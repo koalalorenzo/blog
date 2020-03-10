@@ -1,0 +1,22 @@
+{
+  "name": "qm64-landing-page",
+  "authors": [
+    "Lorenzo Setale <lorenzo@setale.me>"
+  ],
+  "description": "Landing page for qm64.tech",
+  "main": "",
+  "license": "All Rights Reserved",
+  "homepage": "https://qm64.tech",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-icons": "^0.3.1",
+    "mui": "^0.10.1"
+  }
+}

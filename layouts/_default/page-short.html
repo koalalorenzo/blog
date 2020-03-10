@@ -1,0 +1,12 @@
+<article>
+  <h2>
+      <a href="{{.Permalink | relURL }}">
+          {{ .Date.Format "2006-01-02"}} | {{ .Title }}
+      </a>
+  </h2>
+  <div>
+      <small> by {{ .Render "authors-link" }}</small>
+      <p>{{ .Summary | truncate 200 }}...</p>
+      <a href="{{ .Permalink | relURL }}">Read More</a>
+  </div>
+</article>

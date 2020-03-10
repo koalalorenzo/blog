@@ -1,0 +1,6 @@
+
+@font-face {
+    font-family:"Made Tommy Black";
+    src:url("mt_Black.woff2") format("woff2"),url("mt_Black.woff") format("woff"),url("mt_Black.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}

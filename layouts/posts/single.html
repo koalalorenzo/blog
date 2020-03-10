@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article itemscope itemtype="https://schema.org/Article">
+  <div class="mui-container mui--text-left">
+      <h2 class="title" itemprop="headline">
+          {{ .Title }}
+      </h2>
+      <p>
+        On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time> 
+        by {{ .Render "authors-link" }}
+      </p>
+      <div itemprop="articleBody">{{ .Content }}</div>
+
+      <meta itemprop="copyrightHolder" url="https://qm64.tech/"/>
+      <meta itemprop="url" content="{{ $.Page.Permalink }}"/>
+  </div>
+</article>
+{{ end }}

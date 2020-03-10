@@ -1,0 +1,15 @@
+{
+  "name": "material-icons",
+  "homepage": "https://github.com/materialicons/material-icons",
+  "version": "0.3.1",
+  "_release": "0.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.1",
+    "commit": "284190ca3acc9f70584d59ffb2b5f7a27a7018d9"
+  },
+  "_source": "https://github.com/materialicons/material-icons.git",
+  "_target": "^0.3.1",
+  "_originalSource": "material-icons",
+  "_direct": true
+}

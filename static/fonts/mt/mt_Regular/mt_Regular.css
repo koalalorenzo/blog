@@ -1,0 +1,6 @@
+
+@font-face {
+    font-family:"Made Tommy Regular";
+    src:url("mt_Regular.woff2") format("woff2"),url("mt_Regular.woff") format("woff"),url("mt_Regular.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}

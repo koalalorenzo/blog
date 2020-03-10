@@ -1,0 +1,6 @@
+
+@font-face {
+    font-family:"Made Tommy Bold";
+    src:url("mt_Bold.woff2") format("woff2"),url("mt_Bold.woff") format("woff"),url("mt_Bold.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}

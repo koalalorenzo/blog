@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <div class="mui-container">
+        <div class="heading">
+            <h2 class="title">
+                Blog posts
+            </h2>
+        </div>
+        <div id="search-results" class="mui-row mui--text-left"></div>
+        <div id="search-results-all" class="mui-row mui--text-left">
+            {{ range .Pages }}
+            <div class="mui-col-xs-12 mui-col-md-4">
+                {{ .Render "page-short" }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,6 @@
+
+@font-face {
+    font-family:"Made Tommy Medium";
+    src:url("mt_Medium.woff2") format("woff2"),url("mt_Medium.woff") format("woff"),url("mt_Medium.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}

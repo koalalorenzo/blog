@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" href="/img/qm64-sqr.png">
 
     {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
     <!-- Misc -->
     <link rel='me' href='https://mastodon.social/@qm64' />

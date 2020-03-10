@@ -76,7 +76,7 @@ draft: false
     <section>
         <div class="mui--text-center mui-container set-width">
             <!-- <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a> -->
-            <a class="mui-btn mui-btn--primary" href="https://gitlab.com/groups/Qm64/">
+            <a class="mui-btn mui-btn--primary" href="https://gitlab.com/Qm64/landing-page/-/boards">
               Check what is coming next
             </a>
         </div>

@@ -65,8 +65,7 @@ draft: false
                     <p>
                         When possible, share the 
                         <a href="https://gitlab.com/qm64/">source code</a> 
-                        or just a post 
-                        <!-- <a href="/posts/">blog post</a>  -->
+                        or just a <a href="/posts/">blog post</a> 
                         about the learnings and what was successfull or not
                     </p>
                 </div>
@@ -75,7 +74,7 @@ draft: false
     </section>
     <section>
         <div class="mui--text-center mui-container set-width">
-            <!-- <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a> -->
+            <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a>
             <a class="mui-btn mui-btn--primary" href="https://gitlab.com/Qm64/blog/-/boards">
               Check what is coming next
             </a>

@@ -1,12 +1,14 @@
-<article>
+<article class="short">
   <h2>
       <a href="{{.Permalink | relURL }}">
-          {{ .Date.Format "2006-01-02"}} | {{ .Title }}
+          {{ .Title }}
       </a>
   </h2>
+  <div class="details">
+    <span class="material-icons">event</span> {{ .Date.Format "2006-01-02"}} <span class="material-icons">people</span> by {{ .Render "authors-link" }}
+  </div>
   <div>
-      <small> by {{ .Render "authors-link" }}</small>
-      <p>{{ .Summary | truncate 200 }}...</p>
-      <a href="{{ .Permalink | relURL }}">Read More</a>
+    <p>{{ .Summary | truncate 500 }}...</p>
+    <a class="mui-btn mui-btn--primary" href="{{ .Permalink | relURL }}">Read More <span class="material-icons">navigate_next</span></a>
   </div>
 </article>

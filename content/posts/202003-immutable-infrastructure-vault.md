@@ -1,5 +1,5 @@
 ---
-title: "Exploring Immutalbe Infrastructure on Vault"
+title: "Exploring Immutalbe Infrastructure with Vault"
 date: 2020-03-12T21:41:28+01:00
 draft: false
 authors:
@@ -13,17 +13,16 @@ tags:
   - terraform
 ---
 
-Without knowing its name I have been using some Immutable Infrastructure 
-practices during the last years. Some of them are simply trying to replace 
-docker containers with VM images, but I found that this can't be done for 
-a lot of services. Some of those should not run in a container and I thought 
-about exploring Immutable Infrastructure one of them: [Hashicorp Vault](https://www.vaultproject.io).
+During the last year I have been curious about Immutable Infrastucture.
+After researching I have been applying some of these concept already to 
+stateless docker containers, and I wanted to make a practical project with it. 
+So I thought about exploring Immutable Infrastructure with [Hashicorp Vault](https://www.vaultproject.io).
 
 ![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
 
-I have shared here the git repository with some explaination and examples. 
-It is ready for usage but I strongly suggest to go through the comments and the 
-code before running commands.
+I have shared a [git repository](https://gitlab.com/Qm64/vault) 
+with some explaination and examples. It is not ready for usage and I strongly 
+suggest to go through the comments and the code before running commands!
 
 ## The goals
 Vault is one of those services that you don't want to run in a workload that 
@@ -72,6 +71,8 @@ I believe that Immutable Infrastructure starts from there and expands it a
 little by **forcing VMs to be stateless**, and limiting 
 _if not forbidding_, changes to these machines (ex: No SSH, No human error).
 
+![Immutable infrastucture](/posts/202003/ii.gif#center)
+
 Basically servers are **never modified** after they are deployed. If there are 
 errors or changes to be applied, a new VM Image is created, tested and then 
 it will replace the old one[^bluegreen]. 
@@ -84,8 +85,8 @@ even with VM and can help to reduce or avoid any the downtime.
 The first thing I want to start working on is building the images. To keep this 
 cloud agnostic I am using [Packer](https://packer.io) and 
 [Ansible](https://ansible.com). Then I will deploy on AWS (as an exmaple) the 
-image using [Terraform](https://terraform.io). We will use Cloudflare to manage
-the DNS records. 
+image using [Terraform](https://terraform.io) and Cloud-Init to apply the 
+initial configuration. We will use Cloudflare to manage the DNS records. 
 
 _Note 1_: To ease most of the process I am using `make` (GNU Make) __a lot__, 
 the main reason is that I can standardize the commands that I manually run during 
@@ -202,28 +203,28 @@ automagically [fillter the AMI IDs](https://www.terraform.io/docs/providers/aws/
 and find the latest one[^not-enough-time].
 
 ## Conclusion
-
-While exploring it, I have discovered that some of these goals are actually
-harder than I thoguht. The process required a lot of tools, but after a little 
-the beneifts are clear and I will keep using this to deploy Nomad, Consul and 
-other components. This is for sure an SRE or DevOps project as it requires more
-infrastructure knowledge and tools that are not required by developers, even if 
-this gives space to deploy VMs instead of docker containers.
+Is it worth it? **YES**, but not for every workload. 
 
 I would use Immutable Infrastructure to deploy kuberentes minions, Nomad clients 
-or Cockroach, but afther this I will not replace docker containers with VM!
-The main reason is that it is not scaling quickly as when scaling vertically and 
-running upgrades of a full OS is defenetively way less efficient than simply
-upgrading to a different docker container. I would use Immutable Infrastructure to
-deploy Hosts of multi-tenants platforms, so that the services can scale vertically
-with a scheduler while the hosts can scale horizontally with the cloud provider.
+or Cockroach nodes, but afther this I will not replace docker containers with
+VMs! The main reason is that it is not scaling quickly as when scaling 
+vertically. Running upgrades of a full OS is defenetively way less efficient 
+than simply upgrading to a different docker container. I would use Immutable 
+Infrastructure to deploy Hosts of multi-tenants platforms, so that the services 
+can scale vertically with a scheduler while the hosts can scale horizontally 
+with the cloud provider and reduce downtimes.
+
+While exploring it, I have discovered that some of my goals are actually
+harder without IaC tools. The process required a lot of them, but after a little 
+the beneifts are clear and I will keep using this to deploy and maintain Nomad, 
+Consul and other components. I see SREs and DevOps Engineers having their life
+simplified by using Immutable Infrastucture.
 
 As a result, I have decided to keep running a Qm64's instance of Hashicorp Vault
 this way. It allows me to publicly expose the repository and remove every secret 
-from the code, and gives me a little more safety as I know nobody (not even me)
-can SSH into it!
+from the code, and gives me a little more safety as I know nobody can SSH into it!
 
-I could have simplified it, I might in the future but
+Honestly, I could have simplified it, I might in the future but
 due to time constraints I limited myself to not implementing some features:
 
 - Auto unseal[^aws-kms] and a Cluster setup you gain:

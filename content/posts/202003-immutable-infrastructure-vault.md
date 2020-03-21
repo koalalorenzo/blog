@@ -20,7 +20,7 @@ So I thought about exploring Immutable Infrastructure with [Hashicorp Vault](htt
 
 ![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
 
-I have shared a [git repository](https://gitlab.com/Qm64/vault) 
+I have shared a [git repository](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra) 
 with some explaination and examples. It is not ready for usage and I strongly 
 suggest to go through the comments and the code before running commands!
 
@@ -113,7 +113,7 @@ credentials via enviromental variables so that Make can use the one in my env
 or if not present, it will generate the credentials using Vault (if deployed already).
 Read more about the [env variables used by packer here](https://packer.io/docs/builders/amazon.html#environment-variables).
 
-As described in the [README file](https://gitlab.com/Qm64/vault#packer-setup) 
+As described in the [README file](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra#packer-setup) 
 I am able to build the image (AMI) by running:
 
 ```shell
@@ -121,7 +121,7 @@ make -c packer validate build -e BUILD_PLATFORM=amazon-ebs
 ```
 
 This will call Packer and create a temporary EC2 Instance/VM, it will be used to 
-run [some Ansible playbooks](https://gitlab.com/Qm64/vault/-/tree/master/packer/ansible) 
+run [some Ansible playbooks](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra/packer%2Fansible) 
 in it and install Vault service. 
 
 ![Hashicorp Vault Logo](/posts/202003/packer.png#center)
@@ -143,7 +143,7 @@ designed to work with both CLI and GitLab Pipeline, so it automatically gets
 the credentials via Vault[^chicken-egg] 😅. 
 Since we don't have Vault deployed yet, we can pass the env variables manually. 
 Please read the 
-[README file](https://gitlab.com/Qm64/vault/-/tree/master#before-we-start-about-credentials) 
+[README file](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra#before-we-start-about-credentials) 
 to know more about this.
 
 Terraform will require the AMI ID. we can provide it via variables (env var too): 
@@ -161,7 +161,7 @@ make -C infrastructure plan -e TF_VAR_vault_ami=ami-0894b635d1bd24710
 
 This will just validate the current setup and show what will happen in AWS and 
 Cloudflare if we apply the changes. Please refer to the source code and the
-[README file](https://gitlab.com/Qm64/vault/-/tree/master/infrastructure) 
+[README file](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra/infrastructure) 
 to know more about this setup
 
 ### Deploying a new version

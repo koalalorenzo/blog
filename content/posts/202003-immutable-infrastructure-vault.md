@@ -42,7 +42,7 @@ _if not forbidding_, changes to these machines (ex: No SSH = way less changes).
 
 ![Immutable infrastucture](/posts/202003/ii.gif#center)
 
-Basically **servers are never modified** after they are deployed. If there are 
+Very basically **servers are never modified** after they are deployed. If there are 
 errors or changes to be applied, a new VM Image is created, tested and then 
 it will replace the old one[^bluegreen]. 
 
@@ -64,8 +64,8 @@ service/project. I want to explore Immutable Infrastructure to make sure that:
 * Scaling is easy and automated [^aws-kms]
 
 Using immutable infrastructure brings also other benefits and requires a 
-different mindset compared to classic Ops methodologies, but for now I will
-focus only on these benefits as goals for the project.
+different mindset compared to "older Operations" methodologies, but for now I 
+will focus only on these benefits as goals for the project.
 
 [^unseal]: Due to the nature of Vault, we need to unseal it manually. 
 The service will be reacable but the secrets will be locked. This can be 
@@ -89,8 +89,8 @@ image using [Terraform](https://terraform.io) and Cloud-Init to apply the
 initial configuration. We will use Cloudflare to manage the DNS records. 
 
 **Note 1**: To ease most of the process I am using `make` (GNU Make) __a lot__, 
-the main reason is that I can standardize the commands that I manually run during 
-development with the one that are executed by Gitlab CI/CD pipeline.
+the main reason is that I can standardize the commands that I manually run 
+during development with the one that are executed by Gitlab CI/CD pipeline.
 Please [read this to learn more](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra#before-we-start-about-credentials)!
 
 **Note 2**: After the deployment is done Vault needs to be initialized, this is 

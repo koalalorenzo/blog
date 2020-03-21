@@ -14,8 +14,8 @@
     <meta name="keywords" content='{{ delimit .Keywords ", " }}' />
     {{ end }}
 
-    <link rel="canonical" href="{{ $.Page.Permalink }}"/>
-    <link rel="shortlink" href="{{ $.Page.Permalink }}"/>
+    <link rel="canonical" href="{{ $.Page.Permalink | absURL }}"/>
+    <link rel="shortlink" href="{{ $.Page.Permalink | absURL }}"/>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/img/qm64-sqr.svg">

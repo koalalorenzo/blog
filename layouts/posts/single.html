@@ -1,5 +1,29 @@
 {{ define "main" }}
 <article itemscope itemtype="https://schema.org/Article">
+  <!-- For Google -->
+  <meta name="description" content="{{ .Content | truncate 250 }}" />
+  <meta name="keywords" content="{{ delimit .Params.tags "," }}" />
+
+  <meta name="author" content="{{ delimit .Params.authors ", " }}" />
+  <meta name="copyright" content="{{ .Date.Format "2006" }} Qm64 OU" />
+
+  <!-- For Facebook -->
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:type" content="article" />
+  {{ if .Params.thumbnail }}
+  <meta property="og:image" content="{{ .Params.thumbnail | absURL }}" />
+  {{ end }}
+  <meta property="og:url" content="{{ $.Page.Permalink | absURL }}" />
+  <meta property="og:description" content="{{ .Content | truncate 250 }}" />
+
+  <!-- For Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ .Content | truncate 250 }}" />
+  {{ if .Params.thumbnail }}
+  <meta name="twitter:image" content="{{ .Params.thumbnail | absURL }}" />
+  {{ end }}
+
   <div class="mui-container mui--text-left">
       <h2 class="title" itemprop="headline">
           {{ .Title }}

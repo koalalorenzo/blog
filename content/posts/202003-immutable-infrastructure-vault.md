@@ -1,5 +1,5 @@
 ---
-title: "Exploring Immutalbe Infrastructure with Vault"
+title: "Exploring Immutable Infrastructure with Vault"
 date: 2020-03-12T21:41:28+01:00
 draft: false
 authors:
@@ -28,7 +28,7 @@ commands!
 
 ## The goals
 Vault is one of those services that you don't want to run in a environment that 
-has other procesess: you need it to be in its own safe and protected
+has other process: you need it to be in its own safe and protected
 VM. For this reason I believe it is one of the perfect candidates to explore
 Immutable Infrastructure and to move it out from docker.
 

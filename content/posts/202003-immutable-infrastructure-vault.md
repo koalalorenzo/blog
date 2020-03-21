@@ -26,39 +26,6 @@ with some explaination and examples. It is written with Qm64 needs in mind
 and I strongly  suggest to go through the comments and the code before running 
 commands!
 
-## The goals
-Vault is one of those services that you don't want to run in a environment that 
-has other process: you need it to be in its own safe and protected
-VM. For this reason I believe it is one of the perfect candidates to explore
-Immutable Infrastructure and to move it out from docker.
-
-My goals for this project are basic and could be extended to almost any 
-service/project. I want to explore Immutable  Infrastructure to make sure that:
-
-* The Virtual Machine has a reduced attack surface
-* The VM doesn't have more workloads/services (it runs just Vault)
-* The configuration is always correct (no drifts between machines)
-* Humans are not involved for most of the things (so no _human errors_[^human-error]) 
-* There is no or very limited downtime during upgrades [^downtime-unseal]
-* Scaling is easy and automated [^aws-kms]
-
-Using immutable infrastructure brings also other benefits and requires a 
-different mindset compared to classic Ops methodologies, but for now I will
-focus only on these benefits as goals for the project.
-
-[^downtime-unseal]: Due to the nature of Vault, we need to unseal it manually. 
-The service will be reacable but the secrets will be locked. This can be 
-automated[^aws-kms] with no downtimes
-
-[^human-error]: Unless the human error is written down as a script 😅
-
-[^aws-kms]: Vault requires some manual operation (unsealing). anyway it is 
-possible to explore a feature that will 
-[automatically unseal by using AWS KMS](https://learn.hashicorp.com/vault/operations/ops-autounseal-aws-kms) 
-(or similar on GPC / Azure) Due to time constraints I am not exploring this 
-feature that is required for autoscaling. In anycase if this was a simpler 
-project it would have not been a problem
-
 ## A little about Immutable Infrastructure
 _If you are familiar with stateless workloads on docker/k8s this will be easy!_ 😜 
 
@@ -81,6 +48,37 @@ it will replace the old one[^bluegreen].
 
 [^bluegreen]: This allow [Blue/Green deployments](https://en.wikipedia.org/wiki/Blue-green_deployment) 
 even with VM and can help to reduce or avoid any the downtime.
+
+## The goals
+Vault is one of those services that you don't want to run in a environment that 
+has other process: you need it to be in its own safe and protected
+VM. For this reason I believe it is one of the perfect candidates to explore
+Immutable Infrastructure and to move it out from docker.
+
+My goals for this project are basic and could be extended to almost any 
+service/project. I want to explore Immutable Infrastructure to make sure that:
+
+* The Virtual Machine has a reduced attack surface
+* The VM doesn't have more workloads/services (it runs just Vault)
+* Humans are not involved for most of the things[^unseal] (so no _human errors_[^human-error] ) 
+* Scaling is easy and automated [^aws-kms]
+
+Using immutable infrastructure brings also other benefits and requires a 
+different mindset compared to classic Ops methodologies, but for now I will
+focus only on these benefits as goals for the project.
+
+[^unseal]: Due to the nature of Vault, we need to unseal it manually. 
+The service will be reacable but the secrets will be locked. This can be 
+automated[^aws-kms] ideally with a KMS solution
+
+[^human-error]: Unless the human error is written down as a script 😅
+
+[^aws-kms]: Vault requires some manual operation (unsealing). anyway it is 
+possible to explore a feature that will 
+[automatically unseal by using AWS KMS](https://learn.hashicorp.com/vault/operations/ops-autounseal-aws-kms) 
+(or similar on GPC / Azure) Due to time constraints I am not exploring this 
+feature that is required for autoscaling. In anycase if this was a simpler 
+project it would have not been a problem
 
 ## The process
 

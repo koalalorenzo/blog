@@ -24,7 +24,7 @@ draft: false
                         My name is <a href="https://setale.me/">Lorenzo Setale</a> 
                         and Qm64 is my space to share the experiences of 
                         developing software and exploring new tools and methods 
-                        with my friends. Check our <a href="https://gitlab.com/Qm64/landing-page/-/boards">board</a> 
+                        with my friends. Check our <a href="https://gitlab.com/Qm64/blog/-/boards">board</a> 
                         to know what we are working on.
                     </p>
                 </div>
@@ -65,8 +65,7 @@ draft: false
                     <p>
                         When possible, share the 
                         <a href="https://gitlab.com/qm64/">source code</a> 
-                        or just a post 
-                        <!-- <a href="/posts/">blog post</a>  -->
+                        or just a <a href="/posts/">blog post</a> 
                         about the learnings and what was successfull or not
                     </p>
                 </div>
@@ -75,8 +74,8 @@ draft: false
     </section>
     <section>
         <div class="mui--text-center mui-container set-width">
-            <!-- <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a> -->
-            <a class="mui-btn mui-btn--primary" href="https://gitlab.com/Qm64/landing-page/-/boards">
+            <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a>
+            <a class="mui-btn mui-btn--primary" href="https://gitlab.com/Qm64/blog/-/boards">
               Check what is coming next
             </a>
         </div>

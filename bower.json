@@ -1,9 +1,9 @@
 {
-  "name": "qm64-landing-page",
+  "name": "qm64-website",
   "authors": [
     "Lorenzo Setale <lorenzo@setale.me>"
   ],
-  "description": "Landing page for qm64.tech",
+  "description": "Website qm64.tech",
   "main": "",
   "license": "All Rights Reserved",
   "homepage": "https://qm64.tech",

@@ -48,13 +48,19 @@ article img[src$='#big']
 }
 
 // Smaller Article in list
-article.short {
-  max-width: none;
+article.short h2 {
+  margin-top: 0px;
 }
 
 article.short .details {
   font-size: 85%;
-  min-height: 20px;
+}
+
+article.short .thumbnail {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 article.short .details span.material-icons{

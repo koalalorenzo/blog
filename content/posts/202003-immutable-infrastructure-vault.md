@@ -11,6 +11,7 @@ tags:
   - packer
   - infrastructure as code
   - terraform
+thumbnail: /posts/202003/ii.gif
 ---
 
 During the last year I have been curious about Immutable Infrastucture.
@@ -132,9 +133,9 @@ After that it will stop the AWS EC3 instance, create a snapshot and AMI and then
 terminate the it. Once it is done it will output the AWS 
 AMI (or image name, depending on the platform)  that we will use on the next step.
 
-### Deploying Vault
+### Configuring and Deploying Images/Cattle
 This is the core of the concept behind Immutable Infrastructure: Deploying 
-things! _Hurray!_ I am going to make image/cattle _pretty_ usable! 🤣
+things! _Hurray!_ I am going to make the image/cattle _pretty_ usable! 🤣
 
 ![example of pretty usable cattle](/posts/202003/pretty_cattle.gif#center)
 
@@ -195,7 +196,7 @@ make -C infrastructure plan \
 
 I have noticed that this could cause minimal downtime, but I have built the 
 terraform setup so that even witout a load balancer, it ensures that the
-old VM is destroyed only when the new one is ready. 🙃 [^not-enough-time]
+old VM is destroyed only when the new one is ready[^not-enough-time]. 🙃
 
 If something seems broken, I can always re-deploy to the previous image and
 rollback to the old version:

@@ -1,14 +1,28 @@
 <article class="short">
   <h2>
-      <a href="{{.Permalink | relURL }}">
-          {{ .Title }}
-      </a>
+    <a href="{{.Permalink | relURL }}">
+        {{ .Title }}
+    </a>
   </h2>
-  <div class="details">
-    <span class="material-icons">event</span> {{ .Date.Format "2006-01-02"}} <span class="material-icons">people</span> by {{ .Render "authors-link" }}
-  </div>
-  <div>
-    <p>{{ .Summary | truncate 500 }}...</p>
-    <a class="mui-btn mui-btn--primary" href="{{ .Permalink | relURL }}">Read More <span class="material-icons">navigate_next</span></a>
-  </div>
+  <div class="mui-container">
+    <div class="mui-row">
+      {{ if .Params.thumbnail }}
+      <a href="{{ .Permalink | relURL }}">
+        <div class="thumbnail mui-col-md-4" style="background-image: url({{.Params.thumbnail}});"></div>
+      </a>
+      <div class="mui-col-md-8">
+      {{ else }}
+      <div class="mui-col-md-12">
+      {{ end }}
+        <div class="details">
+          <span class="material-icons">event</span> {{ .Date.Format "2006-01-02"}} <span class="material-icons">people</span> by {{ .Render "authors-link" }}
+        </div>
+        <div>
+          <p>
+            {{ .Summary | truncate 350 }} <a href="{{ .Permalink | relURL }}">Read More</a>
+
+          </p>
+        </div>
+      </div>
+    </div>
 </article>

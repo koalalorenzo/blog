@@ -233,9 +233,10 @@ with the cloud provider and reduce downtimes.
 
 While exploring it, I have discovered that some of my goals are actually
 harder without IaC tools. The process _requires_ automation, but after a little 
-the beneifts are clear and I will keep using this to deploy things when 
-possible. I see SREs and DevOps Engineers having their life simplified by using 
-Immutable Infrastucture.
+the beneifts are clear and I will keep using this to deploy services when 
+required but not always. I see SREs and DevOps Engineers having their life 
+simplified by using Immutable Infrastucture on their platforms but not more than
+that.
 
 ![Yeah, it was worth it](/posts/202003/mission_accomplished.gif#center)
 

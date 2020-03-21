@@ -220,7 +220,7 @@ and find the latest one[^not-enough-time].
 
 The current automation takes care of renewing a Vault token that has specific
 policies for GitLab CI/CD public pipeline runners, but every month it can build
-a new Vault AMI automagically.
+a new Vault AMI _automagically_.
 
 ## Conclusion
 Is it worth it? Have I achieved the goals? **YES**. 

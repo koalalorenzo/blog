@@ -1,6 +1,6 @@
 ---
 title: "Exploring Immutable Infrastructure with Vault"
-date: 2020-03-12T21:41:28+01:00
+date: 2020-03-21T13:41:28+01:00
 draft: false
 authors:
   - Lorenzo Setale

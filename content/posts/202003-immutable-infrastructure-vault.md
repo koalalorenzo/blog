@@ -21,20 +21,21 @@ So I thought about exploring Immutable Infrastructure with [Hashicorp Vault](htt
 ![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
 
 I have shared a [git repository](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra) 
-with some explaination and examples. It is not ready for usage and I strongly 
-suggest to go through the comments and the code before running commands!
+with some explaination and examples. It is written with Qm64 needs in mind 
+and I strongly  suggest to go through the comments and the code before running 
+commands!
 
 ## The goals
-Vault is one of those services that you don't want to run in a workload that 
-can saturate the CPU usage: you need it to be in its own safe and protected
+Vault is one of those services that you don't want to run in a environment that 
+has other procesess: you need it to be in its own safe and protected
 VM. For this reason I believe it is one of the perfect candidates to explore
-Immutable Infrastructure.
+Immutable Infrastructure and to move it out from docker.
 
 My goals for this project are basic and could be extended to almost any 
 service/project. I want to explore Immutable  Infrastructure to make sure that:
 
 * The Virtual Machine has a reduced attack surface
-* The Virtual Machine doesn't have more workloads/services (it runs just Vault)
+* The VM doesn't have more workloads/services (it runs just Vault)
 * The configuration is always correct (no drifts between machines)
 * Humans are not involved for most of the things (so no _human errors_[^human-error]) 
 * There is no or very limited downtime during upgrades [^downtime-unseal]
@@ -60,20 +61,20 @@ project it would have not been a problem
 ## A little about Immutable Infrastructure
 _If you are familiar with stateless workloads on docker/k8s this will be easy!_ 😜 
 
-One of the biggest DevOps concepts that I fell in love  with is _Pets VS Cattle_.
-Shortly the is that instead of maintaining machines alive (as Pets 🐶), and 
+One of the biggest DevOps concepts that I fell in love with is _Pets VS Cattle_.
+Shortly the idea is that instead of maintaining machines alive (as Pets 🐶), and 
 upgrading them constantly, VMs are killed **periodically** and replaced with new 
-updated versions (like cattle 🐮).
+updated versions (like cattle 🐮 we don't care about them too much).
 
-![Photo by Annie Spratt](/posts/202003/annie-spratt-cows.jpg#center)
+![Cows](/posts/202003/cows.gif#center)
 
 I believe that Immutable Infrastructure starts from there and expands it a 
 little by **forcing VMs to be stateless**, and limiting 
-_if not forbidding_, changes to these machines (ex: No SSH, No human error).
+_if not forbidding_, changes to these machines (ex: No SSH = way less changes).
 
 ![Immutable infrastucture](/posts/202003/ii.gif#center)
 
-Basically servers are **never modified** after they are deployed. If there are 
+Basically **servers are never modified** after they are deployed. If there are 
 errors or changes to be applied, a new VM Image is created, tested and then 
 it will replace the old one[^bluegreen]. 
 
@@ -88,12 +89,12 @@ cloud agnostic I am using [Packer](https://packer.io) and
 image using [Terraform](https://terraform.io) and Cloud-Init to apply the 
 initial configuration. We will use Cloudflare to manage the DNS records. 
 
-_Note 1_: To ease most of the process I am using `make` (GNU Make) __a lot__, 
+**Note 1**: To ease most of the process I am using `make` (GNU Make) __a lot__, 
 the main reason is that I can standardize the commands that I manually run during 
 development with the one that are executed by Gitlab CI/CD pipeline.
-Please have a look at the `Makefile`s to learn more!
+Please [read this to learn more](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra#before-we-start-about-credentials)!
 
-_Note 2_: After the deployment is done Vault needs to be initialized, this is 
+**Note 2**: After the deployment is done Vault needs to be initialized, this is 
 one-time process that is done manually and I will ignore. The repository I am sharing
 contains also some terraform configuration for Vault's internal setup
 used by Qm64. For the post-deploy procedure I strongly suggest to read 
@@ -107,7 +108,7 @@ configuration**. Since this image can be deployed multiple times at the same
 time, it can't be tailored with a specific setup/IP/certificate as if it 
 was a _pet_. 
 
-To build the image Packer needs AWS credentials set up. As this process should 
+To build the image Packer needs AWS credentials set up. As this process can  
 be both automated as well manual (at least at the beginning). I am passing 
 credentials via enviromental variables so that Make can use the one in my env
 or if not present, it will generate the credentials using Vault (if deployed already).
@@ -117,46 +118,45 @@ As described in the [README file](https://gitlab.com/Qm64/vault/-/tree/blogpost-
 I am able to build the image (AMI) by running:
 
 ```shell
-make -c packer validate build -e BUILD_PLATFORM=amazon-ebs
+make -c packer validate build \
+     -e BUILD_PLATFORM=amazon-ebs
 ```
 
 This will call Packer and create a temporary EC2 Instance/VM, it will be used to 
 run [some Ansible playbooks](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra/packer%2Fansible) 
 in it and install Vault service. 
 
-![Hashicorp Vault Logo](/posts/202003/packer.png#center)
+![Packer building an instance on AWS](/posts/202003/packer.png#center)
 
-After that it will stop the machine, create a snapshot and AMI and then 
-terminate the instance. Once it is done it will output the AWS 
-AMI (or image name based on the platform)  that we will use on the next step.
+After that it will stop the AWS EC3 instance, create a snapshot and AMI and then 
+terminate the it. Once it is done it will output the AWS 
+AMI (or image name, depending on the platform)  that we will use on the next step.
 
 ### Deploying Vault
+This is the core of the concept behind Immutable Infrastructure: Deploying 
+things! _Hurray!_ I am going to make image/cattle _pretty_ usable! 🤣
+
+![example of pretty usable cattle](/posts/202003/pretty_cattle.gif#center)
 
 For this step I have decided to use [Terraform](https://terraform.io). I could 
 have manually implemented it or written a bunch of bash scripts with AWS CLI, 
 but I want to keep this example cloud-agnostic. This steps requires a little 
 knowledge related to terraform, please read the [official documentation](https://learn.hashicorp.com/terraform)
 if you are not familiar with it.
-
-Terraform needs some credentials and even in this case the current makefile is 
-designed to work with both CLI and GitLab Pipeline, so it automatically gets 
-the credentials via Vault[^chicken-egg] 😅. 
-Since we don't have Vault deployed yet, we can pass the env variables manually. 
-Please read the 
-[README file](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra#before-we-start-about-credentials) 
-to know more about this.
-
-Terraform will require the AMI ID. we can provide it via variables (env var too): 
-this could allow me to "chain" Packer with Terraform[^not-enough-time] or
+ 
+Terraform will require the AMI ID we created before. we can provide it via 
+variables (env var too): this could allow me to "chain" Packer with Terraform[^not-enough-time] or
 simply to specify the Image (AMI) to use on the fly. 
 
-[^not-enough-time]: But I was running out of time to do it 😅
+[^not-enough-time]: But I was running out of time to do it 😅 (Or maybe I am 
+  just lazy)
 
 For example the following command will show a planning to deploy `ami-0894b635d1bd24710`
 image:
 
 ```shell
-make -C infrastructure plan -e TF_VAR_vault_ami=ami-0894b635d1bd24710
+make -C infrastructure plan 
+     -e TF_VAR_vault_ami=ami-0894b635d1bd24710
 ```
 
 This will just validate the current setup and show what will happen in AWS and 
@@ -164,35 +164,48 @@ Cloudflare if we apply the changes. Please refer to the source code and the
 [README file](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra/infrastructure) 
 to know more about this setup
 
-### Deploying a new version
+_What about configuration?_ Well, 😏 I have decided to inject the configuration
+using [Terraform templates](https://www.terraform.io/docs/providers/template/d/cloudinit_config.html) 
+and [Cloud-init](https://cloud-init.io). 
 
+In this way I can instruct Vault to point to the right S3 bucket or to use the 
+right domain, as well as to generate SSL certificates only on deploy time. 🔑 
+I am using an IAM Profile generated by Terraform to allow the EC2 instance to 
+read the s3 bucket without dealing with  keys and permissions or writing secrets 
+into Vault's configuration files. 😍 _I found this step the coolest part!!!_ 
+
+### Deploying a new version
 If we find out that there is an outdated kernel version or that there is a new
 Vault version, what we need to do is to rebuild the image. For example:
 
 ```shell
-make -c packer validate build -e BUILD_PLATFORM=amazon-ebs -e VAULT_VERSION=1.3.3
+make -C packer validate build \
+     -e BUILD_PLATFORM=amazon-ebs \
+     -e VAULT_VERSION=1.3.3
 ```
 
-This will create a new image with vault 1.3.3 and the OS upgraded. Then we can 
+This will create a new image with Vault v1.3.3 and the OS upgraded. Then we can 
 use the image ID in Terraform and use workspaces to test it in a different 
 environment to make sure it works. If we feel safe we can then deploy it:
 
 ```shell
-make -C infrastructure plan -e TF_VAR_vault_ami=ami-01742db1d536b4980
+make -C infrastructure plan \
+     -e TF_VAR_vault_ami=ami-01742db1d536b4980
 ```
 
-I have noticed that this could cause some downtime, but I have built the 
+I have noticed that this could cause minimal downtime, but I have built the 
 terraform setup so that even witout a load balancer, it ensures that the
-old VM is destroyed only when the new one is ready. 
+old VM is destroyed only when the new one is ready. 🙃 [^not-enough-time]
 
 If something seems broken, I can always re-deploy to the previous image and
 rollback to the old version:
 
 ```shell
-make -C infrastructure plan -e TF_VAR_vault_ami=ami-0894b635d1bd24710
+make -C infrastructure plan \
+     -e TF_VAR_vault_ami=ami-0894b635d1bd24710
 ```
 
-## Automation
+## Automation with GitLab
 Due to lack of time I was able to automate using GitLab CI/CD Pipelines a set 
 of tools and not being able to chain them.
 
@@ -202,8 +215,12 @@ be automated to build periodically a new image so that Terraform can
 automagically [fillter the AMI IDs](https://www.terraform.io/docs/providers/aws/d/ami_ids.html#example-usage) 
 and find the latest one[^not-enough-time].
 
+The current automation takes care of renewing a Vault token that has specific
+policies for GitLab CI/CD public pipeline runners, but every month it can build
+a new Vault AMI automagically.
+
 ## Conclusion
-Is it worth it? **YES**, but not for every workload. 
+Is it worth it? **YES**, but not for every project. 
 
 I would use Immutable Infrastructure to deploy kuberentes minions, Nomad clients 
 or Cockroach nodes, but afther this I will not replace docker containers with
@@ -215,24 +232,18 @@ can scale vertically with a scheduler while the hosts can scale horizontally
 with the cloud provider and reduce downtimes.
 
 While exploring it, I have discovered that some of my goals are actually
-harder without IaC tools. The process required a lot of them, but after a little 
-the beneifts are clear and I will keep using this to deploy and maintain Nomad, 
-Consul and other components. I see SREs and DevOps Engineers having their life
-simplified by using Immutable Infrastucture.
+harder without IaC tools. The process _requires_ automation, but after a little 
+the beneifts are clear and I will keep using this to deploy things when 
+possible. I see SREs and DevOps Engineers having their life simplified by using 
+Immutable Infrastucture.
 
-As a result, I have decided to keep running a Qm64's instance of Hashicorp Vault
-this way. It allows me to publicly expose the repository and remove every secret 
-from the code, and gives me a little more safety as I know nobody can SSH into it!
+![Yeah, it was worth it](/posts/202003/mission_accomplished.gif#center)
 
-Honestly, I could have simplified it, I might in the future but
-due to time constraints I limited myself to not implementing some features:
+That said, I think I learned what is really important: prevent humans from doing
+mistakes by automating the hell out of it. 🤪
 
-- Auto unseal[^aws-kms] and a Cluster setup you gain:
-   - ability to autoscale the Vault cluster if needed
-   - No human required to unseal vault
-- Load balancer to reduce downtime instead of relying on DNS propagation
-- Cloud Agnostic: we can build multiple platform at the same time for a real 
-  solution that is not vendor locked and maybe also multi cloud.
-- Rollback: I wanted to make an example to rollback to a previous version in
-  case something goes wrong while upgrading to a new AMI/Image.
+If you want to explore more you can read the following articles:
 
+- [What is Mutable vs. Immutable Infrastructure?](https://www.hashicorp.com/resources/what-is-mutable-vs-immutable-infrastructure) by Hashicorp
+- [Why should I build Immutable Infrastructure?](https://blog.codeship.com/immutable-infrastructure/) by CodeShip
+- [What Is Immutable Infrastructure](https://www.digitalocean.com/community/tutorials/what-is-immutable-infrastructure) by DigitalOcean

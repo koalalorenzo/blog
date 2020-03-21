@@ -14,15 +14,16 @@ tags:
 thumbnail: /posts/202003/ii.gif
 ---
 
-During the last year I have been curious about Immutable Infrastucture.
-After researching I have been applying some of these concept already to 
-stateless docker containers, and I wanted to make a practical project with it. 
-So I thought about exploring Immutable Infrastructure with [Hashicorp Vault](https://www.vaultproject.io).
+During the last year I have been curious about Immutable Infrastructure.
+After researching I noticed that I had been applying some of these concepts 
+already to stateless docker containers, and I wanted to make a practical 
+project with it. So I thought about exploring Immutable Infrastructure with 
+[Hashicorp Vault](https://www.vaultproject.io).
 
 ![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
 
 I have shared a [git repository](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra) 
-with some explaination and examples. It is written with Qm64 needs in mind 
+with some explanation and examples. It is written with Qm64's needs in mind 
 and I strongly  suggest to go through the comments and the code before running 
 commands!
 
@@ -37,21 +38,21 @@ updated versions (like cattle 🐮 we don't care about them too much).
 ![Cows](/posts/202003/cows.gif#center)
 
 I believe that Immutable Infrastructure starts from there and expands it a 
-little by **forcing VMs to be stateless**, and limiting 
+little by **forcing VMs to be stateless** and limiting, 
 _if not forbidding_, changes to these machines (ex: No SSH = way less changes).
 
-![Immutable infrastucture](/posts/202003/ii.gif#center)
+![Immutable Infrastructure](/posts/202003/ii.gif#center)
 
 Very basically **servers are never modified** after they are deployed. If there are 
 errors or changes to be applied, a new VM Image is created, tested and then 
 it will replace the old one[^bluegreen]. 
 
 [^bluegreen]: This allow [Blue/Green deployments](https://en.wikipedia.org/wiki/Blue-green_deployment) 
-even with VM and can help to reduce or avoid any the downtime.
+  even with VM and can help to reduce or avoid any downtime.
 
 ## The goals
-Vault is one of those services that you don't want to run in a environment that 
-has other process: you need it to be in its own safe and protected
+Vault is one of those services that you don't want to run in an environment that 
+has any other process: you need it to be in its own safe and protected
 VM. For this reason I believe it is one of the perfect candidates to explore
 Immutable Infrastructure and to move it out from docker.
 
@@ -70,23 +71,23 @@ different mindset compared to "older Operations" methodologies, but for now I
 will focus only on these benefits as goals for the project.
 
 [^unseal]: Due to the nature of Vault, we need to unseal it manually. 
-The service will be reacable but the secrets will be locked. This can be 
-automated[^aws-kms] ideally with a KMS solution
+The service will be reachable but the secrets will be locked. This can be 
+automated[^aws-kms] ideally with a KMS solution.
 
-[^human-error]: Unless the human error is written down as a script 😅
+[^human-error]: Unless the human error is written down as a script. 😅
 
 [^aws-kms]: Vault requires some manual operation (unsealing). anyway it is 
 possible to explore a feature that will 
 [automatically unseal by using AWS KMS](https://learn.hashicorp.com/vault/operations/ops-autounseal-aws-kms) 
 (or similar on GPC / Azure) Due to time constraints I am not exploring this 
 feature that is required for autoscaling. In anycase if this was a simpler 
-project it would have not been a problem
+project it would have not been a problem.
 
 ## The process
 
 The first thing I want to start working on is building the images. To keep this 
 cloud agnostic I am using [Packer](https://packer.io) and 
-[Ansible](https://ansible.com). Then I will deploy on AWS (as an exmaple) the 
+[Ansible](https://ansible.com). Then I will deploy on AWS (as an example) the 
 image using [Terraform](https://terraform.io) and Cloud-Init to apply the 
 initial configuration. We will use Cloudflare to manage the DNS records. 
 
@@ -96,14 +97,14 @@ during development with the one that are executed by Gitlab CI/CD pipeline.
 Please [read this to learn more](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra#before-we-start-about-credentials)!
 
 **Note 2**: After the deployment is done Vault needs to be initialized, this is 
-one-time process that is done manually and I will ignore. The repository I am sharing
-contains also some terraform configuration for Vault's internal setup
+a one-time process that is done manually and I will ignore. The repository I am 
+sharing contains also some terraform configuration for Vault's internal setup
 used by Qm64. For the post-deploy procedure I strongly suggest to read 
 [Vault's official documentation](https://learn.hashicorp.com/vault/getting-started/deploy#initializing-the-vault)
 
 ### Building the image
 
-Building the images is quiet easy, but it requires some attention: this is
+Building the images is quite easy, but it requires some attention: this is
 an automated process that forces me to **not include any secret or specific 
 configuration**. Since this image can be deployed multiple times at the same 
 time, it can't be tailored with a specific setup/IP/certificate as if it 
@@ -111,7 +112,7 @@ was a _pet_.
 
 To build the image Packer needs AWS credentials set up. As this process can  
 be both automated as well manual (at least at the beginning). I am passing 
-credentials via enviromental variables so that Make can use the one in my env
+credentials via environmental variables so that Make can use the one in my env
 or if not present, it will generate the credentials using Vault (if deployed already).
 Read more about the [env variables used by packer here](https://packer.io/docs/builders/amazon.html#environment-variables).
 
@@ -130,7 +131,7 @@ in it and install Vault service.
 ![Packer building an instance on AWS](/posts/202003/packer.png#center)
 
 After that it will stop the AWS EC3 instance, create a snapshot and AMI and then 
-terminate the it. Once it is done it will output the AWS 
+terminate it. Once it is done it will output the AWS 
 AMI (or image name, depending on the platform)  that we will use on the next step.
 
 ### Configuring and Deploying Images/Cattle
@@ -141,11 +142,11 @@ things! _Hurray!_ I am going to make the image/cattle _pretty_ usable! 🤣
 
 For this step I have decided to use [Terraform](https://terraform.io). I could 
 have manually implemented it or written a bunch of bash scripts with AWS CLI, 
-but I want to keep this example cloud-agnostic. This steps requires a little 
+but I want to keep this example cloud-agnostic. This step requires a little 
 knowledge related to terraform, please read the [official documentation](https://learn.hashicorp.com/terraform)
 if you are not familiar with it.
  
-Terraform will require the AMI ID we created before. we can provide it via 
+Terraform will require the AMI ID we created before. I can provide it via 
 variables (env var too): this could allow me to "chain" Packer with Terraform[^not-enough-time] or
 simply to specify the Image (AMI) to use on the fly. 
 
@@ -195,7 +196,7 @@ make -C infrastructure plan \
 ```
 
 I have noticed that this could cause minimal downtime, but I have built the 
-terraform setup so that even witout a load balancer, it ensures that the
+terraform setup so that even without a load balancer, it ensures that the
 old VM is destroyed only when the new one is ready[^not-enough-time]. 🙃
 
 If something seems broken, I can always re-deploy to the previous image and
@@ -210,10 +211,11 @@ make -C infrastructure plan \
 Due to lack of time I was able to automate using GitLab CI/CD Pipelines a set 
 of tools and not being able to chain them.
 
-For exmaple, I made possible to have the terraform setup automated so that 
-after a Pull Request it will apply the changes. The Packer setup should
-be automated to build periodically a new image so that Terraform can 
-automagically [fillter the AMI IDs](https://www.terraform.io/docs/providers/aws/d/ami_ids.html#example-usage) 
+For example, it is possible to have the Pipeline automated so that after a 
+Merge Request is created, terraform will apply the changes to a new environment. 
+The Packer setup can be automated to build periodically a new image so that 
+Terraform can automagically 
+[fillter the AMI IDs](https://www.terraform.io/docs/providers/aws/d/ami_ids.html#example-usage) 
 and find the latest one[^not-enough-time].
 
 The current automation takes care of renewing a Vault token that has specific
@@ -221,7 +223,7 @@ policies for GitLab CI/CD public pipeline runners, but every month it can build
 a new Vault AMI automagically.
 
 ## Conclusion
-Is it worth it? Have I acheived the goals? **YES**. 
+Is it worth it? Have I achieved the goals? **YES**. 
 
 The VM has limited attack surface by limiting the access to it as well as 
 locking it down as much as possible. I can test and validate new versions
@@ -229,10 +231,10 @@ and rollback to the previous version anytime if I need to.
 
 Should I start using Immutable Infrastructure everywhere? _Maybe_...
 
-I would use Immutable Infrastructure to deploy kuberentes minions, Nomad clients 
-or Cockroach nodes, but afther this I will not replace docker containers with
+I would use Immutable Infrastructure to deploy kubernetes minions, Nomad clients 
+or Cockroach nodes, but after this I will not replace docker containers with
 VMs! The main reason is that it is not scaling quickly as when scaling 
-vertically. Running upgrades of a full OS is defenetively way less efficient 
+vertically. Running upgrades of a full OS is definitely way less efficient 
 than simply upgrading to a different docker container. I would use Immutable 
 Infrastructure to deploy Hosts of multi-tenants platforms, so that the services 
 can scale vertically with a scheduler while the hosts can scale horizontally 
@@ -240,9 +242,9 @@ with the cloud provider and reduce downtimes.
 
 While exploring it, I have discovered that some of my goals are actually
 harder without IaC tools. The process _requires_ automation, but after a little 
-the beneifts are clear and I will keep using this to deploy services when 
+the benefits are clear and I will keep using this to deploy services when 
 required but not always. I see SREs and DevOps Engineers having their life 
-simplified by using Immutable Infrastucture on their platforms but not more than
+simplified by using Immutable Infrastructure on their platforms but not more than
 that.
 
 ![Yeah, it was worth it](/posts/202003/mission_accomplished.gif#center)

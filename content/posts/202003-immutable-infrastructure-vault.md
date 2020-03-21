@@ -60,9 +60,11 @@ service/project. I want to explore Immutable Infrastructure to make sure that:
 
 * The Virtual Machine has a reduced attack surface
 * The VM doesn't have more workloads/services (it runs just Vault)
+* I can test the VM before deploying it in production
+* I can rollback quickly to previous versions when needed
 * Humans are not involved for most of the things[^unseal] (so no _human errors_[^human-error] ) 
-* Scaling is easy and automated [^aws-kms]
-
+* ~~Scaling is easy and automated~~ [^aws-kms]
+  
 Using immutable infrastructure brings also other benefits and requires a 
 different mindset compared to "older Operations" methodologies, but for now I 
 will focus only on these benefits as goals for the project.
@@ -219,7 +221,13 @@ policies for GitLab CI/CD public pipeline runners, but every month it can build
 a new Vault AMI automagically.
 
 ## Conclusion
-Is it worth it? **YES**, but not for every project. 
+Is it worth it? Have I acheived the goals? **YES**. 
+
+The VM has limited attack surface by limiting the access to it as well as 
+locking it down as much as possible. I can test and validate new versions
+and rollback to the previous version anytime if I need to.
+
+Should I start using Immutable Infrastructure everywhere? _Maybe_...
 
 I would use Immutable Infrastructure to deploy kuberentes minions, Nomad clients 
 or Cockroach nodes, but afther this I will not replace docker containers with

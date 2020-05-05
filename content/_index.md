@@ -11,6 +11,7 @@ draft: false
     <meta itemprop="name" content="Qm64" />
     <meta itemprop="legalName" content="Qm64 OU" />
     <meta itemprop="logo" content="https://qm64.tech/img/qm64-sqr.png" />
+    <meta itemprop="url" content="https://qm64.tech/" />
     <meta itemprop="location" content="Sepapaja tn 6, Tallinn, Estonia" />
     <meta itemprop="vatID" content="EE101983754" />
     <meta itemprop="description" content="Share experiences of software development" />

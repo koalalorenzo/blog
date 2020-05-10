@@ -17,8 +17,7 @@ thumbnail: /posts/202003/ii.gif
 During the last year I have been curious about Immutable Infrastructure.
 After researching I noticed that I had been applying some of these concepts 
 already to stateless docker containers, and I wanted to make a practical 
-project with it. So I thought about exploring Immutable Infrastructure with 
-[Hashicorp Vault](https://www.vaultproject.io).
+project with it.So I thought about exploring Immutable Infrastructure and use it to deploy [Hashicorp Vault](https://www.vaultproject.io).
 
 ![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
 
@@ -223,11 +222,11 @@ policies for GitLab CI/CD public pipeline runners, but every month it can build
 a new Vault AMI _automagically_.
 
 ## Conclusion
-Is it worth it? Have I achieved the goals? **YES**. 
+Is it worth it? Have I achieved the goals? **YES** 🤔
 
 The VM has limited attack surface by limiting the access to it as well as 
 locking it down as much as possible. I can test and validate new versions
-and rollback to the previous version anytime if I need to.
+and rollback to the previous version anytime if I need to. This is perfect for Vault!
 
 Should I start using Immutable Infrastructure everywhere? _Maybe_...
 

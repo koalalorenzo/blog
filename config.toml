@@ -1,7 +1,7 @@
 baseURL = "https://qm64.tech/"
 languageCode = "en-us"
 title = "Qm64"
-description = "Exploring new way to solve complexity using code and immagination"
+description = "Exploring new way to solve complexity using code and imagination"
 relativeURLs = true
 
 [markup.goldmark.renderer]

@@ -5,14 +5,15 @@ variables:
 
 test:
   script:
-  - make clean build
+  - make clean build -e HUGO_ARGS="--buildFuture --buildDrafts"
   except:
   - master
   artifacts:
+    expose_as: 'Preview'
     paths:
       - public
+      - public/index.html
     expire_in: 1 day
-
 pages:
   script:
   - make clean build

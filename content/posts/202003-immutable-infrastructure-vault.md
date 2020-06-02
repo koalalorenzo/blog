@@ -79,7 +79,7 @@ automated[^aws-kms] ideally with a KMS solution.
 possible to explore a feature that will 
 [automatically unseal by using AWS KMS](https://learn.hashicorp.com/vault/operations/ops-autounseal-aws-kms) 
 (or similar on GPC / Azure) Due to time constraints I am not exploring this 
-feature that is required for autoscaling. In anycase if this was a simpler 
+feature that is required for autoscaling. In any case if this was a simpler 
 project it would have not been a problem.
 
 ## The process
@@ -230,7 +230,7 @@ and rollback to the previous version anytime if I need to. This is perfect for V
 
 Should I start using Immutable Infrastructure everywhere? _Maybe_...
 
-I would use Immutable Infrastructure to deploy kubernetes minions, Nomad clients 
+I would use Immutable Infrastructure to deploy Kubernetes minions, Nomad clients 
 or Cockroach nodes, but after this I will not replace docker containers with
 VMs! The main reason is that it is not scaling quickly as when scaling 
 vertically. Running upgrades of a full OS is definitely way less efficient 

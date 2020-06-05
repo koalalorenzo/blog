@@ -251,6 +251,7 @@ that.
 That said, I think I learned what is really important: prevent humans from doing
 mistakes by automating the hell out of it. 🤪
 
+## Useful links
 If you want to explore more you can read the following articles:
 
 - [What is Mutable vs. Immutable Infrastructure?](https://www.hashicorp.com/resources/what-is-mutable-vs-immutable-infrastructure) by Hashicorp

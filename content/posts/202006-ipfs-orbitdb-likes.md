@@ -21,13 +21,13 @@ any interactive content is required. These extra component are forcing
 people to build an API, host a server, a database or pay for any SaaS 
 product that does that... we could write a blog post about that, but it would
 be too easy! Instead in this article I wanted to challenge myself a little more
-and explore how to make **a decentralised like button**: We will try how it is
+and explore how to make **a decentralized like button**: We will try how it is
 to not be hosting any server or database, and instead use a p2p networks and a
 decentralized database to count the likes
 
 ![Decentralized vs Centralized](/posts/202005/network.png#center)
 
-To achieve that I have been considering just one decentralised technology that 
+To achieve that I have been considering just one decentralized technology that 
 I am very familiar with: **the Interplanetary File System**. This will allow us to
 make a simple HTML widget that works on any modern browser and gets data to show
 from a big and established p2p network.
@@ -53,7 +53,7 @@ Using OrbitDB and IPFS allows us to build a like button that doesn't require a
 Blockchain nor a central server. 
 
 This page is all briefly about how to use IPFS and OrbitDB to create a 
-[decentralised application](https://en.wikipedia.org/wiki/Decentralized_application) 
+[decentralized application](https://en.wikipedia.org/wiki/Decentralized_application) 
 (dApp) as an HTML widget for our websites, to record likes/votes from users.
 
 ## The Goals
@@ -69,7 +69,7 @@ In short the goals of this project are:
 - It should be a _like button_ 
 - It should store data on IPFS/OrbitDB
 - This widget should be able to show changes in real time
-- It should automagically connect to the network
+- It should _automagically_ connect to the network
 - The user/website owner should not care about too much tech details
 
 ## The process
@@ -135,7 +135,7 @@ console.log(db.value) // will log 1
 ```
 
 **That seems simple right**? YES! _Too simple_! 😅 But that is the beauty of it: 
-the database synchronization between peers is done in the backgorund using IPFS
+the database synchronization between peers is done in the background using IPFS
 and OrbitDB instances. 🚀 We can listen to specific events to know when the data
 is replicated too and that is useful to build react components and update the 
 state. 
@@ -185,7 +185,7 @@ solution to replicate the content in the network to ensure that it is alive.
 There are a lot of thing sto consider. The _like button_ is just an example and 
 this conclusion might is based on a side-project that lasted merely 3 months.
 
-So far what we conclude is that implementing a decentralised app (dApps) 
+So far what we conclude is that implementing a decentralized app (dApps) 
 just with IPFS and OrbitDB but without using a blockchain is not enough! _Why?_
 In the current setup anybody could can create a simple script to sends likes
 on pages. Using Ethereum would force users to pay a small fee but will reduce 

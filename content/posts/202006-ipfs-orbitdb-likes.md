@@ -159,8 +159,6 @@ In this gif you can see me setting it up. Then I am copy-pasting the same value
 on my iPhone and pressing the like button there while keeping the original page
 open. 🎉🎉 It works 🎉🎉
 
-The [source code of the project is available here](https://gitlab.com/qm64/dlike).
-
 ## Conclusions
 
 This project is quiet interesting. I was expecting it to be way more difficult
@@ -209,3 +207,11 @@ goals, the infrastructure required needs some tweaking: the dev tools and libs
 are available, but we need major browsers to implement changes for major
 dapps to work without a lot of workaround. I would say that this _like button_
 works, but it is limited by the current state of development.
+
+## Useful links
+If you want to explore more you can read the following articles:
+
+- [Interplanetary File System](https://ipfs.io/) official website
+- [OrbitDB](https://orbitdb.org) official Website
+- Video: [What is IPFS](https://www.youtube.com/watch?v=5Uj6uR3fp-U) by Simply Explained
+- [Getting Started with OrbitDB](https://github.com/orbitdb/orbit-db/blob/master/GUIDE.md)

@@ -10,12 +10,13 @@ MUI is a lightweight CSS framework that follows Google's Material Design guideli
 [![devDependency Status](https://david-dm.org/muicss/mui/dev-status.svg)](https://david-dm.org/muicss/mui?type=dev)
 [![CDNJS](https://img.shields.io/cdnjs/v/muicss.svg)](https://cdnjs.com/libraries/muicss)
 [![Greenkeeper badge](https://badges.greenkeeper.io/muicss/mui.svg)](https://greenkeeper.io/)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/muicss/mui) 
 
 **Use From the CDN:**
 
 ```html
-<link href="//cdn.muicss.com/mui-0.10.1/css/mui.min.css" rel="stylesheet" type="text/css" />
-<script src="//cdn.muicss.com/mui-0.10.1/js/mui.min.js"></script>
+<link href="//cdn.muicss.com/mui-0.10.2/css/mui.min.css" rel="stylesheet" type="text/css" />
+<script src="//cdn.muicss.com/mui-0.10.2/js/mui.min.js"></script>
 ```
 
 Or for development you can use the latest:
@@ -96,6 +97,10 @@ MUI is tested and works in:
    ```
 
    Then visit http://localhost:3000/examples
+
+Alternatively, you can use a pre-configured development environment on GitPod:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
 
 ## Run tests
 

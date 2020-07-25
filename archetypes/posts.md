@@ -20,10 +20,10 @@ Goals:
 * world
 
 ## The process
-What we did to reach teh goal
+What we did to reach the goal
 
 ## Conclusion
-Learnings 
+Learnings
 
 ## Useful links
-Share links here 
+Share links here

@@ -12,7 +12,7 @@ tags:
   - dpkg
   - apt
   - 
-# thumbnail: /posts/202005/network.png
+thumbnail: /posts/202007/debian-pkg-icon.png
 ---
 
 Honestly, I am writing this post feeling a little bit reluctant about it. In a 
@@ -20,6 +20,8 @@ word filled with Containers, PaaS, and SaaS, it seems weird to talk about how we
 can automate the creation of Debian packages and APT repositories. Nonetheless, 
 I still some custom Debian packages for my Raspberry Pi as some projects are not
 packaging them.
+
+![Debian package](/posts/202007/debian-pkg-icon.png#center)
 
 This blog post is about my experiments using GitLab CI/CD pipelines to build 
 packages and publish a Debian Repository.
@@ -59,7 +61,10 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the 
 following structure:
 
+![Debian Source file tree](/posts/202007/source-tree.png#center)
+
 You can access the files here. Those files are defining a few things:
+
 - The changes from one version to another
 - The package details (Name, Version, Maintainer, Architecture, etc.)
 - Files to install (where to decompress them)
@@ -68,26 +73,65 @@ You can access the files here. Those files are defining a few things:
 The command in the Makefile will replace some variables like `${VERSION}` or 
 `${DATE}` and build the package as a whole:
 
+```makefile
+_prepare_ipfs_deb: _unpack_ipfs
+	mkdir -p build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}
+	cp -aR source/ipfs.deb/* build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/
+	chmod +x build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/debian/rules
+	# Updates details of the package
+	sed -i 's/$${VERSION}/${IPFS_PKG_VERSION}/' build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/debian/control
+	sed -i 's/$${DEB_ARCH}/${DEB_ARCH}/' build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/debian/control
+	# Updates the pseudo-changelog
+	sed -i 's/$${VERSION}/${IPFS_PKG_VERSION}/' build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/debian/changelog
+	sed -i 's/$${DATE}/$(shell date -R)/' build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/debian/changelog
+	# Move the source here
+	cp -aR build/source/go-ipfs/${ARCH}/go-ipfs build/deb/${DEB_ARCH}/ipfs-${IPFS_PKG_VERSION}/
+.PHONY: _prepare_ipfs_deb
+```
+
 ## Building the repository
 Now that I have one package (or more than one), I need to build a repository. 
 All the script has to do is move all the `.deb` files in a directory, make the 
 repository, and digitally sign the data.
 
-I am using `apt-ftparchive.` It requires a configuration file similar to this:
+I am using `apt-ftparchive`. It requires a configuration file similar to this:
 
-```
+```ini
+APT::FTPArchive::Release::Origin "Qm64 OU";
+APT::FTPArchive::Release::Label "Qm64 Debian Repository";
+APT::FTPArchive::Release::Suite "stable";
+APT::FTPArchive::Release::Codename "apt";
+APT::FTPArchive::Release::Architectures "noarch amd64 arm64 i386 armhf";
+APT::FTPArchive::Release::Components "main";
+APT::FTPArchive::Release::Description "Qm64 Debian Repository for IPFS";
 ```
 
 Then all I have to do is to instruct the Makefile to use it to build the 
-database, compress it in different formats:
+database, compress it in different formats. Note that it will analyze 
 
+```makefile
+repository_apt:
+	cd dist; \
+	apt-ftparchive -c ../Releases.conf packages apt > apt/Packages ;\
+	cat apt/Packages | gzip -9c > apt/Packages.gz ;\
+	bzip2 -kf apt/Packages ; \
+	apt-ftparchive -c ../Releases.conf release apt > apt/Release
+.PHONY: repository_apt
 ```
-```
+
 All it is left to do is instruct the Pipeline to run the commands, then upload 
-the repository (saved in the `pages` directory) and publish the files to GitLab 
-Pages:
+the repository (use the `pages` job) and publish the files to GitLab Pages:
 
-```
+```yaml
+pages:
+  stage: release
+  script:
+    - make deb_ipfs_amd64 collect_deb_packages repository_apt
+    - mv ./dist ./public
+  artifacts:
+    paths:
+    - public
+    expire_in: 6 weeks
 ```
 
 I previously configured GitLab Pages, but if you are curious, you can follow 

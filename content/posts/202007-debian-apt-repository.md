@@ -1,6 +1,6 @@
 ---
 title: "Building a Debian Repository - DevOps Style"
-date: 2020-26-01T20:41:28+01:00
+date: 2020-07-26T20:41:28+01:00
 draft: false
 authors:
   - Lorenzo Setale
@@ -12,7 +12,7 @@ tags:
   - dpkg
   - apt
   - 
-thumbnail: /posts/202005/network.png
+# thumbnail: /posts/202005/network.png
 ---
 
 Honestly, I am writing this post feeling a little bit reluctant about it. In a 

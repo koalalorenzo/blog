@@ -17,9 +17,20 @@ article p strong {
   font-weight: 500;
 }
 
+// Fixes numbers and bullet points not being readable on small screens
+$break-small: 600px;
+$break-large: 1200px;
 
 article ul {
-  margin-left: 2.5rem;
+  @media screen and (max-width: $break-small) {
+    margin-left: 2.5rem;
+  }
+}
+
+article ol {
+  @media screen and (max-width: $break-small) {
+    margin-left: 2.5rem;
+  }
 }
 
 article li ul {

@@ -6,9 +6,21 @@ article {
 
 article p {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.7em;
+}
+
+article h1 {
+  margin-top: 4rem;
+}
+
+article h2 {
+  margin-top: 3.5rem;
+}
+
+article h3 {
+  margin-top: 3rem;
 }
 
 article p strong {
@@ -46,6 +58,12 @@ article p img {
   margin: 2rem auto;
 }
 
+article img[src$='#smallSquare']
+{
+  max-width: 300px;
+  max-height: 300px;
+}
+
 article img[src$='#small']
 {
   max-width: 300px;
@@ -56,6 +74,11 @@ article img[src$='#big']
 {
   max-width: 750px;
   max-height: 600px;
+}
+article img[src$='#bigSquare']
+{
+  max-width: 750px;
+  max-height: 750px;
 }
 
 // Smaller Article in list

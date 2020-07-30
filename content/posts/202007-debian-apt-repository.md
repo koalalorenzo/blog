@@ -1,5 +1,5 @@
 ---
-title: "Using a GitLab to maintain a custom Debian Repository"
+title: "Using a GitLab to build a Debian Repository"
 date: 2020-07-26T20:41:28+01:00
 draft: false
 authors:
@@ -25,9 +25,9 @@ Nonetheless, even if this appears to be a forgotten step for operations, some
 projects are not distributed over Debian packages, and I need them for my
 Raspberry Pi!
 
-![Debian package](/posts/202007/debian-pkg-icon.png#small)
+![Debian package](/posts/202007/debian-pkg-icon.png#smallSquare)
 
-# A little bit about distributing Debian packages
+## A little bit about distributing Debian packages
 
 [Debian packages](https://en.wikipedia.org/wiki/Deb_%28file_format%29)
 (and [APT repositories](https://en.wikipedia.org/wiki/APT_(software)) are useful
@@ -43,7 +43,7 @@ software is updated every day! I think nobody likes this process as it is not
 fun as writing code! So what if I write some code to do that for me and automate
 the building of a repository?
 
-# What do I want to do?
+## What do I want to do?
 The goals for this project are:
 
 1. Automate the building of the packages
@@ -51,14 +51,14 @@ The goals for this project are:
 3. Use the GitLab CI/CD pipeline to repeat the process **periodically**.
 4. Use GitLab Pages to host the static website with the repository.
 
-# Let's do it!
+## Let's do it!
 
 In this post,  I will pack [IPFS Go binaries](https://dist.ipfs.io/#go-ipfs) in
 a Debian package. Then  I will distribute this package in a repository.
 This can be applied to a set of other projects that are only publishing binaries
 and no package.
 
-## Building a .deb file
+### Building a .deb file
 Build a Debian package is a complex process, but I can automate that in
 different ways. There are various articles/guides that you can find talking
 about this. Since I use GitLab CI/CD pipelines, I use an Ubuntu docker container
@@ -68,7 +68,7 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the
 following structure:
 
-![Debian Source file tree](/posts/202007/source-tree.png#center)
+![Debian Source file tree](/posts/202007/source-tree.png#bigSquare)
 
 You can access the files here. Those files are defining a few things:
 
@@ -96,7 +96,7 @@ _prepare_ipfs_deb: _unpack_ipfs
 .PHONY: _prepare_ipfs_deb
 ```
 
-## Building the repository
+### Building the repository
 Now that I have one package (or more than one), I need to build a repository.
 All the script has to do is move all the `.deb` files in a directory, make the
 repository, and digitally sign the data.
@@ -154,7 +154,7 @@ periodically, so that my registry will build the latest package. This
 step is very easy but it is done on the website. I found this
 [documentation here](https://gitlab.com/help/ci/pipelines/schedules) very useful.
 
-# Conclusions
+## Conclusions
 Building automatically packages from static binaries was fun as it "removes"
 a tedious process from my daily chores 😉. Most of the PaaS and SaaS solutions
 that we use to build and distribute software are moving me away from the "Ops"

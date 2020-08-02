@@ -11,8 +11,6 @@ draft: false
 <div class="mui-container">
   <h1>Contact us</h1>
   <ul>
-    <li><a href="https://t.me/qm64updates">Telegram Channel</a></li>
-    <li><a href="https://t.me/Qm64chat">Telegram Group Chat</a></li>
     <li><a href="https://mastodon.social/@qm64">Mastodon Account</a></li>
     <li><a href="https://gitlab.com/Qm64/blog/-/boards">GitLab Board</a></li>
     <li><a href="https://gitlab.com/Qm64">GitLab Account</a></li>

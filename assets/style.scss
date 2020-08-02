@@ -37,6 +37,7 @@ $material-icons-font-path: 'fonts/';
 @import 'bower_components/material-icons/iconfont/material-icons.scss';
 
 // import custom stuff;
+$screen-break-small: 600px;
 @import "assets/sass/basic.scss";
 @import "assets/sass/contact.scss";
 @import "assets/sass/home.scss";

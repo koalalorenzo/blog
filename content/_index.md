@@ -24,9 +24,9 @@ draft: false
                         Hello! <br/>
                         My name is <a href="https://setale.me/">Lorenzo Setale</a> 
                         and Qm64 is my space to share the experiences of 
-                        developing software and exploring new tools and methods 
-                        with my friends. Check our <a href="https://gitlab.com/Qm64/blog/-/boards">board</a> 
-                        to know what we are working on.
+                        developing software and exploring new tools and methods. 
+                        Check the <a href="https://gitlab.com/Qm64/blog/-/boards">board</a> 
+                        to know what are the next posts or suggest one!
                     </p>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 ---
 title: "Using a GitLab to build a Debian Repository"
-date: 2020-07-26T20:41:28+01:00
+date: 2020-08-02T22:40:28+01:00
 draft: false
 authors:
   - Lorenzo Setale
@@ -15,7 +15,7 @@ tags:
   - devops
   - sre
   - pipeline
-thumbnail: /posts/202007/repo.gif
+thumbnail: /posts/202008/repo.gif
 ---
 
 Honestly, I had the feeling that a blog post about distributing packages is
@@ -25,7 +25,7 @@ Nonetheless, even if this appears to be a forgotten step for operations, some
 projects are not distributed over Debian packages, and I need them for my
 Raspberry Pi!
 
-![Debian package](/posts/202007/debian-pkg-icon.png#smallSquare)
+![Debian package](/posts/202008/debian-pkg-icon.png#smallSquare)
 
 ## A little bit about distributing Debian packages
 
@@ -35,7 +35,7 @@ for distributing apps and keeping Debian-based Operative Systems up to date.
 Adding software via apt install is cleaner than download binaries or using ad-hoc
 processes to manage versions.
 
-![Debian package](/posts/202007/repo.gif#center)
+![Debian package](/posts/202008/repo.gif#center)
 
 Not using a Debian repository is understandable: somebody has to maintain it and
 keep it updated. That takes time, and it is not always easy to do: open source
@@ -68,7 +68,7 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the
 following structure:
 
-![Debian Source file tree](/posts/202007/source-tree.png#bigSquare)
+![Debian Source file tree](/posts/202008/source-tree.png#bigSquare)
 
 You can have a better look [the files here](https://gitlab.com/Qm64/apt/-/tree/master/source).
 Those files are defining a lot of things, including:
@@ -165,7 +165,7 @@ distribute my packages... or I could have just waited
 [GitLab to work on the Debian Repository](https://gitlab.com/gitlab-org/gitlab/-/issues/5835)
 implementation... but I wanted to have fun and complicate my life! 🤪
 
-![Make things so complicated](/posts/202007/make-things-complicated.gif)
+![Make things so complicated](/posts/202008/make-things-complicated.gif)
 
 Building automatically packages from static binaries is useful as it "removes"
 a tedious process from my daily chores 😉. Most of the PaaS and SaaS solutions

@@ -1,2 +1,13 @@
 <script src="/js/mui.min.js" async integrity="sha384-5fukNx4ueWppZffMr5jjEvVI1+qbAERwHcObzwRZhBq1c6zeOEV6gecG8Zu52lle"></script>
 <script src="/js/instantpage.min.js" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
+<!-- switch the avatar every 1.5 secs to a funny one -->
+<script type="text/javascript">
+  function random_avatar() {
+    var max = 5;
+    var min = 1;
+    var rand = Math.floor(Math.random()*(max-min+1)+min);
+    document.getElementById('about_author_avatar').setAttribute("src", "https://setale.me/img/avatar-"+rand+".jpg")
+  }
+  if(document.getElementById('about_author_avatar') !== null) setInterval(random_avatar, 1450);
+</script>

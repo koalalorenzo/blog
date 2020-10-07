@@ -25,9 +25,11 @@ $mui-accent-color:        rgba($accent-color, .90);
 $mui-accent-color-dark:   rgba($accent-color, .90);
 $mui-accent-color-light:  rgba($accent-color, .90);
 
-$mui-body-bg-color: #CCCCCC;
+$mui-body-bg-color: #eeeeec;
 $mui-base-font-size: 16px;
 $mui-base-font-family: 'Made Tommy Regular';
+
+$h1_margin: $mui-base-font-size*3;
 
 // import MUI SASS
 @import "bower_components/mui/src/sass/mui";
@@ -39,7 +41,10 @@ $material-icons-font-path: 'fonts/';
 // import custom stuff;
 $screen-break-small: 600px;
 @import "assets/sass/basic.scss";
+@import "assets/sass/aside.scss";
 @import "assets/sass/contact.scss";
 @import "assets/sass/home.scss";
 @import "assets/sass/sections.scss";
 @import "assets/sass/articles.scss";
+@import "assets/sass/avatar.scss";
+@import "assets/sass/shorts.scss";

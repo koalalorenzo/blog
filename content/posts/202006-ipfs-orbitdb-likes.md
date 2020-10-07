@@ -19,11 +19,12 @@ thumbnail: /posts/202005/network.png
 All static websites meet a hard limit when a comment form, “like” buttons, or
 any interactive content is required. These extra components force people to
 build an API, host a server, a database or pay for any SaaS product that does
-that... we could write a blog post about that, but it would be too easy! Instead
-in this article, I wanted to challenge myself a little more and explore how to
-make a **decentralized like button**: We will try how it is to not be hosting
-any server or database, and instead use a p2p networks and a decentralized
-database to count the likes
+that... we could write a blog post about that, but it would be too easy! 🤣 
+Instead in this article, I wanted to challenge myself a little more and explore 
+how to make a **decentralized like button**: We will try how it is to not be 
+hosting any server or database, and instead use a p2p networks and a 
+decentralized database to count the likes. 👍
+<!--more-->
 
 ![Decentralized vs Centralized](/posts/202005/network.png#center)
 

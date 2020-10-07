@@ -19,9 +19,9 @@
         </div>
         <div>
           <p>
-            {{ .Summary | truncate 350 }} <a href="{{ .Permalink | relURL }}">Read More</a>
-
+            {{ .Summary }}
           </p>
+          <a class="mui-btn mui-btn--primary" href="{{ .Permalink | relURL }}">Continue reading</a>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ tags:
   - packer
   - infrastructure as code
   - terraform
+  - gitlab
 thumbnail: /posts/202003/ii.gif
 ---
 
@@ -18,7 +19,8 @@ During the last year, I have been curious about Immutable Infrastructure.
 After researching, I noticed that I had been applying some of these concepts
 already to stateless Docker containers, and I wanted to do a practical
 project with it. So I thought about exploring Immutable Infrastructure and use
-it to deploy [Hashicorp Vault](https://www.vaultproject.io).
+it to deploy [Hashicorp Vault](https://www.vaultproject.io). 
+<!--more-->
 
 ![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
 

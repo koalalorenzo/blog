@@ -19,15 +19,21 @@ draft: false
         <div class="mui--text-center mui-container set-width">
             <h1>What is Qm64?</h1>
             <div class="mui-row">
-                <div class="mui-col-xs-12 mui-col-sm-12 mui-col-md-6 mui-col-md-offset-3 mui--text-left">
+                <div class="mui-col-xs-12 mui-col-sm-12 mui-col-md-2 mui-col-md-offset-3 mui--text-right">
+                    <a href="https://setale.me/">
+                        <img id="about_author_avatar" src="https://setale.me/avatar.jpg">
+                    </a>
+                </div>
+                <div class="mui-col-xs-12 mui-col-sm-12 mui-col-md-5 mui--text-left">
                     <p>
                         Hello! <br/>
                         My name is <a href="https://setale.me/">Lorenzo Setale</a> 
                         and Qm64 is my space to share the experiences of 
                         developing software and exploring new tools and methods. 
                         Check the <a href="https://gitlab.com/Qm64/blog/-/boards">board</a> 
-                        to know what are the next posts or suggest one!
+                        to know what I am working right now!
                     </p>
+                    <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a>
                 </div>
             </div>
         </div>

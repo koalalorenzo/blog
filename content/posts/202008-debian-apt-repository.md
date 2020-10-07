@@ -15,15 +15,17 @@ tags:
   - devops
   - sre
   - pipeline
+  - ipfs
 thumbnail: /posts/202008/repo.gif
 ---
 
-Honestly, I had the feeling that a blog post about distributing packages is
-needed. In a word filled with Containers, PaaS, and SaaS, it seems weird to talk
+I have the feeling that a blog post about distributing packages is needed. 😮
+In a word filled with Containers, PaaS, and SaaS, it seems weird to talk
 about how we can automate the creation of Debian packages and APT repositories.
 Nonetheless, even if this appears to be a forgotten step for operations, some
-projects are not distributed over Debian packages, and I need them for my
-Raspberry Pi!
+projects are not distributed over Debian packages, 👷‍♂️ and I need them for my
+Raspberry Pi! 😜 
+<!--more-->
 
 ![Debian package](/posts/202008/debian-pkg-icon.png#smallSquare)
 

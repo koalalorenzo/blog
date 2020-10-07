@@ -4,6 +4,8 @@ title = "Qm64"
 description = "Exploring new way to solve complexity using code and imagination"
 relativeURLs = true
 
+disqusShortname = "qm64"
+
 [markup.goldmark.renderer]
 unsafe = true
 

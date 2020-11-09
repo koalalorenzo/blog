@@ -6,9 +6,12 @@
             </h1>
         </div>
         <div class="mui--text-left" id="article_shorts">
-            {{ range .Data.Pages }}
+            {{ range .Paginator.Pages }}
                 {{ .Render "page-short" }}
             {{ end }}
+        </div>
+        <div class="mui--text-center">
+            {{ partial "paginator.html" . }}
         </div>
     </div>
 {{ end }}

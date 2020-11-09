@@ -109,3 +109,22 @@ article {
   }
 }
 
+ul.pagination {
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+
+  .page-item {
+    margin-left: 1rem;
+    display: block;
+    margin: auto;
+  } 
+
+  .page-item.active {
+    a {
+      color: $accent-color;
+    }
+  }
+}

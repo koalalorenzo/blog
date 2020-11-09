@@ -1,5 +1,6 @@
 .EXPORT_ALL_VARIABLES:
 
+DATE ?= $(shell date +"%Y%m")
 HUGO_ARGS ?=
 
 clean_%:
@@ -16,3 +17,7 @@ run: clean
 build: clean
 	hugo ${HUGO_ARGS}
 .PHONY: build
+
+new_post:
+	hugo new posts/${DATE}.md
+.PHONY: new_post

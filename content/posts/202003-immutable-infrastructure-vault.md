@@ -5,7 +5,8 @@ draft: false
 authors:
   - Lorenzo Setale
 tags:
-  - hashicorp vault
+  - hashicorp
+  - vault
   - infrastructure
   - immutable infrastructure
   - packer

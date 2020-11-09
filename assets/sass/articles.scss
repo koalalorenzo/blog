@@ -39,22 +39,17 @@ article {
         margin: 2rem auto;
     }
 
-    img[src$='#smallSquare'] {
+    img[src*='#smallSquare'] {
         max-width: 300px;
         max-height: 300px;
     }
 
-    img[src$='#small'] {
-        max-width: 300px;
-        max-height: 250px;
-    }
-
-    img[src$='#big'] {
+    img[src*='#big'] {
         max-width: 750px;
         max-height: 600px;
     }
 
-    img[src$='#bigSquare'] {
+    img[src*='#bigSquare'] {
         max-width: 750px;
         max-height: 750px;
     }

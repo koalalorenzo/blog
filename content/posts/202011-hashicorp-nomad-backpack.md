@@ -1,5 +1,5 @@
 ---
-title: "202011"
+title: "Backpack: hashicorp nomad jobs packages"
 date: 2020-11-12T19:12:20+01:00
 draft: false
 authors:
@@ -14,8 +14,11 @@ tags:
   - development
   - devops
   - sre
+thumbnail: /posts/202011/gopherswrench.jpg
 ---
-a
+
+<!--more-->
+![Go Gophers at work](/posts/202011/gopherswrench.jpg#center)
 
 ## A little about 202011
 Description of the tech

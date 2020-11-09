@@ -19,5 +19,7 @@ build: clean
 .PHONY: build
 
 new_post:
-	hugo new posts/${DATE}.md
+	-hugo new posts/${DATE}.md
+	mkdir -p static/posts/${DATE}/
+	touch static/posts/${DATE}/.gitkeep
 .PHONY: new_post

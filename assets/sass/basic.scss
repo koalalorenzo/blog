@@ -17,6 +17,15 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  border: 4px black solid;
+  border-radius: 45px 0% 0% 45px;
+}
+
+img[src*='#noborder'] {
+  border: 0px;
+  border-radius: 0;
+}
 
 h1, h2, h3 {
   font-family: 'Made Tommy Medium';

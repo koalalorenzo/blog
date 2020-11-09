@@ -1,0 +1,19 @@
+{{ define "main" }}
+    <div class="mui-container">
+        <div class="heading">
+            <h1 class="title">
+                All the tags used in this blog
+            </h1>
+            <p>
+              Interested in a specific topic or tag? Discover all the posts 
+              about and projects about it from here! 😉 
+            </p>
+        </div>
+        <div class="mui--text-left" id="article_shorts">
+          {{ range .Data.Terms.ByCount }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+          {{ end }}
+        </div>
+    </div>
+{{ end }}
+      

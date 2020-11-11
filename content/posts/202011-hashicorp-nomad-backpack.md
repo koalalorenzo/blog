@@ -112,8 +112,9 @@ implement the packages and repository with [IPFS](https://ipfs.io/) in mind to
 avoid packages disappearing. I wish Backpack was smarter and capable of reading 
 the cluster configuration to pick up automatically things like the job drive to 
 use for the template, or like the service tags to implement to configure 
-traefik or fabio-lb. I would love to pack multiple containers, apps, and tools,
-solve issues like dependency management and more... 
+[traefik](https://learn.hashicorp.com/tutorials/nomad/load-balancing-traefik) 
+or [fabio-lb](https://fabiolb.net). I would love to pack multiple containers, 
+apps, and tools, solve issues like dependency management and more... 
 
 ![I will do that later](/posts/202011/karenwalker-later.gif#smallSquare)
 

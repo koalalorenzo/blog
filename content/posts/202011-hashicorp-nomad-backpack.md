@@ -1,5 +1,5 @@
 ---
-title: "Backpack: hashicorp nomad jobs packages"
+title: "Backpack: Hashicorp Nomad packages"
 date: 2020-11-12T19:12:20+01:00
 draft: false
 authors:
@@ -17,9 +17,8 @@ tags:
 thumbnail: /posts/202011/gopherswrench.jpg
 ---
 I recently decided to run at home a [Hashicorp Nomad](https://www.nomadproject.io) 
-cluster with my Raspberry Pi. When I was using, I found myself writing a 
-significant amount of HCL files than I expected, and I have been missing Helm's 
-simplicity.
+cluster on my 3 Raspberry Pi. When I was using it, I found myself writing a 
+significant amount of HCL files, and I have been missing Helm's simplicity.
 
 I have been working with Kubernetes for a while now. During this time, I had to 
 install, configure, and distribute some apps using [Helm](https://helm.sh). 
@@ -30,9 +29,9 @@ Nomad Jobs's definitions in HCL?
 <!--more-->
 ![Go Gophers at work](/posts/202011/gopherswrench.jpg#center)
 
-So I did it for pure fun, and during my spare time: I made Nomad's Backpack! 😀 
-I decided to keep things as similar as possible to Helm but improve on it too,
-all based on my personal experience.
+So I did it for pure fun, and during my spare time: I made **Backpack** for Nomad! 
+😀 I decided to keep things as similar as possible to Helm but improve on it 
+too, all based on my personal experience.
 
 ```bash
 # Please check the README.md as this might be outdated! 😉

@@ -10,6 +10,8 @@ thumbnail: /posts/202003/ii.gif
 ---
 Introduction
 
+<!--more-->
+
 ## A little about {{ replace .Name "-" " " | title }}
 Description of the tech
 

@@ -7,7 +7,7 @@ draft: false
 
 
 
-<div id="homepage" itemscope itemtype="https://schema.org/Organization">
+<div class="homepage" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="Qm64" />
     <meta itemprop="legalName" content="Qm64 OU" />
     <meta itemprop="logo" content="https://qm64.tech/img/qm64-sqr.png" />

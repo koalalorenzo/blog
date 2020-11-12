@@ -7,13 +7,13 @@ authors:
 tags:
   - IPFS
   - OrbitDB
-  - serverless
   - P2P
   - decentralized
   - javascript
   - react
   - database
   - html
+  - projects
 thumbnail: /posts/202005/network.png
 ---
 All static websites meet a hard limit when a comment form, “like” buttons, or

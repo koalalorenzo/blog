@@ -5,13 +5,16 @@ draft: false
 authors:
   - Lorenzo Setale
 tags:
-  - hashicorp vault
+  - hashicorp
+  - vault
   - infrastructure
   - immutable infrastructure
   - packer
   - infrastructure as code
   - terraform
   - gitlab
+  - devops
+  - SRE
 thumbnail: /posts/202003/ii.gif
 ---
 
@@ -22,7 +25,7 @@ project with it. So I thought about exploring Immutable Infrastructure and use
 it to deploy [Hashicorp Vault](https://www.vaultproject.io). 
 <!--more-->
 
-![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center)
+![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center#noborder)
 
 I have shared a [git repository](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra)
 with some explanation and examples. It is written with Qm64's needs in mind

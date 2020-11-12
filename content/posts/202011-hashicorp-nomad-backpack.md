@@ -13,18 +13,19 @@ tags:
   - golang
   - development
   - devops
-  - sre
+  - SRE
+  - projects
 thumbnail: /posts/202011/gopherswrench.jpg
 ---
 I recently decided to replace my k8s home cluster with a **Hashicorp Nomad**
 cluster on my 3 Raspberry Pis. When I was using it, I found myself writing a
 significant amount of HCL files, and I have been missing Helm's simplicity.
 
-I have been working with Kubernetes for a while now. During this time, I had to
-install, configure, and distribute some apps using Helm. For me, it is a
-de-facto standard when it comes to deploy and maintain apps that otherwise would
-require a way bigger list of YAML files. Can we do the same for Nomad Jobs's
-definitions?
+As an SRE, I have been working with Kubernetes for a while now. During this time, 
+I had to install, configure, and distribute some apps using Helm. For me, it is 
+a de-facto standard when it comes to deploy and maintain apps that otherwise 
+would require a way bigger list of YAML files. Can we do the same for Nomad 
+Jobs's definitions?
 
 <!--more-->
 ![Go Gophers at work](/posts/202011/gopherswrench.jpg#center)

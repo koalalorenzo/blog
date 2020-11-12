@@ -13,6 +13,8 @@ tags:
   - infrastructure as code
   - terraform
   - gitlab
+  - devops
+  - SRE
 thumbnail: /posts/202003/ii.gif
 ---
 

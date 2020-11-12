@@ -13,7 +13,7 @@ tags:
   - apt
   - gitlab
   - devops
-  - sre
+  - SRE
   - pipeline
   - ipfs
 thumbnail: /posts/202008/repo.gif

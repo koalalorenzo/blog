@@ -21,10 +21,10 @@ I recently decided to replace my k8s home cluster with a **Hashicorp Nomad**
 cluster on my 3 Raspberry Pis. When I was using it, I found myself writing a
 significant amount of HCL files, and I have been missing Helm's simplicity.
 
-As an SRE, I have been working with Kubernetes for a while now. During this time, 
-I had to install, configure, and distribute some apps using Helm. For me, it is 
-a de-facto standard when it comes to deploy and maintain apps that otherwise 
-would require a way bigger list of YAML files. Can we do the same for Nomad 
+As an SRE, I have been working with Kubernetes for a while now. During this time,
+I had to install, configure, and distribute some apps using Helm. For me, it is
+a de-facto standard when it comes to deploy and maintain apps that otherwise
+would require a way bigger list of YAML files. Can we do the same for Nomad
 Jobs's definitions?
 
 <!--more-->
@@ -47,10 +47,12 @@ _Hint_: I left some _TL;DR_ in the [README.md](https://gitlab.com/Qm64/backpack/
 to quick start Nomad and test out backpack! 😉 Also note, that this article
 is written on version 0.1.0... things might change.
 
-## A Backpack is like a chart
-I am lazy 😅 therefore, I don't want to learn a new language: I started working
-around something similar to what I am used to so that it would be easy to
-understand and use. For example, the things that are I kept similar are:
+## Backpack is like Helm
+When I started writing the code of Backpack, I had to keep in mind that this is
+for myself or people like me... I am lazy 😅 therefore, I don't want to learn a
+new templating system: I would find annoying to have to learn a new way when I
+have spent the past 5 years writing Helm charts! Instead, I decided to keep some
+things _similar_:
 
 * Backpack Uses the same **Go templates** and extra functions[^templates]
 * The default configuration/values is a **YAML** file[^format]
@@ -58,7 +60,7 @@ understand and use. For example, the things that are I kept similar are:
 * It is easy to create, test, and deploy new packs[^binhelp]
 
 [^templates]: I am using go templates with [Sprig](https://github.com/Masterminds/sprig)
-  as Helm.
+  as Helm charts.
 
 [^format]: YAML might not be the most loved format, I do believe I can adjust
   the code to support multiple human-readable formats 🤔

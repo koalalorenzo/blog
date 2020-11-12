@@ -1,5 +1,5 @@
 ---
-title: "Backpack: Hashicorp Nomad packages"
+title: "Backpack: helm charts but for Hashicorp Nomad"
 date: 2020-11-12T19:12:20+01:00
 draft: false
 authors:

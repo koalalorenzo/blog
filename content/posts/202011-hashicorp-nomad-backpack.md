@@ -113,14 +113,19 @@ container or a chroot-ed binary[^jobdriver].
   backpack to know what drivers are supported!
 
 ```bash
-# This is an example to use exec (chroot)
-echo "driver: exec" > values.yaml
-backpack run https://backpack.qm64.tech/examples/redis-6.0.0.backpack -f values.yaml
-
-# Switch to use Docker
+# Deploy FabioLB using Docker driver for Nomad
 echo "driver: docker" > values.yaml
-backpack run https://backpack.qm64.tech/examples/redis-6.0.0.backpack -f values.yaml
+backpack run https://backpack.qm64.tech/examples/fabiolb-1.5.14.backpack -v values.yaml
+# Now Nomad will download the right docker image and start Fabio from there:
+nomad ui fabiolb
+
+# Switch to raw_exec (use exec for chroot, check driver docs)
+echo "driver: raw_exec" > values.yaml
+backpack run https://backpack.qm64.tech/examples/fabiolb-1.5.14.backpack -v values.yaml
+# Now Nomad will download the right binaries (CPU and Platform) and start Fabio:
+nomad ui fabiolb
 ```
+
 
 ## Future plans for the project
 

@@ -57,6 +57,7 @@ things _similar_:
 * Backpack Uses the same **Go templates** and extra functions[^templates]
 * The default configuration/values is a **YAML** file[^format]
 * All done with a single Go binary
+* Multiple workloads can be packed together in a _Pack_[^equivalent]
 * It is easy to create, test, and deploy new packs[^binhelp]
 
 [^templates]: I am using go templates with [Sprig](https://github.com/Masterminds/sprig)
@@ -64,6 +65,9 @@ things _similar_:
 
 [^format]: YAML might not be the most loved format, I do believe I can adjust
   the code to support multiple human-readable formats 🤔
+
+[^equivalent]: a _Pack_ is the equivalent of an "Helm Chart", open for suggestion
+  if the name is not following the travelling theme 😜 
 
 [^binhelp]: I think the core is to make it easy: `backpack help` might do the
   trick!
@@ -104,13 +108,18 @@ Another feature that I wanted to improve on is that Helm chart focuses mostly on
 Kubernetes as a Docker-first platform. In Hashicorp Nomad, this is slightly
 different.
 [A Job doesn't have to be necessarily a docker container](https://www.nomadproject.io/docs/drivers)!
-It can be a binary downloaded on the fly with the architecture. An app that
-would support this is redis: you can select the Job driver to be a docker
-container or a chroot-ed binary[^jobdriver].
+It can be a binary downloaded on the fly[^nomadbinary]. An app that
+would support this is [FabioLB](http://fabiolb.net/): you can select the Job 
+driver to be a docker container or a chroot-ed binary[^jobdriver]. I already
+wrote a pack for it! 😉
 
 [^jobdriver]: This is still a work-in-progress feature. I just need to manually
-  implement it in every template for now. Please check the documentation of the
-  backpack to know what drivers are supported!
+  implement it in every template for now. Please check the documentation of 
+  the pack to know what drivers are supported!
+
+[^nomadbinary]: Nomad can dowload the right binaries, with the right CPU 
+  architecture (ex: amd64, armhf, arm64...) of the machine and the right OS 
+  (macOS, Linux...). All is done with variables: pure magic 😍
 
 ```bash
 # Deploy FabioLB using Docker driver for Nomad

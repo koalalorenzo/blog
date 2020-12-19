@@ -7,7 +7,7 @@ test:
   script:
   - make clean build -e HUGO_ARGS="--buildFuture --buildDrafts"
   except:
-  - master
+  - main
   artifacts:
     expose_as: 'Preview'
     paths:
@@ -21,4 +21,4 @@ pages:
     paths:
     - public
   only:
-  - master
+  - main

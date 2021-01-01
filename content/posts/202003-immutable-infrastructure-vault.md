@@ -2,9 +2,8 @@
 title: "Exploring Immutable Infrastructure with Vault"
 date: 2020-03-21T13:41:28+01:00
 draft: false
-authors:
-  - Lorenzo Setale
 tags:
+  - Qm64
   - hashicorp
   - vault
   - infrastructure
@@ -16,6 +15,8 @@ tags:
   - devops
   - SRE
 thumbnail: /posts/202003/ii.gif
+aliases: 
+  - /posts/202003-immutable-infrastructure-vault
 ---
 
 During the last year, I have been curious about Immutable Infrastructure.

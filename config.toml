@@ -1,7 +1,7 @@
-baseURL = "https://qm64.tech/"
+baseURL = "https://blog.setale.me/"
 languageCode = "en-us"
-title = "Qm64"
-description = "Exploring new way to solve complexity using code and imagination"
+title = "Lorenzo Setale's Blog"
+description = "My personal blog"
 relativeURLs = true
 
 disqusShortname = "qm64"
@@ -12,3 +12,9 @@ unsafe = true
 [taxonomies]
   author = "authors"
   tag = "tags"
+
+## Changes to import content from jekyll
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+disablePathToLower = true

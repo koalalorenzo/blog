@@ -6,10 +6,9 @@
       <meta itemprop="url" content="{{ $.Page.Permalink }}"/>
       <meta name="description" content="{{ .Content | truncate 250 }}" />
       <meta name="keywords" content="{{ delimit .Params.tags "," }}" />
-
-      <meta name="author" content="{{ delimit .Params.authors ", " }}" />
-      <meta name="copyright" content="{{ .Date.Format "2006" }} Qm64 OU" />
-      <meta itemprop="copyrightHolder" url="https://qm64.tech/"/>
+      <meta name="author" content="Lorenzo Setale" />
+      <meta name="copyright" content="{{ .Date.Format "2006" }} Lorenzo Setale" />
+      <meta itemprop="copyrightHolder" url="https://setale.me/"/>
 
       <!-- For Facebook -->
       <meta property="og:title" content="{{ .Title }}" />

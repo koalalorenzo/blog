@@ -1,6 +1,6 @@
 ---
-description: "Qm64 OU - Software Development and experiments"
-keywords: "qm64,development,software,opensource,ipfs,application,cloud,blockchain,go,devops"
+description: "Lorenzo Setale blog"
+keywords: "development,software,opensource,ipfs,application,cloud,blockchain,go,devops"
 date: 2020-03-01T16:37:00+05:30
 draft: false
 aliases:

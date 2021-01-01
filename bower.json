@@ -1,12 +1,12 @@
 {
-  "name": "qm64-website",
+  "name": "blog",
   "authors": [
     "Lorenzo Setale <lorenzo@setale.me>"
   ],
-  "description": "Website qm64.tech",
+  "description": "Website blog.setale.me",
   "main": "",
   "license": "All Rights Reserved",
-  "homepage": "https://qm64.tech",
+  "homepage": "https://blog.setale.me",
   "private": true,
   "ignore": [
     "**/.*",

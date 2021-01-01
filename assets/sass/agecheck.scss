@@ -1,0 +1,15 @@
+.agecheck {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+
+  top: 0;
+  margin: 0 !important;
+  padding: $h1_margin;
+
+  background-color: $mui-body-bg-color;
+  color: $mui-primary-color-dark;
+
+  h2 {
+    margin: 0
+  }
+}

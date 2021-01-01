@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 <div class="mui-container">
   <div class="mui-row">
     <article class="mui-col-md-8" itemscope itemtype="https://schema.org/Article">
@@ -31,11 +32,13 @@
           <h1 class="title" itemprop="headline">
               {{ .Title }}
           </h1>
+          {{ partial "agecheck.html" . }}
           <p>
             On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time> 
           </p>
           <div itemprop="articleBody">{{ .Content }}</div>
 
+          {{ partial "agecheck.html" . }}
           {{ template "_internal/disqus.html" . }}
 
       </div>

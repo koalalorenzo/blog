@@ -37,7 +37,9 @@ aliases:
             <p class="mui--text-center">
                 In this blog you will find some posts marked with the 
                 <a href="/tags/project/">project tag</a>. These are results of 
-                projects and are following specific rules:
+                projects and are following specific rules:<br/>
+                <br/>
+                <br/>
             </p>
             <div class="mui-row">
                 <div class="mui-col-xs-12 mui-col-sm-6 mui-col-md-3">

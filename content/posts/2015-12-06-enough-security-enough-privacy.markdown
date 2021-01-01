@@ -17,17 +17,16 @@ tags:
 - security
 - smart contracts
 - ethereum
+thumbnail: /images/2015/8334340659_72e0f734d8_b.jpg
 ---
 
-During the last year my interests verted to **security** and **privacy**. I had time to explore and have fun with encryption and some protocols to strength the security and feel more _safe_ from the bad guys, the annoying business, the stealing banks and the spying governments.
+During the last year my interests verted to **security** and **privacy**. I had time to explore and have fun with encryption and some protocols to strength the security and feel more _safe_ from the bad guys, the annoying business, the stealing banks and the spying governments. <!--more-->
 
-![](images/2015/8334340659_72e0f734d8_b.jpg"
-  title="Photo Credit: http://www.flickr.com/photos/84454580@N00/8334340659/ I_am_Allan"
-%}
+![Photo Credit: http://www.flickr.com/photos/84454580@N00/8334340659/ I_am_Allan](/images/2015/8334340659_72e0f734d8_b.jpg)
 
 I believe that there is **a limit to security and privacy** because in specific situations we may want others to know what happened. Emotions, like bad and good stories, usually are temporary, and the **things** that I **care** the most will **vary** in different **moments of my life**. So are the things that I want to keep safe and encrypted...
 
-After encrypting all my important documents I have realized that there is a limit. I need the right level of encryption, not much or less. Enough security and enough privacy for the future. <!--more-->
+After encrypting all my important documents I have realized that there is a limit. I need the right level of encryption, not much or less. Enough security and enough privacy for the future. 
 
 What if something bad is happening to me to the point that I will not be able to access some important files, and the only help would come from these documents? What if somebody will hurt me and the only truth is encrypted and nobody will ever access these files?
 

@@ -13,7 +13,7 @@ tags:
 - goals
 - high school 
 ---
-One of the biggest things that I have been learning is the **discipline** of being focused on the main goal. I get distracted every few minutes, and if it is not an advertisement, or a funny cloud in the sky, it is an event that we may consider bigger than it actually is. Instead, I don't want to lose the focus on the prize.
+One of the biggest things that I have been learning is the **discipline** of being focused on the main goal. I get distracted every few minutes, and if it is not an advertisement, or a funny cloud in the sky, it is an event that we may consider bigger than it actually is. Instead, I don't want to lose the focus on the prize. <!-- more -->
 
 _I want to write something personal._ I remember when I was in high school. It was a nightmare, and it still is for a lot of students: I spent the most horrible years of my life, and the reason was not because it was frustrating, but because all my expectations were ruined by small events that I was considering bigger than they actually were. 
 

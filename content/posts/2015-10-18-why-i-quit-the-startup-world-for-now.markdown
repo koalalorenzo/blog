@@ -11,16 +11,16 @@ categories:
 - Startup
 tags:
 - old blog
+thumbnail: /images/2015/1*VlDez5Fd7UKUaoesMZ-8iA.jpeg
 ---
 
-Few days ago, while watching [The Martian](http://www.imdb.com/title/tt3659388/) something special happened to me: I got my first **epileptic seizure. **I don’t remember that much of that evening, but I realized how much I grew up by moving away from Italy, and deciding to stop working for Startups.
+Few days ago, while watching [The Martian](http://www.imdb.com/title/tt3659388/) something special happened to me: I got my first **epileptic seizure.** I don’t remember that much of that evening, but I realized how much I grew up by moving away from Italy, and deciding to stop working for Startups. <!--more-->
 
-![](images/2015/1xmpx_j7srezo00iyfv738a.png"
-%}
+![I thought it was bigger](/images/2015/1xmpx_j7srezo00iyfv738a.png)
 
 Almost 2 years ago I decided to **escape my country** to find my path abroad. I accepted a **job offer** to be the **CTO** of a **Danish startup**, lead by Italians.
 
-I moved to [København](https://en.wikipedia.org/wiki/Copenhagen). I don’t have any regrets, and I still suggest my friends to move abroad as soon as they can, to make more experiences. <!--more-->
+I moved to [København](https://en.wikipedia.org/wiki/Copenhagen). I don’t have any regrets, and I still suggest my friends to move abroad as soon as they can, to make more experiences.
 
 More than one year after, the same company gave me two options: **quit** or move to **Netherlands** to work for the _new partners_, but with no benefits, no shares, no quotes nor money for my hard work, even if **I asked** a few months before, to really **be part** of what we were doing .
 
@@ -60,9 +60,7 @@ These months working in that bigger company, gave me the big chance to **think 
 Life tip: **if you are considering** to join a **Startup**, think twice about the team, the idea and your own future inside the company.
 Will it be a worthy experience in one year?
 
-![](images/2015/1*VlDez5Fd7UKUaoesMZ-8iA.jpeg"
-  caption="A smile, after an extra effort to achieve goals, is satisfying!"
-%}
+![A smile, after an extra effort to achieve goals, is satisfying!](/images/2015/1*VlDez5Fd7UKUaoesMZ-8iA.jpeg)
 
 
 Now I am happy, relaxed and with new **selfish goals**. After months I can say that I am working with **amazing people**, in an **amazing place**, and

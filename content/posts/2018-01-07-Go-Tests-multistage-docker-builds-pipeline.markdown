@@ -20,12 +20,13 @@ tags:
 - docker
 - golang
 - go
+thumbnail: /posts/202011/gopherswrench.jpg
 ---
 During the last year I have learned how important it is to build, test and
 deploy using always the same docker container as well as reducing its size.
 As I have not  found anything online, I want to remember and share it: I am
 testing my go packages with a multistage docker build inside my pipeline on
-GitLab.
+GitLab. <!-- more -->
 
 ## The odd way of testing go docker containers
 Especially when implementing CI best practices, I have seen projects running
@@ -53,7 +54,7 @@ the risk source code exposure. We can avoid that! 😎
 Luckily for me, we can build “binaries” for go packages... I mean, **test
 binaries**. It works like this:
 
-```
+```bash
 go test -c ./package
 ```
 
@@ -71,7 +72,7 @@ a docker container.  (remember about integration and unit tests?)  🧐  Since w
 don’t need anymore the source code we will use [multistage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/).
 Let me show you my *amazing* Docker file:
 
-```
+```Dockerfile
 FROM go:alpine as builder
 ...
 COPY . .
@@ -121,7 +122,7 @@ I am using GitLab CI/CD Pipeline because it is really useful and easy to
 explain. This is doable as well with Jenkins or something else 😉 It is just a
 concept.  This is my pipeline scripted as source code in `.gitlab-ci.yaml`:
 
-```
+```yaml
 image: docker:latest
 
 services:

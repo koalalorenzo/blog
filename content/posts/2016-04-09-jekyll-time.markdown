@@ -17,7 +17,7 @@ tags:
 Finally I have decided to **ditch Wordpress.com** to start using [Jekyll](http://jekyllrb.com) for my new
 personal blog. This decision was made after considering that the most of my blog
 posts are written in Italian. Only [2 years ago I have decided to write in
-English]({{ site.baseurl | prepend: site.url }}{% post_url 2014-04-03-goodbye-roma %}), to allow more people to easily
+English](/2014/04/03/goodbye-roma/), to allow more people to easily
 read (access) my thoughts... and everybody knows that a not well-index blog with
 weird languages is *not loved by google's bots*!
 

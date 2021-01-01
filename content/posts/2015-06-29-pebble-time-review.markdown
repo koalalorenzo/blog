@@ -25,9 +25,7 @@ It's been a long time, and finally, exactly when I forgot about it, my Pebble T
 ](https://instagram.com/p/38ctSdPeIX/?taken-by=koalalorenzo)
 
 
-{%
-  include image.html
-  img="images/2015/pebble-2.jpg"
+![](images/2015/pebble-2.jpg"
   title="My Pebble Time Kickstarter Edition"
 %}
 
@@ -38,18 +36,14 @@ The packaging that they used for the **kickstarter campaign** is really minimal:
 <!--more-->
 
 
-{%
-  include image.html
-  img="images/2015/pebble-1.jpg"
+![](images/2015/pebble-1.jpg"
   title="My Pebble Time Kickstarter Edition"
 %}
 
 
 From the **hardware** side the e-paper display makes everything different: The **battery** lasts really for days, and the glass seems to be very durable. I was able to use for 4 days at maximum, but my average is of 3 days, since I use it to check-in on Swarm and to track my activities and sleep. The wrist, mine is made out of ribbon, is soft and comfortable but after **2 weeks** its all ruined and **consumed by wear**... and I was expecting this from a **longer** time of **usage**!
 
-{%
-  include image.html
-  img="images/2015/pebble-3.jpg"
+![](images/2015/pebble-3.jpg"
   title="Pebble Time usage"
 %}
 

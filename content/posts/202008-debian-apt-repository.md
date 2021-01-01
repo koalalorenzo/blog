@@ -4,6 +4,7 @@ date: 2020-08-02T22:40:28+01:00
 draft: false
 tags:
   - Qm64
+  - project
   - debian
   - linux
   - devops

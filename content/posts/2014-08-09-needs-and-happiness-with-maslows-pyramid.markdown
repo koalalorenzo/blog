@@ -15,17 +15,14 @@ tags:
 - maslow
 - maslow's pyramid
 - health
+thumbnail: /images/2015/maslows.png
 ---
 
 Before moving to Denmark, when I was in Italy, I was focusing all my attention on the main actions to get material things and physical welfare: I was happy only when I was able to achieve my goals. The truth is that I was able to achieve my goals, but as soon as I got stuff done, after a short period of happiness, I had the same feeling when the tv series I am watching is over, and there are no more episodes to watch: looking for something to re-fill that feeling of nothingness.
 
-{%
-  include image.html
-  img="images/2015/maslows.png"
-  title="Maslow's hierarchy of needs"
-%}
+![Maslow's hierarchy of needs](/images/2015/maslows.png)
 
-So I reminded that [Tommaso Grotto](http://www.tommasogrotto.com), once told me about his own version of the [Maslow's hierarchy of needs](http://en.wikipedia.org/wiki/Maslow's_hierarchy_of_needs) and I decided to think about that, _redrawing_ and thinking from scratch **what happiness means to me**. I am not a psychologist and just for fun, I created my own Maslow's pyramid, based on the **needs I can satisfy to be happy** and on my **life goals**. <!--more-->
+So I reminded that [Tommaso Grotto](http://www.tommasogrotto.com), once told me about his own version of the [Maslow's hierarchy of needs](http://en.wikipedia.org/wiki/Maslow's_hierarchy_of_needs) and I decided to think about that, _redrawing_ and thinking from scratch **what happiness means to me**. I am not a psychologist and just for fun, I created my own Maslow's pyramid, based on the **needs I can satisfy to be happy** and on my **life goals**.
 
 I created a new pyramid made by needs connected to specific life-goals and actions: At the bottom of it there are needs that I can **satisfy easily**, (like _eating junk food_) and on the top the needs that require a **bigger effort** (like _found another company_). I don't want to share it here, _because is really personal and I am sorry_, but I hope you get the idea: I really suggest everybody to create their own Maslow's pyramid.
 

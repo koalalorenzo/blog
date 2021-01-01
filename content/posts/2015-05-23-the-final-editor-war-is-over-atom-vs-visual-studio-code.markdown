@@ -26,9 +26,7 @@ tags:
 
 During the last month I started **experimenting** a lot with some **editors** for **software development**. I've been playing for 2 weeks with **Atom** and **Visual Studio Code** and here are my impressions from a Mac and Sublime user.
 
-{%
-  include image.html
-  img="images/2015/atom-vs-visual-studio-code.png"
+![](images/2015/atom-vs-visual-studio-code.png"
   caption="Atom VS VisualStudio Code"
 %}
 
@@ -48,9 +46,7 @@ I started developing several projects using NodeJS, coffee-script, python, docke
 
 [Atom](http://atom.io/) is really new and the version 1.0 is going to be released soon. It is **OpenSource** and released by **GitHub** and it is thought, designed and created by developers for developers. it comes with a lot of **cool features** that are **helping** any developer.
 
-{%
-  include image.html
-  img="images/2015/atom-logo.png"
+![](images/2015/atom-logo.png"
 %}
 
 On my **everyday working routine**, I have to admit that it suffers from the "_open source then wannabe the best_" problem of new projects: on the website the main line claims an "Hackable text editor", and this means that **everything is plugin** and **ultra-customizable**. This is **good** if you need **specific** features, integrations and language support, but also really bad for speed, like loading time.
@@ -81,9 +77,7 @@ I like it. I bet that soon it will a better editor and less "wannabe the best" a
 
 When I've read about Microsoft releasing a new software for Mac, I started thinking about my **Mac security and stability**: they are famous for creating software ultra unstable, that will be used in offices for decades without upgrades or security fixes. They [introduced few **viruses for Mac** with MS Office](http://www.notebookreview.com/news/mac-hit-with-a-second-major-virus-in-as-many-weeks-ms-office-users-targeted/) suite and I hope they will not do the same. Microsoft have a really strict privacy terms if you use Visual Studio Code and I got scared... but I decided to risk by downloading it.
 
-{%
-  include image.html
-  img="images/2015/schermata-2015-05-23-alle-08-22-57.png"
+![](images/2015/schermata-2015-05-23-alle-08-22-57.png"
   caption="do not download visual studio code"
 %}
 

@@ -4,6 +4,7 @@ date: 2020-11-12T19:12:20+01:00
 draft: false
 tags:
   - Qm64
+  - project
   - hashicorp
   - nomad
   - template
@@ -13,7 +14,6 @@ tags:
   - development
   - devops
   - SRE
-  - projects
 thumbnail: /posts/202011/gopherswrench.jpg
 aliases: 
   - /posts/202011-hashicorp-nomad-backpack

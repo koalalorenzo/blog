@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{{ if eq .Title "" }}Qm64{{ else }}{{ .Title }} - Qm64{{ end }}</title>
+    <title>{{ if eq .Title "" }}Lorenzo's Blog{{ else }}{{ .Title }} - Lorenzo's Blog{{ end }}</title>
 
     {{ if not (eq .Description "") }}
     <meta name=description content="{{ .Description }}">
@@ -20,25 +20,11 @@
     <!-- RSS -->
     <link  rel="alternate" type="application/rss+xml" title="Qm64 Posts Feed" href="/index.xml">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/img/qm64-sqr.svg">
-    <link rel="icon" type="image/png" href="/img/qm64-sqr.png">
-
     {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
     <!-- Misc -->
-    <link rel='me' href='https://mastodon.social/@qm64' />
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161405596-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-161405596-1');
-    </script>
+    <link rel='me' href='https://mastodon.social/@koalalorenzo' />
 
     <!-- Preloads -->
     <link rel="preload" as="script" href="/js/mui.min.js" />

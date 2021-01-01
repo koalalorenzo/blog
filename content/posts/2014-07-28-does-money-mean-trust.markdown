@@ -15,19 +15,16 @@ tags:
 - digital life
 - money
 - peer-to-peer
+thumbnail: /images/2015/money.jpg
 ---
 
-Finally, I moved my blog to wordpress.com. The reason is really simple: time. I have a blog that had been for years and years hosted on my own server. This helped me a lot, because is cheaper and it allows me to use custom plugin and design my own theme. But everything is fine until you get **hacked**! ...and sadly I don't have enough time to find a solution to this... by paying!
+Finally, I moved my blog to wordpress.com. The reason is really simple: time. I have a blog that had been for years and years hosted on my own server. This helped me a lot, because is cheaper and it allows me to use custom plugin and design my own theme. But everything is fine until you get **hacked**! ...and sadly I don't have enough time to find a solution to this... by paying! <!--more-->
 
-{%
-  include image.html
-  img="images/2015/money.jpg"
-  title="Money by Mukumbura"
-%}
+![Money by Mukumbura](/images/2015/money.jpg)
 
 Shortly: I found that 2 months ago, exactly on the 5th of May, somebody injected some PHP code in my wordpress installation on my server.  The way to fix this is to restore some backups and upgrade everything to the latest version... but I don't have time for this. So I decided to spend 99$ and buy the WordPress.com Plan in order to have my old blog, in my old domain ( blog.setale.me ), with a horrible theme and the trust that wordpress.com will take care of **the security** of my thoughts.
 
-I have a strange feeling of security when I pay that. Probably this feeling of security is caused by the **trust** I give when I pay those 99 dollars. **I am not a psychologist**, but I can say that maybe this is the **base** for some **business models** mostly in the **share economy** or every **peer-to-peer** business model...<!--more-->
+I have a strange feeling of security when I pay that. Probably this feeling of security is caused by the **trust** I give when I pay those 99 dollars. **I am not a psychologist**, but I can say that maybe this is the **base** for some **business models** mostly in the **share economy** or every **peer-to-peer** business model...
 
 If we think about the need of **finding a place to stay** during our vacations: I could be a guest and ask gently for a couch to sleep, or I can pay a hostel or a BnB. I had both experiences, both as guest and host.
 

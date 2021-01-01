@@ -3,21 +3,16 @@ description: "Qm64 OU - Software Development and experiments"
 keywords: "qm64,development,software,opensource,ipfs,application,cloud,blockchain,go,devops"
 date: 2020-03-01T16:37:00+05:30
 draft: false
+aliases:
+ - /about
 ---
 
 
 
-<div class="homepage" itemscope itemtype="https://schema.org/Organization">
-    <meta itemprop="name" content="Qm64" />
-    <meta itemprop="legalName" content="Qm64 OU" />
-    <meta itemprop="logo" content="https://qm64.tech/img/qm64-sqr.png" />
-    <meta itemprop="url" content="https://qm64.tech/" />
-    <meta itemprop="location" content="Sepapaja tn 6, Tallinn, Estonia" />
-    <meta itemprop="vatID" content="EE101983754" />
-    <meta itemprop="description" content="Share experiences of software development" />
+<div class="homepage">
     <section id="about">
         <div class="mui--text-center mui-container set-width">
-            <h1>What is Qm64?</h1>
+            <h1>Welcome to my Personal Blog!</h1>
             <div class="mui-row">
                 <div class="mui-col-xs-12 mui-col-sm-12 mui-col-md-2 mui-col-md-offset-3 mui--text-center">
                     <a href="https://setale.me/">
@@ -28,10 +23,8 @@ draft: false
                     <p>
                         Hello! <br/>
                         My name is <a href="https://setale.me/">Lorenzo Setale</a> 
-                        and Qm64 is my space to share the experiences of 
-                        developing software and exploring new tools and methods. 
-                        Check the <a href="https://gitlab.com/Qm64/blog/-/boards">board</a> 
-                        to know what I am working right now!
+                        and this is my space to share the experiences of 
+                        developing software and exploring new tools and methods
                     </p>
                     <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a>
                 </div>
@@ -40,7 +33,12 @@ draft: false
     </section>
     <section id="goals">
         <div class="mui--text-center mui-container set-width">
-            <h1>The Goals</h1>
+            <h1>The Projects Rules</h1>
+            <p class="mui--text-center">
+                In this blog you will find some posts marked with the 
+                <a href="/tags/project/">project tag</a>. These are results of 
+                projects and are following specific rules:
+            </p>
             <div class="mui-row">
                 <div class="mui-col-xs-12 mui-col-sm-6 mui-col-md-3">
                     <span class="material-icons">gesture</span>
@@ -71,8 +69,8 @@ draft: false
                     <h3>Share it</h3>
                     <p>
                         When possible, share the 
-                        <a href="https://gitlab.com/qm64/">source code</a> 
-                        or just a <a href="/posts/">blog post</a> 
+                        <a href="https://gitlab.com/koalalorenzo/">source code</a> 
+                        or just a <a href="/tags/project/">blog post</a> 
                         about the learnings and what was successfull or not
                     </p>
                 </div>
@@ -82,7 +80,7 @@ draft: false
     <section>
         <div class="mui--text-center mui-container set-width">
             <a class="mui-btn mui-btn--primary" href="/posts/">Read the blog posts</a>
-            <a class="mui-btn mui-btn--primary" href="https://gitlab.com/Qm64/blog/-/boards">
+            <a class="mui-btn mui-btn--primary" href="https://gitlab.com/koalalorenzo/blog/-/boards">
               Check what is coming next
             </a>
         </div>

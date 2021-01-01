@@ -15,9 +15,7 @@ tags:
 
 Few days ago, while watching [The Martian](http://www.imdb.com/title/tt3659388/) something special happened to me: I got my first **epileptic seizure. **I don’t remember that much of that evening, but I realized how much I grew up by moving away from Italy, and deciding to stop working for Startups.
 
-{%
-  include image.html
-  img="images/2015/1xmpx_j7srezo00iyfv738a.png"
+![](images/2015/1xmpx_j7srezo00iyfv738a.png"
 %}
 
 Almost 2 years ago I decided to **escape my country** to find my path abroad. I accepted a **job offer** to be the **CTO** of a **Danish startup**, lead by Italians.
@@ -62,9 +60,7 @@ These months working in that bigger company, gave me the big chance to **think 
 Life tip: **if you are considering** to join a **Startup**, think twice about the team, the idea and your own future inside the company.
 Will it be a worthy experience in one year?
 
-{%
-  include image.html
-  img="images/2015/1*VlDez5Fd7UKUaoesMZ-8iA.jpeg"
+![](images/2015/1*VlDez5Fd7UKUaoesMZ-8iA.jpeg"
   caption="A smile, after an extra effort to achieve goals, is satisfying!"
 %}
 

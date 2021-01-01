@@ -10,7 +10,7 @@
             </p>
         </div>
         <div class="mui--text-left" id="article_shorts">
-          {{ range .Data.Terms }}
+          {{ range .Data.Terms.ByCount }}
             <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> - {{ .Count }}</li>
           {{ end }}
         </div>

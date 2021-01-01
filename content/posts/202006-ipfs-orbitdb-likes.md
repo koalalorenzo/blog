@@ -13,7 +13,6 @@ tags:
   - react
   - database
   - html
-  - projects
 thumbnail: /posts/202005/network.png
 aliases:
   - /posts/202006-ipfs-orbitdb-likes

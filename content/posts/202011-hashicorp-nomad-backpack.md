@@ -11,7 +11,7 @@ tags:
   - helm
   - backpack
   - golang
-  - development
+  - develop
   - devops
   - SRE
 thumbnail: /posts/202011/gopherswrench.jpg

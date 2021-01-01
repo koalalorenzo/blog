@@ -14,7 +14,6 @@ tags:
 - copenhagen
 - italy
 - work
-- projects
 - rome
 - startup
 - expat

@@ -11,17 +11,11 @@ categories:
 tags:
 - old blog
 - bitcoin
-- coinbase
+- blockchain
 - linux
-- innovazione
 - opensource
 - p2p
-- progetti
-- socialnetwork
-- credit
-- debit
 - money
-- xapo
 thumbnail: /images/2015/bitcoin.jpg
 ---
 

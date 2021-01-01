@@ -12,7 +12,7 @@ categories:
 tags:
 - old blog
 - bitcoin
-- bitcoin classic
+- blockchain
 - opensource
 - p2p
 thumbnail: /images/2015/screen-shot-2016-02-28-at-12-42-42.png

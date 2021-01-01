@@ -17,10 +17,7 @@ tags:
 - mac
 - microsoft
 - nodejs
-- node
-- sublime
 - sublime text editor
-- visual studio
 - visual studio Code
 thumbnail: /images/2015/atom-vs-visual-studio-code.png
 ---

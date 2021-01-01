@@ -55,38 +55,42 @@ pre {
 
 header {
   background-color: $mui-body-bg-color;
-  /* position: fixed; */
+  // position: fixed;
   width: 100%;
   min-height: 2rem;
+  font-size: 2rem;
+  color: #000000;
 
   navbar {
     display: flex;
     align-items: center;
+  }
 
-    .logo {
-      height: 36px;
-      width: 128px;
-      background-image: url('/img/qm64-logo.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      margin: 10px 0px;
-    }
+  a {
+    color: #000000;
+  }
+
+  a:hover {
+    color: #0080FF;
   }
 
   .nav-item {
     align-items: flex-end;
     text-align: right;
-    font-size: 1.2rem;
-    color: #000000;
-    font-weight: 500;
     display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
     padding-left: 1rem;
   }
+}
 
-  .nav-item:hover {
-    color: #0080FF;
-  }
+//Fixes header padding from top
+body .mui-container:first-child {
+  margin-top: $h1_margin/2;
+}
+
+body .mui-container:nth-child(2) {
+  margin-top: $h1_margin;
 }
 
 // Fixes numbers and bullet points not being readable on small screens

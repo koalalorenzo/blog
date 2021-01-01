@@ -29,7 +29,8 @@ $mui-body-bg-color: #eeeeec;
 $mui-base-font-size: 16px;
 $mui-base-font-family: 'Made Tommy Regular';
 
-$h1_margin: $mui-base-font-size*3;
+// this define the margin of headers and h1 first elements
+$h1_margin: $mui-base-font-size*1.2;
 
 // import MUI SASS
 @import "bower_components/mui/src/sass/mui";

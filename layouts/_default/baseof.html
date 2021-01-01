@@ -3,8 +3,10 @@
     {{ partial "head" . }}
     <body>
         {{ partial "header" . }}
+        <!-- main -->
         {{ block "main" . }}
         {{ end }}
+        <!-- end main -->
         {{ partial "footer" . }}
         {{ partial "scripts" . }}
     </body>

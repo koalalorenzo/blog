@@ -2,9 +2,9 @@
 title: "Using a GitLab to build a Debian Repository"
 date: 2020-08-02T22:40:28+01:00
 draft: false
-authors:
-  - Lorenzo Setale
 tags:
+  - Qm64
+  - project
   - debian
   - linux
   - devops
@@ -17,6 +17,8 @@ tags:
   - pipeline
   - ipfs
 thumbnail: /posts/202008/repo.gif
+aliases:
+  - /posts/202008-debian-apt-repository
 ---
 
 I have the feeling that a blog post about distributing packages is needed. 😮

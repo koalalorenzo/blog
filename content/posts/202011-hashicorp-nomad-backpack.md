@@ -2,20 +2,21 @@
 title: "Backpack: helm charts but for Hashicorp Nomad"
 date: 2020-11-12T19:12:20+01:00
 draft: false
-authors:
-  - Lorenzo Setale
 tags:
+  - Qm64
+  - project
   - hashicorp
   - nomad
   - template
   - helm
   - backpack
   - golang
-  - development
+  - develop
   - devops
   - SRE
-  - projects
 thumbnail: /posts/202011/gopherswrench.jpg
+aliases: 
+  - /posts/202011-hashicorp-nomad-backpack
 ---
 I recently decided to replace my k8s home cluster with a **Hashicorp Nomad**
 cluster on my 3 Raspberry Pis. When I was using it, I found myself writing a

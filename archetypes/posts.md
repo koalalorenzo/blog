@@ -2,8 +2,6 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-authors:
-  - Lorenzo Setale
 tags:
   - update
 thumbnail: /posts/202003/ii.gif

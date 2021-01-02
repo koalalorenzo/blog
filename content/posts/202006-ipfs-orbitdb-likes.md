@@ -2,9 +2,9 @@
 title: "How to make a decentralized like button"
 date: 2020-06-01T20:41:28+01:00
 draft: false
-authors:
-  - Lorenzo Setale
 tags:
+  - Qm64
+  - project
   - IPFS
   - OrbitDB
   - P2P
@@ -13,8 +13,9 @@ tags:
   - react
   - database
   - html
-  - projects
 thumbnail: /posts/202005/network.png
+aliases:
+  - /posts/202006-ipfs-orbitdb-likes
 ---
 All static websites meet a hard limit when a comment form, “like” buttons, or
 any interactive content is required. These extra components force people to

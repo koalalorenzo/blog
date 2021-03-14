@@ -4,6 +4,8 @@ title = "Lorenzo Setale's Blog"
 description = "My personal blog"
 relativeURLs = true
 
+mainSections = ["posts"]
+
 disqusShortname = "qm64"
 
 [markup.goldmark.renderer]

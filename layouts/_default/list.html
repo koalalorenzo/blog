@@ -1,3 +1,18 @@
 {{ define "main" }}
-    <div>{{ .Content }}</div>
+    <div class="mui-container">
+        <div class="heading">
+            <h1 class="title">
+                Latest blog posts
+            </h1>
+        </div>
+        <div class="mui--text-left" id="article_shorts">
+            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+            {{ range $paginator.Pages }}
+                {{ .Render "page-short" }}
+            {{ end }}
+        </div>
+        <div class="mui--text-center">
+            {{ partial "paginator.html" . }}
+        </div>
+    </div>
 {{ end }}

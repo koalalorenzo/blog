@@ -9,6 +9,7 @@ clean_%:
 	rm -rf ./$*
 .PHONY: clean
 
+.DEFAULT_GOAL :=
 clean: clean_public clean_tmp
 .PHONY: clean
 
@@ -22,13 +23,13 @@ build: clean
 
 %.webp:
 	cwebp -short -q 85 $* -o $(basename $*).webp
-	find . \
-		-type f -and \( -iname "*.md" -o -iname "*.markdown" \) \
+	find . -type f -and \( -iname "*.md" -o -iname "*.markdown" \) \
 		-exec sed -i '' s#$(patsubst static/%,%,$*)#$(patsubst static/%,%,$(basename $*)).webp#g {} \;
 
 convert_images:
 	$(MAKE) $(patsubst %,%.webp,${__IMAGES_TO_CONVERT})
 	rm ${__IMAGES_TO_CONVERT}
+.PHONY: convert_images
 
 new_post:
 	-hugo new posts/${DATE}.md

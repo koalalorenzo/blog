@@ -40,7 +40,7 @@ ifneq (${__IMAGES_TO_CONVERT},)
 endif
 ifneq (${__GIF_TO_CONVERT},)
 	$(MAKE) $(patsubst %,%webp,${__GIF_TO_CONVERT})
-	# rm ${__GIF_TO_CONVERT}
+	rm ${__GIF_TO_CONVERT}
 endif
 .PHONY: convert_images
 

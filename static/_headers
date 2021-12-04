@@ -1,9 +1,16 @@
-/posts/*
+/*
   Cache-Control: max-age=172800, s-maxage=1209600, stale-if-error=600
   Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
   CDN-Cache-Control: 1209600, stale-if-error=600
 
+/2014/*
+/2025/*
+/2026/*
+/2018/*
+/2020/*
 /images/*
+/fonts/*
+/js/*
   Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
   Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
   CDN-Cache-Control: 1209600

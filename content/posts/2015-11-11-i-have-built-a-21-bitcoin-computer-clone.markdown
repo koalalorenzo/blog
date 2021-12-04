@@ -16,14 +16,14 @@ tags:
 - raspberry
 - asic
 - hacking
-thumbnail: /images/2015/1*cGzWsrAlRUAGWLfzJOGYLg.jpeg
+thumbnail: /images/2015/1*cGzWsrAlRUAGWLfzJOGYLg.webp
 ---
 
 Two months ago, I decided to buy two **Bitcoin ASIC Miners**. The reason is quite simple: I am easy to get bored when I have everything prepared and ready to be used. 😴 Particularly if we are talking about technologies and computers. There is no fun if I can’t **learn from crafting it**, right?
 
 When “[The 21 Bitcoin computer](https://21.co/)” was announced I was surprised to see a [Raspberry Pi](https://www.raspberrypi.org/) device with a huge black brick on top of it: an ASIC Chip that mines between 50 and 120Gh/s. Basically it is an “already assembled and configured” device that can mine and be a Bitcoin full node. 👍 <!--more-->
 
-![](/images/2015/1*cGzWsrAlRUAGWLfzJOGYLg.jpeg)
+![](/images/2015/1*cGzWsrAlRUAGWLfzJOGYLg.webp)
 
 That seems to be an awesome product, for thousands of reasons, but I have decided to not buy it. The reason is not the price (~_400$_) or the software inside that is pre-compiled by a new company for you. The reason is simple: it would bore me.
 

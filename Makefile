@@ -1,4 +1,5 @@
 .EXPORT_ALL_VARIABLES:
+.DEFAULT_GOAL := clean
 
 DATE ?= $(shell date +"%Y%m")
 HUGO_ARGS ?=
@@ -9,7 +10,6 @@ clean_%:
 	rm -rf ./$*
 .PHONY: clean
 
-.DEFAULT_GOAL :=
 clean: clean_public clean_tmp
 .PHONY: clean
 
@@ -27,8 +27,10 @@ build: clean
 		-exec sed -i '' s#$(patsubst static/%,%,$*)#$(patsubst static/%,%,$(basename $*)).webp#g {} \;
 
 convert_images:
+ifneq (${__IMAGES_TO_CONVERT},)
 	$(MAKE) $(patsubst %,%.webp,${__IMAGES_TO_CONVERT})
 	rm ${__IMAGES_TO_CONVERT}
+endif
 .PHONY: convert_images
 
 new_post:

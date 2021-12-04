@@ -91,7 +91,7 @@ is lost, not synced, or hard to understand. 🙄 I often found myself deploying
 DataDog agents, but the version I was using was not using the same values
 defined in the documentation.
 
-![reading docs](/images/202011/reading.gif)
+![reading docs](/images/202011/reading.webp)
 
 To solve this issue, I have decided to package the documentation and the
 templates, and the values altogether. This change makes sure that the version
@@ -151,7 +151,7 @@ use for the template, or like the service tags to implement to configure
 or [fabio-lb](https://fabiolb.net). I would love to pack multiple containers,
 apps, and tools, solve issues like dependency management and more...
 
-![I will do that later](/images/202011/karenwalker-later.gif#smallSquare)
+![I will do that later](/images/202011/karenwalker-later.webp#smallSquare)
 
 For now, I will work on it in my spare time. I have released the source code on
 [GitLab](https://gitlab.com/Qm64/backpack), and if you want to help feel free

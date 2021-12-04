@@ -15,7 +15,7 @@ tags:
   - gitlab
   - devops
   - SRE
-thumbnail: /images/202003/ii.gif
+thumbnail: /images/202003/ii.webp
 aliases: 
   - /images/202003-immutable-infrastructure-vault
 ---
@@ -42,13 +42,13 @@ Shortly the idea is that instead of maintaining machines alive (as Pets 🐶), a
 upgrading them constantly, VMs are killed **periodically** and replaced with new
 updated versions (like cattle 🐮 we don't care about them too much).
 
-![Cows](/images/202003/cows.gif#center)
+![Cows](/images/202003/cows.webp#center)
 
 I believe that Immutable Infrastructure starts from there and expands it a
 little by **forcing VMs to be stateless** and limiting,
 _if not forbidding_, changes to these machines (ex: No SSH = way fewer changes).
 
-![Immutable Infrastructure](/images/202003/ii.gif#center)
+![Immutable Infrastructure](/images/202003/ii.webp#center)
 
 Very basically, **servers are never modified** after they are deployed. If there
 are errors or changes to be applied, a new VM Image is created, tested and then
@@ -145,7 +145,7 @@ AMI (or image name, depending on the platform)  that we will use on the next ste
 This is the core of the concept behind Immutable Infrastructure: Deploying
 things! _Hurray!_ I am going to make the image/cattle _pretty_ usable! 🤣
 
-![example of pretty usable cattle](/images/202003/pretty_cattle.gif#center)
+![example of pretty usable cattle](/images/202003/pretty_cattle.webp#center)
 
 For this step I have decided to use [Terraform](https://terraform.io). I could
 have manually implemented it or written a bunch of bash scripts with AWS CLI,
@@ -254,7 +254,7 @@ required but not always. I see SREs and DevOps Engineers having their life
 simplified by using Immutable Infrastructure on their platforms but not more than
 that.
 
-![Yeah, it was worth it](/images/202003/mission_accomplished.gif#center)
+![Yeah, it was worth it](/images/202003/mission_accomplished.webp#center)
 
 That said, I think I learned what is really important: prevent humans from
 making mistakes by automating the hell out of it. 🤪

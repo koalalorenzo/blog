@@ -158,7 +158,7 @@ few seconds or tries, but it should work! 😎
 
 
 
-[![dlike setup example](/images/202005/dlike-new-widget-example.gif#big)](/images/202005/dlike-new-widget-example.gif#big)
+[![dlike setup example](/images/202005/dlike-new-widget-example.webp#big)](/images/202005/dlike-new-widget-example.webp#big)
 
 In this gif, you can see me setting it up. Then I am copy-pasting the same value
 on my iPhone and pressing the like button there while keeping the original page
@@ -208,7 +208,7 @@ required on Web 2.0 services to ensure an SLA.
 
 ### Was this a success?
 
-[![Thinking](/images/202005/thinking.gif#big)](/images/202005/thinking.gif#big)
+[![Thinking](/images/202005/thinking.webp#big)](/images/202005/thinking.webp#big)
 
 Concluding, the libraries and development tools are already available. We should
 all start developing more using this tech as it might be really the future! I

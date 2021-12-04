@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: true
 tags:
   - update
-thumbnail: /posts/202003/ii.gif
+thumbnail: /images/202003/ii.webp
 ---
 Introduction
 

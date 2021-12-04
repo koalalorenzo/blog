@@ -14,14 +14,14 @@ tags:
 - communication
 - suggestions
 - love
-thumbnail: /images/2015/3523307598_faa352e689_o.jpg
+thumbnail: /images/2015/3523307598_faa352e689_o.webp
 ---
 
 During the last months, I fell in love with different people. My real problem was that my mind was "acting like a child", dividing work from loving affairs as two magnets with the same poles attract themselves (hint: they don't). That's good, but what happens if you bring "_communication techniques_" into love affairs? So I realized that, when I am in love, I was not that good in communicating as I am doing while working every day... then I decided to write down some suggestion about the "_communication techniques for lovers_".
 
 <!-- more -->
 
-![Communication for lovers (Photo by MartinodF)](/images/2015/3523307598_faa352e689_o.jpg)
+![Communication for lovers (Photo by MartinodF)](/images/2015/3523307598_faa352e689_o.webp)
 
 I decided to write some simple suggestions based on what happened to me, to remind me to communicate better. I want to apply some communication techniques that I've learned from the experience of working in teams, to my future love story, just because I failed in the past.
 
@@ -61,7 +61,7 @@ At work, I always have to find some solutions before saying anybody that there i
 
 We are not able to do everything. At work, I cannot **force myself** to do something I am **not capable of**. The reason is simple: It would take **more time** to do something that somebody, with that specific **skills**, can do in one minute... and I know for sure that he can do something better than me.
 
-![Be yourself everyone else is already taken](/images/2015/be-yourself-everyone-else-is-already-taken.jpg)
+![Be yourself everyone else is already taken](/images/2015/be-yourself-everyone-else-is-already-taken.webp)
 
 Love works the same way. I was trying to appear fascinating to Martino. I started changing my self: I changed clothes, I changed haircut and hair color and I changed interests. But nothing happened even if I was really comfortable in that new "skin". Nonetheless, it was a sad waste of time... even if Martino says "you look better" he was not really interested in me. Lesson learned: If I am not able to do something, I should not force myself... at least I have to learn how to do that!
 
@@ -69,7 +69,7 @@ Love works the same way. I was trying to appear fascinating to Martino. I sta
 
 Do not, do not, do not ever confess your feelings to somebody else that is not the person you love. Is the worst thing you could do. In general, when you are looking for compassion and needs somebody to talk with, you must be sure that this person is your true friend. When I receive bad news at work, I can't express my feelings to my colleague because this will generate hostilities or a big problem. But when you are talking about love, you can be sure that the person that is listening your feelings, will spread your emotions to everybody.
 
-![No one cares bro](/images/2015/no-one-care.jpg)
+![No one cares bro](/images/2015/no-one-care.webp)
 
 I feel always alone because I've learned the lesson from Antonio, but this is the right price to pay if you don't want to have enemies or to hurt somebody that you really love. So don't look for compassion, even on the internet: **nobody really cares!** (even if I share [everything online](http://tmb.setale.me/post/83819505870/perdermi))
 

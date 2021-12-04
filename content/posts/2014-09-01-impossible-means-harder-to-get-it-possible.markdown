@@ -15,7 +15,7 @@ tags:
 - innovation
 - mac
 - possible
-thumbnail: /images/2015/battery_macportable1989.png
+thumbnail: /images/2015/battery_macportable1989.webp
 ---
 
 Several times, I have heard my grandparents saying "that is impossible" when they are comparing what the young generations do to what they were used to do. According to the [dictionary](http://en.wiktionary.org/wiki/impossible), what is impossible, is "_not possible, unable to be, exist, happen, unable to be done..._", but for what I have noticed and experienced, is just a matter of **points of view**. <!--more-->
@@ -28,7 +28,7 @@ The Macintosh Portable, yes that _big-plastic-"90's gray"-heavy thing_, was rele
 
 I may think about "future" things, but they will always **appear as "impossible"** to my practical eyes. I may say "people take flying cars in the future", maybe they will, maybe they will not. I really believe that what I see as **impossible** is still possible, but **the effort** to make it real, so to **make it possible**, is **higher**. What is impossible for me could be possible to somebody else or in another time of the history. It's just a matter of points of view.
 
-![Macintosh Portable battery](/images/2015/battery_macportable1989.png)
+![Macintosh Portable battery](/images/2015/battery_macportable1989.webp)
 
 The main reason behind this choice by Apple was its battery. Technically you can [read more about that on Wikipedia](http://en.wikipedia.org/wiki/Macintosh_Portable#Criticism), but the battery problem is important to understand my idea: If we could **travel back in time** and go on Semptember 20th of 1989 with the **concept of the modern MacBook Pro**, or just even with the concept of the modern batteries, how do you think people and engineers will react?
 

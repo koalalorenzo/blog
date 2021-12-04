@@ -35,6 +35,6 @@ endif
 
 new_post:
 	-hugo new posts/${DATE}.md
-	mkdir -p static/posts/${DATE}/
-	touch static/posts/${DATE}/.gitkeep
+	mkdir -p static/images/${DATE}/
+	touch static/images/${DATE}/.gitkeep
 .PHONY: new_post

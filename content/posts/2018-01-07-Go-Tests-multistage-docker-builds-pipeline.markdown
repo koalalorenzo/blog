@@ -20,7 +20,7 @@ tags:
 - docker
 - golang
 - go
-thumbnail: /posts/202011/gopherswrench.jpg
+thumbnail: /images/202011/gopherswrench.jpg
 ---
 During the last year I have learned how important it is to build, test and
 deploy using always the same docker container as well as reducing its size.

@@ -16,9 +16,9 @@ tags:
   - SRE
   - pipeline
   - ipfs
-thumbnail: /posts/202008/repo.gif
+thumbnail: /images/202008/repo.gif
 aliases:
-  - /posts/202008-debian-apt-repository
+  - /images/202008-debian-apt-repository
 ---
 
 I have the feeling that a blog post about distributing packages is needed. 😮
@@ -29,7 +29,7 @@ projects are not distributed over Debian packages, 👷‍♂️ and I need them
 Raspberry Pi! 😜 
 <!--more-->
 
-![Debian package](/posts/202008/debian-pkg-icon.png#smallSquare#noborder)
+![Debian package](/images/202008/debian-pkg-icon.png#smallSquare#noborder)
 
 ## A little bit about distributing Debian packages
 
@@ -39,7 +39,7 @@ for distributing apps and keeping Debian-based Operative Systems up to date.
 Adding software via apt install is cleaner than download binaries or using ad-hoc
 processes to manage versions.
 
-![Debian package](/posts/202008/repo.gif#center)
+![Debian package](/images/202008/repo.gif#center)
 
 Not using a Debian repository is understandable: somebody has to maintain it and
 keep it updated. That takes time, and it is not always easy to do: open source
@@ -72,7 +72,7 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the
 following structure:
 
-![Debian Source file tree](/posts/202008/source-tree.png#bigSquare#noborder)
+![Debian Source file tree](/images/202008/source-tree.png#bigSquare#noborder)
 
 You can have a better look [the files here](https://gitlab.com/Qm64/apt/-/tree/master/source).
 Those files are defining a lot of things, including:
@@ -169,7 +169,7 @@ distribute my packages... or I could have just waited
 [GitLab to work on the Debian Repository](https://gitlab.com/gitlab-org/gitlab/-/issues/5835)
 implementation... but I wanted to have fun and complicate my life! 🤪
 
-![Make things so complicated](/posts/202008/make-things-complicated.gif)
+![Make things so complicated](/images/202008/make-things-complicated.gif)
 
 Building automatically packages from static binaries is useful as it "removes"
 a tedious process from my daily chores 😉. Most of the PaaS and SaaS solutions
@@ -190,5 +190,5 @@ Digital signatures are present because HTTPs is not the default transport
 protocol used. Instead, PGP/GPG increases the security for HTTP, FTP, and other 
 methods to distribute files! 😎 (Does anybody remember when repositories were on
 CD/DVDs?). But don't panic! This process can be automated too, just remember
-to use something like [Hashicorp Vault](https://qm64.tech/posts/202003-immutable-infrastructure-vault/) 
+to use something like [Hashicorp Vault](https://qm64.tech/images/202003-immutable-infrastructure-vault/) 
 to store the secret PGP Key!

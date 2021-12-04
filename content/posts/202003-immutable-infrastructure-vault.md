@@ -15,9 +15,9 @@ tags:
   - gitlab
   - devops
   - SRE
-thumbnail: /posts/202003/ii.gif
+thumbnail: /images/202003/ii.gif
 aliases: 
-  - /posts/202003-immutable-infrastructure-vault
+  - /images/202003-immutable-infrastructure-vault
 ---
 
 During the last year, I have been curious about Immutable Infrastructure.
@@ -27,7 +27,7 @@ project with it. So I thought about exploring Immutable Infrastructure and use
 it to deploy [Hashicorp Vault](https://www.vaultproject.io). 
 <!--more-->
 
-![Hashicorp Vault Logo](/posts/202003/vault-logo.svg#center#noborder)
+![Hashicorp Vault Logo](/images/202003/vault-logo.svg#center#noborder)
 
 I have shared a [git repository](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra)
 with some explanation and examples. It is written with Qm64's needs in mind
@@ -42,13 +42,13 @@ Shortly the idea is that instead of maintaining machines alive (as Pets 🐶), a
 upgrading them constantly, VMs are killed **periodically** and replaced with new
 updated versions (like cattle 🐮 we don't care about them too much).
 
-![Cows](/posts/202003/cows.gif#center)
+![Cows](/images/202003/cows.gif#center)
 
 I believe that Immutable Infrastructure starts from there and expands it a
 little by **forcing VMs to be stateless** and limiting,
 _if not forbidding_, changes to these machines (ex: No SSH = way fewer changes).
 
-![Immutable Infrastructure](/posts/202003/ii.gif#center)
+![Immutable Infrastructure](/images/202003/ii.gif#center)
 
 Very basically, **servers are never modified** after they are deployed. If there
 are errors or changes to be applied, a new VM Image is created, tested and then
@@ -135,7 +135,7 @@ This will call Packer and create a temporary EC2 Instance/VM, it will be used to
 run [some Ansible playbooks](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra/packer%2Fansible)
 in it and install Vault service.
 
-![Packer building an instance on AWS](/posts/202003/packer.png#center)
+![Packer building an instance on AWS](/images/202003/packer.png#center)
 
 After that, it will stop the AWS EC3 instance, create a snapshot and AMI and
 then terminate it. Once it is done it will output the AWS
@@ -145,7 +145,7 @@ AMI (or image name, depending on the platform)  that we will use on the next ste
 This is the core of the concept behind Immutable Infrastructure: Deploying
 things! _Hurray!_ I am going to make the image/cattle _pretty_ usable! 🤣
 
-![example of pretty usable cattle](/posts/202003/pretty_cattle.gif#center)
+![example of pretty usable cattle](/images/202003/pretty_cattle.gif#center)
 
 For this step I have decided to use [Terraform](https://terraform.io). I could
 have manually implemented it or written a bunch of bash scripts with AWS CLI,
@@ -254,7 +254,7 @@ required but not always. I see SREs and DevOps Engineers having their life
 simplified by using Immutable Infrastructure on their platforms but not more than
 that.
 
-![Yeah, it was worth it](/posts/202003/mission_accomplished.gif#center)
+![Yeah, it was worth it](/images/202003/mission_accomplished.gif#center)
 
 That said, I think I learned what is really important: prevent humans from
 making mistakes by automating the hell out of it. 🤪

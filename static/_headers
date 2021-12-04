@@ -1,0 +1,44 @@
+/*
+  Cache-Control: max-age=172800, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600, stale-if-error=600
+
+/2014/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/2015/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/2016/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/2018/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/2020/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/images/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/fonts/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600
+
+/js/*
+  Cache-Control: max-age=1209600, s-maxage=1209600, stale-if-error=600
+  Cloudflare-CDN-Cache-Control: max-age=1209600, stale-if-error=600
+  CDN-Cache-Control: 1209600

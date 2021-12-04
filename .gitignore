@@ -2,3 +2,4 @@ public/
 .DS_Store
 resources
 .vscode
+.hugo_build.lock

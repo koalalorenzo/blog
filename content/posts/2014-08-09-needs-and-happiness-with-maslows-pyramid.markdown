@@ -15,12 +15,12 @@ tags:
 - maslow
 - maslow's pyramid
 - health
-thumbnail: /images/2015/maslows.png
+thumbnail: /images/2015/maslows.webp
 ---
 
 Before moving to Denmark, when I was in Italy, I was focusing all my attention on the main actions to get material things and physical welfare: I was happy only when I was able to achieve my goals. The truth is that I was able to achieve my goals, but as soon as I got stuff done, after a short period of happiness, I had the same feeling when the tv series I am watching is over, and there are no more episodes to watch: looking for something to re-fill that feeling of nothingness.
 
-![Maslow's hierarchy of needs](/images/2015/maslows.png)
+![Maslow's hierarchy of needs](/images/2015/maslows.webp)
 
 So I reminded that [Tommaso Grotto](http://www.tommasogrotto.com), once told me about his own version of the [Maslow's hierarchy of needs](http://en.wikipedia.org/wiki/Maslow's_hierarchy_of_needs) and I decided to think about that, _redrawing_ and thinking from scratch **what happiness means to me**. I am not a psychologist and just for fun, I created my own Maslow's pyramid, based on the **needs I can satisfy to be happy** and on my **life goals**.
 

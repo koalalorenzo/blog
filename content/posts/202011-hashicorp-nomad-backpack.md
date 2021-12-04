@@ -14,7 +14,7 @@ tags:
   - develop
   - devops
   - SRE
-thumbnail: /images/202011/gopherswrench.jpg
+thumbnail: /images/202011/gopherswrench.webp
 aliases: 
   - /images/202011-hashicorp-nomad-backpack
 ---
@@ -29,7 +29,7 @@ would require a way bigger list of YAML files. Can we do the same for Nomad
 Jobs's definitions?
 
 <!--more-->
-![Go Gophers at work](/images/202011/gopherswrench.jpg#center)
+![Go Gophers at work](/images/202011/gopherswrench.webp#center)
 
 Yes, we can! For pure fun and during my spare time, I made **Backpack** for Nomad!
 😀 I decided to keep things as similar as possible to Helm but improve on it

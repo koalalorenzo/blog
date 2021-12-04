@@ -29,7 +29,7 @@ projects are not distributed over Debian packages, 👷‍♂️ and I need them
 Raspberry Pi! 😜 
 <!--more-->
 
-![Debian package](/images/202008/debian-pkg-icon.png#smallSquare#noborder)
+![Debian package](/images/202008/debian-pkg-icon.webp#smallSquare#noborder)
 
 ## A little bit about distributing Debian packages
 
@@ -72,7 +72,7 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the
 following structure:
 
-![Debian Source file tree](/images/202008/source-tree.png#bigSquare#noborder)
+![Debian Source file tree](/images/202008/source-tree.webp#bigSquare#noborder)
 
 You can have a better look [the files here](https://gitlab.com/Qm64/apt/-/tree/master/source).
 Those files are defining a lot of things, including:

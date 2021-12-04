@@ -22,12 +22,12 @@ tags:
 - zeronet
 - bittorrent
 - tor
-thumbnail: /images/2015/zeronet.png
+thumbnail: /images/2015/zeronet.webp
 ---
 
 Since when I was little, I always loved peer-to-peer technologies... I even tried to create a GNU/Linux distribution based on that. .. but recently I have discovered a brilliant project that is combining the power of **asynchronous cryptography**, using **Bitcoin** private and public keys, with **BitTorrent technology.** This project is called [ZeroNet](http://zeronet.io) and it is a new and interesting way to provide websites and real-time services in a p2p network. <!--more-->
 
-![](/images/2015/zeronet.png)
+![](/images/2015/zeronet.webp)
 
 To join the network and browse the ZeroNet websites, now you have to **keep running a python software** in one of your **terminal**. I really hate to keep it opened 24h a day... even if I am nerd enough to love logs. I decided to run an instance of ZeroNet in background on my Mac: every time I turn on my computer, I am updating and seeding content. I feel happy to help this community 👍 Here is how I made it possible. <!--more-->
 

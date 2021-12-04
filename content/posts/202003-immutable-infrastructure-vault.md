@@ -135,7 +135,7 @@ This will call Packer and create a temporary EC2 Instance/VM, it will be used to
 run [some Ansible playbooks](https://gitlab.com/Qm64/vault/-/tree/blogpost-202003-immutable-infra/packer%2Fansible)
 in it and install Vault service.
 
-![Packer building an instance on AWS](/images/202003/packer.png#center)
+![Packer building an instance on AWS](/images/202003/packer.webp#center)
 
 After that, it will stop the AWS EC3 instance, create a snapshot and AMI and
 then terminate it. Once it is done it will output the AWS

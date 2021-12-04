@@ -15,7 +15,7 @@ tags:
 - blockchain
 - opensource
 - p2p
-thumbnail: /images/2015/screen-shot-2016-02-28-at-12-42-42.png
+thumbnail: /images/2015/screen-shot-2016-02-28-at-12-42-42.webp
 ---
 
 I have my own  clear vision of what it would be the **future of value exchange**. At the moment I am running a [Bitcoin Classic](https://bitcoinclassic.com), **full node**. This is because I want to keep a **copy of the blockchain** to verify my payments and make the **Bitcoin network stronger**. I have also a [p2pool](http://warp2pool.eu/) mining node and 2 miners, to be able to express myself with the bitcoin “consensus” (without thinking of profit). <!--more-->
@@ -23,7 +23,7 @@ I have my own  clear vision of what it would be the **future of value exchange*
 Sadly, somebody had the bad idea to start an [attack against some Bitcoin Classic nodes](https://www.reddit.com/r/Bitcoin_Classic/comments/47zglz/ddos_started_again_have_a_nice_day_guys/), in the war against Bitcoin Core. Somebody is missing the **bitcoin vision**: For few hours, my internet connection was not stable or down, and I have to believe that this event is connected to this **stupid DDoS attack**.
 
 
-![My miners went down several times as I was attacked.](/images/2015/screen-shot-2016-02-28-at-12-42-42.png)
+![My miners went down several times as I was attacked.](/images/2015/screen-shot-2016-02-28-at-12-42-42.webp)
 
 **I don’t care who did it**. I care more why they did it: **What is the point** of blocking me and making a DoS attack to me and my Classic Node? 
 

@@ -17,12 +17,12 @@ tags:
 - security
 - smart contracts
 - ethereum
-thumbnail: /images/2015/8334340659_72e0f734d8_b.jpg
+thumbnail: /images/2015/8334340659_72e0f734d8_b.webp
 ---
 
 During the last year my interests verted to **security** and **privacy**. I had time to explore and have fun with encryption and some protocols to strength the security and feel more _safe_ from the bad guys, the annoying business, the stealing banks and the spying governments. <!--more-->
 
-![Photo Credit: http://www.flickr.com/photos/84454580@N00/8334340659/ I_am_Allan](/images/2015/8334340659_72e0f734d8_b.jpg)
+![Photo Credit: http://www.flickr.com/photos/84454580@N00/8334340659/ I_am_Allan](/images/2015/8334340659_72e0f734d8_b.webp)
 
 I believe that there is **a limit to security and privacy** because in specific situations we may want others to know what happened. Emotions, like bad and good stories, usually are temporary, and the **things** that I **care** the most will **vary** in different **moments of my life**. So are the things that I want to keep safe and encrypted...
 

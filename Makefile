@@ -28,7 +28,7 @@ build: clean
 
 convert_images:
 	$(MAKE) $(patsubst %,%.webp,${__IMAGES_TO_CONVERT})
-	# rm ${__IMAGES_TO_CONVERT}
+	rm ${__IMAGES_TO_CONVERT}
 
 new_post:
 	-hugo new posts/${DATE}.md

@@ -3,8 +3,6 @@ title: "Exploring Immutable Infrastructure with Vault"
 date: 2020-03-21T13:41:28+01:00
 draft: false
 tags:
-  - Qm64
-  - project
   - hashicorp
   - vault
   - infrastructure

@@ -35,7 +35,7 @@ build: clean
 
 convert_images:
 ifneq (${__IMAGES_TO_CONVERT},)
-	$(MAKE) $(patsubst %,%webp,${__IMAGES_TO_CONVERT})
+	$(MAKE) $(patsubst %,%.webp,${__IMAGES_TO_CONVERT})
 	rm ${__IMAGES_TO_CONVERT}
 endif
 ifneq (${__GIF_TO_CONVERT},)

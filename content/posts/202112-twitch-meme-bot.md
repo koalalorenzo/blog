@@ -94,21 +94,21 @@ flowchart TD;
   IGa["GenerateMeme() 1st"];
   IGb["GenerateMeme() 2nd"];
   IGn["GenerateMeme() Nth"];
-  MainChannel{{"mainChannel"}};
+  MainChannel{{"mainChannel queue"}};
   WBC[/"channelPipe() broadcast"\];
 
-  NMSG([New Message on IRC]) ==> TPar;
-  TPar-- Starts a Go routine -->IGa;
-  TPar-- Starts a Go routine -->IGb;
-  TPar-- Starts a Go routine -->IGn;
+  NMSG([IRC Messages]) ==> TPar;
+  TPar-- Starts a goroutine -->IGa;
+  TPar-- Starts a goroutine -->IGb;
+  TPar-- Starts a goroutine -->IGn;
   IGa-- sends Image URL-->MainChannel;
   IGb-- sends Image URL -->MainChannel;
   IGn-- sends Image URL -->MainChannel;
   MainChannel==>WBC;
-  WBC-->wsChannela["OBS Go Channel reader()"];
-  WBC-->wsChannelb["Safari Go Channel reader()"];
-  wsChannela-- Web Socket -->B(["Web Socket OBS"]);
-  wsChannelb-- Web Socket --->C(["WebPage Safari"]);
+  WBC--"channel 1"-->wsChannela["reader() (OBS Channel)"];
+  WBC--"channel 2"-->wsChannelb["reader() (Safari Channel)"];
+  wsChannela-- Web Socket -->B(["Web Page in OBS"]);
+  wsChannelb-- Web Socket --->C(["Web Page in Safari"]);
 {{< /mermaid >}}
 
 _Why this complex structure_? 😅 When a web page opens, using

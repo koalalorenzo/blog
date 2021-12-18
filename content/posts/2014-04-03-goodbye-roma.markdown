@@ -17,6 +17,7 @@ tags:
 - rome
 - startup
 - expat
+images: ["/images/2015/img_2834.webp"]
 thumbnail: /images/2015/img_2834.webp
 ---
 

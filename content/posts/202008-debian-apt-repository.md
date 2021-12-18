@@ -15,6 +15,7 @@ tags:
   - pipeline
   - ipfs
 thumbnail: /images/202008/repo.webp
+images: ["/images/202008/repo.webp"]
 aliases:
   - /images/202008-debian-apt-repository
 ---

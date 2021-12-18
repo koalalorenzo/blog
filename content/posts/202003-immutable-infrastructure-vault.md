@@ -14,6 +14,7 @@ tags:
   - devops
   - SRE
 thumbnail: /images/202003/ii.webp
+images: ["/images/202003/ii.webp"]
 aliases: 
   - /images/202003-immutable-infrastructure-vault
 ---

@@ -12,6 +12,7 @@ tags:
   - database
   - html
 thumbnail: /images/202005/network.webp
+images: ["/images/202005/network.webp"]
 aliases:
   - /images/202006-ipfs-orbitdb-likes
 ---

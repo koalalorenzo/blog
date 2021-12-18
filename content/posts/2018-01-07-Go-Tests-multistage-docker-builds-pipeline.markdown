@@ -19,6 +19,7 @@ tags:
 - testing
 - docker
 - go
+images: ["/images/202011/gopherswrench.webp"]
 thumbnail: /images/202011/gopherswrench.webp
 ---
 During the last year I have learned how important it is to build, test and

@@ -14,6 +14,7 @@ tags:
   - devops
   - SRE
 thumbnail: /images/202011/gopherswrench.webp
+images: ["/images/202011/gopherswrench.webp"]
 aliases: 
   - /images/202011-hashicorp-nomad-backpack
 ---

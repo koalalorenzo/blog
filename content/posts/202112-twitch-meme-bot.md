@@ -11,6 +11,7 @@ tags:
   - Heroku
   - opensource
 thumbnail: /images/202112/stream.webp
+images: ["/images/202112/stream.webp"]
 mermaid: true
 ---
 During the dark side of quarantine, I had to keep my hands busy, and instead of

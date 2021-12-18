@@ -38,9 +38,9 @@ It will show you something like this on my stream:
 
 ![Example of a Meme generated using the Bot](/images/202112/hello-example.webp#small)
 
-This was fun because at times, people could generate Memes based on what was
-happening on the screen, and since I have been playing a lot of Dead By
-Daylight, there were plenty of moments to have fun creating new images.
+People could generate Memes based on what was happening on the screen, and since 
+I have been playing a lot of Dead By Daylight, there were plenty of moments to 
+have fun creating new images, while I was running away from the killer. 😜
 
 I have decided to make it using [Go](https://go.dev) and hosting it on
 [Heroku](https://heroku.com). If you want to skip straight to the app running
@@ -57,6 +57,8 @@ OBS connect to the Image_? _How do I generate Imanges in Go_?
 _How can I make it easy to deploy_? and also,
 _what should be the name of the bot_? 🤣
 
+In the end I named it _Koalalorenzo's Twich Meme Bot_... LOL!
+
 ### Twitch uses IRC for chat
 At the beginning I was thinking about using a full-blown Twitch Bot, but setting
 it up would have been way more complex than needed. Instead I have discovered
@@ -67,22 +69,23 @@ unless I need to write to the channel. Since the bot is just listening,
 listen to the IRC interface. Jackpot!
 
 ### Ingredients: Go routines, WebSockets, Go channels
-I found out that the easiest way to show content on my stream was to use OBS's
-Browser source. I discovered that almost all the streaming plugins are using
-a clever trick: Streamlabs, Sound Alert, and many others are using a
+I found out that the easiest way to show content on my stream was to use a 
+specific widget in [Open Broadcaster Software](https://obsproject.com)
+(OBS for friends). I discovered that almost all the streaming services are 
+using a clever trick: Streamlabs, Sound Alert, and many others are using a
 **transparent HTML page** to show images, content and animations. This means
-that it is super easy for me to show a image on my stream!
+that it is super easy for me to implement this and show a image on my stream!
 
 To connect to it, I figured out that i needed a little more than just refreshing
 the HTML page constantly, I had to make my hands dirty with WebSockets in Go,
 and connect them to some Go Channel.
 
 The approach is the following: Once a new message arrives to the Twitch bot,
-a Go routine will analyze it and generate the image. Once that is doen, it will
+a Go routine will analyze it and generate the image. Once that is done, it will
 send a message to a _main_ go channel.
 
-On the other hand of the _main_ go channel there are various channels listening,
-one for each WebSocket open. Like this:
+This _main_ go channel is consumed by a function that sends it to various
+other channels, one for each WebSocket open. Like this:
 
 {{< mermaid >}}
 flowchart TD;
@@ -109,18 +112,21 @@ flowchart TD;
 
 _Why this complex structure_? 😅 When a web page opens, using
 some JavaScript code (yeah, there is some [spaghetti code here](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/http/streamview.go#L43) 🤫),
-there is a new connection using **a new Websocket**. If I open more,
-I need to _broadcast_ (or funnel out) the Image URL to **every single web page**.
-To make it possible, the code creates **a new Go Channel for each WebSocket**,
-and uses a `mainChannel`
-[to broadcast the message to all the other go channels](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/http/channels.go#L15).
+there is **a new WebSocket connection every time**. If I open more, I need to 
+_broadcast_ (or _funnel out_) the Image URL to **every single web page**.
+This is why for each WebSocket there is a Go Channel, and 
+[a function](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/http/channels.go#L15)
+that broadcast the messages to all of them.
+
+It might not be the best, nor the clearest implementation, but it works...
+Please let me know with a PR or with a comment if there is a better way!
 
 ### Genearting Images and GIFS, but FASTER!
 This part was intersting, but I was lucky to find a Go module that would
 exactly generate Images and GIFs based on text imput. After inspecting the code
-[jpoz/gomeme](https://github.com/jpoz/gomeme) was working fine for my case, it
-did exactly what I was planning to do... except for one little detail: the image
-size and formats. Let me explain why:
+of [jpoz/gomeme](https://github.com/jpoz/gomeme) was working fine for my case, 
+it did exactly what I was planning to do... except for one little detail: the 
+image size and formats. _Here is why:_
 
 [James](https://github.com/jpoz)'s module supports GIFs, PNG, and JPEGs.
 Those formats could be quite heavy and slow to manipulate. Infact one of the
@@ -155,7 +161,7 @@ In the full sprit of OpenSource I opened a
 [Pull Request on Github]()
 to merge my gomeme changes and contribute to the original project. 🤞 Maybe
 somebody else will use my WebP changes to make even more efficient Meme
-Images! 🤣
+Images! 🤣 Kudos to [James Pozdena](https://github.com/jpoz) for making it! ❤️
 
 I have added a lot of other functionalities, like: support for a basic Web UI,
 a WebHook with Basic HTTP Auth and some JSON API to integrate with **Apple

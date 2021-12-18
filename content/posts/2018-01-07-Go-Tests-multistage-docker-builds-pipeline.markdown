@@ -18,7 +18,6 @@ tags:
 - pipeline
 - testing
 - docker
-- golang
 - go
 thumbnail: /images/202011/gopherswrench.webp
 ---

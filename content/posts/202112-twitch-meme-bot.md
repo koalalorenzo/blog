@@ -10,6 +10,7 @@ tags:
   - bot
   - Heroku
 thumbnail: /images/202112/stream.webp
+mermaid: true
 ---
 During the dark side of quarantine, I had to keep my hands busy, and instead of
 writing on this blog (_sorry_!) I started streaming on Twitch instead. To add
@@ -80,7 +81,6 @@ On the other hand of the _main_ go channel there are various channels listening,
 one for each WebSocket open. Like this:
 
 {{< mermaid >}}
-# TODO
 graph TD;
   A-->B;
   A-->C;

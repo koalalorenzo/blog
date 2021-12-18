@@ -38,16 +38,17 @@
       <div itemprop="articleBody">{{ .Content }}</div>
 
       {{ partial "agecheck.html" . }}
-      <script src="https://utteranc.es/client.js"
-        repo="koalalorenzo/blog"
-        issue-term="title"
-        label="comments"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-      </script>
-
-
+      <div>
+        <h2>Comments</h2>
+        <script src="https://utteranc.es/client.js"
+          repo="koalalorenzo/blog"
+          issue-term="title"
+          label="comments"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
   </div>
 </article>
 {{ end }}

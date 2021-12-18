@@ -31,7 +31,7 @@ See it in action:
 The idea is simple. If you write on my chat while I stream something like:
 
 ```yaml
-!meme hello Hey Lorenzo!
+!meme hello Hello Lorenzo!
 ```
 
 It will show you something like this on my stream:

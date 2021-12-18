@@ -6,7 +6,8 @@ relativeURLs = true
 
 mainSections = ["posts"]
 
-disqusShortname = "qm64"
+enableGitInfo = true
+lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 [markup.goldmark.renderer]
 unsafe = true

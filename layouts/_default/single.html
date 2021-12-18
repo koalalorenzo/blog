@@ -38,7 +38,15 @@
       <div itemprop="articleBody">{{ .Content }}</div>
 
       {{ partial "agecheck.html" . }}
-      {{ template "_internal/disqus.html" . }}
+      <script src="https://utteranc.es/client.js"
+        repo="koalalorenzo/blog"
+        issue-term="title"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+      </script>
+
 
   </div>
 </article>

@@ -81,11 +81,26 @@ On the other hand of the _main_ go channel there are various channels listening,
 one for each WebSocket open. Like this:
 
 {{< mermaid >}}
-graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;
+flowchart TD;
+  TPar[\"twitch.parser()"/];
+  IGa["GenerateMeme() 1st"];
+  IGb["GenerateMeme() 2nd"];
+  IGn["GenerateMeme() Nth"];
+  MainChannel{{"mainChannel"}};
+  WBC[/"channelPipe() broadcast"\];
+  
+  NMSG([New Message on IRC]) ==> TPar;
+  TPar-- Starts a Go routine -->IGa;
+  TPar-- Starts a Go routine -->IGb;
+  TPar-- Starts a Go routine -->IGn;
+  IGa-- sends Image URL-->MainChannel;
+  IGb-- sends Image URL -->MainChannel;
+  IGn-- sends Image URL -->MainChannel;
+  MainChannel==>WBC;
+  WBC-->wsChannela["OBS Go Channel reader()"];
+  WBC-->wsChannelb["Safari Go Channel reader()"];
+  wsChannela-- Web Socket -->B(["Web Socket OBS"]);
+  wsChannelb-- Web Socket --->C(["WebPage Safari"]);
 {{< /mermaid >}}
 
 Why this complex structure? The reason is that Websockets are open and closed 

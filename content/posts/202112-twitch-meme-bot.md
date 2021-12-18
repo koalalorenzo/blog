@@ -9,16 +9,20 @@ tags:
   - streaming
   - bot
   - Heroku
+  - opensource
 thumbnail: /images/202112/stream.webp
 mermaid: true
 ---
 During the dark side of quarantine, I had to keep my hands busy, and instead of
-writing on this blog (_sorry_!) I started streaming on Twitch instead. To add
-some interactivity with my viewers, I decided to add my own bot to display
-custom Images and GIFs with a text that my viewers could decided. Using it was
-fun, but building it in Go was even more fun!
+writing on this blog (_sorry_!) I **started streaming on Twitch** instead. To 
+add some **interactivity with my viewers**, I decided to create my own bot to 
+display custom Images and GIFs with a text that my viewers could decided...
+Basically a Meme Generator! This is **the story of designing it, building it in
+Go and running it Heroku** 🤩
 
 <!--more-->
+
+See it in action:
 
 {{< youtube os4yx5Ryzmo >}}
 
@@ -62,7 +66,7 @@ unless I need to write to the channel. Since the bot is just listening,
 [I found a go module](https://github.com/gempir/go-twitch-irc) that would just
 listen to the IRC interface. Jackpot!
 
-### Ingredients: WebSockets, Go Channels, HTTP API and a Basic UI
+### Ingredients: Go routines, WebSockets, Go channels
 I found out that the easiest way to show content on my stream was to use OBS's
 Browser source. I discovered that almost all the streaming plugins are using 
 a clever trick: Streamlabs, Sound Alert, and many others are using a 
@@ -103,12 +107,13 @@ flowchart TD;
   wsChannelb-- Web Socket --->C(["WebPage Safari"]);
 {{< /mermaid >}}
 
-Why this complex structure? The reason is that Websockets are open and closed 
-when I open the web page using some JavaScript code (yeah, there is some 
-spaghetti code on [how I did it here]()),
-the page creates a new Websocket. If I open more, I need to _broadcast_ the 
-image to every single web page. Using a _funnel out_ approach for this makes 
-sure that every single page will get the new meme/images.
+_Why this complex structure_? 😅 When a web page opens, using 
+some JavaScript code (yeah, there is some [spaghetti code here](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/http/streamview.go#L43) 🤫),
+there is a new connection using **a new Websocket**. If I open more, 
+I need to _broadcast_ (or funnel out) the Image URL to **every single web page**. 
+To make it possible, the code creates **a new Go Channel for each WebSocket**,
+and uses a `mainChannel` 
+[to broadcast the message to all the other go channels](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/http/channels.go#L15).
 
 ### Genearting Images and GIFS, but FASTER!
 This part was intersting, but I was lucky to find a Go module that would
@@ -132,7 +137,6 @@ became
 [4MB Animated WebP](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/d3ba69eb50726810bc5423b7586723a5334aff63/assets/yeah.69.webp).
 _It is still a big file_, but it will be faster to process. 🎉
 
-
 To do so I had to create my
 [own fork of the module](https://gitlab.com/koalalorenzo/gomeme). My fork sadly
 does requires GCC as there is no official `image/webp` package in the Go
@@ -147,7 +151,18 @@ people to use WebP... I could improve the bot to render the images in WebP, but
 that is for another time maybe! 😉
 
 ## Conclusion
-Learnings
+Building this was actually super fun. I feel that I made something for fun,
+just as a small project. I am happy that I gathered some feedback from some of
+my viewers after making it, but sadly I had very little time to stream during 
+the last months, and therefore the project did not evolve anymore.
+
+In the full sprit of OpenSource I opened a Pull Request on Github to merge my 
+gomeme changes and contribute to the original project. Maybe somebody else
+will use my WebP changes to make even more efficient Meme Images! 🤣 
+
 
 ## Useful links
-Share links here
+
+* [Quick link to Deploy it on Heroku](https://heroku.com/deploy?template=https://github.com/koalalorenzo/twitch-meme-generator/tree/main)
+* [Source Code on GitLab](https://gitlab.com/koalalorenzo/twitch-meme-generator/)
+* [My GoMeme Fork with WebP Support](https://gitlab.com/koalalorenzo/gomeme)

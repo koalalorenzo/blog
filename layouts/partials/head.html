@@ -16,7 +16,7 @@
     {{ if not (eq .Description "") }}
     {{ .Scratch.Set "description" .Description }}
     {{ end }}
-    <meta name=description content='{{ .Scratch.Get "description" }}'>
+    <meta name="description" content='{{ .Scratch.Get "description" }}'>
 
     {{ $taxonomy := "tags" }}{{ with .Param $taxonomy }}
     <meta name="keywords" content='{{ delimit . ", " }}' />

@@ -6,7 +6,10 @@
       </h1>
       {{ partial "agecheck.html" . }}
       <p>
-        On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time> 
+        On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time>
+        {{ if .Lastmod }}
+        <meta itemprop="dateModified" content="{{ .Lastmod }}" />
+        {{ end }}
       </p>
       <div itemprop="articleBody">{{ .Content }}</div>
   </div>

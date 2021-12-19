@@ -7,16 +7,16 @@
     <title>{{ if eq .Title "" }}Lorenzo's Blog{{ else }}{{ .Title }} - Lorenzo's Blog{{ end }}</title>
 
     {{ $description := "" }}
-    {{ if not (eq $.Site.Params.description  "") }}
+    {{ if ne $.Site.Params.description  "" }}
     {{ .Scratch.Set "description" $.Site.Params.description }}
     {{ end }}
-    {{ if not (eq .Summary "") }}
+    {{ if ne .Summary "" }}
     {{ .Scratch.Set "description" .Summary }}
     {{ end }}
-    {{ if not (eq .Description "") }}
+    {{ if ne .Description "" }}
     {{ .Scratch.Set "description" .Description }}
     {{ end }}
-    <meta name="description" content='{{ .Scratch.Get "description" }}'>
+    <meta name="description" content='{{ .Scratch.Get "description" | truncate 160 }}'>
 
     {{ $taxonomy := "tags" }}{{ with .Param $taxonomy }}
     <meta name="keywords" content='{{ delimit . ", " }}' />
@@ -27,12 +27,8 @@
 
     <!-- RSS -->
     <link  rel="alternate" type="application/rss+xml" title="Lorenzo's Blog Posts Feed" href="/index.xml">
-
     {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
-
-    <!-- Misc -->
-    <link rel='me' href='https://mastodon.social/@koalalorenzo' />
 
     <!-- Preloads -->
     <link rel="preload" as="script" href="/js/mui.min.js" />
@@ -43,4 +39,7 @@
 
     <!-- Twitter Cards -->
     {{ template "_internal/twitter_cards.html" . }}
+
+    <!-- Misc -->
+    <link rel='me' href='https://mastodon.social/@koalalorenzo' />
 </head>

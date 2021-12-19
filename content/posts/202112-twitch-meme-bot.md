@@ -176,9 +176,9 @@ on twitch recently, and therefore the project did not evolve anymore. 😭
 
 ...But if you see me live [on my channel](https://www.twitch.com/koalalorenzo), 
 feel free to say hello with a meme! ❤️  **If you want to use the twitch meme 
-generator** check out the [README](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/README.md) 
-in the repo: I wrote instructions on how to set it up and how to customize it,
-there is even a quick button to deploy it to Heroku! 😉 
+generator**, check out the [README](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/README.md) 
+in the repo: I wrote instructions on setting it up and customizing it. 
+There is even a quick button to deploy it to Heroku! 😉 
 
 ## Useful links
 

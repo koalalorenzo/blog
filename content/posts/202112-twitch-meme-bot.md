@@ -152,9 +152,9 @@ added support for WebP only for static Images... 🤞 hoping to upgrade to
 Animated WebP when the Go standard library implements them.
 
 Using my fork of Jame’s Go module made some images faster, but I kept the source
-to display PNGs, JPEGs, and GIFs as I am not expecting people to use WebP... 
-I could improve the bot to render the images in WebP, but that is for another 
-time, maybe! 😉
+to display PNGs, JPEGs, and GIFs as I am not expecting people to use only 
+WebP...  I could improve the bot to render the images in WebP, but that is for 
+another time, maybe! 😉
 
 ## Conclusion
 In the full spirit of OpenSource, I opened a

@@ -158,7 +158,7 @@ time, maybe! 😉
 
 ## Conclusion
 In the full spirit of OpenSource, I opened a
-[Pull Request on Github]()
+[Pull Request on Github](https://github.com/jpoz/gomeme/pull/3)
 to merge my gomeme changes and contribute to the original project. 🤞 Maybe
 somebody else will use my WebP changes to make even more efficient Meme
 Images! 🤣 Kudos to [James Pozdena](https://github.com/jpoz) for making it! ❤️

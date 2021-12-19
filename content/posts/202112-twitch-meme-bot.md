@@ -1,5 +1,5 @@
 ---
-title: "I made a Twitch Bot to generate memes for fun"
+title: "A Twitch bot to create memes and show them live"
 date: 2021-12-18T13:55:50+01:00
 draft: false
 tags:
@@ -17,8 +17,8 @@ mermaid: true
 During the dark side of quarantine, I had to keep my hands busy, and instead of
 writing on this blog (_sorry_!) I **started streaming on Twitch** instead. To
 add some **interactivity with my viewers**, I made my own bot to let my viewers
-create and display custom Images and GIFs... Basically, a Meme Generator! This 
-is **the story of designing it, building it in Go, and running it Heroku** 🤩
+create and display custom Images and GIFs with text... Basically, a Meme 
+Generator! This  is the story of **designing it**, **building it** in Go, and **running it** Heroku 🤩
 
 <!--more-->
 
@@ -171,8 +171,11 @@ Shortcuts**...  so that I can generate memes from my iPhone or from my Mac.
 
 Building this was pure pleasure. I made something so that viewers can have some 
 fun, just as a small project. I am happy that I gathered some feedback from some
-of my viewers after making it, but sadly I had _very little time to stream_ 
-during the last months, and therefore the project did not evolve anymore. 😭
+of my viewers after making it. Sadly I had _very little time to stream_
+on twitch recently, and therefore the project did not evolve anymore. 😭 
+
+But if you see me live [on my channel](https://www.twitch.com/koalalorenzo), 
+feel free to say hello with a meme! ❤️
 
 Let's see what my next project will be! Probably something about WebP
 

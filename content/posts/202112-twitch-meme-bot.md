@@ -174,10 +174,11 @@ fun, just as a small project. I am happy that I gathered some feedback from some
 of my viewers after making it. Sadly I had _very little time to stream_
 on twitch recently, and therefore the project did not evolve anymore. 😭 
 
-But if you see me live [on my channel](https://www.twitch.com/koalalorenzo), 
-feel free to say hello with a meme! ❤️
-
-Let's see what my next project will be! Probably something about WebP
+...But if you see me live [on my channel](https://www.twitch.com/koalalorenzo), 
+feel free to say hello with a meme! ❤️  **If you want to use the twitch meme 
+generator** check out the [README](https://gitlab.com/koalalorenzo/twitch-meme-generator/-/blob/main/README.md) 
+in the repo: I wrote instructions on how to set it up and how to customize it,
+there is even a quick button to deploy it to Heroku! 😉 
 
 ## Useful links
 

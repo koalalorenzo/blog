@@ -7,8 +7,8 @@
     <title>{{ if eq .Title "" }}Lorenzo's Blog{{ else }}{{ .Title }} - Lorenzo's Blog{{ end }}</title>
 
     {{ $description := "" }}
-    {{ if not (eq $.Site.Params.Description  "") }}
-    {{ .Scratch.Set "description" $.Site.Params.Description }}
+    {{ if not (eq $.Site.Params.description  "") }}
+    {{ .Scratch.Set "description" $.Site.Params.description }}
     {{ end }}
     {{ if not (eq .Summary "") }}
     {{ .Scratch.Set "description" .Summary }}

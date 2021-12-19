@@ -3,8 +3,6 @@ title: "Using a GitLab to build a Debian Repository"
 date: 2020-08-02T22:40:28+01:00
 draft: false
 tags:
-  - Qm64
-  - project
   - debian
   - linux
   - devops
@@ -17,6 +15,7 @@ tags:
   - pipeline
   - ipfs
 thumbnail: /images/202008/repo.webp
+images: ["/images/202008/repo.webp"]
 aliases:
   - /images/202008-debian-apt-repository
 ---

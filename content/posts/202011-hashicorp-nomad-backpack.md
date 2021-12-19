@@ -3,18 +3,18 @@ title: "Backpack: helm charts but for Hashicorp Nomad"
 date: 2020-11-12T19:12:20+01:00
 draft: false
 tags:
-  - Qm64
   - project
   - hashicorp
   - nomad
   - template
   - helm
   - backpack
-  - golang
+  - go
   - develop
   - devops
   - SRE
 thumbnail: /images/202011/gopherswrench.webp
+images: ["/images/202011/gopherswrench.webp"]
 aliases: 
   - /images/202011-hashicorp-nomad-backpack
 ---

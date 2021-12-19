@@ -6,12 +6,20 @@
 
     <title>{{ if eq .Title "" }}Lorenzo's Blog{{ else }}{{ .Title }} - Lorenzo's Blog{{ end }}</title>
 
-    {{ if not (eq .Description "") }}
-    <meta name=description content="{{ .Description }}">
+    {{ $description := "" }}
+    {{ if not (eq $.Site.Params.description  "") }}
+    {{ .Scratch.Set "description" $.Site.Params.description }}
     {{ end }}
+    {{ if not (eq .Summary "") }}
+    {{ .Scratch.Set "description" .Summary }}
+    {{ end }}
+    {{ if not (eq .Description "") }}
+    {{ .Scratch.Set "description" .Description }}
+    {{ end }}
+    <meta name=description content='{{ .Scratch.Get "description" }}'>
 
-    {{ if not (eq .Keywords "") }}
-    <meta name="keywords" content='{{ delimit .Keywords ", " }}' />
+    {{ $taxonomy := "tags" }}{{ with .Param $taxonomy }}
+    <meta name="keywords" content='{{ delimit . ", " }}' />
     {{ end }}
 
     <link rel="canonical" href="{{ $.Page.Permalink | absURL }}"/>

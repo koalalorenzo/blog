@@ -144,12 +144,12 @@ became
 _It is still a big file_, but it will be faster to process. 🎉
 
 To do so I had to create my
-[own fork of the module](https://gitlab.com/koalalorenzo/gomeme). sadly requires
-GCC as there is no official `image/webp` package in the Go
-standard library... 😭 and on top of that, I was able to find only libraries 
-using C code to deal with WebP and Animated WebP. So due to time
-constraints, I added support for WebP only for static Images... 🤞 hoping to
-upgrade to Animated WebP when the Go standard library implements them.
+[own fork of the module](https://gitlab.com/koalalorenzo/gomeme). Sadly, it 
+requires GCC as there is no official `image/webp` package in the Go standard 
+library... 😭 and on top of that, I was able to find only libraries using C code 
+to deal with WebP and not with Animated WebP. So due to time constraints, I 
+added support for WebP only for static Images... 🤞 hoping to upgrade to 
+Animated WebP when the Go standard library implements them.
 
 Using my fork of Jame’s Go module made some images faster, but I kept the source
 to display PNGs, JPEGs, and GIFs as I am not expecting people to use WebP... 

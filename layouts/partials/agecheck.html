@@ -4,6 +4,9 @@
 {{ if gt $article_age 2 }}
 <div class="agecheck">
   <h2>ATTENTION!</h2>
-  <p>This article is <b>{{ $article_age }} years old</b>, it may be outdated!</p>
+  <p>
+    This article is <b>{{ $article_age }} years old</b>, it may be outdated or
+    not relevant anymore!
+  </p>
 </div>
 {{ end }}

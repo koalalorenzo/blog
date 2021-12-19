@@ -3,6 +3,7 @@ languageCode: "en-us"
 title: "Lorenzo Setale's Blog"
 description: "My personal blog"
 relativeURLs: true
+enableRobotsTXT: true
 
 mainSections: ["posts"]
 

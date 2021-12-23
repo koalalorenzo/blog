@@ -6,7 +6,7 @@
 
 {{ if (.Params.mermaid) }}
 {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build | resources.Minify }}
-<script async src="{{ $mermaidjs.RelPermalink }}" ></script>
+<script src="{{ $mermaidjs.RelPermalink }}" ></script>
 {{ end }}
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->

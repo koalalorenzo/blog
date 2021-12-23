@@ -31,8 +31,15 @@
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
     <!-- Preloads -->
-    <link rel="preload" as="script" href="/js/mui.min.js" />
-    <link rel="preload" as="script" href="/js/instantpage.min.js" />
+    {{ $muijs := resources.Get "js/mui.min.js" | js.Build | resources.Minify }}
+    <link rel="preload" as="script" href="{{ $muijs.RelPermalink }}" />
+    {{ $instjs := resources.Get "js/instantpage.min.js" | js.Build | resources.Minify }}
+    <link rel="preload" as="script" href="{{ $instjs.RelPermalink }}" />
+    {{ if (.Params.mermaid) }}
+    {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build | resources.Minify }}
+    <link rel="preload" as="script" href="{{ $mermaidjs.RelPermalink }}" />
+    {{ end }}
+    <link rel="preload" as="script" href="https://utteranc.es/client.js" />
 
     <!-- OpenGraph -->
     {{ template "_internal/opengraph.html" . }}

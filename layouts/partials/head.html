@@ -31,12 +31,12 @@
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
     <!-- Preloads -->
-    {{ $muijs := resources.Get "js/mui.min.js" | js.Build }}
+    {{ $muijs := resources.Get "js/mui.min.js" | js.Build | resources.Minify }}
     <link rel="preload" as="script" href="{{ $muijs.RelPermalink }}" />
-    {{ $instjs := resources.Get "js/instantpage.min.js" | js.Build }}
+    {{ $instjs := resources.Get "js/instantpage.min.js" | js.Build | resources.Minify }}
     <link rel="preload" as="script" href="{{ $instjs.RelPermalink }}" />
     {{ if (.Params.mermaid) }}
-    {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build }}
+    {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build | resources.Minify }}
     <link rel="preload" as="script" href="{{ $mermaidjs.RelPermalink }}" />
     {{ end }}
     <link rel="preload" as="script" href="https://utteranc.es/client.js" />

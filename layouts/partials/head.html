@@ -39,6 +39,7 @@
     {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build "mermaid.min.js" }}
     <link rel="preload" as="script" href="{{ $mermaidjs.RelPermalink }}" />
     {{ end }}
+    <link rel="preload" as="script" href="https://utteranc.es/client.js" />
 
     <!-- OpenGraph -->
     {{ template "_internal/opengraph.html" . }}

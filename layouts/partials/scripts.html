@@ -1,6 +1,12 @@
-<script src="/js/mui.min.js" async integrity="sha384-5fukNx4ueWppZffMr5jjEvVI1+qbAERwHcObzwRZhBq1c6zeOEV6gecG8Zu52lle"></script>
-<script src="/js/instantpage.min.js" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->
+{{ $muijs := resources.Get "js/mui.min.js" | js.Build "mui.min.js" }}
+<script async src="{{ $muijs.RelPermalink }}"></script>
+
+{{ $instjs := resources.Get "js/instantpage.min.js" | js.Build "instant.min.js" }}
+<script type="module"  src="{{ $instjs.RelPermalink }}" ></script>
+
 {{ if (.Params.mermaid) }}
-<script async src="https://unpkg.com/mermaid@latest/dist/mermaid.min.js"></script>
+{{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build "mermaid.min.js" }}
+<script async src="{{ $mermaidjs.RelPermalink }}" ></script>
 {{ end }}
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->

@@ -1,11 +1,11 @@
-{{ $muijs := resources.Get "js/mui.min.js" | js.Build "mui.min.js" }}
+{{ $muijs := resources.Get "js/mui.min.js" | js.Build }}
 <script async src="{{ $muijs.RelPermalink }}"></script>
 
-{{ $instjs := resources.Get "js/instantpage.min.js" | js.Build "instant.min.js" }}
+{{ $instjs := resources.Get "js/instantpage.min.js" | js.Build }}
 <script type="module"  src="{{ $instjs.RelPermalink }}" ></script>
 
 {{ if (.Params.mermaid) }}
-{{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build "mermaid.min.js" }}
+{{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build }}
 <script async src="{{ $mermaidjs.RelPermalink }}" ></script>
 {{ end }}
 

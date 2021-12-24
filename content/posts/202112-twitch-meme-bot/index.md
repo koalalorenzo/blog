@@ -10,8 +10,6 @@ tags:
   - bot
   - Heroku
   - opensource
-thumbnail: stream.webp
-images: ["stream.webp"]
 mermaid: true
 ---
 During the dark side of quarantine, I had to keep my hands busy, and instead of

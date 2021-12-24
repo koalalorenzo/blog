@@ -16,14 +16,13 @@ tags:
 - raspberry
 - asic
 - hacking
-thumbnail: /images/2015/1*cGzWsrAlRUAGWLfzJOGYLg.webp
 ---
 
 Two months ago, I decided to buy two **Bitcoin ASIC Miners**. The reason is quite simple: I am easy to get bored when I have everything prepared and ready to be used. 😴 Particularly if we are talking about technologies and computers. There is no fun if I can’t **learn from crafting it**, right?
 
 When “[The 21 Bitcoin computer](https://21.co/)” was announced I was surprised to see a [Raspberry Pi](https://www.raspberrypi.org/) device with a huge black brick on top of it: an ASIC Chip that mines between 50 and 120Gh/s. Basically it is an “already assembled and configured” device that can mine and be a Bitcoin full node. 👍 <!--more-->
 
-![](/images/2015/1*cGzWsrAlRUAGWLfzJOGYLg.webp)
+![](1*cGzWsrAlRUAGWLfzJOGYLg.webp)
 
 That seems to be an awesome product, for thousands of reasons, but I have decided to not buy it. The reason is not the price (~_400$_) or the software inside that is pre-compiled by a new company for you. The reason is simple: it would bore me.
 
@@ -36,7 +35,7 @@ So I decided to build my onw 21 Bitcoin Computer, capable of mining, programmabl
 
 I compiled and configured all the softwares by myself and the time spent was worth. I spent less money by recycling old things and that made me feel even better. The result was a RaspberryPi connected to some devces, with several cables. Ugly but I am happy with that. 👏
 
-![](/images/2015/1*4YwZQoRaF768dDC8HC8Vfg.png)
+![](cover.webp)
 
 After some weeks of checking and playing with different mining pools, and configuration and integration with the API and NodeJS… I got bored… again…
 

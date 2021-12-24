@@ -25,13 +25,13 @@ tags:
 thumbnail: /images/2015/zeronet.webp
 ---
 
-Since when I was little, I always loved peer-to-peer technologies... I even tried to create a GNU/Linux distribution based on that. .. but recently I have discovered a brilliant project that is combining the power of **asynchronous cryptography**, using **Bitcoin** private and public keys, with **BitTorrent technology.** This project is called [ZeroNet](http://zeronet.io) and it is a new and interesting way to provide websites and real-time services in a p2p network. <!--more-->
+Since when I was little, I always loved peer-to-peer technologies... I even tried to create a GNU/Linux distribution based on that. .. but recently I have discovered a brilliant project that is combining the power of **asynchronous cryptography**, using **Bitcoin** private and public keys, with **BitTorrent technology.** This project is called [ZeroNet](http://zeronet.io) and it is a new and interesting way to provide websites and real-time services in a p2p network. <!--more-->
 
 ![](/images/2015/zeronet.webp)
 
-To join the network and browse the ZeroNet websites, now you have to **keep running a python software** in one of your **terminal**. I really hate to keep it opened 24h a day... even if I am nerd enough to love logs. I decided to run an instance of ZeroNet in background on my Mac: every time I turn on my computer, I am updating and seeding content. I feel happy to help this community 👍 Here is how I made it possible. <!--more-->
+To join the network and browse the ZeroNet websites, now you have to **keep running a python software** in one of your **terminal**. I really hate to keep it opened 24h a day... even if I am nerd enough to love logs. I decided to run an instance of ZeroNet in background on my Mac: every time I turn on my computer, I am updating and seeding content. I feel happy to help this community 👍 Here is how I made it possible. <!--more-->
 
-First, I have created a _launchd daemon_. So I cloned the [github project repository](https://github.com/HelloZeroNet/ZeroNet) in my home directory (~/ZeroNet).
+First, I have created a _launchd daemon_. So I cloned the [github project repository](https://github.com/HelloZeroNet/ZeroNet) in my home directory (~/ZeroNet).
 
 ```shell
 cd ~ ; git clone https://github.com/HelloZeroNet/ZeroNet.git
@@ -40,7 +40,7 @@ cd ~ ; git clone https://github.com/HelloZeroNet/ZeroNet.git
 Then after that I have created the launchd daemon by editing the file:
 
 ```
-nano ~/Library/LaunchAgents/io.zeronet.plist
+nano ~/Library/LaunchAgents/io.zeronet.plist
 ```
 
 And adding the following content, of course **replacing** /Users/koalalorenzo with **your own home path**:
@@ -72,7 +72,7 @@ And adding the following content, of course **replacing** /Users/koalalorenzo wi
 I have then added a new script able to update the repository and run the server. So I have edited a second file:
 
 ```shell
-nano ~/ZeroNet/start.sh
+nano ~/ZeroNet/start.sh
 ```
 
 Adding in it the following simple code:
@@ -84,7 +84,7 @@ git pull
 sleep 5
 /usr/bin/python /Users/koalalorenzo/ZeroNet/zeronet.py
 ```
-Then I had to change the permissions of the file so the Daemon would run it:
+Then I had to change the permissions of the file so the Daemon would run it:
 
 ```shell
 chmod +x ~/ZeroNet/start.sh
@@ -96,4 +96,4 @@ The only thing missing was to launch it! So I had to activate the Daemon on laun
 launchctl load ~/Library/LaunchAgents/io.zeronet.plist
 ```
 
-Once loaded, because I had every dependencies installed and it was running already before, the daemon works without errors, allowing me to browse to ZeroNet, without having a terminal opened. :)
+Once loaded, because I had every dependencies installed and it was running already before, the daemon works without errors, allowing me to browse to ZeroNet, without having a terminal opened. :)

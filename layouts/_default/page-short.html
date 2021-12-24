@@ -6,11 +6,13 @@
   </h2>
   <div class="mui-container">
     <div class="mui-row">
-      {{ if .Params.thumbnail }}
-      <a href="{{ .Permalink | relURL }}">
-        <div class="thumbnail mui-col-md-4" style="background-image: url({{.Params.thumbnail}});"></div>
+      {{ if .Params.images }}
+      {{ range first 1 .Params.images }}
+      <a href="{{ $.Permalink | relURL }}">
+        <div class="thumbnail mui-col-md-4" style="background-image: url({{.}});"></div>
       </a>
       <div class="mui-col-md-8">
+      {{ end }}
       {{ else }}
       <div class="mui-col-md-12">
       {{ end }}

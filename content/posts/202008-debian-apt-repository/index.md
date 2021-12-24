@@ -14,10 +14,6 @@ tags:
   - SRE
   - pipeline
   - ipfs
-thumbnail: /images/202008/repo.webp
-images: ["/images/202008/repo.webp"]
-aliases:
-  - /images/202008-debian-apt-repository
 ---
 
 I have the feeling that a blog post about distributing packages is needed. 😮
@@ -28,7 +24,7 @@ projects are not distributed over Debian packages, 👷‍♂️ and I need them
 Raspberry Pi! 😜 
 <!--more-->
 
-![Debian package](/images/202008/debian-pkg-icon.webp#smallSquare#noborder)
+![Debian package](dpkg.webp#smallSquare#noborder)
 
 ## A little bit about distributing Debian packages
 
@@ -38,7 +34,7 @@ for distributing apps and keeping Debian-based Operative Systems up to date.
 Adding software via apt install is cleaner than download binaries or using ad-hoc
 processes to manage versions.
 
-![Debian package](/images/202008/repo.webp#center)
+![Debian package](repo.webp#center)
 
 Not using a Debian repository is understandable: somebody has to maintain it and
 keep it updated. That takes time, and it is not always easy to do: open source
@@ -71,7 +67,7 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the
 following structure:
 
-![Debian Source file tree](/images/202008/source-tree.webp#bigSquare#noborder)
+![Debian Source file tree](source-tree.webp#bigSquare#noborder)
 
 You can have a better look [the files here](https://gitlab.com/Qm64/apt/-/tree/master/source).
 Those files are defining a lot of things, including:
@@ -168,7 +164,7 @@ distribute my packages... or I could have just waited
 [GitLab to work on the Debian Repository](https://gitlab.com/gitlab-org/gitlab/-/issues/5835)
 implementation... but I wanted to have fun and complicate my life! 🤪
 
-![Make things so complicated](/images/202008/make-things-complicated.webp)
+![Make things so complicated](make-things-complicated.webp)
 
 Building automatically packages from static binaries is useful as it "removes"
 a tedious process from my daily chores 😉. Most of the PaaS and SaaS solutions

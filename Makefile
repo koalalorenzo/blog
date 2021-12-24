@@ -45,7 +45,5 @@ endif
 .PHONY: convert_images
 
 new_post:
-	-hugo new posts/${DATE}.md
-	mkdir -p static/images/${DATE}/
-	touch static/images/${DATE}/.gitkeep
+	-hugo new posts/${DATE}/content.md
 .PHONY: new_post

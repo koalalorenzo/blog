@@ -4,8 +4,8 @@ date: {{ .Date }}
 draft: true
 tags:
   - update
-thumbnail: /images/202003/ii.webp
-images: ["/images/202003/ii.webp"]
+thumbnail: image.webp
+images: ["image.webp"]
 ---
 Introduction
 

@@ -19,7 +19,7 @@ a:hover {
 
 img {
   border: 0px black solid;
-  border-radius: 25px;
+  border-radius: $border_radius;
 }
 
 img[src*='#noborder'] {

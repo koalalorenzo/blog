@@ -16,12 +16,11 @@ tags:
 - opensource
 - p2p
 - money
-thumbnail: /images/2015/bitcoin.webp
 ---
 
 I am in the world of bitcoin since 2012 when I opened my first bitcoin wallet on [blockchain.info](https://blockchain.info/it/wallet/)... and a lot of things **changed** since that moment: new **services**, growing **communities**, new alternative crypto currencies, **ATMs**, Credit-Debit cards, and a larger diffusion of people accepting bitcoin in their shops. <!-- more -->
 
-![](/images/2015/bitcoin.webp)
+![Bitcoin](/images/2015/cover_bitcoin.webp)
 
 After those two years I can see a better view of what Bitcoin means to me and the innovation behind that technology, including [Xapo](http://xapo.com/r/AT5712D) debit card... and some of my friends are tired of me talking about bitcoins :)
 
@@ -53,11 +52,11 @@ The same day I went to the [7 eleven](https://www.7-eleven.com) and I bought two
 
 
 
-![](/images/2015/scontrino.webp)
+![](scontrino.webp)
 
 
 
-So, while I was eating the amazing [Winerbrød](/images/2015/win.webp), I checked the balance on the **Xapo** [mobile wallet](https://xapo.com/wallet/) (the iOS native app), just be sure that everything was working fine. I received instantly the payment on my account, and my 25 DKK had been converted into 0.009 BTC. I was so excited and happy that **my friends started ignoring me** because I was talking too much about bitcoin! :P
+So, while I was eating the amazing [Winerbrød](win.webp), I checked the balance on the **Xapo** [mobile wallet](https://xapo.com/wallet/) (the iOS native app), just be sure that everything was working fine. I received instantly the payment on my account, and my 25 DKK had been converted into 0.009 BTC. I was so excited and happy that **my friends started ignoring me** because I was talking too much about bitcoin! :P
 
 
 

@@ -14,14 +14,13 @@ tags:
 - communication
 - suggestions
 - love
-thumbnail: /images/2015/3523307598_faa352e689_o.webp
 ---
 
 During the last months, I fell in love with different people. My real problem was that my mind was "acting like a child", dividing work from loving affairs as two magnets with the same poles attract themselves (hint: they don't). That's good, but what happens if you bring "_communication techniques_" into love affairs? So I realized that, when I am in love, I was not that good in communicating as I am doing while working every day... then I decided to write down some suggestion about the "_communication techniques for lovers_".
 
 <!-- more -->
 
-![Communication for lovers (Photo by MartinodF)](/images/2015/3523307598_faa352e689_o.webp)
+![Communication for lovers (Photo by MartinodF)](cover.webp)
 
 I decided to write some simple suggestions based on what happened to me, to remind me to communicate better. I want to apply some communication techniques that I've learned from the experience of working in teams, to my future love story, just because I failed in the past.
 
@@ -53,7 +52,7 @@ In my job is **really important** to **express an idea** when you are **asking**
 
 _Let's say_ you really want _that guy_. But what if you cannot plan on a date because he is really busy? Sometimes it's not because they are busy, but just because they don't want to have a date: to be practical and honest, If somebody really wants something but he/she has some "**obstacles**", then that person should be able to overcome all the "_problems_" and be the first to find a solution and _achieve the goal_: **If we really want something**, if we really want to dance, if we really want to kiss, we just have to **do it**. I believe that the word "shy" is just a stupid excuse to hide other problems sometimes.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ovFDGRmjWYE" frameborder="0" allowfullscreen></iframe>
+{{< youtube ovFDGRmjWYE >}}
 
 At work, I always have to find some solutions before saying anybody that there is a problem. If the "_problem_" is not going to affect our main "**goal**", maybe is **not a real problem**. However, in case we really have to fix the problem, we **can't be "shy"** or we **lose money**.
 

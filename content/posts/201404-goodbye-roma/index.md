@@ -17,8 +17,6 @@ tags:
 - rome
 - startup
 - expat
-images: ["/images/2015/img_2834.webp"]
-thumbnail: /images/2015/img_2834.webp
 ---
 
 Dear Rome,
@@ -26,7 +24,7 @@ I know you are not missing me and I am not missing you. You may wonder why I mad
 
 <!--more-->
 
-![](/images/2015/13357268864_6760a1c19e_o.webp)
+![](cover_13357268864_6760a1c19e_o.webp)
 
 [We are on a time bomb](http://tmb.setale.me/post/68204905930/iperattivi-pro-attivi-e-stronzi), Rome. You are not what I need now. You are the perfect city for people that are not willing to grow up. Your citizen has big dreams, but maybe someone has cursed you. So they easily get **distractions** when they are almost to achieve goals. You are my **eternal city** because it was not easy to get things done for me. I had this feeling. 
 
@@ -34,7 +32,7 @@ When I was **not thinking** about collecting money, because I get used to that, 
 
 **My dear Roma**, you have to understand that **Copenhagen** is different from you. Is better than you. If you are talented, young and really skilled, you will find a great job a great salary and a big opportunity. Nobody is using me or takes advantage of my time. Nobody is using my age. Nobody is promising me money. Nobody is talking behind about my projects. Nobody is smiling at me just because they want something back and everybody answers to email. Nonetheless, that is something that will change. You gave me the opportunity to learn and to know, you helped me by introducing me cool and interesting people: even if everyone has defects, I think I've met the most important people, and I am proud of what you gave to me: I great experiences inside a **great community**.
 
-![](/images/2015/img_2834.webp)
+![](img_2834.webp)
 
 Roma, I am not missing you... The startup world in Copenhagen is not so big, but at the same time is more solid and **people really care** about important things. The city "works" and "[rocks](http://www.cphdistortion.dk)", nobody is really complaining about the transport system, the internet connection, money, and services. Everything just **works**.
 

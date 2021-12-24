@@ -15,12 +15,11 @@ tags:
 - digital life
 - money
 - peer-to-peer
-thumbnail: /images/2015/money.webp
 ---
 
 Finally, I moved my blog to wordpress.com. The reason is really simple: time. I have a blog that had been for years and years hosted on my own server. This helped me a lot, because is cheaper and it allows me to use custom plugin and design my own theme. But everything is fine until you get **hacked**! ...and sadly I don't have enough time to find a solution to this... by paying! <!--more-->
 
-![Money by Mukumbura](/images/2015/money.webp)
+![Money by Mukumbura](cover.webp)
 
 Shortly: I found that 2 months ago, exactly on the 5th of May, somebody injected some PHP code in my wordpress installation on my server.  The way to fix this is to restore some backups and upgrade everything to the latest version... but I don't have time for this. So I decided to spend 99$ and buy the WordPress.com Plan in order to have my old blog, in my old domain ( blog.setale.me ), with a horrible theme and the trust that wordpress.com will take care of **the security** of my thoughts.
 

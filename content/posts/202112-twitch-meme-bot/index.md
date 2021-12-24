@@ -10,8 +10,8 @@ tags:
   - bot
   - Heroku
   - opensource
-thumbnail: /images/202112/stream.webp
-images: ["/images/202112/stream.webp"]
+thumbnail: stream.webp
+images: ["stream.webp"]
 mermaid: true
 ---
 During the dark side of quarantine, I had to keep my hands busy, and instead of
@@ -36,7 +36,7 @@ The idea is simple. If you write on my chat while I stream something like:
 
 It will show you something like this on my stream:
 
-![Example of a Meme generated using the Bot](/images/202112/hello-example.webp#small)
+![Example of a Meme generated using the Bot](hello-example.webp#small)
 
 People could generate Memes based on what was happening on the screen, and since 
 I have been playing a lot of Dead By Daylight, there were plenty of moments to 

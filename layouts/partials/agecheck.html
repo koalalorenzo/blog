@@ -1,3 +1,4 @@
+{{ if not (.Params.hide_age_check) }}
 {{ $now := int (now.Format "2006") }}
 {{ $article_age := sub $now (int (.Date.Format "2006")) }}
 
@@ -6,7 +7,8 @@
   <h2>ATTENTION!</h2>
   <p>
     This article is <b>{{ $article_age }} years old</b>, it may be outdated or
-    not relevant anymore!
+    not relevant anymore! Comments and reactions might have been lost.
   </p>
 </div>
+{{ end }}
 {{ end }}

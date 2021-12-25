@@ -14,6 +14,7 @@
       <div itemprop="articleBody">{{ .Content }}</div>
   </div>
 </article>
+{{ if (.Params.comments) }}
 <div id="comments">
   <h2>Comments</h2>
   <script src="https://utteranc.es/client.js"
@@ -26,4 +27,5 @@
   </script>
   {{ partial "agecheck.html" . }}
 </div>
+{{ end }}
 {{ end }}

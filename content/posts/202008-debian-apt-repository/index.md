@@ -185,5 +185,5 @@ Digital signatures are present because HTTPs is not the default transport
 protocol used. Instead, PGP/GPG increases the security for HTTP, FTP, and other 
 methods to distribute files! 😎 (Does anybody remember when repositories were on
 CD/DVDs?). But don't panic! This process can be automated too, just remember
-to use something like [Hashicorp Vault](https://qm64.tech/images/202003-immutable-infrastructure-vault/) 
+to use something like [Hashicorp Vault](https://blog.setale.me/2020/03/21/Exploring-Immutable-Infrastructure-with-Vault/) 
 to store the secret PGP Key!

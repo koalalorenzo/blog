@@ -165,7 +165,7 @@ I have added a lot of other functionalities, like support for a basic Web UI,
 a WebHook with Basic HTTP Auth, and some JSON API to integrate with **Apple
 Shortcuts**...  so that I can generate memes from my iPhone or from my Mac.
 
-![My Shortcut to generate Memes from my iPhone](/images/202112/shortcuts-twitch-gen.webp#noborder#big)
+![My Shortcut to generate Memes from my iPhone](shortcuts-twitch-gen.webp#noborder#big)
 
 Building this was pure pleasure. I made something so that viewers can have some 
 fun, just as a small project. I am happy that I gathered some feedback from some

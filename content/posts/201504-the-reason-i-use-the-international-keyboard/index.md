@@ -16,12 +16,11 @@ tags:
 - macbook pro
 - programming
 - hacking
-thumbnail: /images/2015/keyboard.webp
 ---
 
 If you think that a keyboard layout can **boost** your **productivity**, you should consider the **time** you will spend to **learn** a new one, the hassle and the **frustration** when typing something wrong... but if you love **programming**, you may consider to **buy/switch** to the **international** keyboard.
 
-![](/images/2015/keyboard.webp)
+![](cover_keyboard.webp)
 
 Back in February, I had to switch to a new MacBookPro. My old 2011 13 inch MacBookPro, started being impossible to use... and after 4 years I had to remove all the stickers from its back and turn it off forever. I am still _in mourning_ after its _death_.
 
@@ -33,6 +32,6 @@ The international keyboard layout, instead, puts all the **buttons** we need, ri
 
 There is a **feature** that is helping me when I need to write other "**special vowels**" by holding the one I need. You can read more about it [here, on the Apple support website](https://support.apple.com/kb/PH11264?locale=en_US). For example to write København I will hold `O` when i need ti write `Ø` and something like this will appear:
 
-![Just old the vowel you need](/images/2015/holding-mac-keyboard.webp)
+![Just old the vowel you need](holding-mac-keyboard.webp)
 
 To be honest, it is **not a big deal**, but this is the reason why my MacBookPro has an International Keyboard instead of a localized one. It is easier to use to write code. My hands are thanking me for this choice :-)

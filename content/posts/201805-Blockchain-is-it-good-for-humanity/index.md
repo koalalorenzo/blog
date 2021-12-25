@@ -14,8 +14,6 @@ tags:
 - Ethereum
 - Blockchain
 - Hera
-images: ["/images/2015/bitcoin.webp"]
-thumbnail: /images/2015/bitcoin.webp
 ---
 The journey that I have decided to take with [Siderus](https://siderus.io/) 
 brought myself always in embarrassing moment on meetings **Hyped discussion** 

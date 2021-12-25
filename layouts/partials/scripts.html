@@ -1,12 +1,12 @@
-{{ $muijs := resources.Get "js/mui.min.js" | js.Build | resources.Minify }}
-<script async src="{{ $muijs.RelPermalink }}"></script>
-
-{{ $instjs := resources.Get "js/instantpage.min.js" | js.Build | resources.Minify }}
-<script type="module"  src="{{ $instjs.RelPermalink }}" ></script>
+{{ $muijs := resources.Get "js/mui.min.js" | js.Build }}
+{{ $instjs := resources.Get "js/instantpage.min.js" | js.Build }}
+{{ $js := slice $instjs $muijs | resources.Concat "js/bundle.js" | resources.Minify }}
 
 {{ if (.Params.mermaid) }}
-{{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build | resources.Minify }}
-<script src="{{ $mermaidjs.RelPermalink }}" ></script>
+{{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build }}
+{{ $js = slice $instjs $muijs $mermaidjs | resources.Concat "js/bundle.full.js" | resources.Minify }}
 {{ end }}
+
+<script src="{{ $js.RelPermalink }}"></script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->

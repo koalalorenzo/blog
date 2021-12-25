@@ -32,7 +32,7 @@ The fact that we pretend other people to **read our needs** is really **stupid**
 
 
 
-I've found Emil on Grindr a month ago. We talked a lot for a few weeks. He was a really cute and nice guy, we talked about everything and we always had the feeling that we had something in common. ([We wrote that, yeah](http://koalalorenzo2014.files.wordpress.com/2014/05/f_e62d47899e.jpg)) Then I made the decision to meet him in person, because a stupid app is not enough. What happen? I told him to meet in person and then we did... but because I was not clearly saying the word "_first date_" we had just a one-nite of pure passion. Well, I really enjoyed that, but the day after it was sad to heard his mouth saying something like "_I was not looking for sex_" and then argue about that. He is gone. Lesson learned: If you want a date, say the word "date" or you will maybe find something that you were not expecting.
+I've found Emil on Grindr a month ago. We talked a lot for a few weeks. He was a really cute and nice guy, we talked about everything and we always had the feeling that we had something in common. ([We wrote that, yeah](awww.webp)) Then I made the decision to meet him in person, because a stupid app is not enough. What happen? I told him to meet in person and then we did... but because I was not clearly saying the word "_first date_" we had just a one-nite of pure passion. Well, I really enjoyed that, but the day after it was sad to heard his mouth saying something like "_I was not looking for sex_" and then argue about that. He is gone. Lesson learned: If you want a date, say the word "date" or you will maybe find something that you were not expecting.
 
 
 

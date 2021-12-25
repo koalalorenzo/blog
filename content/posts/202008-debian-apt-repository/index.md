@@ -24,7 +24,7 @@ projects are not distributed over Debian packages, 👷‍♂️ and I need them
 Raspberry Pi! 😜 
 <!--more-->
 
-![Debian Repository building](repo.webp#smallSquare#noborder)
+![Debian Repository building](repo.webp#center)
 
 ## A little bit about distributing Debian packages
 
@@ -34,7 +34,7 @@ for distributing apps and keeping Debian-based Operative Systems up to date.
 Adding software via apt install is cleaner than download binaries or using ad-hoc
 processes to manage versions.
 
-![Debian package](cover.webp#center)
+![Debian package](cover.webp#smallSquare)
 
 Not using a Debian repository is understandable: somebody has to maintain it and
 keep it updated. That takes time, and it is not always easy to do: open source

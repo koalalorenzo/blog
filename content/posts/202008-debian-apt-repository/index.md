@@ -24,7 +24,7 @@ projects are not distributed over Debian packages, 👷‍♂️ and I need them
 Raspberry Pi! 😜 
 <!--more-->
 
-![Debian package](dpkg.webp#smallSquare#noborder)
+![Debian Repository building](repo.webp#smallSquare#noborder)
 
 ## A little bit about distributing Debian packages
 
@@ -34,7 +34,7 @@ for distributing apps and keeping Debian-based Operative Systems up to date.
 Adding software via apt install is cleaner than download binaries or using ad-hoc
 processes to manage versions.
 
-![Debian package](repo.webp#center)
+![Debian package](dpkg.webp#center)
 
 Not using a Debian repository is understandable: somebody has to maintain it and
 keep it updated. That takes time, and it is not always easy to do: open source
@@ -67,7 +67,7 @@ To do that, I need to create a set of files in specific directories. To automate
 this process, I am creating a "template" that scripts will modify with the
 following structure:
 
-![Debian Source file tree](source-tree.webp#bigSquare#noborder)
+![Debian Source file tree](cover.webp#bigSquare#noborder)
 
 You can have a better look [the files here](https://gitlab.com/Qm64/apt/-/tree/master/source).
 Those files are defining a lot of things, including:

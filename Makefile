@@ -11,7 +11,7 @@ clean_%:
 	rm -rf ./$*
 .PHONY: clean
 
-clean: clean_public clean_tmp
+clean: clean_public clean_tmp clean_resources
 .PHONY: clean
 
 run: clean

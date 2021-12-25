@@ -5,7 +5,6 @@
   CDN-Cache-Control: 1209600, stale-if-error=600
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'self'; script-src 'self' static.cloudflareinsights.com utteranc.es
 
 
 /2014/*

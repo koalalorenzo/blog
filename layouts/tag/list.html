@@ -11,7 +11,7 @@
         </div>
         <div class="mui--text-left" id="article_shorts">
           {{ range .Data.Terms.ByCount }}
-            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> - {{ .Count }}</li>
+            <li><a href="{{ .Page.Permalink }}" data-instant>{{ .Page.Title }}</a> - {{ .Count }}</li>
           {{ end }}
         </div>
     </div>

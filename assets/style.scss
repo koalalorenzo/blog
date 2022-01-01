@@ -11,6 +11,8 @@ Colors:
 // fonts 
 @import "assets/sass/fonts.scss";
 
+@import "assets/sass/grid.scss";
+
 // customize MUI variables
 $primart-color: #0080FF;
 $mui-primary-color:       rgba($primart-color, .90);
@@ -37,7 +39,6 @@ $screen-break-small: 600px;
 @import "assets/sass/agecheck.scss";
 @import "assets/sass/aside.scss";
 @import "assets/sass/contact.scss";
-@import "assets/sass/home.scss";
 @import "assets/sass/sections.scss";
 @import "assets/sass/articles.scss";
 @import "assets/sass/avatar.scss";

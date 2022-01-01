@@ -1,0 +1,8 @@
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+
+  .column-main {
+    grid-column-start: span 2;
+  }
+}

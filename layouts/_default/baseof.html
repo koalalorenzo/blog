@@ -5,13 +5,12 @@
         {{ partial "header" . }}
 
         <!-- main -->
-        <div class="mui-container">
-          <div class="mui-row">
-            <div class="mui-col-md-9 mui-col-xs-12">
+        <div class="grid-container">
+          <div class="column-main">
         {{ block "main" . }}
         {{ end }}
             </div>
-            <aside class="mui-col-md-3 mui--hidden-xs">
+            <aside class="column-avatar">
             {{ partial "author.html" . }}
             {{ partial "table_of_content.html" . }}
             {{ partial "tags.html" . }}

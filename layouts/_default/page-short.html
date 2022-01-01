@@ -1,33 +1,31 @@
 <article class="short">
   <h2>
     <a href="{{.Permalink | relURL }}" data-instant>
-        {{ .Title }}
+      {{ .Title }}
     </a>
   </h2>
-  <div class="mui-container">
-    <div class="mui-row">
+  <div class="details">
+    On: {{ .Date.Format "2006-01-02"}} - 
+    Reading Time: {{ math.Round (div (countwords .Content) 230.0) }} Minutes
+  </div>
+  <div class="content">
+    <div class="thumbnail-container">
       {{ if gt (len (.Resources.ByType "image")) 0 }}
-        {{ range first 1 (.Resources.ByType "image") }}
-          <a href="{{ $.Permalink | relURL }}" data-instant>
-          {{ with $i := .Fill "450x300 Center webp q75" }}
-            <div class="thumbnail mui-col-md-4" style="background-image: url({{$i.RelPermalink}});"></div>
-          {{ end }}
+      {{ range first 1 (.Resources.ByType "image") }}
+      <a href="{{ $.Permalink | relURL }}" data-instant>
+        {{ with $i := .Fill "450x300 Center webp q75" }}
+        <div class="thumbnail" style="background-image: url({{$i.RelPermalink}});"></div>
         {{ end }}
-        </a>
-        <div class="mui-col-md-8">
-      {{ else }}
-      <div class="mui-col-md-12">
+        {{ end }}
+      </a>
       {{ end }}
-        <div class="details">
-          <span class="material-icons">event</span> {{ .Date.Format "2006-01-02"}} 
-          <span class="material-icons">timer</span> {{ math.Round (div (countwords .Content) 230.0) }} Minutes
-        </div>
-        <div>
-          <p>
-            {{ .Summary }}
-          </p>
-          <a class="mui-btn mui-btn--primary" href="{{ .Permalink | relURL }}" data-instant>Continue reading</a>
-        </div>
+      <div>
+        <p>
+          {{ .Summary | plainify }}
+          <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading</a>
+        </p>
       </div>
     </div>
+  </div>
 </article>
+<hr />

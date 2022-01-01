@@ -10,45 +10,65 @@ Colors:
 */
 // fonts 
 @import "assets/sass/fonts.scss";
+$font-family: 'Made Tommy Regular';
 
-// import MUI colors
-@import "bower_components/mui/src/sass/mui/colors";
+// https://colorhunt.co/palette/d8e3e751c4d3126e82132c33
+$themes: (
+  light: (
+    background: #D8E3E7,
+    background-accent: #51C4D3,
+    text-color: #132C33,
+    color-primary: #126E82,
+    color-secondary: rgba(#126E82, .80),
+    color-accent: #51C4D3,
+  ),
+  dark: (
+    background: #132C33,
+    background-accent: #126E82,
+    text-color: #D8E3E7,
+    color-primary: #51C4D3,
+    color-secondary: rgba(#51C4D3, .80),
+    color-accent: #126E82,
+  ),
+);
 
-// customize MUI variables
-$primart-color: #0080FF;
-$mui-primary-color:       rgba($primart-color, .90);
-$mui-primary-color-dark:  rgba($primart-color, 1);
-$mui-primary-color-light: rgba($primart-color, .80);
+$theme-map: null;
+@mixin themify() {
+  @each $theme, $map in $themes {
+    @media (prefers-color-scheme: #{$theme}) {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
 
-$accent-color: #FFCA39;
-$mui-accent-color:        rgba($accent-color, .90);
-$mui-accent-color-dark:   rgba($accent-color, .90);
-$mui-accent-color-light:  rgba($accent-color, .90);
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
 
-$mui-body-bg-color: #eeeeec;
-$mui-base-font-size: 16px;
-$mui-base-font-family: 'Made Tommy Regular';
-
+$base-font-size: 16px;
 // this define the margin of headers and h1 first elements
-$h1_margin: $mui-base-font-size*1.2;
+$global-h1-margin: $base-font-size*1.2;
+$global-header-top-distance: $global-h1-margin*2;
 
-$border_radius: 0.8rem;
-
-// import MUI SASS
-@import "bower_components/mui/src/sass/mui";
-
-// impport material icons
-$material-icons-font-path: 'fonts/';
-@import 'bower_components/material-icons/iconfont/material-icons.scss';
-
+$global-border-radius: 25px;
+$global-margin: $global-border-radius;
+$global-body-width: 900px;
+$global-content-width: $global-body-width - $global-margin;
 // import custom stuff;
 $screen-break-small: 600px;
+
+@import "assets/sass/header.scss";
 @import "assets/sass/basic.scss";
 @import "assets/sass/agecheck.scss";
 @import "assets/sass/aside.scss";
-@import "assets/sass/contact.scss";
-@import "assets/sass/home.scss";
+@import "assets/sass/classes.scss";
 @import "assets/sass/sections.scss";
 @import "assets/sass/articles.scss";
+@import "assets/sass/articles_shorts.scss";
 @import "assets/sass/avatar.scss";
-@import "assets/sass/shorts.scss";

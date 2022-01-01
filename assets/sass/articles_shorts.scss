@@ -1,0 +1,37 @@
+// Smaller Article in list
+article.short {
+  clear: both;
+  margin: $global-margin 0;
+  border-radius: $global-border-radius;
+
+  h2 {
+    margin-top: 0px;
+
+    a {
+      @include themify(){
+        color: themed("text-color");
+      }    
+    }
+  }
+
+  .details {
+    font-size: 85%;
+  }
+
+  .thumbnail {
+    height: 200px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: $global-border-radius;
+    display: inline;
+    float: left;
+    margin: $global-margin/3;
+  }
+
+  .details span.material-icons {
+    font-size: 0.8rem;
+  }
+
+}

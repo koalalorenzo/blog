@@ -1,15 +1,24 @@
 .agecheck {
+  @include themify(){
+    background: themed("background-accent");
+    color: themed("text-color");
+  }
+
   position: -webkit-sticky; /* Safari */
   position: sticky;
 
   top: 0;
-  margin: 0 !important;
-  padding: $h1_margin;
+  margin: $global-margin 0 !important;
+  padding: $global-h1-margin;
 
-  background-color: $mui-body-bg-color;
-  color: red;
+  border-radius: $global-border-radius;
 
   h2 {
-    margin: 0
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }

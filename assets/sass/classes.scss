@@ -1,0 +1,33 @@
+.main {
+  width: ($global-body-width/12)*8 + $global-margin;
+  float: right; //opposite of aside
+  margin-top: $global-header-top-distance;
+}
+
+.highlight {
+  // @include themify(){
+  //   background-color: themed("backgron-accent");
+  //   color: themed("color-accent");
+  // }
+
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding: 10px;
+  background-color: #272822;
+  color: #f8f8f2;
+  overflow: scroll;
+
+  // Fixes numbers and bullet points not being readable on small screens
+  @media screen and (max-width: $screen-break-small) {
+    // Code highlight and markup
+    & {
+      width: 95%;
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+}

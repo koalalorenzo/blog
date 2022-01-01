@@ -1,129 +1,97 @@
 article {
-    p {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: $mui-base-font-size;
-        font-weight: 400;
-        line-height: 1.7em;
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: $base-font-size;
+    font-weight: 400;
+    line-height: 1.7em;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 2rem auto;
+    }
+  }
+
+  h1 {
+    margin-top: $global-h1-margin;
+  }
+
+  h2 {
+    margin-top: 3.5rem;
+  }
+
+  h3 {
+    margin-top: 3rem;
+  }
+
+  p strong {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  li ul {
+    margin-left: 2rem;
+  }
+
+  .mermaid {
+    @include themify() {
+      background-color: themed("background-accent");
     }
 
-    h1 {
-        margin-top: $h1_margin;
-    }
+    border-radius: $global-border-radius;
+    text-align: center;
+  }
 
-    h2 {
-        margin-top: 3.5rem;
-    }
-
-    h3 {
-        margin-top: 3rem;
-    }
-
-    p strong {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-    li ul {
-        margin-left: 2rem;
-    }
-
-    .mermaid {
-        text-align: center;
-    }
-}
-
-/* Images */
-
-article {
-    p img {
-        width: 100%;
-        max-width: 500px;
-        display: block;
-        margin: 2rem auto;
-    }
-
-    img[src*='#smallSquare'] {
-        max-width: 300px;
-        max-height: 300px;
-    }
-
-    img[src*='#big'] {
-        max-width: 750px;
-        max-height: 600px;
-    }
-
-    img[src*='#bigSquare'] {
-        max-width: 750px;
-        max-height: 750px;
-    }
-}
-
-// Smaller Article in list
-article.short {
-    h2 {
-        margin-top: 0px;
-    }
-
-    .details {
-        font-size: 85%;
-    }
-
-    .thumbnail {
-        height: 200px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        border-radius: $border_radius;
-    }
-
-    .details span.material-icons {
-        font-size: 0.8rem;
-    }
-
+  // Same distance as first child on aside.scss
+  :first-child {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
 }
 
 // Footnotes
 article {
-    .footnotes {
-        font-size: 0.85rem;
-    }
+  .footnotes {
+    font-size: 0.85rem;
+  }
 
-    .footnotes ol {
-        margin: 1rem;
-    }
+  .footnotes ol {
+    margin: 1rem;
+  }
 
-    .footnotes p {
-        font-size: 0.85rem;
-    }
+  .footnotes p {
+    font-size: 0.85rem;
+  }
 }
 
 // Fixes numbers and bullet points not being readable on small screens
 @media screen and (max-width: $screen-break-small) {
-
-    // Article lists and bullet points
-    article ul {
-        margin-left: 2.5rem;
+  // Article lists and bullet points
+  article {
+    ul {
+      margin-left: 2.5rem;
     }
-
-    article ol {
-        margin-left: 2.5rem;
+    ol {
+      margin-left: 2.5rem;
     }
+  }
 }
 
 .pagination {
-    clear: both;
-    text-align: center;
-    align-items: center;
+  clear: both;
+  text-align: center;
+  align-items: center;
 
-    .page-item.active a,
-    a.page-item.active {
-        text-decoration: underline;
-    }
+  .page-item.active a,
+  a.page-item.active {
+    text-decoration: underline;
+  }
 }
 
 div#latest_posts {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 div#age-note {

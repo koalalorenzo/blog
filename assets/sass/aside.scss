@@ -1,27 +1,40 @@
-
 // Floating aside
 aside {
-  position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: $h1_margin;
-  margin-top: $h1_margin;
+  top: $global-header-top-distance/2;
 
+  width: ($global-body-width/12)*4;
+  float: left; // opposite to .main
+  padding-left: $global-margin/2;
+  margin-top: $global-header-top-distance;
 
   // See Partial: table_of_content
   #table_of_content nav#TableOfContents {
-    margin-top: $h1_margin/4;
+    margin-top: $global-h1-margin/4;
   }
 
   #table_of_content nav#TableOfContents ul {
-    margin-left: $h1_margin/4;
+    margin-left: $global-h1-margin/4;
     margin-bottom: 0;
   }
 
-
   // See partial author
-  #about_author {
+  .author {
     h2 {
       margin: 0
     }
+
+    &.avatar {
+      padding-top: $global-margin;
+    }
+  }
+
+  :first-child {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  div {
+    padding-top: $global-h1-margin;
   }
 }

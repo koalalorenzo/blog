@@ -19,7 +19,8 @@
       <div class="mui-col-md-12">
       {{ end }}
         <div class="details">
-          <span class="material-icons">event</span> {{ .Date.Format "2006-01-02"}}
+          <span class="material-icons">event</span> {{ .Date.Format "2006-01-02"}} 
+          <span class="material-icons">timer</span> {{ math.Round (div (countwords .Content) 230.0) }} Minutes
         </div>
         <div>
           <p>

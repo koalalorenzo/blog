@@ -34,6 +34,18 @@ a {
   }
 }
 
+h1 {
+  font-size: $base-font-size*2.5;
+}
+
+h2 {
+  font-size: $base-font-size*1.5;
+}
+
+h3 {
+  font-size: $base-font-size*1.4;
+}
+
 img {
   border: 0px black solid;
   border-radius: $global-border-radius;

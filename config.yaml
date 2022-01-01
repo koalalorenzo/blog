@@ -5,8 +5,9 @@ description: "My personal blog"
 relativeURLs: true
 enableRobotsTXT: true
 mainSections: ["posts"]
-
+enableEmoji: true
 enableGitInfo: true
+
 lastmod: ["lastmod", ":git", "date", "publishDate"]
 
 markup:

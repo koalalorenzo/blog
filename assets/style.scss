@@ -32,6 +32,7 @@ $themes: (
   ),
 );
 
+$theme-map: null;
 @mixin themify() {
   @each $theme, $map in $themes {
     @media (prefers-color-scheme: #{$theme}) {
@@ -52,9 +53,10 @@ $themes: (
 
 $base-font-size: 16px;
 // this define the margin of headers and h1 first elements
-$h1_margin: $base-font-size*1.2;
+$global-h1-margin: $base-font-size*1.2;
 
-$border_radius: 0.8rem;
+$global-border-radius: 0.8rem;
+$global-margin: $global-border-radius;
 
 // import custom stuff;
 $screen-break-small: 600px;

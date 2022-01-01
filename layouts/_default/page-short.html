@@ -22,8 +22,9 @@
         <div>
           <p>
             {{ .Summary }}
+            <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading</a>
           </p>
-          <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading</a>
+          
         </div>
       </div>
     </div>

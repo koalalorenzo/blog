@@ -16,27 +16,25 @@ p {
   margin: 11px 0;
 }
 
-a .btn {
+a {
   text-decoration: none;
-}
+  @include themify(){
+    color: themed("color-accent");
+  }
 
-a:hover {
-  color: currentColor;
-  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 img {
   border: 0px black solid;
-  border-radius: $border_radius;
+  border-radius: $global-border-radius;
 }
 
 img[src*='#noborder'] {
   border: 0px;
   border-radius: 0;
-}
-
-h1, h2, h3 {
-  font-family: 'Made Tommy Medium';
 }
 
 footer {
@@ -50,7 +48,19 @@ pre {
 
 /* misc */
 
+.main {
+  margin: $global-margin*4;
+  max-width: 750px;
+  float: left;
+}
+
+
 .highlight {
+  // @include themify(){
+  //   background-color: themed("backgron-accent");
+  //   color: themed("color-accent");
+  // }
+
   margin-top: 45px;
   margin-bottom: 45px;
   padding: 10px;
@@ -62,23 +72,18 @@ pre {
 /* Header */
 
 header {
+  @include themify(){
+    color: themed("color-accent");
+  }
+
   // position: fixed;
   width: 100%;
   min-height: 2rem;
   font-size: 2rem;
-  color: #000000;
 
   navbar {
     display: flex;
     align-items: center;
-  }
-
-  a {
-    color: #000000;
-  }
-
-  a:hover {
-    color: #0080FF;
   }
 
   .nav-item {
@@ -93,11 +98,11 @@ header {
 
 //Fixes header padding from top
 body:first-child {
-  margin-top: $h1_margin/2;
+  margin-top: $global-h1-margin/2;
 }
 
 body:nth-child(2) {
-  margin-top: $h1_margin;
+  margin-top: $global-h1-margin;
 }
 
 // Fixes numbers and bullet points not being readable on small screens

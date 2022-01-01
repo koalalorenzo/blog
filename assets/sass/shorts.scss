@@ -1,6 +1,6 @@
 #article_shorts  {
   >article:nth-child(2n), >article:last-child {
-    margin-top: $h1_margin;
-    margin-bottom: $h1_margin;
+    margin-top: $global-h1-margin;
+    margin-bottom: $global-h1-margin;
   }
 }

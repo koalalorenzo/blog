@@ -7,7 +7,7 @@
 // Floating aside
 aside {
   width: ($global-body-width/12)*4;
-  float: right;
+  float: left; // opposite to .main
   padding-left: $global-margin/2;
   margin-top: $global-header-top-distance;
 

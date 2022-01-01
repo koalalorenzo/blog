@@ -3,9 +3,11 @@
 aside {
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: $global-h1-margin;
-  margin-top: $global-h1-margin;
+  top: $global-h1-margin*2;
+  padding-top: $global-h1-margin;
 
+  width: ($global-body-width/12)*4;
+  float: left;
 
   // See Partial: table_of_content
   #table_of_content nav#TableOfContents {
@@ -23,5 +25,9 @@ aside {
     h2 {
       margin: 0
     }
+  }
+
+  div {
+    padding-top: $global-h1-margin;
   }
 }

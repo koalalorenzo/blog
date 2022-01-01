@@ -3,16 +3,17 @@
     {{ partial "head" . }}
     <body>
         {{ partial "header" . }}
-        <!-- main -->
+        <div>
         <div class="main">
         {{ block "main" . }}
         {{ end }}
         </div>
-        <aside class="hero">
+        <aside>
           {{ partial "author.html" . }}
           {{ partial "table_of_content.html" . }}
           {{ partial "tags.html" . }}
         </aside>
+        </div>
         <!-- end main -->
         {{ partial "footer" . }}
         {{ partial "scripts" . }}

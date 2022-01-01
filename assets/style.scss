@@ -26,9 +26,9 @@ $themes: (
     background: #132C33,
     background-accent: #126E82,
     text-color: #D8E3E7,
-    color-primary: #126E82,
-    color-secondary: rgba(#126E82, .80),
-    color-accent: #51C4D3,
+    color-primary: #51C4D3,
+    color-secondary: rgba(#51C4D3, .80),
+    color-accent: #126E82,
   ),
 );
 
@@ -55,9 +55,10 @@ $base-font-size: 16px;
 // this define the margin of headers and h1 first elements
 $global-h1-margin: $base-font-size*1.2;
 
-$global-border-radius: 0.8rem;
+$global-border-radius: 25px;
 $global-margin: $global-border-radius;
-
+$global-body-width: 900px;
+$global-content-width: $global-body-width - $global-margin;
 // import custom stuff;
 $screen-break-small: 600px;
 
@@ -68,5 +69,5 @@ $screen-break-small: 600px;
 @import "assets/sass/contact.scss";
 @import "assets/sass/sections.scss";
 @import "assets/sass/articles.scss";
+@import "assets/sass/articles_shorts.scss";
 @import "assets/sass/avatar.scss";
-@import "assets/sass/shorts.scss";

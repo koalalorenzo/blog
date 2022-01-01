@@ -5,6 +5,8 @@ body {
   }
 
   font-family: $font-family;
+  width: $global-body-width + ($global-margin *2);
+  margin: 0 auto;
 }
 
 * {
@@ -19,11 +21,14 @@ p {
 a {
   text-decoration: none;
   @include themify(){
-    color: themed("color-accent");
+    color: themed("color-secondary");
   }
 
   &:hover {
     text-decoration: underline;
+    @include themify(){
+      color: themed("color-accent");
+    }
   }
 }
 
@@ -39,20 +44,23 @@ img[src*='#noborder'] {
 
 footer {
   clear: both;
-  margin-top: 6rem;
-  padding: 1.5rem;
+  padding-top: $global-margin*4;
+  text-align: center;
 }
 
 pre {
-  font-size: 0.80em;
+  font-size: 1.25rem;
+  code {
+    font-family: monospace;
+  }
 }
 
 /* misc */
 
 .main {
-  margin: $global-margin*4;
-  max-width: 750px;
-  float: left;
+  padding-left: $global-margin;
+  width: ($global-body-width/12)*8;
+  float: right;
 }
 
 
@@ -95,15 +103,6 @@ header {
     font-weight: 500;
     padding-left: 1rem;
   }
-}
-
-//Fixes header padding from top
-body:first-child {
-  margin-top: $global-h1-margin/2;
-}
-
-body:nth-child(2) {
-  margin-top: $global-h1-margin;
 }
 
 // Fixes numbers and bullet points not being readable on small screens

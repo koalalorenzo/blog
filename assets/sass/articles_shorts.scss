@@ -1,0 +1,30 @@
+// Smaller Article in list
+article.short {
+  clear: both;
+  margin: $global-margin 0;
+
+  h2 {
+    margin-top: 0px;
+  }
+
+  .details {
+    font-size: 85%;
+  }
+
+  .thumbnail {
+    height: 200px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: $global-border-radius;
+    display: inline;
+    float: left;
+    margin: $global-margin/3;
+  }
+
+  .details span.material-icons {
+    font-size: 0.8rem;
+  }
+
+}

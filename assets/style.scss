@@ -10,31 +10,60 @@ Colors:
 */
 // fonts 
 @import "assets/sass/fonts.scss";
+$font-family: 'Made Tommy Regular';
 
-@import "assets/sass/grid.scss";
+// https://colorhunt.co/palette/d8e3e751c4d3126e82132c33
+$themes: (
+  light: (
+    background: #D8E3E7,
+    background-accent: #51C4D3,
+    text-color: #132C33,
+    color-primary: #126E82,
+    color-secondary: rgba(#126E82, .80),
+    color-accent: #51C4D3,
+  ),
+  dark: (
+    background: #132C33,
+    background-accent: #126E82,
+    text-color: #D8E3E7,
+    color-primary: #126E82,
+    color-secondary: rgba(#126E82, .80),
+    color-accent: #51C4D3,
+  ),
+);
 
-// customize MUI variables
-$primart-color: #0080FF;
-$mui-primary-color:       rgba($primart-color, .90);
-$mui-primary-color-dark:  rgba($primart-color, 1);
-$mui-primary-color-light: rgba($primart-color, .80);
+@media (prefers-color-scheme: dark) {
+  $theme: "dark";
+}
 
-$accent-color: #FFCA39;
-$mui-accent-color:        rgba($accent-color, .90);
-$mui-accent-color-dark:   rgba($accent-color, .90);
-$mui-accent-color-light:  rgba($accent-color, .90);
+@mixin themify() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
 
-$mui-body-bg-color: #eeeeec;
-$mui-base-font-size: 16px;
-$mui-base-font-family: 'Made Tommy Regular';
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
 
+$base-font-size: 16px;
 // this define the margin of headers and h1 first elements
-$h1_margin: $mui-base-font-size*1.2;
+$h1_margin: $base-font-size*1.2;
 
 $border_radius: 0.8rem;
 
 // import custom stuff;
 $screen-break-small: 600px;
+
+@import "assets/sass/grid.scss";
 @import "assets/sass/basic.scss";
 @import "assets/sass/agecheck.scss";
 @import "assets/sass/aside.scss";

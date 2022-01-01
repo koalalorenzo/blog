@@ -1,3 +1,11 @@
+body {
+  @include themify(){
+    background: themed("background");
+    color: themed("text-color");
+  }
+
+  font-family: $font-family;
+}
 
 * {
     margin: 0;
@@ -54,7 +62,6 @@ pre {
 /* Header */
 
 header {
-  background-color: $mui-body-bg-color;
   // position: fixed;
   width: 100%;
   min-height: 2rem;
@@ -85,11 +92,11 @@ header {
 }
 
 //Fixes header padding from top
-body .mui-container:first-child {
+body:first-child {
   margin-top: $h1_margin/2;
 }
 
-body .mui-container:nth-child(2) {
+body:nth-child(2) {
   margin-top: $h1_margin;
 }
 

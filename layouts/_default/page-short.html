@@ -1,7 +1,7 @@
 <article class="short">
   <h2>
     <a href="{{.Permalink | relURL }}" data-instant>
-      {{ .Title }}
+      {{ .Title | emojify }}
     </a>
   </h2>
   <div class="details">
@@ -21,7 +21,7 @@
       {{ end }}
       <div>
         <p>
-          {{ .Summary }}
+          {{ .Summary | plainify | emojify }}
           <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading</a>
         </p>
       </div>

@@ -2,7 +2,7 @@
 <article itemscope itemtype="https://schema.org/Article">
   <div class="header">
       <h1 class="title" itemprop="headline">
-          {{ .Title }}
+          {{ .Title | emojify }}
       </h1>
       {{ partial "agecheck.html" . }}
       <p>
@@ -12,7 +12,7 @@
         {{ end }}
         - Reading Time: {{ math.Round (div (countwords .Content) 230.0) }} Minutes
       </p>
-      <div itemprop="articleBody">{{ .Content }}</div>
+      <div itemprop="articleBody">{{ .Content | emojify }}</div>
   </div>
 </article>
 {{ if (.Params.comments) }}

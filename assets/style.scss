@@ -54,6 +54,7 @@ $theme-map: null;
 $base-font-size: 16px;
 // this define the margin of headers and h1 first elements
 $global-h1-margin: $base-font-size*1.2;
+$global-header-top-distance: $global-h1-margin*2;
 
 $global-border-radius: 25px;
 $global-margin: $global-border-radius;
@@ -62,11 +63,11 @@ $global-content-width: $global-body-width - $global-margin;
 // import custom stuff;
 $screen-break-small: 600px;
 
-@import "assets/sass/grid.scss";
+@import "assets/sass/header.scss";
 @import "assets/sass/basic.scss";
 @import "assets/sass/agecheck.scss";
 @import "assets/sass/aside.scss";
-@import "assets/sass/contact.scss";
+@import "assets/sass/classes.scss";
 @import "assets/sass/sections.scss";
 @import "assets/sass/articles.scss";
 @import "assets/sass/articles_shorts.scss";

@@ -1,13 +1,15 @@
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0px;  
+}
 
 // Floating aside
 aside {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: $global-h1-margin*2;
-  padding-top: $global-h1-margin;
-
   width: ($global-body-width/12)*4;
   float: left;
+  padding-left: $global-margin/2;
+  margin-top: $global-header-top-distance;
 
   // See Partial: table_of_content
   #table_of_content nav#TableOfContents {
@@ -19,12 +21,20 @@ aside {
     margin-bottom: 0;
   }
 
-
   // See partial author
-  #about_author {
+  .author {
     h2 {
       margin: 0
     }
+
+    &.avatar {
+      padding-top: $global-margin;
+    }
+  }
+
+  :first-child {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
   div {

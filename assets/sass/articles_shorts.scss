@@ -2,9 +2,16 @@
 article.short {
   clear: both;
   margin: $global-margin 0;
+  border-radius: $global-border-radius;
 
   h2 {
     margin-top: 0px;
+
+    a {
+      @include themify(){
+        color: themed("text-color");
+      }    
+    }
   }
 
   .details {

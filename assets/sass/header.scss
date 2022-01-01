@@ -1,0 +1,31 @@
+header {
+  @include themify(){
+    color: themed("text-color");
+  }
+
+  // position: fixed;
+  width: 100%;
+  min-height: 2rem;
+  font-size: 2rem;
+
+  navbar {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      @include themify(){
+        color: themed("text-color");
+      }    
+    }
+  }
+
+  .nav-item {
+    align-items: flex-end;
+    text-align: right;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 1rem;
+  }
+}

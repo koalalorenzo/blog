@@ -2,20 +2,19 @@
 <html lang="en">
     {{ partial "head" . }}
     <body>
-        {{ partial "header" . }}
-        <div>
-        <div class="main">
-        {{ block "main" . }}
-        {{ end }}
-        </div>
-        <aside>
-          {{ partial "author.html" . }}
-          {{ partial "table_of_content.html" . }}
-          {{ partial "tags.html" . }}
-        </aside>
-        </div>
-        <!-- end main -->
-        {{ partial "footer" . }}
-        {{ partial "scripts" . }}
+      {{ partial "header" . }}
+      <div class="main">
+      {{ block "main" . }}
+      {{ end }}
+      </div>
+      <aside class="sticky">
+        {{ partial "table_of_content.html" . }}
+        {{ partial "tags.html" . }}
+        {{ partial "avatar.html" . }}
+        {{ partial "author_links.html" . }}
+      </aside>
+      <!-- end main -->
+      {{ partial "footer" . }}
+      {{ partial "scripts" . }}
     </body>
 </html>

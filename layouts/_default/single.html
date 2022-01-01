@@ -10,6 +10,7 @@
         {{ if .Lastmod }}
         <meta itemprop="dateModified" content="{{ .Lastmod }}" />
         {{ end }}
+        - Reading Time: {{ math.Round (div (countwords .Content) 230.0) }} Minutes
       </p>
       <div itemprop="articleBody">{{ .Content }}</div>
   </div>

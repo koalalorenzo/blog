@@ -32,13 +32,9 @@ $themes: (
   ),
 );
 
-@media (prefers-color-scheme: dark) {
-  $theme: "dark";
-}
-
 @mixin themify() {
   @each $theme, $map in $themes {
-    .theme--#{$theme} & {
+    @media (prefers-color-scheme: #{$theme}) {
       $theme-map: () !global;
       @each $key, $submap in $map {
         $value: map-get(map-get($themes, $theme), '#{$key}');

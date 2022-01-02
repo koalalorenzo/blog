@@ -2,6 +2,13 @@
   width: ($global-body-width/12)*8 + $global-margin;
   float: right; //opposite of aside
   margin-top: $global-header-top-distance;
+
+  @include mobile-portrait {   
+    float: none;
+    display: inline-block;
+
+    width: 100%;
+  }
 }
 
 .highlight {
@@ -30,4 +37,10 @@
   clear: both;
   margin: 0px;
   padding: 0px;
+}
+
+.hide-portrait {
+  @include mobile-portrait {   
+    display: none;
+  }
 }

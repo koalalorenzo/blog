@@ -27,7 +27,7 @@ article.short {
     border-radius: $global-border-radius;
     display: inline;
     float: left;
-    margin: $global-margin/3;
+    margin: $global-margin/3 $global-margin/2 $global-margin/3 0;
   }
 
   .details span.material-icons {

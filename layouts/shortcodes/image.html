@@ -1,17 +1,22 @@
 {{ $tag := (.Get "tag") }}
 {{ $alt := (.Get "alt") }}
+{{ $original := (.Page.Resources.ByType "image").GetMatch (printf "*%s" (.Get "src")) }}
 
-{{ $image := .Resources.GetMatch (.Get "src") }}
-{{ $tiny := ($image.Resize "256x webp q90") }}
-{{ $small := ($image.Resize "512x webp q90") }}
-{{ $medium := ($image.Resize "1024x webp q90") }}
-{{ $large := ($image.Resize "2048x webp q90") }}
-
-<img
-srcset="
-  {{- with $tiny.RelPermalink -}}{{.}}{{$tag}} 256h{{- end -}}
-  {{- with $small.RelPermalink -}}, {{.}}{{$tag}} 512h{{- end -}}
-  {{- with $medium.RelPermalink -}}, {{.}}{{$tag}} 1024h{{- end -}}
-  {{- with $large.RelPermalink -}}, {{.}}{{$tag}} 2048h{{- end -}}"
-src="{{ $image.RelPermalink }}{{$tag}}"
-alt="{{ $alt }}">
+{{ with $original }}
+  {{ $tiny := (.Resize "256x webp q90") }}
+  {{ $small := (.Resize "512x webp q90") }}
+  {{ $medium := (.Resize "1024x webp q90") }}
+  {{ $large := (.Resize "2048x webp q90") }}
+<a href="{{ .Permalink }}" target="_blank">
+  <figure>
+    <img
+      srcset="
+        {{- with $tiny.Permalink -}}{{.}}{{$tag}} 256w{{- end -}}
+        {{- with $small.Permalink -}}, {{.}}{{$tag}} 512w{{- end -}}
+        {{- with $medium.Permalink -}}, {{.}}{{$tag}} 1024w{{- end -}}
+        {{- with $large.Permalink -}}, {{.}}{{$tag}} 2048w{{- end -}}"
+      src="{{ $medium.Permalink }}{{$tag}}"
+      alt="{{ $alt }}">
+  </figure>
+</a>
+{{ end }}

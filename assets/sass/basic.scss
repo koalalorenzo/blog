@@ -14,12 +14,12 @@ body {
   width: $global-body-width+($global-margin *2);
   margin: 0 auto;
 
-  @include mobile-portrait {   
+  @include mobile-portrait {
     width: unset;
     padding: 5px $global-margin;
     font-size: $base-font-size;
   }
-  
+
   @include for-mobile-portrait-down {
     padding: 0 $global-margin/3;
   }
@@ -66,27 +66,57 @@ img {
   border: 0px black solid;
   border-radius: $global-border-radius;
 
-  &[src*='#smallSquare'] {
+  &[src*='#smallSquare'] &[src*='#small'], .smallSquare, .small {
     max-width: 300px;
     max-height: 300px;
   }
 
-  &[src*='#big'] {
+  &[src*='#big'], .big {
     max-width: 750px;
     max-height: 600px;
   }
 
-  &[src*='#bigSquare'] {
+  &[src*='#bigSquare'], .bigSquare {
     max-width: 750px;
     max-height: 750px;
   }
 
-  &[src*='#noborder'] {
+  &[src*='#noborder'], .noborder {
     border: 0px;
     border-radius: 0;
   }
-
 }
+
+figure {
+  &.smallSquare, &.small {
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+
+  &.big {
+    img {
+      max-width: 750px;
+      max-height: 600px;
+    }
+  }
+
+  &.bigSquare {
+    img {
+      max-width: 750px;
+      max-height: 750px;
+    }
+  }
+
+  &.noborder {
+    img {
+      border: 0px;
+      border-radius: 0;
+    }
+  }
+}
+
 
 footer {
   clear: both;

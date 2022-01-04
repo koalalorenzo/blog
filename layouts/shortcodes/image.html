@@ -1,0 +1,17 @@
+{{ $tag := (.Get "tag") }}
+{{ $alt := (.Get "alt") }}
+
+{{ $image := .Resources.GetMatch (.Get "src") }}
+{{ $tiny := ($image.Resize "256x webp q90") }}
+{{ $small := ($image.Resize "512x webp q90") }}
+{{ $medium := ($image.Resize "1024x webp q90") }}
+{{ $large := ($image.Resize "2048x webp q90") }}
+
+<img
+srcset="
+  {{- with $tiny.RelPermalink -}}{{.}}{{$tag}} 256h{{- end -}}
+  {{- with $small.RelPermalink -}}, {{.}}{{$tag}} 512h{{- end -}}
+  {{- with $medium.RelPermalink -}}, {{.}}{{$tag}} 1024h{{- end -}}
+  {{- with $large.RelPermalink -}}, {{.}}{{$tag}} 2048h{{- end -}}"
+src="{{ $image.RelPermalink }}{{$tag}}"
+alt="{{ $alt }}">

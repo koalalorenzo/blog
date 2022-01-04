@@ -34,7 +34,7 @@ The idea is simple. If you write on my chat while I stream something like:
 
 It will show you something like this on my stream:
 
-![Example of a Meme generated using the Bot](hello-example.webp#small)
+{{< image src="hello-example.webp" alt="Example of a Meme generated using the Bot" tag="#small" >}}
 
 People could generate Memes based on what was happening on the screen, and since 
 I have been playing a lot of Dead By Daylight, there were plenty of moments to 

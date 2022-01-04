@@ -4,6 +4,7 @@ article.short {
   margin: $global-margin 0;
   border-radius: $global-border-radius;
   text-align: left;
+  // min-height: $global-home-thumbnail-height + ($global-margin*3);
 
   h2 {
     margin-top: 0px;
@@ -20,8 +21,8 @@ article.short {
   }
 
   .thumbnail {
-    height: 200px;
-    width: 300px;
+    height: $global-home-thumbnail-height;
+    width: $global-home-thumbnail-height + ($global-home-thumbnail-height/2);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -53,4 +54,10 @@ article.short {
     }
   }
 
+  .continue-reading {
+    display: block;
+    clear: both;
+    width: 100%;
+    text-align: right;
+  }
 }

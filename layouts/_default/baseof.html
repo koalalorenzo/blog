@@ -7,14 +7,16 @@
       {{ block "main" . }}
       {{ end }}
       </div>
-      <aside {{ if .Pages }}class="sticky"{{ end }}>
+      <aside {{ if not .IsPage }}class="sticky"{{ end }}>
         {{ partial "avatar.html" . }}
         {{ partial "author_links.html" . }}
       </aside>
+      {{ if .IsPage }}
       <aside class="sticky">
         {{ partial "table_of_content.html" . }}
         {{ partial "tags.html" . }}
       </aside>
+      {{ end }}
       <!-- end main -->
       {{ partial "footer" . }}
       {{ partial "scripts" . }}

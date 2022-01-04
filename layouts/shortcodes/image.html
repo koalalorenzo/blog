@@ -1,5 +1,6 @@
 {{ $tag := (.Get "tag") }}
 {{ $alt := (.Get "alt") }}
+{{ $caption := (.Get "caption") }}
 {{ $original := (.Page.Resources.ByType "image").GetMatch (printf "*%s" (.Get "src")) }}
 
 {{ with $original }}
@@ -17,6 +18,11 @@
         {{- with $large.Permalink -}}, {{.}}{{$tag}} 2048w{{- end -}}"
       src="{{ $medium.Permalink }}{{$tag}}"
       alt="{{ $alt }}">
+      {{ if $caption }}
+      <figcaption>
+        {{ $caption }}
+      </figcaption>
+      {{ end }}
   </figure>
 </a>
 {{ end }}

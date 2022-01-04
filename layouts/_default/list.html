@@ -6,7 +6,7 @@
       Latest blog posts
     </h1>
   </div>
-  {{ if .Paginator.HasPrev }}
+  {{ if $paginator.HasPrev }}
   {{ partial "paginator.html" . }}
   {{ end }}
   <div id="article_shorts">

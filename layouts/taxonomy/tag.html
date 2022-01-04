@@ -4,6 +4,9 @@
     Latest blog posts about {{ .Data.Term | title }}
   </h1>
 </div>
+{{ if .Paginator.HasPrev }}
+{{ partial "paginator.html" . }}
+{{ end }}
 <div id="article_shorts">
   {{ range .Paginator.Pages }}
   {{ .Render "page-short" }}

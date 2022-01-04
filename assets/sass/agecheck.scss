@@ -3,11 +3,6 @@
     background: themed("background-accent");
     color: themed("text-color");
   }
-
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-
-  top: 0;
   margin: $global-margin 0 !important;
   padding: $global-h1-margin;
 
@@ -20,5 +15,9 @@
   p {
     margin: 0;
     padding: 0;
+  }
+
+  @include mobile-portrait {   
+    position: inherit !important;
   }
 }

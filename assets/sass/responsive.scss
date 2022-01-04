@@ -7,7 +7,7 @@
 }
 
 @mixin for-mobile-portrait-down {
-  @media (max-width: 600px) { @content; }
+  @media (max-width: 550px) { @content; }
 }
 
 @mixin for-tablet-portrait-up {

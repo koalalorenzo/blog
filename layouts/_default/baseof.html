@@ -7,11 +7,13 @@
       {{ block "main" . }}
       {{ end }}
       </div>
-      <aside>
-        {{ partial "table_of_content.html" . }}
-        {{ partial "tags.html" . }}
+      <aside {{ if .Pages }}class="sticky"{{ end }}>
         {{ partial "avatar.html" . }}
         {{ partial "author_links.html" . }}
+      </aside>
+      <aside class="sticky">
+        {{ partial "table_of_content.html" . }}
+        {{ partial "tags.html" . }}
       </aside>
       <!-- end main -->
       {{ partial "footer" . }}

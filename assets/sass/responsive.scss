@@ -6,6 +6,10 @@
   @media screen and (orientation: landscape) { @content; }
 }
 
+@mixin for-mobile-portrait-down {
+  @media (max-width: 550px) { @content; }
+}
+
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) { @content; }
 }

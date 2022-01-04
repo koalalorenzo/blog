@@ -44,3 +44,14 @@
     display: none;
   }
 }
+
+.hide-small-screen {
+  @include for-mobile-portrait-down {   
+    display: none;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: $global-header-top-distance/2;
+}

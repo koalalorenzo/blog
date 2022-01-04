@@ -1,8 +1,5 @@
 // Floating aside
 aside {
-  position: sticky;
-  top: $global-header-top-distance/2;
-
   width: ($global-body-width/12)*4;
   float: left; // opposite to .main
   padding-left: $global-margin/2;

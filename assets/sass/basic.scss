@@ -1,3 +1,8 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   @include themify() {
     background: themed("background");
@@ -13,6 +18,10 @@ body {
     width: unset;
     padding: 5px $global-margin;
     font-size: $base-font-size;
+  }
+  
+  @include for-mobile-portrait-down {
+    padding: 0 $global-margin/3;
   }
 }
 

@@ -3,7 +3,7 @@
 {{ $article_age := sub $now (int (.Date.Format "2006")) }}
 
 {{ if gt $article_age 2 }}
-<div class="agecheck">
+<div class="agecheck sticky">
   <h2>ATTENTION!</h2>
   <p>
     This article is <b>{{ $article_age }} years old</b>, it may be outdated or

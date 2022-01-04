@@ -3,6 +3,7 @@ article.short {
   clear: both;
   margin: $global-margin 0;
   border-radius: $global-border-radius;
+  text-align: left;
 
   h2 {
     margin-top: 0px;
@@ -28,10 +29,28 @@ article.short {
     display: inline;
     float: left;
     margin: $global-margin/3 $global-margin/2 $global-margin/3 0;
+
+    @include themify(){
+      background-color: themed("background-accent");
+    }
+
+    @include for-mobile-portrait-down {
+      display: block;
+      float: none;
+      margin: $global-margin/3 auto;
+      clear: both;
+      width: 100%;
+      height: 200px;
+    }
+
   }
 
-  .details span.material-icons {
-    font-size: 0.8rem;
+  .summary {
+    @include for-mobile-portrait-down {
+      display: block;
+      margin: 0 auto $global-margin/3 auto;
+      clear: both;
+    }
   }
 
 }

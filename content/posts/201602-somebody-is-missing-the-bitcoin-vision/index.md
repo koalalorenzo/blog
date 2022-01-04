@@ -6,10 +6,9 @@ layout: post
 slug: somebody-is-missing-the-bitcoin-vision
 title: Somebody is missing the Bitcoin vision
 wordpress_id: 18840
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - bitcoin
 - blockchain

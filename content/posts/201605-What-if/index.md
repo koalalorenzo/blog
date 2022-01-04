@@ -4,10 +4,9 @@ author: koalalorenzo
 comments: true
 date: 2016-05-10 19:26:15+02:00
 title: "What if... ?"
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - p2p
 ---

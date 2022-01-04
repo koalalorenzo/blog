@@ -6,10 +6,9 @@ layout: post
 slug: communication-techniques-for-lovers
 title: Communication techniques for lovers.
 wordpress_id: 18294
-categories:
-- Thoughts
-- Work
 tags:
+- thoughts
+- work
 - old blog
 - communication
 - suggestions

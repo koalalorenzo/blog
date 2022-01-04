@@ -6,10 +6,9 @@ layout: post
 slug: enough-security-enough-privacy
 title: Enough security, enough privacy
 wordpress_id: 18690
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - bitcoin
 - encryption

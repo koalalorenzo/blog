@@ -4,9 +4,6 @@ author: koalalorenzo
 comments: true
 date: 2018-05-29 6:12:31+02:00
 title: "Blockchain: is it good for humanity?"
-categories:
-- Thoughts
-- Work
 tags:
 - old blog
 - Siderus
@@ -14,6 +11,8 @@ tags:
 - Ethereum
 - Blockchain
 - Hera
+- thoughts
+- work
 ---
 The journey that I have decided to take with [Siderus](https://siderus.io/) 
 brought myself always in embarrassing moment on meetings **Hyped discussion** 

@@ -6,9 +6,8 @@ layout: post
 slug: the-reason-i-use-the-international-keyboard
 title: The reason I use the international keyboard
 wordpress_id: 18594
-categories:
-- Thoughts
 tags:
+- Thoughts
 - old blog
 - suggestions
 - keyboard

@@ -4,14 +4,13 @@ author: koalalorenzo
 comments: true
 date: 2016-09-03 14:10:01+02:00
 title: "Focus on the prize"
-categories:
-- Thoughts
-- Work
 tags:
 - old blog
 - retrospective
 - goals
-- high school 
+- high school
+- thoughts
+- work
 ---
 One of the biggest things that I have been learning is the **discipline** of being focused on the main goal. I get distracted every few minutes, and if it is not an advertisement, or a funny cloud in the sky, it is an event that we may consider bigger than it actually is. Instead, I don't want to lose the focus on the prize. <!-- more -->
 

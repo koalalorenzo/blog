@@ -6,9 +6,8 @@ layout: post
 slug: bitcoin-xapo-debit-card
 title: 'My Bitcoin Experience: Wallets and Debit Card'
 wordpress_id: 18433
-categories:
-- Decentralized
 tags:
+- decentralized
 - old blog
 - bitcoin
 - blockchain

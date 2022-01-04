@@ -6,9 +6,6 @@ layout: post
 slug: goodbye-roma
 title: Goodbye Roma!
 wordpress_id: 18266
-categories:
-- Startup
-- Work
 tags:
 - old blog
 - copenhagen

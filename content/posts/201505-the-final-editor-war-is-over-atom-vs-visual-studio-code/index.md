@@ -6,10 +6,9 @@ layout: post
 slug: the-final-editor-war-is-over-atom-vs-visual-studio-code
 title: 'The final editor war is over: Atom vs Visual Studio Code'
 wordpress_id: 18614
-categories:
-- Thoughts
-- Work
 tags:
+- thoughts
+- work
 - old blog
 - atom
 - develop
@@ -18,7 +17,8 @@ tags:
 - microsoft
 - nodejs
 - sublime text editor
-- visual studio Code
+- visual studio code
+- vscode
 ---
 
 During the last month I started **experimenting** a lot with some **editors** for **software development**. I've been playing for 2 weeks with **Atom** and **Visual Studio Code** and here are my impressions from a Mac and Sublime user.

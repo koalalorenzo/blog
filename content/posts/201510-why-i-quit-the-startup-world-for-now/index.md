@@ -6,11 +6,10 @@ layout: post
 slug: why-i-quit-the-startup-world-for-now
 title: Why I quit the StartUp world (for now)
 wordpress_id: 18671
-categories:
-- Work
-- Startup
 tags:
 - old blog
+- work
+- startup
 ---
 
 Few days ago, while watching [The Martian](http://www.imdb.com/title/tt3659388/) something special happened to me: I got my first **epileptic seizure.** I don’t remember that much of that evening, but I realized how much I grew up by moving away from Italy, and deciding to stop working for Startups. <!--more-->

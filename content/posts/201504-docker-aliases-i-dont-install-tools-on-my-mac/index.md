@@ -6,9 +6,6 @@ layout: post
 slug: docker-aliases-i-dont-install-tools-on-my-mac
 title: 'Docker + aliases: I don''t install tools on my Mac'
 wordpress_id: 18572
-categories:
-- Work
-- How To
 tags:
 - old blog
 - docker
@@ -19,6 +16,9 @@ tags:
 - devleop
 - devops
 - scale
+- work
+- how to
+
 ---
 
 I really care about **keeping the OS clean** and _untouched_. Sometimes, when I have to develop using specific softwares and tools, I have to **modify** core and **important** sections of the system on my **Mac** or **PC**, and this can create some problems with **package managers** (like homebrew for Mac OS X; or like APT, pacman or yum for GNU/Linux)...

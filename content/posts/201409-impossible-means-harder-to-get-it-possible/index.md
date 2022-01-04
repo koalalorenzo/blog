@@ -6,8 +6,6 @@ layout: post
 slug: impossible-means-harder-to-get-it-possible
 title: 'Impossible means: "harder to make it possible"'
 wordpress_id: 18405
-categories:
-- Thoughts
 tags:
 - old blog
 - apple
@@ -15,6 +13,7 @@ tags:
 - innovation
 - mac
 - possible
+- thoughts
 ---
 
 Several times, I have heard my grandparents saying "that is impossible" when they are comparing what the young generations do to what they were used to do. According to the [dictionary](http://en.wiktionary.org/wiki/impossible), what is impossible, is "_not possible, unable to be, exist, happen, unable to be done..._", but for what I have noticed and experienced, is just a matter of **points of view**. <!--more-->

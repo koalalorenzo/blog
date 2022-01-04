@@ -6,10 +6,9 @@ layout: post
 slug: i-wish-you-a-private-and-secure-2015
 title: I wish you a private and secure 2015
 wordpress_id: 18476
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - 1password
 - bittorrent sync

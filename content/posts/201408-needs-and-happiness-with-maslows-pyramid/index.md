@@ -6,9 +6,8 @@ layout: post
 slug: needs-and-happiness-with-maslows-pyramid
 title: Needs and happiness with Maslow's pyramid
 wordpress_id: 18374
-categories:
-- Thoughts
 tags:
+- thoughts
 - old blog
 - suggestions
 - happiness

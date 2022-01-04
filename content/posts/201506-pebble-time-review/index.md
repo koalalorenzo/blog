@@ -6,9 +6,8 @@ layout: post
 slug: pebble-time-review
 title: 'My review: Pebble Time'
 wordpress_id: 18631
-categories:
-- Thoughts
 tags:
+- thoughts
 - old blog
 - apple
 - apple watch

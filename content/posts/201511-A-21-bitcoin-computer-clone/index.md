@@ -6,10 +6,9 @@ layout: post
 slug: i-have-built-a-21-bitcoin-computer-clone
 title: I have built a 21 Bitcoin Computer “clone”
 wordpress_id: 18686
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - bitcoin
 - raspberry pi

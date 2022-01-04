@@ -4,9 +4,6 @@ author: koalalorenzo
 comments: true
 date: 2016-04-17 18:26:15+02:00
 title: "React is not over engineered"
-categories:
-- Work
-- Thoughts
 tags:
 - old blog
 - develop
@@ -14,6 +11,9 @@ tags:
 - angular
 - javascript
 - over engineered
+- work
+- thoughts
+
 ---
 JavaScript development is crazy, and evolving fast... and the more you learn about it
 the more you realize how crazy it has become 😅. I think it is exciting, indeed, but

@@ -5,10 +5,9 @@ comments: true
 date: 2016-04-09 11:18:32+00:00
 slug: jekyll-time
 title: It's jekyll time!
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - blog
 - jekyll

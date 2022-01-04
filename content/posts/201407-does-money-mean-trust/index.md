@@ -6,10 +6,9 @@ layout: post
 slug: does-money-mean-trust
 title: 'Does Money mean Trust? [Spoiler: Yes]'
 wordpress_id: 18347
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - suggestion
 - digital life

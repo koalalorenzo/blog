@@ -8,10 +8,9 @@ layout: post
 slug: i-am-running-zeronet-in-background-on-my-mac
 title: I am running ZeroNet in background on my Mac
 wordpress_id: 18650
-categories:
-- How To
-- Decentralized
 tags:
+- how To
+- decentralized
 - old blog
 - apple
 - bitcoin

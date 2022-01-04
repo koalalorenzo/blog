@@ -6,10 +6,6 @@ layout: post
 slug: how-to-use-cache-headers-to-speed-up-your-website-with-django-and-cloudflare
 title: How to use Cache Headers to speed up your website with Django and CloudFlare
 wordpress_id: 18507
-categories:
-- Life online
-- Work
-- How To
 tags:
 - old blog
 - django
@@ -22,6 +18,8 @@ tags:
 - headers
 - http
 - minbildinbil
+- work
+- how To
 ---
 
 Since I started working at bigger startups, like [MinbilDinbil](http://minbildinbil.dk/), I had to face the problem of providing pages to a larger amount of users every day. For this reason, it is really important to use a CDN service like **CloudFlare**, in order to provide a good user experience on our website: we don't want our clients wait too much to load the homepage! How do we do that? <!-- more --> The author of GNU grep [once said](http://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html):

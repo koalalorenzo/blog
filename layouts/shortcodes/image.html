@@ -1,23 +1,26 @@
-{{ $tag := (.Get "tag") }}
-{{ $alt := (.Get "alt") }}
+{{ $class := (.Get "class") }}
 {{ $caption := (.Get "caption") }}
 {{ $original := (.Page.Resources.ByType "image").GetMatch (printf "*%s" (.Get "src")) }}
 
 {{ with $original }}
-  {{ $tiny := (.Resize "256x webp q90") }}
-  {{ $small := (.Resize "512x webp q90") }}
-  {{ $medium := (.Resize "1024x webp q90") }}
-  {{ $large := (.Resize "2048x webp q90") }}
+  {{ $tiny := (.Resize "256x webp q75") }}
+  {{ $small := (.Resize "512x webp q75") }}
+  {{ $medium := (.Resize "1024x webp q75") }}
+  {{ $large := (.Resize "2048x webp q75") }}
 <a href="{{ .Permalink }}" target="_blank">
-  <figure>
+  <figure {{ if $class }}class="{{ $class }}"{{ end }}>
     <img
       srcset="
-        {{- with $tiny.Permalink -}}{{.}}{{$tag}} 256w{{- end -}}
-        {{- with $small.Permalink -}}, {{.}}{{$tag}} 512w{{- end -}}
-        {{- with $medium.Permalink -}}, {{.}}{{$tag}} 1024w{{- end -}}
-        {{- with $large.Permalink -}}, {{.}}{{$tag}} 2048w{{- end -}}"
-      src="{{ $medium.Permalink }}{{$tag}}"
-      alt="{{ $alt }}">
+        {{- with $tiny.Permalink -}}{{.}} 256w{{- end -}}
+        {{- with $small.Permalink -}}, {{.}} 512w{{- end -}}
+
+        {{ if in $class "big" }}
+        {{- with $medium.Permalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.Permalink -}}, {{.}} 2048w{{- end -}}
+        {{ end }}
+      "
+      src="{{ $medium.Permalink }}"
+      alt="{{ $caption }}">
       {{ if $caption }}
       <figcaption>
         {{ $caption }}

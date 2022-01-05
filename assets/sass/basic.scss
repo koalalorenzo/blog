@@ -74,66 +74,6 @@ h3 {
   font-size: 1.4em;
 }
 
-img {
-  border: 0px black solid;
-  border-radius: $global-border-radius;
-
-  &[src*='#smallSquare'] &[src*='#small'], .smallSquare, .small {
-    max-width: 300px;
-    max-height: 300px;
-  }
-
-  &[src*='#big'], .big {
-    max-width: 750px;
-    max-height: 600px;
-  }
-
-  &[src*='#bigSquare'], .bigSquare {
-    max-width: 750px;
-    max-height: 750px;
-  }
-
-  &[src*='#noborder'], .noborder {
-    border: 0px;
-    border-radius: 0;
-  }
-}
-
-figure {
-  &.smallSquare, &.small {
-    img {
-      margin: 0 auto;
-      max-width: 300px;
-      max-height: 300px;
-    }
-  }
-
-  &.big {
-    img {
-      margin: 0 auto;
-      max-width: 750px;
-      max-height: 600px;
-    }
-  }
-
-  &.bigSquare {
-    img {
-      margin: 0 auto;
-      max-width: 750px;
-      max-height: 750px;
-    }
-  }
-
-  &.noborder {
-    img {
-      margin: 0 auto;
-      border: 0px;
-      border-radius: 0;
-    }
-  }
-}
-
-
 footer {
   clear: both;
   padding: $global-margin*4 0;

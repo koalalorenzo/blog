@@ -26,7 +26,8 @@ The Macintosh Portable, yes that _big-plastic-"90's gray"-heavy thing_, was rele
 
 I may think about "future" things, but they will always **appear as "impossible"** to my practical eyes. I may say "people take flying cars in the future", maybe they will, maybe they will not. I really believe that what I see as **impossible** is still possible, but **the effort** to make it real, so to **make it possible**, is **higher**. What is impossible for me could be possible to somebody else or in another time of the history. It's just a matter of points of view.
 
-![Macintosh Portable battery](cover_battery_macportable1989.webp)
+
+{{< image src="cover_battery_macportable1989.webp" caption="Macintosh Portable battery" >}}
 
 The main reason behind this choice by Apple was its battery. Technically you can [read more about that on Wikipedia](http://en.wikipedia.org/wiki/Macintosh_Portable#Criticism), but the battery problem is important to understand my idea: If we could **travel back in time** and go on Semptember 20th of 1989 with the **concept of the modern MacBook Pro**, or just even with the concept of the modern batteries, how do you think people and engineers will react?
 

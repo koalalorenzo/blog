@@ -33,7 +33,7 @@ _Mike Haertel, Sat Aug 21 2010.[^source]
 
 So I decided to integrate our django servers with CloudFlare, improving the cache. [According to their documentation](https://support.cloudflare.com/hc/en-us/articles/202775670-How-Do-I-Tell-CloudFlare-What-to-Cache-), to enable the cache, the backend needs to provide **specific headers in the HTTP response**, like Cache-Control, Expires and others: by using these headers both the **browsers** and the CloudFlare **servers** will cache the file for a specific amount of time.
 
-![](cf-logo-v-rgb.webp#noborder)
+{{< image src="cf-logo-v-rgb.webp" class="noborder" >}}
 
 For this purpose, I created an **open source** customizable **middleware** to provide **cache headers** in a **smart way**. It is called [django-smartcc](https://github.com/koalalorenzo/django-smartcc) (standing for "smart cache control"). Once installed, it will start considering not authenticated requests as public and disabling the cache when the user is logged in. You can [read here the instructions](https://github.com/koalalorenzo/django-smartcc/blob/master/README.md#installation) to install it too:
 
@@ -80,11 +80,11 @@ This is a basic example that is saying to both the browser and CloudFlare CDN to
 
 The only way to measure and understand if the cache headers are working properly, is to compare CloudFlare statistics about the bandwidth and requests saved. When we started using CloudFlare on MinbilDinbil, the default settings were saving only a small quantity of requests:
 
-![CloudFlare statistics](2015-01-01.webp)
+{{< image src="2015-01-01.webp" class="noborder" >}}
 
 Then **I enabled django-smartcc** and configured it properly on HTML pages and files. In the same amount of days, we saved about **one third** of our bandwidth to our servers:
 
-![CloudFlare statistics when using django-smartcc to set automatically cache control HTTP headers.](cover_2015-01-15.webp)
+{{< image src="cover_2015-01-15.webp" caption="CloudFlare statistics when using django-smartcc to set automatically cache control HTTP headers." class="noborder" >}}
 
 Thanks to this little trick our **user experience** is a little bit **improved**, as the **stability and speed**: basically, some pages are not provided by our django servers, but instead are downloaded from the **fast and distributed** content delivery network from **all around the world**. In other terms to make our server fast, it is doing _nothing_, as Mike Haertel, was saying!
 

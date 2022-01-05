@@ -23,7 +23,8 @@ tags:
 
 During the last month I started **experimenting** a lot with some **editors** for **software development**. I've been playing for 2 weeks with **Atom** and **Visual Studio Code** and here are my impressions from a Mac and Sublime user.
 <!--more-->
-![Atom VS VisualStudio Code](atom-vs-visual-studio-code.webp)
+
+{{< image src="atom-vs-visual-studio-code.webp" >}}
 
 I started developing several projects using NodeJS, coffee-script, python, docker and angular, but sometimes **Sublime is not enough** and I need other tools and software for job routine. I am a Sublime user, and I love it, but I had to break up with it since I need more features... and I found the love in one of those two editors... :-) 
 
@@ -41,7 +42,8 @@ I started developing several projects using NodeJS, coffee-script, python, docke
 
 [Atom](http://atom.io/) is really new and the version 1.0 is going to be released soon. It is **OpenSource** and released by **GitHub** and it is thought, designed and created by developers for developers. it comes with a lot of **cool features** that are **helping** any developer.
 
-![Atom Logo](cover.webp#noborder)
+
+{{< image src="cover.webp" class="noborder" >}}
 
 On my **everyday working routine**, I have to admit that it suffers from the "_open source then wannabe the best_" problem of new projects: on the website the main line claims an "Hackable text editor", and this means that **everything is plugin** and **ultra-customizable**. This is **good** if you need **specific** features, integrations and language support, but also really bad for speed, like loading time.
 
@@ -71,7 +73,7 @@ I like it. I bet that soon it will a better editor and less "wannabe the best" a
 
 When I've read about Microsoft releasing a new software for Mac, I started thinking about my **Mac security and stability**: they are famous for creating software ultra unstable, that will be used in offices for decades without upgrades or security fixes. They [introduced few **viruses for Mac** with MS Office](http://www.notebookreview.com/news/mac-hit-with-a-second-major-virus-in-as-many-weeks-ms-office-users-targeted/) suite and I hope they will not do the same. Microsoft have a really strict privacy terms if you use Visual Studio Code and I got scared... but I decided to risk by downloading it.
 
-![do not download visual studio code](schermata-2015-05-23-alle-08-22-57.webp)
+{{< image src="schermata-2015-05-23-alle-08-22-57.webp" >}}
 
 Once installed, the first thing that I have noticed is that it is using Microsoft Metro style... and it is not really user friendly for me, but it is super fast. The loading time is almost immediate and it has already integrated a basic GIT client, code autocompletion and debugging tools... and it is fast. Sadly It ends here, there is nothing more than that. You don't have plugins and deeply customizations like Sublime or cool feature like the multiple cursor to edit several things at once.
 

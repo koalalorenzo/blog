@@ -23,7 +23,7 @@
       alt="{{ $caption }}">
       {{ if $caption }}
       <figcaption>
-        {{ $caption }}
+        {{ $caption | markdownify }}
       </figcaption>
       {{ end }}
   </figure>

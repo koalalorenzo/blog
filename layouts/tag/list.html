@@ -10,7 +10,7 @@
 </div>
 <div id="article_shorts">
   {{ range .Data.Terms.ByCount }}
-  <li><a href="{{ .Page.Permalink }}" data-instant>{{ .Page.Title }}</a> - {{ .Count }}</li>
+  <li><a href="{{ .Page.Permalink | relURL }}" data-instant>{{ .Page.Title }}</a> - {{ .Count }}</li>
   {{ end }}
 </div>
 {{ end }}

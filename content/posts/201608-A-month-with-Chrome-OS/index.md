@@ -4,9 +4,6 @@ author: koalalorenzo
 comments: true
 date: 2016-08-30 12:13:10+02:00
 title: "A month with Google ChromeOS"
-categories:
-- Life online
-- Thoughts
 tags:
 - old blog
 - coding
@@ -16,6 +13,8 @@ tags:
 - chromebook
 - google
 - linux
+- thoughts
+
 ---
 A month ago I have ordered, as a backup device, a **Chromebook**. I was watching videos on [youtube](https://www.youtube.com/watch?v=vxqQXH2ecpI) and I have selected the **ASUS Chromebook Flip** without thinking much. It is powerful, _cute_, convertible, the screen is not _that bad_ and the keyboard is meh... you can get used to its size. The main problem was not the hardware: after a month with Google ChromeOS, as a developer, I am really disappointed. I was expecting a device to work, and instead I got something to play cat videos.
 

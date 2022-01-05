@@ -34,7 +34,7 @@ The idea is simple. If you write on my chat while I stream something like:
 
 It will show you something like this on my stream:
 
-![Example of a Meme generated using the Bot](hello-example.webp#small)
+{{< figure src="hello-example.webp" caption="Example of a Meme generated using the Bot" >}}
 
 People could generate Memes based on what was happening on the screen, and since 
 I have been playing a lot of Dead By Daylight, there were plenty of moments to 
@@ -165,7 +165,7 @@ I have added a lot of other functionalities, like support for a basic Web UI,
 a WebHook with Basic HTTP Auth, and some JSON API to integrate with **Apple
 Shortcuts**...  so that I can generate memes from my iPhone or from my Mac.
 
-![My Shortcut to generate Memes from my iPhone](shortcuts-twitch-gen.webp#noborder#big)
+{{< image src="shortcuts-twitch-gen.webp" caption="My Shortcut to generate Memes from my iPhone" class="noborder big">}}
 
 Building this was pure pleasure. I made something so that viewers can have some 
 fun, just as a small project. I am happy that I gathered some feedback from some

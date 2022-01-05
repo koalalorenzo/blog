@@ -4,10 +4,6 @@ author: koalalorenzo
 comments: true
 date: 2018-01-06 16:15:30+02:00
 title: "Go tests, multistage docker builds, pipeline"
-categories:
-- Thoughts
-- Work
-- How To
 tags:
 - old blog
 - coding
@@ -19,6 +15,10 @@ tags:
 - testing
 - docker
 - go
+- thoughts
+- work
+- how to
+
 ---
 During the last year I have learned how important it is to build, test and
 deploy using always the same docker container as well as reducing its size.

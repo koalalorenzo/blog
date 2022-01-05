@@ -6,10 +6,9 @@ layout: post
 slug: somebody-is-missing-the-bitcoin-vision
 title: Somebody is missing the Bitcoin vision
 wordpress_id: 18840
-categories:
-- Decentralized
-- Thoughts
 tags:
+- decentralized
+- thoughts
 - old blog
 - bitcoin
 - blockchain
@@ -21,8 +20,7 @@ I have my own clear vision of what it would be the **future of value exchange**.
 
 Sadly, somebody had the bad idea to start an [attack against some Bitcoin Classic nodes](https://www.reddit.com/r/Bitcoin_Classic/comments/47zglz/ddos_started_again_have_a_nice_day_guys/), in the war against Bitcoin Core. Somebody is missing the **bitcoin vision**: For few hours, my internet connection was not stable or down, and I have to believe that this event is connected to this **stupid DDoS attack**.
 
-
-![My miners went down several times as I was attacked.](cover_screen-shot-2016-02-28-at-12-42-42.webp)
+{{< image src="cover_screen-shot-2016-02-28-at-12-42-42.webp" caption="My miners went down several times as I was attacked." class="center">}}
 
 **I don’t care who did it**. I care more why they did it: **What is the point** of blocking me and making a DoS attack to me and my Classic Node? 
 

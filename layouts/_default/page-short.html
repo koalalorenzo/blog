@@ -8,7 +8,7 @@
     On: {{ .Date.Format "2006-01-02"}} -
     Reading Time: {{ math.Round (div (countwords .Content) 230.0) }} Minutes
   </div>
-  <div class="content">
+  <div>
     {{ if gt (len (.Resources.ByType "image")) 0 }}
     {{ range first 1 (.Resources.ByType "image") }}
     <a href="{{ $.Permalink | relURL }}" data-instant>
@@ -22,8 +22,8 @@
       <p>
         {{ .Summary }}
       </p>
-      <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading...</a>
     </div>
   </div>
+  <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading...</a>
 </article>
 <hr />

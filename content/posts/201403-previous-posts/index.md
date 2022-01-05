@@ -7,8 +7,6 @@ slug: previous-posts
 title: Where are all the previous blog posts?
 tags:
   - old blog
-categories:
-  - No Category
 ---
 If you are reading this, you are probably wondering where my previous posts are.
 I have brought order in my blog, and I have found a better place for my Italian

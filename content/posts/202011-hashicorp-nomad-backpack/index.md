@@ -25,7 +25,8 @@ would require a way bigger list of YAML files. Can we do the same for Nomad
 Jobs's definitions?
 
 <!--more-->
-![Go Gophers at work](gopherswrench.webp#center)
+
+{{< image src="gopherswrench.webp" caption="Go Gophers at work" class="center">}}
 
 Yes, we can! For pure fun and during my spare time, I made **Backpack** for Nomad!
 😀 I decided to keep things as similar as possible to Helm but improve on it
@@ -87,7 +88,7 @@ is lost, not synced, or hard to understand. 🙄 I often found myself deploying
 DataDog agents, but the version I was using was not using the same values
 defined in the documentation.
 
-![reading docs](reading.webp)
+{{< figure src="reading.webp" >}}
 
 To solve this issue, I have decided to package the documentation and the
 templates, and the values altogether. This change makes sure that the version
@@ -147,7 +148,7 @@ use for the template, or like the service tags to implement to configure
 or [fabio-lb](https://fabiolb.net). I would love to pack multiple containers,
 apps, and tools, solve issues like dependency management and more...
 
-![I will do that later](karenwalker-later.webp#smallSquare)
+{{< figure src="karenwalker-later.webp" caption="I will do that later" class="smallSquare" >}}
 
 For now, I will work on it in my spare time. I have released the source code on
 [GitLab](https://gitlab.com/Qm64/backpack), and if you want to help feel free

@@ -4,7 +4,7 @@
     {{ range $index, $tag := . }} 
       {{ $tagClean := $tag | urlize }}
       {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tagClean) -}}
-      <a href="{{ .Permalink }}" data-instant>{{ $tag }}</a>&nbsp;
+      <a href="{{ .Permalink | relURL }}" data-instant>{{ $tag }}</a>&nbsp;
       {{- end -}} 
     {{- end -}}
 </div>

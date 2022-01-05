@@ -4,9 +4,6 @@ author: koalalorenzo
 comments: true
 date: 2016-05-14 16:12:15+02:00
 title: "Please do not EVER stop learning how to code!"
-categories:
-- Work
-- Thoughts
 tags:
 - old blog
 - learning
@@ -14,6 +11,8 @@ tags:
 - coding
 - software development
 - develop
+- work
+- thoughts
 ---
 I remember when I was 10 and my mother was worried about me staying too much in
 front of the computer, writing lines of weird text on a black and white screen;

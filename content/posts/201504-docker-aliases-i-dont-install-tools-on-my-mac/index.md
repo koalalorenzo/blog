@@ -6,9 +6,6 @@ layout: post
 slug: docker-aliases-i-dont-install-tools-on-my-mac
 title: 'Docker + aliases: I don''t install tools on my Mac'
 wordpress_id: 18572
-categories:
-- Work
-- How To
 tags:
 - old blog
 - docker
@@ -19,11 +16,14 @@ tags:
 - devleop
 - devops
 - scale
+- work
+- how to
+
 ---
 
 I really care about **keeping the OS clean** and _untouched_. Sometimes, when I have to develop using specific softwares and tools, I have to **modify** core and **important** sections of the system on my **Mac** or **PC**, and this can create some problems with **package managers** (like homebrew for Mac OS X; or like APT, pacman or yum for GNU/Linux)...
 
-![](cover_docker.webp)
+{{< image src="cover_docker.webp" >}}
 
 **For example**, few months ago I installed node.js on my Mac using the official package. When I started using [homebrew](http://brew.sh), I had problems with the command line and the configuration. I even had the same problem when I was not using a virtual environment with Python 2.7 and 3.4... So I was forced to fix all the files/links manually with the super user... and I don't like that: it is like corrupting my OS...<!-- more -->
 

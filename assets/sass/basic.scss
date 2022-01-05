@@ -14,12 +14,12 @@ body {
   width: $global-body-width+($global-margin *2);
   margin: 0 auto;
 
-  @include mobile-portrait {   
+  @include mobile-portrait {
     width: unset;
     padding: 5px $global-margin;
     font-size: $base-font-size;
   }
-  
+
   @include for-mobile-portrait-down {
     padding: 0 $global-margin/3;
   }
@@ -48,6 +48,18 @@ a {
       color: themed("color-accent");
     }
   }
+
+  figure, figcaption {
+    @include themify(){
+      color: themed("text-color");
+    }    
+    
+    &:hover{
+      @include themify(){
+        color: themed("text-color");
+      }
+    }
+  }
 }
 
 h1 {
@@ -60,32 +72,6 @@ h2 {
 
 h3 {
   font-size: 1.4em;
-}
-
-img {
-  border: 0px black solid;
-  border-radius: $global-border-radius;
-
-  &[src*='#smallSquare'] {
-    max-width: 300px;
-    max-height: 300px;
-  }
-
-  &[src*='#big'] {
-    max-width: 750px;
-    max-height: 600px;
-  }
-
-  &[src*='#bigSquare'] {
-    max-width: 750px;
-    max-height: 750px;
-  }
-
-  &[src*='#noborder'] {
-    border: 0px;
-    border-radius: 0;
-  }
-
 }
 
 footer {
@@ -104,4 +90,5 @@ pre {
 
 hr {
   margin: $global-margin 0 $global-margin*2;
+  clear: both;
 }

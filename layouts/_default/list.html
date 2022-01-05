@@ -1,18 +1,19 @@
 {{ define "main" }}
-    <div>
-        <div class="heading">
-            <h1 class="title">
-                Latest blog posts
-            </h1>
-        </div>
-        <div id="article_shorts">
-            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-            {{ range $paginator.Pages }}
-                {{ .Render "page-short" }}
-            {{ end }}
-        </div>
-        <div>
-            {{ partial "paginator.html" . }}
-        </div>
-    </div>
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+<div>
+  <div class="heading">
+    <h1 class="title">
+      Latest blog posts
+    </h1>
+  </div>
+  {{ if $paginator.HasPrev }}
+  {{ partial "paginator.html" . }}
+  {{ end }}
+  <div id="article_shorts">
+    {{ range $paginator.Pages }}
+    {{ .Render "page-short" }}
+    {{ end }}
+  </div>
+  {{ partial "paginator.html" . }}
+</div>
 {{ end }}

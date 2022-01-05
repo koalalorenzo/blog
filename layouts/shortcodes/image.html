@@ -7,19 +7,19 @@
   {{ $small := (.Resize "512x webp q75") }}
   {{ $medium := (.Resize "1024x webp q75") }}
   {{ $large := (.Resize "2048x webp q75") }}
-<a href="{{ .Permalink }}" target="_blank">
+<a href="{{ .RelPermalink }}" target="_blank">
   <figure {{ if $class }}class="{{ $class }}"{{ end }}>
     <img
       srcset="
-        {{- with $tiny.Permalink -}}{{.}} 256w{{- end -}}
-        {{- with $small.Permalink -}}, {{.}} 512w{{- end -}}
+        {{- with $tiny.RelPermalink -}}{{.}} 256w{{- end -}}
+        {{- with $small.RelPermalink -}}, {{.}} 512w{{- end -}}
 
         {{ if in $class "big" }}
-        {{- with $medium.Permalink -}}, {{.}} 1024w{{- end -}}
-        {{- with $large.Permalink -}}, {{.}} 2048w{{- end -}}
+        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+        {{- with $large.RelPermalink -}}, {{.}} 2048w{{- end -}}
         {{ end }}
       "
-      src="{{ $medium.Permalink }}"
+      src="{{ $medium.RelPermalink }}"
       alt="{{ $caption }}">
       {{ if $caption }}
       <figcaption>

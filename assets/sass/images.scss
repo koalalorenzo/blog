@@ -1,6 +1,7 @@
 img {
   border: 0px;
   border-radius: $global-border-radius;
+  max-width: 100%;
 
   &[src*='#smallSquare'],
   &[src*='#small'],
@@ -39,7 +40,6 @@ figure {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 500px;
   }
 
   figcaption {
@@ -55,12 +55,16 @@ figure {
   &.smallSquare,
   &.small {
     max-width: 300px;
-    max-height: 300px;
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
   }
 
   &.big {
     max-width: unset;
     max-height: unset;
+    width: 100%;
     
     img {
       max-width: unset;
@@ -70,7 +74,11 @@ figure {
 
   &.bigSquare {
     max-width: 750px;
-    max-height: 750px;
+
+    img {
+      max-width: 750px;
+      max-height: 750px;
+    }
   }
 
   &.noborder {

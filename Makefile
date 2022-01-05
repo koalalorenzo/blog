@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := clean
 
 DATE ?= $(shell date +"%Y%m")
-HUGO_ARGS ?= --minify
+HUGO_ARGS ?= --minify --gc
 
 __IMAGES_TO_CONVERT ?= $(shell find . -type f -and -not -path "./bower_components/*" -and \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \))
 __GIF_TO_CONVERT ?= $(shell find . -type f -and -not -path "./bower_components/*" -and -name "*.gif")

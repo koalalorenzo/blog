@@ -14,7 +14,7 @@ clean_%:
 clean: clean_public clean_tmp clean_resources
 .PHONY: clean
 
-run: clean
+run:
 	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts ${HUGO_ARGS}
 .PHONY: run
 

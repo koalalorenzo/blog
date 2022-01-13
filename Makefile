@@ -19,6 +19,7 @@ run:
 .PHONY: run
 
 build: clean
+	env
 	hugo ${HUGO_ARGS}
 .PHONY: build
 

@@ -27,7 +27,7 @@
     <!-- RSS -->
     <link  rel="alternate" type="application/rss+xml" title="Lorenzo's Blog Posts Feed" href="/index.xml">
     {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | absURL }}">
 
     <!-- Preloads -->
     {{ $instjs := resources.Get "js/instantpage.min.js" | js.Build }}
@@ -38,7 +38,7 @@
     {{ $js = slice $instjs $mermaidjs | resources.Concat "js/bundle.full.js" | minify | fingerprint }}
     {{ end }}
     
-    <link rel="preload" as="script" href="{{ $js.RelPermalink }}" />
+    <link rel="preload" as="script" href="{{ $js.RelPermalink | absURL }}" />
     <link rel="preload" as="script" href="https://utteranc.es/client.js" />
 
     <!-- OpenGraph -->

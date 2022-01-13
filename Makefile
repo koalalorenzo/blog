@@ -5,7 +5,7 @@ HUGO_ARGS ?= --minify --gc
 
 # Fixes CF_PAGES_URL to be blog.setale.me when deploying in master
 CF_PAGES_URL ?= https://blog.setale.me/
-ifeq (${CF_PAGES_URL},https://blog-3du.pages.dev)
+ifeq (${CF_PAGES_BRANCH},main)
 CF_PAGES_URL := https://blog.setale.me/
 endif
 

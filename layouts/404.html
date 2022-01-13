@@ -2,12 +2,12 @@
 <main id="main">
   <div>
     <h1 id="title">Ooops! Error 404: Page not found</h1>
-    <img src="{{ "/images/gopher_coffee_nofill.webp" | relURL }}#noborder">
+    <img src="{{ "/images/gopher_coffee_nofill.webp" | absURL }}#noborder">
     <p>
       Apparently this page does not exist. 😅 
     </p>
     <p>
-      You can try searching in the <a href="{{ "/" | relURL }}" data-instant>home page</a>!
+      You can try searching in the <a href="{{ "/" | absURL }}" data-instant>home page</a>!
     </p>
   </div>
 </main>

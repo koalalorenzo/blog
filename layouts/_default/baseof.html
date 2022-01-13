@@ -2,14 +2,14 @@
 <html lang="en">
     {{ partial "head" . }}
     <body>
-      {{ partial "header" . }}
+      {{ partialCached "header" . }}
       <div class="main">
       {{ block "main" . }}
       {{ end }}
       </div>
       <aside {{ if not .IsPage }}class="sticky"{{ end }}>
-        {{ partial "avatar.html" . }}
-        {{ partial "author_links.html" . }}
+        {{ partialCached "avatar.html" . }}
+        {{ partialCached "author_links.html" . }}
       </aside>
       {{ if .IsPage }}
       <aside class="sticky">
@@ -18,7 +18,7 @@
       </aside>
       {{ end }}
       <!-- end main -->
-      {{ partial "footer" . }}
-      {{ partial "scripts" . }}
+      {{ partialCached "footer" . }}
+      {{ partialCached "scripts" . }}
     </body>
 </html>

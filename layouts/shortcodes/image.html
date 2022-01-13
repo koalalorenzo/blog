@@ -26,6 +26,8 @@
 <a href="{{ .RelPermalink }}" target="_blank">
   <figure {{ if $class }}class="{{ $class }}"{{ end }}>
     <img
+      width="450px"
+      height="{{ div (mul .Height 450) .Width }}px"
       srcset="
         {{ if gt .Width 256 }}
         {{- with $tiny.RelPermalink -}}{{.}} 256w{{- end -}}

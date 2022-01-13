@@ -1,8 +1,15 @@
-.EXPORT_ALL_VARIABLES:
 .DEFAULT_GOAL := clean
 
 DATE ?= $(shell date +"%Y%m")
 HUGO_ARGS ?= --minify --gc
+
+# Fixes CF_PAGES_URL to be blog.setale.me when deploying in master
+CF_PAGES_URL ?= https://blog.setale.me/
+ifeq (${CF_PAGES_URL},https://blog-3du.pages.dev)
+CF_PAGES_URL := https://blog.setale.me/
+endif
+
+.EXPORT_ALL_VARIABLES:
 
 __IMAGES_TO_CONVERT ?= $(shell find . -type f -and -not -path "./bower_components/*" -and \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \))
 __GIF_TO_CONVERT ?= $(shell find . -type f -and -not -path "./bower_components/*" -and -name "*.gif")
@@ -19,7 +26,8 @@ run:
 .PHONY: run
 
 build: clean
-	hugo ${HUGO_ARGS}
+	env
+	hugo -b ${CF_PAGES_URL} ${HUGO_ARGS}
 .PHONY: build
 
 %.webp:

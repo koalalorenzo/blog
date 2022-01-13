@@ -6,6 +6,6 @@
 {{ $js = slice $instjs $mermaidjs | resources.Concat "js/bundle.full.js" | minify | fingerprint }}
 {{ end }}
 
-<script src="{{ $js.RelPermalink }}"></script>
+<script src="{{ $js.RelPermalink | absURL }}"></script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->

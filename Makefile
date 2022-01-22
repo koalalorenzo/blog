@@ -25,8 +25,7 @@ run:
 	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts ${HUGO_ARGS}
 .PHONY: run
 
-build: clean
-	env
+build: clean_public
 	hugo -b ${CF_PAGES_URL} ${HUGO_ARGS}
 .PHONY: build
 
@@ -53,5 +52,5 @@ endif
 .PHONY: convert_images
 
 new_post:
-	-hugo new posts/${DATE}/content.md
+	-hugo new posts/${DATE}/index.md
 .PHONY: new_post

@@ -7,7 +7,7 @@ article {
 
   h1 {
     margin-top: $global-h1-margin;
-    margin-left: -$global-h1-margin;
+    margin-left: -($global-h1-margin/2);
 
     &:first-child {
       margin-top: 0px;
@@ -17,12 +17,12 @@ article {
 
   h2 {
     margin-top: 3.5rem;
-    margin-left: -$global-h1-margin;
+    margin-left: -($global-h1-margin/2.25);
   }
 
   h3 {
     margin-top: 3rem;
-    margin-left: -($global-h1-margin/2);
+    margin-left: -($global-h1-margin/3);
   }
 
   p strong {

@@ -21,7 +21,7 @@ clean_%:
 clean: clean_public clean_tmp clean_resources
 .PHONY: clean
 
-run:
+run: clean_public 
 	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts ${HUGO_ARGS}
 .PHONY: run
 
@@ -30,13 +30,13 @@ build: clean_public
 .PHONY: build
 
 %.webp:
-	cwebp -short -q 85 $* -o $(basename $*).webp
+	cwebp -short -q 85 "$*" -o "$(basename $*).webp"
 	find . -type f -and \( -iname "*.md" -o -iname "*.markdown" \) \
 		-exec gsed -i '' "s#$(patsubst %,%,$*)#$(patsubst %,%,$(basename $*)).webp#g" {} \;
 
 
 %.gifwebp:
-	gif2webp -mt -mixed -q 60 $*.gif -o $(basename $*).webp
+	gif2webp -mt -mixed -q 60 "$*.gif" -o "$(basename $*).webp"
 	find . -type f -and \( -iname "*.md" -o -iname "*.markdown" \) \
 		-exec gsed -i '' "s#$(patsubst %,%,$*).gif#$(patsubst %,%,$(basename $*)).webp#g" {} \;
 

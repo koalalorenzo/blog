@@ -26,6 +26,8 @@
 
     <!-- RSS -->
     <link  rel="alternate" type="application/rss+xml" title="Lorenzo's Blog Posts Feed" href="/index.xml">
+
+    <!-- CSS -->
     {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | absURL }}">
 

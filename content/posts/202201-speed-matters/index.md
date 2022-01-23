@@ -40,8 +40,9 @@ So I have decided to resolve all these issues and try to reduce the size of the
 page, the amount of connections and improve the speed. Aiming for something 
 **below 500kb**.
 
-This blog is entirely generated using [Hugo](https://gohugo.io), so it should
-be something easy to do.
+This blog is entirely generated using [Hugo](https://gohugo.io). 
+Everything is orchestrated using GNU/Make. It should be something 
+easy to do.
 
 [^css-fix]: I am already building 
 [SCSS/SASS files into a single CSS file](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/partials/head.html#L30), 

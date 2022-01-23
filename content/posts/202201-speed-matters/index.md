@@ -19,19 +19,40 @@ On my way to Recife, from Copenhagen, on an airplane from TAP Airplines I
 realised that my luggage was stuck in Copenhagen. My Apple AirTag helped me a 
 lot, but I could not do much besides trying to use a unusable website.
 
-So I inspected the website a little further and I realised that [FlyTAP.com 
-homepage weights around 17MB](flytap.com-size.webp). On a bad hotel WiFi it was
-impossible to sort things out from the website. Worse if it was from my iPhone,
-as the Mobile app was even worse.
+So I [inspected the website a little further](https://pagespeed.web.dev/report?url=http%3A%2F%2Fflytap.com%2F) 
+and I realised that [FlyTAP.com homepage weights around **17MB**](flytap.com-size.webp). 
+I had a lot of issue opening every single page on a _Hotel Wifi_. Using my 
+iPhone was even a worse experience.
 
 {{< image src="page-speed-mobile.webp" caption="flytap.com Google Speed test was pretty clear to me" class="noborder big">}}
 
+Looking at the Page Speed on Google's page, my personal Hugo blog was already 
+fast, but there was still a bunch of things to improve:
 
-## The goals
-Goals:
+* There were lot of unused CSS and JS code from different frameworks/style[^deps-fix]
+* The CSS files were not minimized[^css-fix]
+* The JavaScript code was not minimized, nor bundled up
+* Some resources were not pre-loaded[^preload]
+* Images were the heavies elements
 
-* hello
-* world
+So I have decided to resolve all these issues and try to reduce the size of the
+page, the amount of connections and improve the speed. Aiming for something 
+below 500kb.
+
+[^css-fix]: I am already building [SCSS/SASS files into a single CSS file](), 
+but I was not minimizing it.
+
+[^deps-fix]: This blog, and my personal page were using 
+[Material UI CSS](https://www.muicss.com/) and [jquery](https://jquery.com/) 😱 
+for no real reason. 😅
+
+[^preload]: Some resources are downloaded only when the browser reaches the 
+HTML page calling it, but [it is possible to pre-load](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload),
+so that the files are ready to be used later on.
+
+## Images: Hugo dynamic resize, WebP and Animated WebP
+Since the Images were the heaviest elements loaded in the page
+
 
 ## The process
 What we did to reach the goal

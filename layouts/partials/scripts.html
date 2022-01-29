@@ -1,12 +1,17 @@
 {{ $instjs := resources.Get "js/instantpage.min.js" | js.Build }}
-{{ $tocbot := resources.Get "js/tocbot.min.js" | js.Build }}
-{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.js" | minify | fingerprint }}
+{{ $jsslice := slice $instjs }}
 
 {{ if (.Params.mermaid) }}
 {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build }}
-{{ $js = slice $tocbot $instjs $mermaidjs | resources.Concat "js/bundle.full.js" | minify | fingerprint }}
+{{ $jsslice = $jsslice | append (slice $mermaidjs) }}
 {{ end }}
 
+{{ if (.IsPage) }}
+{{ $tocbot := resources.Get "js/tocbot.min.js" | js.Build }}
+{{ $jsslice = $jsslice | append (slice $tocbot) }}
+{{ end }}
+
+{{ $js := $jsslice | resources.Concat "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink | absURL }}"></script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->

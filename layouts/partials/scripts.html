@@ -11,7 +11,7 @@
 {{ $jsslice = $jsslice | append (slice $tocbot) }}
 {{ end }}
 
-{{ $js := $jsslice | resources.Concat "js/bundle.js" | fingerprint }}
+{{ $js := $jsslice | resources.Concat "js/bundle.js" | js.Build | minify | fingerprint }}
 <script src="{{ $js.RelPermalink | absURL }}"></script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script><!-- End Cloudflare Web Analytics -->

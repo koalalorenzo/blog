@@ -1,5 +1,5 @@
 ---
-title: "From a delayed luggage to a faster Hugo website"
+title: "My Hugo blog now is fast and light"
 date: 2022-01-23T15:39:41+01:00
 tags:
   - hugo

@@ -140,9 +140,24 @@ and used. This improves speed a little, since the minimized bundle, changes
 between a few pages.
 
 Hugo provides some nice [Go Pipelines to do so](https://gohugo.io/hugo-pipes/bundling/). 
-This snippet will always load [instantpage](https://instant.page), but enables
+I use it to always load [instantpage](https://instant.page), but enables
 [TocBot](https://tscanlin.github.io/tocbot/) only on pages, and 
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) only if the page uses it.
+
+For example: 
+
+```html
+{{ $instjs := resources.Get "js/instantpage.min.js" }}
+{{ $tocbot := resources.Get "js/tocbot.min.js" }}
+{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.i.js" | js.Build | minify | fingerprint }}
+
+{{ if .Params.mermaid }}
+  {{ $mermaidjs := resources.Get "js/mermaid.min.js" }}
+  {{ $js = slice $instjs $mermaidjs $tocbot | resources.Concat "js/bundle.itm.js" | js.Build | minify | fingerprint }}
+{{ end }}
+
+<script src="{{ $js.RelPermalink | absURL }}"></script>
+```
 
 You can check the full code of how I am bundling the JavaScript code [here]().
 
@@ -168,16 +183,6 @@ setup.
   CDN-Cache-Control: 1209600, stale-if-error=600
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-
-/images/*
-  Cache-Control: max-age=31536000, s-maxage=31536000, stale-if-error=600
-  Cloudflare-CDN-Cache-Control: max-age=31536000, stale-if-error=600
-  CDN-Cache-Control: 31536000
-
-/fonts/*
-  Cache-Control: max-age=31536000, s-maxage=31536000, stale-if-error=600
-  Cloudflare-CDN-Cache-Control: max-age=31536000, stale-if-error=600
-  CDN-Cache-Control: 31536000
 ```
 
 Setting this up, is very important to me, as I can fine tune settings and 

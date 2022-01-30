@@ -1,13 +1,13 @@
-{{ $instjs := resources.Get "js/instantpage.min.js" | js.Build }}
-{{ $js := slice $instjs | resources.Concat "js/bundle.i.js" | minify | fingerprint }}
+{{ $instjs := resources.Get "js/instantpage.min.js" }}
+{{ $js := slice $instjs | resources.Concat "js/bundle.i.js" | js.Build | minify | fingerprint }}
 
 {{ if (.IsPage) }}
 {{ $tocbot := resources.Get "js/tocbot.min.js" }}
-{{ $js = slice $instjs $tocbot | resources.Concat "js/bundle.it.js" | minify | fingerprint }}
+{{ $js = slice $instjs $tocbot | resources.Concat "js/bundle.it.js" | js.Build | minify | fingerprint }}
 
 {{ if (.Params.mermaid) }}
-  {{ $mermaidjs := resources.Get "js/mermaid.min.js" | js.Build }}
-  {{ $js = slice $instjs $mermaidjs $tocbot | resources.Concat "js/bundle.itm.js" | minify | fingerprint }}
+  {{ $mermaidjs := resources.Get "js/mermaid.min.js" }}
+  {{ $js = slice $instjs $mermaidjs $tocbot | resources.Concat "js/bundle.itm.js" | js.Build | minify | fingerprint }}
 {{ end }}
 {{ end }}
 

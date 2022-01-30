@@ -1,11 +1,11 @@
 {{ $instjs := resources.Get "js/instantpage.min.js" }}
 {{ $js := slice $instjs | resources.Concat "js/bundle.i.js" | js.Build | minify | fingerprint }}
 
-{{ if (.IsPage) }}
+{{ if .IsPage }}
 {{ $tocbot := resources.Get "js/tocbot.min.js" }}
 {{ $js = slice $instjs $tocbot | resources.Concat "js/bundle.it.js" | js.Build | minify | fingerprint }}
 
-{{ if (.Params.mermaid) }}
+{{ if .Params.mermaid }}
   {{ $mermaidjs := resources.Get "js/mermaid.min.js" }}
   {{ $js = slice $instjs $mermaidjs $tocbot | resources.Concat "js/bundle.itm.js" | js.Build | minify | fingerprint }}
 {{ end }}
@@ -14,7 +14,7 @@
 <script src="{{ $js.RelPermalink | absURL }}"></script>
 
 {{ if (.IsPage) }}
-<script type="text/javascript">
+<script type="text/javascript" defer>
   tocbot.init({
       tocSelector: '#TableOfContents',
       contentSelector: 'article.full',

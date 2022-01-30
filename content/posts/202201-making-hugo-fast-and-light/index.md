@@ -130,7 +130,9 @@ I also got rid of Disqus, in favor of [utteranc.es](utteranc.es) with GitHub
 integration.
 
 ## Hugo bundles my JavaScript now!
-Originally my hugo website was bloated with a lot of almost useless Javascript,
+My hugo website was bloated with a lot of almost useless Javascript, so I 
+decided to get rid of most of it, and bundle it, minimize it and enable the 
+scripts only if were in use.
 
 
 ## Serving all these things together

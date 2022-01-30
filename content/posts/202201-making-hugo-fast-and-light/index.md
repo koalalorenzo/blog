@@ -134,6 +134,17 @@ My hugo website was bloated with a lot of almost useless Javascript, so I
 decided to get rid of most of it, and bundle it, minimize it and enable the 
 scripts only if were in use.
 
+To imprvoe the loading speed, I have decided to [preload the js bundle](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload), 
+so that the browser can fetch it a little before the js code is actually defined
+and used. This improves speed a little, since the minimized bundle, changes 
+between a few pages.
+
+Hugo provides some nice [Go Pipelines to do so](https://gohugo.io/hugo-pipes/bundling/). 
+This snippet will always load [instantpage](https://instant.page), but enables
+[TocBot](https://tscanlin.github.io/tocbot/) only on pages, and 
+[Mermaid](https://mermaid-js.github.io/mermaid/#/) only if the page uses it.
+
+You can check the full code of how I am bundling the JavaScript code [here]().
 
 ## Serving all these things together
 It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I then 

@@ -29,6 +29,11 @@ article {
     margin-left: 2rem;
   }
 
+  ul {
+    padding: $global-margin 0;
+    line-height: 2rem;
+  }
+
   .mermaid {
     @include themify() {
       background-color: themed("background-accent");

@@ -211,4 +211,7 @@ waiting on my luggage. Most importantly I managed to:
 * Bundled JS and CSS resources and loading them only when needed
 * Improved speed by leveraging cache settings with Cache Control Headers
 
-So what is the result?
+So what is the result? According to [GTMetrix](https://gtmetrix.com) Reports: my
+Homepage went from [883kb](homepage-old.webp) to just [252kb](homepage-new.webp) 
+(uncompressed), and my personal blog jumped from [879kb](blog-old.webp) kb to 
+[375kb](blog-new.webp) (uncompressed).

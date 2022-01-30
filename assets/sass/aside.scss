@@ -48,6 +48,10 @@ aside {
     &.avatar {
       padding-top: $global-margin;
     }
+    
+    &.link {
+      line-height: 1.6rem;
+    }
   }
 
   :first-child {

@@ -39,8 +39,8 @@ fast, but there was still a bunch of things to improve:
 * Images were the heavies elements
 
 So I have decided to resolve all these issues and try to reduce the size of the
-page, the amount of connections and improve the speed. Aiming for something 
-**below 500kb**.
+page, the amount of connections and improve the speed. [Aiming for something 
+below 512kb](http://512kb.club/).
 
 This blog is entirely generated using [Hugo](https://gohugo.io). 
 Everything is orchestrated using GNU/Make. It should be something 
@@ -111,6 +111,10 @@ There are [a lot of functions that can be used to manipualte images](https://goh
 and I am very happy about it because it saved me a lot of commands to 
 run for each thumbnail! 😎 
 
+I made further changes to even use `srcset` for images to allow the browser to 
+load the right image, and resize it dynamically. You can check how I have done
+it [here](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/shortcodes/image.html).
+
 ## Removing Material UI and jQuery
 I can't remember when I started, but  when it comes to build new HTML pages, 
 I have the feeling that I have always been using some sort of _quick framework_ 
@@ -126,8 +130,8 @@ and jQuery, just to have an animated avatar in the center.
 So I just got rid of all of them, and I removed a lot of CSS and JavaScript that
 I was anyway customizing. That removed many files!
 
-I also got rid of Disqus, in favor of [utteranc.es](utteranc.es) with GitHub
-integration.
+I also got rid of Disqus, in favor of [utteranc.es](https://utteranc.es) with 
+GitHub integration.
 
 ## Hugo bundles my JavaScript now!
 My hugo website was bloated with a lot of almost useless Javascript, so I 
@@ -144,36 +148,41 @@ I use it to always load [instantpage](https://instant.page), but enables
 [TocBot](https://tscanlin.github.io/tocbot/) only on pages, and 
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) only if the page uses it.
 
-For example: 
+This is a useful snippet to bundle and minimize JS:
 
 ```html
-{{ $instjs := resources.Get "js/instantpage.min.js" }}
-{{ $tocbot := resources.Get "js/tocbot.min.js" }}
-{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.i.js" | js.Build | minify | fingerprint }}
+{{ $instjs := resources.Get "js/instantpage.js" }}
+{{ $tocbot := resources.Get "js/tocbot.js" }}
+{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.js" | js.Build | minify | fingerprint }}
 
 {{ if .Params.mermaid }}
   {{ $mermaidjs := resources.Get "js/mermaid.min.js" }}
-  {{ $js = slice $instjs $mermaidjs $tocbot | resources.Concat "js/bundle.itm.js" | js.Build | minify | fingerprint }}
+  {{ $js = slice $instjs $mermaidjs $tocbot | resources.Concat "js/bundle.js" | js.Build | minify | fingerprint }}
 {{ end }}
 
 <script src="{{ $js.RelPermalink | absURL }}"></script>
 ```
 
-You can check the full code of how I am bundling the JavaScript code [here]().
+If you are curious, you can check the full code of how I am bundling the 
+JavaScript code [here](https://gitlab.com/koalalorenzo/blog/-/blob/main/layouts/partials/scripts.html).
 
 ## Serving all these things together
-It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I then 
-understand how probably TAP Air Portugal just _wanted to have a website_, and
-outsurced it to the cheapest offer. 💸 
+It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I 
+personally would never use Microsoft Windows as Server or even Microsoft Azure. 
 
-My blog was not outsourced. I would not host on Microsoft Windows or even Azure.
-Originally I have been using GitHub Pages, but then moved to GitLab Pages for 
-integrity reasons. [To turn it up to eleven](https://en.wikipedia.org/wiki/Up_to_eleven), 
-I have decided to onboard to [Cloudflare Pages](https://pages.dev).
+Instead I have been using GitHub Pages, but then moved to GitLab Pages to 
+support Open Source projects[^why-use-gitlab]... but to turn it up to 
+eleven[^eleven], I have  decided to onboard to 
+[Cloudflare Pages](https://pages.dev).
 
 Compared to GitHub and GitLab, Cloudflare Pages allows me to customize
 the headers, redirects, and add serverless functions directly from my Hugo
-setup.
+setup:
+
+[^eleven]: https://en.wikipedia.org/wiki/Up_to_eleven
+
+[^why-use-gitlab]: Since Micosoft bought GitHub, I have moved my personal 
+                   projects to GitLab
 
 ```yaml
 # File: _headers
@@ -186,9 +195,20 @@ setup.
 ```
 
 Setting this up, is very important to me, as I can fine tune settings and 
-improve speed by better leveraging Cloudflare CDN and the Browser's cache.
-There is a full page 
+improve speed by better leveraging Cloudflare CDN, Edge Cache, and the
+Browser's cache rules.
+
+You can read more about this directly on 
+[Cloudflare Pages documentation](https://developers.cloudflare.com/pages/platform/headers)
 
 ## Conclusions
-Although I cannot change TAP Airlines's website or their customer support, I
-have learned a lot of things about optimizing websites and how Hugo does it.
+Although I cannot change TAP Airlines's website, their service, or their customer 
+support, I have learned a lot of things about optimizing websites while I was
+waiting on my luggage. Most importantly I managed to:
+
+* Replaced CSS and JS framework that I don't need with simpler lines of code 
+* Move all the images to WebP format to reduce the size used
+* Bundled JS and CSS resources and loading them only when needed
+* Improved speed by leveraging cache settings with Cache Control Headers
+
+So what is the result?

@@ -6,19 +6,21 @@ tags:
   - go
   - webp
 ---
-Recently I have been travelling with a bad airplane company that lost my 
+Recently I have been travelling with _a bad airplane company_ that lost my 
 luggage. In hope to get my belongings back with me, I tried to use their
-website and support page, just to be super frustrated every time. The main
-reason of frustration, besides the lack of any form of support, was the 
-website speed. So I decided to spend the time without my luggage (around 5 days)
-trying to use best practices to improve the speed of my own website and blog.
+website, and support pages and I frustrated every time. The main source of 
+frustration was the website speed. So I decided to spend most of the time 
+without my luggage (around 5 days) trying to use best practices to improve the 
+speed of my own website and blog ending in making my hugo blog faster and way
+lighter than before. This blog post is about what I have chanted.
 
 <!--more-->
 
-## Investigations
+## The Investigations
 On my way to Recife, from Copenhagen, on an airplane from TAP Airplines I 
-realised that my luggage was stuck in Copenhagen. My Apple AirTag helped me a 
-lot, but I could not do much besides trying to use a unusable website.
+realised that my luggage was stuck in Copenhagen. [My Apple AirTag](apple-airtag-tap-luggage.webp) 
+helped me a lot, but I could not do much besides trying to use a unusable 
+website.
 
 So I [inspected the website a little further](https://pagespeed.web.dev/report?url=http%3A%2F%2Fflytap.com%2F) 
 and I realised that [FlyTAP.com homepage weights around **17MB**](flytap.com-size.webp). 
@@ -128,7 +130,8 @@ I also got rid of Disqus, in favor of [utteranc.es](utteranc.es) with GitHub
 integration.
 
 ## Hugo bundles my JavaScript now!
-Originally my website was using a lot of Javascript, 
+Originally my hugo website was bloated with a lot of almost useless Javascript,
+
 
 ## Serving all these things together
 It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I then 

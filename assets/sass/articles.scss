@@ -1,6 +1,5 @@
 article {
   p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.7em;
   }
@@ -23,7 +22,6 @@ article {
   }
 
   p strong {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
   }
 
@@ -43,9 +41,13 @@ article {
   // Specific full-page article 
   &.full {
     @include for-tablet-portrait-up {
-      h1 {
+      .header {
         margin-left: -$global-h1-margin;
       }
+
+      // h1 {
+      //   margin-left: -$global-h1-margin;
+      // }
 
       h2 {
         margin-left: -($global-h1-margin/1.5);

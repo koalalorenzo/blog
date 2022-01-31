@@ -16,7 +16,6 @@ markup:
       unsafe: true
 
 taxonomies:
-  author: "authors"
   tag: "tags"
 
 ## Changes to import content from jekyll

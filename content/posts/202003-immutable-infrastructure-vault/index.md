@@ -37,13 +37,13 @@ Shortly the idea is that instead of maintaining machines alive (as Pets 🐶), a
 upgrading them constantly, VMs are killed **periodically** and replaced with new
 updated versions (like cattle 🐮 we don't care about them too much).
 
-{{< image src="cows.webp" caption="Hashicorp Vault Logo" class="center">}}
+{{< figure src="cows.webp" class="center">}}
 
 I believe that Immutable Infrastructure starts from there and expands it a
 little by **forcing VMs to be stateless** and limiting,
 _if not forbidding_, changes to these machines (ex: No SSH = way fewer changes).
 
-{{< figure src="cover.webp" caption="Immutable Infrastructure" class="center">}}
+{{< figure src="animated-immutable.webp" caption="Immutable Infrastructure" class="center">}}
 
 Very basically, **servers are never modified** after they are deployed. If there
 are errors or changes to be applied, a new VM Image is created, tested and then

@@ -26,7 +26,7 @@ Jobs's definitions?
 
 <!--more-->
 
-{{< image src="gopherswrench.webp" caption="Go Gophers at work" class="center">}}
+{{< image src="gopherswrench-cover.webp" caption="Go Gophers at work" class="center">}}
 
 Yes, we can! For pure fun and during my spare time, I made **Backpack** for Nomad!
 😀 I decided to keep things as similar as possible to Helm but improve on it

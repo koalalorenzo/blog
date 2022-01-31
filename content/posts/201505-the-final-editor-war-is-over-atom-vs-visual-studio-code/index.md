@@ -24,7 +24,7 @@ tags:
 During the last month I started **experimenting** a lot with some **editors** for **software development**. I've been playing for 2 weeks with **Atom** and **Visual Studio Code** and here are my impressions from a Mac and Sublime user.
 <!--more-->
 
-{{< image src="atom-vs-visual-studio-code.webp" >}}
+{{< image src="atom-vs-visual-studio-code-cover.webp" >}}
 
 I started developing several projects using NodeJS, coffee-script, python, docker and angular, but sometimes **Sublime is not enough** and I need other tools and software for job routine. I am a Sublime user, and I love it, but I had to break up with it since I need more features... and I found the love in one of those two editors... :-) 
 

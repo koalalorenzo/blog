@@ -16,13 +16,27 @@ aside {
   }
 
   // See Partial: table_of_content
-  #table_of_content nav#TableOfContents {
-    margin-top: $global-h1-margin/4;
-  }
+  #table_of_content {
+    nav#TableOfContents {
+      margin-top: $global-h1-margin/4;
+    }
 
-  #table_of_content nav#TableOfContents ul {
-    margin-left: $global-h1-margin/4;
-    margin-bottom: 0;
+    nav#TableOfContents li {
+      margin-left: $global-h1-margin/4;
+      margin-bottom: 0;
+    }
+
+    li.is-active-li {
+      @include themify() {
+        color: themed("color-accent") !important;
+      }
+
+      a {
+        @include themify() {
+          color: themed("color-accent") !important;
+        }  
+      }
+    }
   }
 
   // See partial author
@@ -33,6 +47,10 @@ aside {
 
     &.avatar {
       padding-top: $global-margin;
+    }
+    
+    &.link {
+      line-height: 1.6rem;
     }
   }
 

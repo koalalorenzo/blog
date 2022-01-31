@@ -9,6 +9,7 @@ tags:
   - streaming
   - bot
   - Heroku
+  - webp
   - opensource
 mermaid: true
 ---

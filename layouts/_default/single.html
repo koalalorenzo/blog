@@ -1,5 +1,5 @@
 {{ define "main" }}
-<article itemscope itemtype="https://schema.org/Article">
+<article class="full" itemscope itemtype="https://schema.org/Article">
   <div class="header">
       <h1 class="title" itemprop="headline">
           {{ .Title }}
@@ -12,9 +12,10 @@
         {{ end }}
         - Reading Time: {{ math.Round (div (countwords .Content) 230.0) }} Minutes
       </p>
-      <div itemprop="articleBody">{{ .Content }}</div>
   </div>
+  <div itemprop="articleBody">{{ .Content }}</div>
 </article>
+
 {{ if (.Params.comments) }}
 <div id="comments">
   <h2>Comments</h2>
@@ -29,4 +30,18 @@
   {{ partial "agecheck.html" . }}
 </div>
 {{ end }}
+
+<div class="pagination">
+  <hr />
+  {{ if .PrevPage }}
+  <a class="link-reverse" href="{{ .PrevPage.Permalink }}">« Previous Post</a>
+  {{ end }}
+  {{ if and .PrevPage .NextPage  }}
+  -~-
+  {{ end }}
+  {{ if .NextPage }}
+  <a class="link-reverse" href="{{ .NextPage.Permalink }}">Next Post »</a>
+  {{ end }}
+</div>
+
 {{ end }}

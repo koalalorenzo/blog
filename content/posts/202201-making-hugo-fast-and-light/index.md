@@ -21,12 +21,12 @@ On my way to Recife from Copenhagen, I realized that my luggage was stuck in
 Copenhagen on a TAP Airplane. [My Apple AirTag](apple-airtag-tap-luggage.webp)
 helped me, but I could not do much besides using an unusable website.
 
-So I [inspected the website a little further](https://pagespeed.web.dev/report?url=http%3A%2F%2Fflytap.com%2F)
-and I realized that [FlyTAP.com homepage weights around **17MB**](flytap.com-size.webp).
+So I [inspected the website a little further](https://pagespeed.web.dev/report?url=http%3A%2F%2Fflytap.com%2F),
+and I realized that the [FlyTAP.com homepage weighs around **17MB**](flytap.com-size.webp).
 I had a lot of issues opening every single page on a _Hotel Wifi_.
 Using my iPhone was even a worse experience.
 
-{{< image src="flytap-speed.webp" caption="flytap.com GTMetrix tests are very bad" class="noborder big">}}
+{{< image src="flytap-speed.webp" caption="flytap.com GTMetrix tests results are awful" class="noborder big">}}
 
 My blog was already light, but I know that I could improve it:
 
@@ -47,12 +47,12 @@ tools made the changes easier to achieve.
 [SCSS/SASS files into a single CSS file](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/partials/head.html#L30),
 but I was not minimizing it.
 
-[^deps-fix]: This blog, and my personal page were using
+[^deps-fix]: This blog and my personal page used
 [Material UI CSS](https://www.muicss.com/) and [jquery](https://jquery.com/) 😱
 for no real reason. 😅
 
 [^preload]: Some resources are downloaded only when the browser reaches the
-HTML page calling it, but [it is possible to pre-load](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload),
+HTML page calling it, but [it is possible to pre-load](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload)
 so that the files are ready to be used later on.
 
 ## Images: WebP, Animated WebP, and right-sizing
@@ -77,13 +77,13 @@ These commands made some tangible improvements in file size, shrinking
 huge win because I love to use GIFs and memes in my posts! 😅
 
 [^size-image-changes]: You can see [from this PR](https://gitlab.com/koalalorenzo/blog/-/merge_requests/4/diffs#3fa76e96f26c99e5110e368f3bbed165427a47e1) that when I started working on
-moving to WebP, I reduced a lot the size of the images.
+moving to WebP, I reduced the size of the images.
 
 {{< image src="webp-gif-size-feature-center.webp" caption="Size matters too!">}}
 
 To improve speed, WebP is not enough. The pages were loading big images
 (around 5000x5000 pixels) for a tiny thumbnail space (approximately 300x300
-pixels), and then the Browser would resize it after downloading.
+pixels), and then the browser would resize it after downloading.
 Resizing the thumbnail to the proper size beforehand would help reduce the
 dimensions to lower things.
 
@@ -111,7 +111,7 @@ and I am happy about it because it saved me a lot of commands to run for each
 thumbnail! 🤯
 
 I made further changes to even use `srcset` for images to allow the browser to
-load the right image, and resize it dynamically. You can check how I have done
+load the right image and resize it dynamically. You can check how I have done
 it [here](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/shortcodes/image.html).
 
 ## Removing Material UI and jQuery
@@ -127,14 +127,15 @@ was using some frameworks for no real good reason, and my Homepage was using the
 old good Bootstrap and jQuery, just to have an animated avatar and a few divs
 center[^center-div].
 
-[^tapwappalyzer]: See full list of tools used by TAP Airlines homepage in [this CSV file](wappalyzer_flytap-com.csv)
+[^tapwappalyzer]: See the full list of tools used by TAP Airlines homepage
+in [this CSV file](wappalyzer_flytap-com.csv)
 
 [^center-div]: [Centering the div meme](https://www.reddit.com/r/ProgrammerHumor/comments/95z1xn/if_you_can_successfully_center_a_div_you_can/)
 
 After a deep breath, I removed all of them in favor of some simple SASS/SCSS and
 JavaScript That removed many files! 💪
 
-I also got rid of Disqus, in favor of [utteranc.es](https://utteranc.es) with
+I also got rid of Disqus in favor of [utteranc.es](https://utteranc.es) with
 GitHub integration.
 
 ## Hugo bundles my SASS/SCSS and JavaScript now!
@@ -149,8 +150,8 @@ I use it to always load [instantpage](https://instant.page), but it enables
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) only if the page uses it.
 
 To improve the loading speed, I have decided to [preload the js bundle](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload)
-so that the Browser can fetch it slightly before the js code is actually defined
-and used. This improves speed since the minimized bundle, changes
+so that the browser can fetch it slightly before the js code is actually defined
+and used. This improves speed since the minimized bundle changes
 between some pages.
 
 This is a useful snippet to bundle and minimize JS:
@@ -176,10 +177,9 @@ It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I
 personally would never use Microsoft Windows as a web server or even Microsoft
 Azure.
 
-Instead I have been using GitHub Pages, but then moved to GitLab Pages to
+Instead, I have been using GitHub Pages, but then moved to GitLab Pages to
 support Open Source projects[^why-use-gitlab]... but to turn it up to
-eleven[^eleven], I have  decided to onboard to
-[Cloudflare Pages](https://pages.dev).
+eleven[^eleven], I have  decided to onboard to [Cloudflare Pages](https://pages.dev).
 
 Compared to GitHub and GitLab, Cloudflare Pages allows me to customize
 the headers, redirects, and add serverless functions directly from my Hugo
@@ -187,7 +187,7 @@ setup:
 
 [^eleven]: https://en.wikipedia.org/wiki/Up_to_eleven
 
-[^why-use-gitlab]: Since Micosoft bought GitHub, I have moved my personal
+[^why-use-gitlab]: Since Microsoft bought GitHub, I have moved my personal
                    projects to GitLab
 
 ```yaml
@@ -201,10 +201,10 @@ setup:
 ```
 
 Setting this up is important to me, as I can fine-tune settings and improve
-speed by leveraging Cloudflare CDN, Edge Cache, and the Browser's cache rules.
+speed by leveraging Cloudflare CDN, Edge Cache, and the browser's cache rules.
 
 You can read more about this directly on
-[Cloudflare Pages documentation](https://developers.cloudflare.com/pages/platform/headers)
+[Cloudflare Pages documentation](https://developers.cloudflare.com/pages/platform/headers).
 
 ## Conclusions
 Although I cannot change TAP Airlines’s website, the service, or the customer
@@ -226,8 +226,8 @@ might not be looking fair, but generating a static website in the right way will
 make it scalable.
 
 Optimizing a big SPA/static website might not be difficult if we use the right
-technologies and the proper setup. My website is way hosted by better servers
-than Microsoft IIS 🤦 and it uses CDN service helps with response time.
+technologies and the proper setup. My website is hosted by better servers than
+Microsoft IIS 🤦 and uses CDN service to help with response time.
 
 The CSS and JS files are now bundled and minimized by Hugo... but the gain comes
 when considering Images are also manipulated, resized, and converted by Hugo!

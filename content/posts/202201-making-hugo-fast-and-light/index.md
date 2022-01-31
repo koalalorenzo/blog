@@ -106,46 +106,52 @@ directly from the [layout templates of my theme](https://gitlab.com/koalalorenzo
 {{ end }}
 ```
 
-There are [a lot of functions that can be used to manipulate images](https://gohugo.io/content-management/image-processing/),
-and I am very happy about it because it saved me a lot of commands to
-run for each thumbnail! 😎
+There are [a lot of functions to manipulate images](https://gohugo.io/content-management/image-processing/),
+and I am happy about it because it saved me a lot of commands to run for each
+thumbnail! 🤯
 
 I made further changes to even use `srcset` for images to allow the browser to
 load the right image, and resize it dynamically. You can check how I have done
 it [here](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/shortcodes/image.html).
 
 ## Removing Material UI and jQuery
-I can't remember when I started, but  when it comes to build new HTML pages,
-I have the feeling that I have always been using some sort of _quick framework_
-to save me time. Originally it was Bootstrap but then I switched to some
-Material UI with MUI CSS.
+I can’t remember how long ago I started, but when it comes to building new HTML
+pages, I have the feeling that I have always been using a framework to save me
+time. Originally it was Bootstrap, but then I switched to some Material UI with
+MUI CSS.
 
-When looking at FlyTAP website, I noticed how many frameworks the homepage
-loads: Angular, jQuery, Lodash, Mustache...  [Full list, by wappalyzer](wappalyzer_flytap-com.csv)
-My blog was also using Material UI / MUI CSS, and I realised that I was using
-it for no real good reason. While my homepage was using the old good Bootstrap
-and jQuery, just to have an animated avatar in the center.
+When looking at the FlyTAP website, I noticed how many frameworks the homepage
+loads: Angular, jQuery, Lodash, Mustache... [^tapwappalyzer]
+It is a lot of repeated code to probably do similar things! I realized that I
+was using some frameworks for no real good reason, and my Homepage was using the
+old good Bootstrap and jQuery, just to have an animated avatar and a few divs
+center[^center-div].
 
-So I just got rid of all of them, and I removed a lot of CSS and JavaScript that
-I was anyway customizing. That removed many files!
+[^tapwappalyzer]: See full list of tools used by TAP Airlines homepage in [this CSV file](wappalyzer_flytap-com.csv)
+
+[^center-div]: [Centering the div meme](https://www.reddit.com/r/ProgrammerHumor/comments/95z1xn/if_you_can_successfully_center_a_div_you_can/)
+
+After a deep breath, I removed all of them in favor of some simple SASS/SCSS and
+JavaScript That removed many files! 💪
 
 I also got rid of Disqus, in favor of [utteranc.es](https://utteranc.es) with
 GitHub integration.
 
-## Hugo bundles my JavaScript now!
-My hugo website was bloated with a lot of almost useless Javascript, so I
-decided to get rid of most of it, and bundle it, minimize it and enable the
-scripts only if were in use.
-
-To imprvoe the loading speed, I have decided to [preload the js bundle](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload),
-so that the browser can fetch it a little before the js code is actually defined
-and used. This improves speed a little, since the minimized bundle, changes
-between a few pages.
+## Hugo bundles my SASS/SCSS and JavaScript now!
+Even without Bootstrap, jQuery, or MUI, my Hugo website used multiple CSS and JS
+files. Each file is a single HTTP request that takes time.
 
 Hugo provides some nice [Go Pipelines to do so](https://gohugo.io/hugo-pipes/bundling/).
-I use it to always load [instantpage](https://instant.page), but enables
-[TocBot](https://tscanlin.github.io/tocbot/) only on pages, and
+It works both with SASS/SCSS/CSS and JavaScript.
+
+I use it to always load [instantpage](https://instant.page), but it enables
+[TocBot](https://tscanlin.github.io/tocbot/) only on pages and
 [Mermaid](https://mermaid-js.github.io/mermaid/#/) only if the page uses it.
+
+To improve the loading speed, I have decided to [preload the js bundle](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload)
+so that the Browser can fetch it slightly before the js code is actually defined
+and used. This improves speed since the minimized bundle, changes
+between some pages.
 
 This is a useful snippet to bundle and minimize JS:
 
@@ -167,7 +173,8 @@ JavaScript code [here](https://gitlab.com/koalalorenzo/blog/-/blob/main/layouts/
 
 ## Serving all these things together
 It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I
-personally would never use Microsoft Windows as Server or even Microsoft Azure.
+personally would never use Microsoft Windows as a web server or even Microsoft
+Azure.
 
 Instead I have been using GitHub Pages, but then moved to GitLab Pages to
 support Open Source projects[^why-use-gitlab]... but to turn it up to
@@ -193,43 +200,43 @@ setup:
   X-Content-Type-Options: nosniff
 ```
 
-Setting this up, is very important to me, as I can fine tune settings and
-improve speed by better leveraging Cloudflare CDN, Edge Cache, and the
-Browser's cache rules.
+Setting this up is important to me, as I can fine-tune settings and improve
+speed by leveraging Cloudflare CDN, Edge Cache, and the Browser's cache rules.
 
 You can read more about this directly on
 [Cloudflare Pages documentation](https://developers.cloudflare.com/pages/platform/headers)
 
 ## Conclusions
-Although I cannot change TAP Airlines's website, their service, or their customer
-support, I have learned a lot of things about optimizing websites while I was
-waiting on my luggage. Most importantly I managed to:
+Although I cannot change TAP Airlines’s website, the service, or the customer
+support, I have learned a lot of things about optimizing sites while I was
+waiting on my luggage. Most importantly, I managed to:
 
-* Replaced CSS and JS framework that I don't need with simpler lines of code
+* Replaced CSS and JS framework that I don’t need with way fewer lines of code
 * Move all the images to WebP format to reduce the size used
-* Bundled JS and CSS resources and loading them only when needed
-* Improved speed by leveraging cache settings with Cache Control Headers
+* Bundled JS and CSS resources and loaded them only when needed
+* Improved speed by leveraging cache settings with cache-control HTTP headers
 
 So what is the result? According to [GTMetrix](https://gtmetrix.com) reports: my
 Homepage went from [883kb](homepage-old.webp) to just [252kb](homepage-new.webp)
-(uncompressed), and my personal blog jumped from [879kb](blog-old.webp) kb to
+(uncompressed), and my personal blog jumped from [879kb](blog-old.webp) to
 [375kb](blog-new.webp) (uncompressed).
 
-Comparing a personal blog with a few pages, with a much more complicated website
+Comparing a personal blog with a few pages with a much more complicated website
 might not be looking fair, but generating a static website in the right way will
-make it _scalable_.
+make it scalable.
 
-Optimizing a **big SPA/static website** might not that difficult if we are using
-the right technologies and the right setup. The CSS and JS files are bundled and
-minimized by Hugo... but the big gain comes when considering Images are also
-manipulated, resized and converted by Hugo! In other words: it is way easy to
-add more content without having to think too much about the load speed, image
-size and formats if Hugo does it. Providing the website on better servers than
-Microsoft IIS and using CDN service helps with response time!
+Optimizing a big SPA/static website might not be difficult if we use the right
+technologies and the proper setup. My website is way hosted by better servers
+than Microsoft IIS 🤦 and it uses CDN service helps with response time.
 
-Using the right tecnologies and techniques may help FlyTAP to
-provide a better user experience... Sadly that will not do anything about my
+The CSS and JS files are now bundled and minimized by Hugo... but the gain comes
+when considering Images are also manipulated, resized, and converted by Hugo!
+In other words: it is way easy to add more content without having to overthink
+about the load speed, image size, and formats if Hugo does it.
+
+Using the right technologies and techniques may help FlyTAP provide a better
+user experience... Sadly that will not do anything about my
 delayed luggage,
 [1h phone calls](https://twitter.com/konikun/status/1474110357283164174?s=20&t=M0O7Pk4GwFnouuu9Y3Xjlw),
-and non-existing customer support. 😅 I may know very little about airplanes but
-I know a little more about making Hugo websites faster now!
+and non-existing customer support. 😅 I may know very little about airplanes,
+but I know a little more about making Hugo websites faster now!

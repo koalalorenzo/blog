@@ -24,11 +24,11 @@ helped me, but I could not do much besides using an unusable website: FlyTAP.com
 So I [inspected the website a little further](https://pagespeed.web.dev/report?url=http%3A%2F%2Fflytap.com%2F),
 and I realized that the [FlyTAP.com homepage weighs around **17MB**](flytap.com-size.webp).
 I had a lot of issues opening every single page on a _Hotel Wifi_. 😱
-Using my 3G connection from my iPhone was even a worse experience.
+Using my 3G connection from my iPhone was an even worse experience.
 
 {{< image src="flytap-speed.webp" caption="flytap.com GTMetrix tests results are awful" class="noborder big">}}
 
-I do not want people browsing my homepage or my blog to experience the same.
+I do not want people browsing my homepage or blog to experience the same.
 My blog was already light, but I know that I could improve it:
 
 * There was a lot of unused CSS and JS code from different frameworks[^deps-fix]
@@ -116,15 +116,15 @@ load the right image and resize it dynamically. You can check how I have done
 it [here](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/shortcodes/image.html).
 
 ## Removing Material UI and jQuery
-I can’t remember how long ago I started, but when it comes to building new HTML
-pages, I have always been using a framework to save me time. Originally it was
-Bootstrap, but then I switched to some Material UI with MUI CSS and that comes
-bundled with jQuery and some bloated fonts.
+I can’t remember how long ago I started, but when building new HTML pages, I
+have always been using a framework to save me time. Originally, it was
+Bootstrap, but then I switched to some Material UI with MUI CSS, which comes
+bundled with jQuery and some bloated fonts
 
 When looking at the FlyTAP website, I noticed how many frameworks the homepage
 loads: Angular, jQuery, Lodash, Mustache... [^tapwappalyzer]
 It is a lot of repeated code to probably do similar things! I realized that **I
-was using these frameworks for no real good reason**: my Homepage was using the
+was using these frameworks for no good reason**: my Homepage was using the
 old good Bootstrap and jQuery, just to have an animated avatar and a few divs
 center[^center-div]. 😓
 
@@ -133,8 +133,8 @@ in [this CSV file](wappalyzer_flytap-com.csv)
 
 [^center-div]: [Centering the div meme](https://www.reddit.com/r/ProgrammerHumor/comments/95z1xn/if_you_can_successfully_center_a_div_you_can/)
 
-_After a deep breath_, I removed all of them in favor of some simple SASS/SCSS
-and JavaScript, as well as defaulting to simpler fonts.
+_After a deep breath_, I removed all of them. Then I wrote simple SASS/SCSS
+and JavaScript and used fonts included in browsers. That removed many files!
 That removed many files! 💪
 
 I also got rid of Disqus in favor of [utteranc.es](https://utteranc.es) with
@@ -176,7 +176,7 @@ JavaScript code [here](https://gitlab.com/koalalorenzo/blog/-/blob/main/layouts/
 ## Serving all these things together on CDN
 It looks like FlyTap.com is served from Microsoft Windows Servers. 😱 I
 personally would never use Microsoft Windows as a web server or even Microsoft
-Azure after all the bad experiences that I had at work.
+Azure after all the bad experiences I had at work.
 
 Instead, I have been using GitHub Pages, but then moved to GitLab Pages to
 support Open Source projects[^why-use-gitlab]... but to turn it up to
@@ -201,7 +201,7 @@ Hugo setup:
   X-Content-Type-Options: nosniff
 ```
 
-Setting this up is important, as I can fine-tune settings and improve speed by
+Setting this up is essential, as I can fine-tune settings and improve speed by
 leveraging Cloudflare CDN, Edge Cache, and the browser's cache rules.
 
 You can read more about this directly on

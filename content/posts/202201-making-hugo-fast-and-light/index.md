@@ -1,6 +1,6 @@
 ---
 title: "My Hugo blog now is fast and light"
-date: 2022-01-23T15:39:41+01:00
+date: 2022-01-31T19:05:41+01:00
 tags:
   - hugo
   - go

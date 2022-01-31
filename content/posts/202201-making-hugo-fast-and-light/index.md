@@ -6,44 +6,42 @@ tags:
   - go
   - webp
 ---
-Recently I have been travelling with _a bad airplane company_ that lost my
-luggage. In hope to get my belongings back with me, I tried to use their
-website, and support pages and I frustrated every time. The main source of
-frustration was the website speed. So I decided to spend most of the time
-without my luggage (around 5 days) trying to use best practices to improve the
-speed of my own website and blog ending in making my hugo blog faster and way
-lighter than before. This blog post is about what I have chanted.
+This blog post is about what I have changed in my blog and website to make it
+faster. Recently, I have traveled with a bad airplane company that lost my
+luggage. In the hope of getting my belongings back with me, I tried to use their
+website and support pages, and I was frustrated every time. The primary source
+of frustration was the website speed. So I decided to spend most of the time
+without my luggage (around five days), trying to use best practices to improve
+my website and blog, making my Hugo blog faster and way lighter than before.
 
 <!--more-->
 
 ## The Investigations
-On my way to Recife, from Copenhagen, on an airplane from TAP Airplines I
-realised that my luggage was stuck in Copenhagen. [My Apple AirTag](apple-airtag-tap-luggage.webp)
-helped me a lot, but I could not do much besides trying to use a unusable
-website.
+On my way to Recife from Copenhagen, I realized that my luggage was stuck in
+Copenhagen on a TAP Airplane. [My Apple AirTag](apple-airtag-tap-luggage.webp)
+helped me, but I could not do much besides using an unusable website.
 
 So I [inspected the website a little further](https://pagespeed.web.dev/report?url=http%3A%2F%2Fflytap.com%2F)
-and I realised that [FlyTAP.com homepage weights around **17MB**](flytap.com-size.webp).
-I had a lot of issue opening every single page on a _Hotel Wifi_. Using my
-iPhone was even a worse experience.
+and I realized that [FlyTAP.com homepage weights around **17MB**](flytap.com-size.webp).
+I had a lot of issues opening every single page on a _Hotel Wifi_.
+Using my iPhone was even a worse experience.
 
-{{< image src="flytap-speed.webp" caption="flytap.com GTMetrix tests is very bad" class="noborder big">}}
+{{< image src="flytap-speed.webp" caption="flytap.com GTMetrix tests are very bad" class="noborder big">}}
 
-To be fair, my blog is way smaller, but I know that I could improve it:
+My blog was already light, but I know that I could improve it:
 
-* There were lot of unused CSS and JS code from different frameworks/style[^deps-fix]
+* There was a lot of unused CSS and JS code from different frameworks/style[^deps-fix]
 * The CSS files were not minimized[^css-fix]
-* The JavaScript code was not minimized, nor bundled up
+* The JavaScript code was not minimized nor bundled up
 * Some resources were not pre-loaded[^preload]
 * Images were the heavies elements
 
-So I have decided to resolve all these issues and try to reduce the size of the
-page, the amount of connections and improve the speed. [Aiming for something
-below 512kb](http://512kb.club/).
+I started resolving all these issues to reduce the page size and the number of
+connections and improve the speed, [Aiming for something below 512kb](http://512kb.club/).
 
-This blog is entirely generated using [Hugo](https://gohugo.io).
-Everything is orchestrated using GNU/Make. It should be something
-easy to do.
+I am lucky because [Hugo](https://gohugo.io) is the static engine used to build
+this blog. Everything is orchestrated using GNU/Make. These two Open Source
+tools made the changes easier to achieve.
 
 [^css-fix]: I am already building
 [SCSS/SASS files into a single CSS file](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/partials/head.html#L30),
@@ -57,10 +55,11 @@ for no real reason. 😅
 HTML page calling it, but [it is possible to pre-load](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload),
 so that the files are ready to be used later on.
 
-## Images: WebP, Animated WebP and right-sizing
-Since the Images were the heaviest elements loaded in the page, I started
-workign there. I decided to transform all my GIF, PNG and JPEG to [WebP images](https://en.wikipedia.org/wiki/WebP).[^webp-vs-]
-I ran a few commands and updated my [Makefile](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/Makefile#L44), to do this automagically:
+## Images: WebP, Animated WebP, and right-sizing
+Since the Images were the heaviest elements loaded on the page, I started
+working there. I decided to transform all my GIF, PNG, and JPEG to
+[WebP images](https://en.wikipedia.org/wiki/WebP).[^webp-vs-]
+I ran a few commands and updated my [Makefile](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/Makefile#L44) to do this automagically:
 
 ```bash
 # Installing WebP tools on macOS
@@ -73,21 +72,22 @@ cwebp -short -q 85 ${FILENAME}.png -o ${FILENAME}.webp
 gif2webp -mt -mixed -q 60 ${FILENAME}.gif -o ${FILENAME}.webp
 ```
 
-This made some huge improvements in file size, shrinking most of them **from
-several MB to a few kilobites**![^size-image-changes] That was already a huge
-win for me, because I love to use GIFs and memes in my posts! 😅
+These commands made some tangible improvements in file size, shrinking
+**from several MB to a few kilobytes**.[^size-image-changes] That was already a
+huge win because I love to use GIFs and memes in my posts! 😅
 
 [^size-image-changes]: You can see [from this PR](https://gitlab.com/koalalorenzo/blog/-/merge_requests/4/diffs#3fa76e96f26c99e5110e368f3bbed165427a47e1) that when I started working on
 moving to WebP, I reduced a lot the size of the images.
 
 {{< image src="webp-gif-size-feature-center.webp" caption="Size matters too!">}}
 
-To improve speed, WebP is not enough. Another issue with the image was that
-I was downloading big images of around 5000x5000 pixels, for a small thumbnail
-space, that is around 300x300 pixels. Resizing the thumbnail to proper size
-would help, and reducing the sizes to lower things...
+To improve speed, WebP is not enough. The pages were loading big images
+(around 5000x5000 pixels) for a tiny thumbnail space (approximately 300x300
+pixels), and then the Browser would resize it after downloading.
+Resizing the thumbnail to the proper size beforehand would help reduce the
+dimensions to lower things.
 
-Thankfully, Hugo can process images and resize/fit images to proper sizes,
+Thankfully, Hugo can process images and resize/fit images to proper sizes
 directly from the [layout templates of my theme](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/layouts/_default/page-short.html#L15)!
 
 ```html
@@ -106,7 +106,7 @@ directly from the [layout templates of my theme](https://gitlab.com/koalalorenzo
 {{ end }}
 ```
 
-There are [a lot of functions that can be used to manipualte images](https://gohugo.io/content-management/image-processing/),
+There are [a lot of functions that can be used to manipulate images](https://gohugo.io/content-management/image-processing/),
 and I am very happy about it because it saved me a lot of commands to
 run for each thumbnail! 😎
 
@@ -231,5 +231,5 @@ Using the right tecnologies and techniques may help FlyTAP to
 provide a better user experience... Sadly that will not do anything about my
 delayed luggage,
 [1h phone calls](https://twitter.com/konikun/status/1474110357283164174?s=20&t=M0O7Pk4GwFnouuu9Y3Xjlw),
-and non-existing customer support. 😅 I may know very little about customer
-support but I know a little more about Hugo now!
+and non-existing customer support. 😅 I may know very little about airplanes but
+I know a little more about making Hugo websites faster now!

@@ -8,9 +8,7 @@ tags:
 - old blog
 - learning
 - how to
-- coding
 - software development
-- develop
 - work
 - thoughts
 ---

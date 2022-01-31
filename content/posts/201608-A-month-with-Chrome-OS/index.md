@@ -6,9 +6,7 @@ date: 2016-08-30 12:13:10+02:00
 title: "A month with Google ChromeOS"
 tags:
 - old blog
-- coding
 - software development
-- develop
 - chromeos
 - chromebook
 - google

@@ -11,7 +11,7 @@ tags:
 - work
 - old blog
 - atom
-- develop
+- software development
 - github
 - mac
 - microsoft
@@ -26,7 +26,7 @@ During the last month I started **experimenting** a lot with some **editors** fo
 
 {{< image src="atom-vs-visual-studio-code-cover.webp" >}}
 
-I started developing several projects using NodeJS, coffee-script, python, docker and angular, but sometimes **Sublime is not enough** and I need other tools and software for job routine. I am a Sublime user, and I love it, but I had to break up with it since I need more features... and I found the love in one of those two editors... :-) 
+I started developing several projects using NodeJS, coffee-script, python, docker and angular, but sometimes **Sublime is not enough** and I need other tools and software for job routine. I am a Sublime user, and I love it, but I had to break up with it since I need more features... and I found the love in one of those two editors... :-)
 
 
 

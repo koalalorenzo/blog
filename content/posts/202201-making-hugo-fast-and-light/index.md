@@ -3,8 +3,13 @@ title: "My Hugo blog now is fast and light"
 date: 2022-01-31T19:05:41+01:00
 tags:
   - hugo
-  - go
   - webp
+  - cache
+  - cloudflare
+  - javascript
+  - css
+  - software development
+  - how to
 ---
 This blog post is about what I have changed in my blog and website to make it
 faster. Recently, I have traveled with a bad airplane company that delayed my

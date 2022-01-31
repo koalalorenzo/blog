@@ -6,10 +6,8 @@ date: 2018-01-06 16:15:30+02:00
 title: "Go tests, multistage docker builds, pipeline"
 tags:
 - old blog
-- coding
 - software development
 - continuous integration
-- develop
 - GitLab
 - pipeline
 - testing

@@ -9,7 +9,7 @@ slug: i-am-running-zeronet-in-background-on-my-mac
 title: I am running ZeroNet in background on my Mac
 wordpress_id: 18650
 tags:
-- how To
+- how to
 - decentralized
 - old blog
 - apple

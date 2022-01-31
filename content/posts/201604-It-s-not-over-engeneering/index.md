@@ -6,7 +6,7 @@ date: 2016-04-17 18:26:15+02:00
 title: "React is not over engineered"
 tags:
 - old blog
-- develop
+- software development
 - react
 - angular
 - javascript

@@ -10,7 +10,7 @@ tags:
   - helm
   - backpack
   - go
-  - develop
+  - software development
   - devops
   - SRE
 ---
@@ -65,7 +65,7 @@ things _similar_:
   the code to support multiple human-readable formats 🤔
 
 [^equivalent]: a _Pack_ is the equivalent of an "Helm Chart", open for suggestion
-  if the name is not following the travelling theme 😜 
+  if the name is not following the travelling theme 😜
 
 [^binhelp]: I think the core is to make it easy: `backpack help` might do the
   trick!
@@ -107,16 +107,16 @@ Kubernetes as a Docker-first platform. In Hashicorp Nomad, this is slightly
 different.
 [A Job doesn't have to be necessarily a docker container](https://www.nomadproject.io/docs/drivers)!
 It can be a binary downloaded on the fly[^nomadbinary]. An app that
-would support this is [FabioLB](http://fabiolb.net/): you can select the Job 
+would support this is [FabioLB](http://fabiolb.net/): you can select the Job
 driver to be a docker container or a chroot-ed binary[^jobdriver]. I already
 wrote a pack for it! 😉
 
 [^jobdriver]: This is still a work-in-progress feature. I just need to manually
-  implement it in every template for now. Please check the documentation of 
+  implement it in every template for now. Please check the documentation of
   the pack to know what drivers are supported!
 
-[^nomadbinary]: Nomad can dowload the right binaries, with the right CPU 
-  architecture (ex: amd64, armhf, arm64...) of the machine and the right OS 
+[^nomadbinary]: Nomad can dowload the right binaries, with the right CPU
+  architecture (ex: amd64, armhf, arm64...) of the machine and the right OS
   (macOS, Linux...). All is done with variables: pure magic 😍
 
 ```bash

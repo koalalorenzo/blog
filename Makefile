@@ -27,6 +27,7 @@ run: clean_public
 
 build: clean_public
 	hugo -b ${CF_PAGES_URL} ${HUGO_ARGS}
+	du -sh ./public
 .PHONY: build
 
 %.webp:

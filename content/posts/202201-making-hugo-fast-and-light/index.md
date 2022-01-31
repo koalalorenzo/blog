@@ -109,7 +109,7 @@ directly from the [layout templates of my theme](https://gitlab.com/koalalorenzo
 
 There are [a lot of functions to manipulate images](https://gohugo.io/content-management/image-processing/),
 and I am happy about it because it saved me a lot of commands to run for each
-thumbnail! 🤯 It scales as it does it for every new image.
+thumbnail! 🤯 It scales as it does that for every new image.
 
 I made further changes to even use `srcset` for images to allow the browser to
 load the right image and resize it dynamically. You can check how I have done

@@ -64,7 +64,7 @@ so that the files are ready to be used later on.
 ## Images: WebP, Animated WebP, and right-sizing
 Since the Images were the heaviest elements loaded on the page, I started
 working there. Earlier, I decided to transform all my GIF, PNG, and JPEG to
-[WebP images](https://en.wikipedia.org/wiki/WebP).[^webp-vs-]
+[WebP images](https://en.wikipedia.org/wiki/WebP).
 I ran a few commands and updated my [Makefile](https://gitlab.com/koalalorenzo/blog/-/blob/dc77e8d2ae9d6de9db8fc23b4539aec6fc15cbb5/Makefile#L44) to do this automagically:
 
 ```bash

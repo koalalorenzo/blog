@@ -1,6 +1,6 @@
 {{ $instjs := resources.Get "js/instantpage.min.js" }}
 {{ $tocbot := resources.Get "js/tocbot.min.js" }}
-{{ $js = slice $instjs $tocbot | resources.Concat "js/bundle.it.js" | js.Build | minify | fingerprint }}
+{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.it.js" | js.Build | minify | fingerprint }}
 
 {{ if .Params.mermaid }}
   {{ $mermaidjs := resources.Get "js/mermaid.min.js" }}

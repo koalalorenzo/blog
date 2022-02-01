@@ -10,6 +10,9 @@ enableGitInfo: true
 
 lastmod: ["lastmod", ":git", "date", "publishDate"]
 
+params:
+  comments: true
+
 markup:
   goldmark:
     renderer:

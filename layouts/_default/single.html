@@ -16,7 +16,7 @@
   <div itemprop="articleBody">{{ .Content }}</div>
 </article>
 
-{{ if (.Params.comments) }}
+{{ if ($.Param "comments") }}
 <div id="comments">
   <h2>Comments</h2>
   <script src="https://utteranc.es/client.js"

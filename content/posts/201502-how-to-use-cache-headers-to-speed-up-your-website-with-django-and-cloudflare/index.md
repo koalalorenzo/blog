@@ -9,14 +9,11 @@ wordpress_id: 18507
 tags:
 - old blog
 - django
-- scale
 - python
 - cache
 - cloud
 - cloudflare
 - django-smartcc
-- headers
-- http
 - minbildinbil
 - work
 - how to

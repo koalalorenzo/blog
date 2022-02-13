@@ -43,7 +43,7 @@
 
     <link rel="preload" as="script" href="{{ $js.RelPermalink | absURL }}" />
     {{ if and (.IsPage) ($.Param "comments")}}
-    <link rel="preload" as="script" href="https://utteranc.es/client.js" />
+    <link rel="preload" as="script" href="https://giscus.app/client.js" />
     {{ end }}
     <!-- OpenGraph -->
     {{ template "_internal/opengraph.html" . }}

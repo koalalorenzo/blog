@@ -13,7 +13,6 @@ tags:
 - bitcoin
 - raspberry pi
 - raspberry
-- asic
 - hacking
 ---
 

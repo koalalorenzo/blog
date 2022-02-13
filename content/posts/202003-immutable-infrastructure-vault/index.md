@@ -12,6 +12,7 @@ tags:
   - terraform
   - gitlab
   - devops
+  - cloud
   - SRE
 ---
 
@@ -19,7 +20,7 @@ During the last year, I have been curious about Immutable Infrastructure.
 After researching, I noticed that I had been applying some of these concepts
 already to stateless Docker containers, and I wanted to do a practical
 project with it. So I thought about exploring Immutable Infrastructure and use
-it to deploy [Hashicorp Vault](https://www.vaultproject.io). 
+it to deploy [Hashicorp Vault](https://www.vaultproject.io).
 <!--more-->
 
 {{< figure src="vault-logo.svg" caption="Hashicorp Vault Logo" class="center noborder">}}

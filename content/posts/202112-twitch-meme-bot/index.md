@@ -3,7 +3,7 @@ title: "A Twitch bot to create memes and show them live"
 date: 2021-12-18T13:55:50+01:00
 draft: false
 tags:
-  - Go
+  - go
   - software development
   - twitch
   - streaming

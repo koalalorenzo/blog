@@ -1,7 +1,6 @@
 ---
 title: "So long, and thanks for all the fish, IPFS!"
 date: 2020-12-06T13:17:41+01:00
-draft: true
 tags:
   - ipfs
   - decentralized

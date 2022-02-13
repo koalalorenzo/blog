@@ -10,10 +10,10 @@ tags:
 - decentralized
 - thoughts
 - old blog
-- suggestion
+- suggestions
 - digital life
 - money
-- peer-to-peer
+- p2p
 ---
 
 Finally, I moved my blog to wordpress.com. The reason is really simple: time. I have a blog that had been for years and years hosted on my own server. This helped me a lot, because is cheaper and it allows me to use custom plugin and design my own theme. But everything is fine until you get **hacked**! ...and sadly I don't have enough time to find a solution to this... by paying! <!--more-->

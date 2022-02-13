@@ -8,7 +8,7 @@ tags:
 - old blog
 - software development
 - continuous integration
-- GitLab
+- gitlab
 - pipeline
 - testing
 - docker

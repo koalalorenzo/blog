@@ -3,10 +3,12 @@ title: "So long, and thanks for all the fish, IPFS!"
 date: 2020-12-06T13:17:41+01:00
 draft: true
 tags:
-  - IPFS
+  - ipfs
   - decentralized
   - thoughts
   - blockchain
+  - p2p
+  - siderus
 description: Due to abuse of IPFS and Filecoin network we are shutting down Siderus Orion and Gateway
 ---
 If you are using [Orion](https://orion.qm64.tech/), Siderus’ IPFS desktop

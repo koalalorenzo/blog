@@ -7,7 +7,7 @@ slug: the-reason-i-use-the-international-keyboard
 title: The reason I use the international keyboard
 wordpress_id: 18594
 tags:
-- Thoughts
+- thoughts
 - old blog
 - suggestions
 - keyboard

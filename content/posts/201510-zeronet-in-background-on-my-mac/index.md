@@ -15,7 +15,7 @@ tags:
 - apple
 - bitcoin
 - mac
-- os x
+- macOS
 - p2p
 - python
 - zeronet

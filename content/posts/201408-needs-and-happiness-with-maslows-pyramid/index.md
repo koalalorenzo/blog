@@ -11,9 +11,6 @@ tags:
 - old blog
 - suggestions
 - happiness
-- maslow
-- maslow's pyramid
-- health
 ---
 
 Before moving to Denmark, when I was in Italy, I was focusing all my attention on the main actions to get material things and physical welfare: I was happy only when I was able to achieve my goals. The truth is that I was able to achieve my goals, but as soon as I got stuff done, after a short period of happiness, I had the same feeling when the tv series I am watching is over, and there are no more episodes to watch: looking for something to re-fill that feeling of nothingness.

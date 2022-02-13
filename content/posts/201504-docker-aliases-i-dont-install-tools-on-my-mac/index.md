@@ -12,8 +12,8 @@ tags:
 - mac
 - hacking
 - tools
-- os x
-- devleop
+- macOS
+- software development
 - devops
 - scale
 - work

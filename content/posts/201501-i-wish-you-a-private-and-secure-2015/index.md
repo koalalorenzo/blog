@@ -12,7 +12,6 @@ tags:
 - old blog
 - 1password
 - bittorrent sync
-- btsync
 - dropbox
 - firewall
 - gnupg

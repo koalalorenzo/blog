@@ -21,8 +21,8 @@ clean_%:
 clean: clean_public clean_tmp clean_resources
 .PHONY: clean
 
-run: clean_public 
-	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts ${HUGO_ARGS} 
+run: clean_public
+	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts ${HUGO_ARGS}
 .PHONY: run
 
 build: clean_public
@@ -32,14 +32,9 @@ build: clean_public
 
 %.webp:
 	cwebp -short -q 85 "$*" -o "$(basename $*).webp"
-	find . -type f -and \( -iname "*.md" -o -iname "*.markdown" \) \
-		-exec gsed -i '' "s#$(patsubst %,%,$*)#$(patsubst %,%,$(basename $*)).webp#g" {} \;
-
 
 %.gifwebp:
 	gif2webp -mt -mixed -q 60 "$*.gif" -o "$(basename $*).webp"
-	find . -type f -and \( -iname "*.md" -o -iname "*.markdown" \) \
-		-exec gsed -i '' "s#$(patsubst %,%,$*).gif#$(patsubst %,%,$(basename $*)).webp#g" {} \;
 
 convert_images:
 ifneq (${__IMAGES_TO_CONVERT},)

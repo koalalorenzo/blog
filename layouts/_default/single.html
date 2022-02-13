@@ -19,11 +19,17 @@
 {{ if ($.Param "comments") }}
 <div id="comments">
   <h2>Comments</h2>
-  <script src="https://utteranc.es/client.js"
-    repo="koalalorenzo/blog"
-    issue-term="title"
-    label="comments"
-    theme="github-light"
+  <script src="https://giscus.app/client.js"
+    data-repo="koalalorenzo/blog"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkzNTIxMjk4MzM="
+    data-category="Blog Comments"
+    data-category-id="DIC_kwDOFP0TKc4CBJDA"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
     crossorigin="anonymous"
     async>
   </script>

@@ -1,6 +1,6 @@
 ---
 title: "My journey to a new SRE team"
-date: 2022-05-26T13:05:41+01:00
+date: 2022-05-26T12:05:41+01:00
 tags:
   - SRE
   - work

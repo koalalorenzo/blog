@@ -54,8 +54,8 @@ a {
   figure, figcaption {
     @include themify(){
       color: themed("text-color");
-    }    
-    
+    }
+
     &:hover{
       @include themify(){
         color: themed("text-color");
@@ -96,4 +96,25 @@ pre {
 hr {
   margin: $global-margin 0 $global-margin*2;
   clear: both;
+}
+
+blockquote {
+  @include themify() {
+    background-color: themed("background-accent");
+    color: themed("color")
+  }
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  padding: $global-margin/2 $global-margin;
+
+  border-radius: $global-border-radius;
+
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+
+  a:hover {
+    color: theme("color");
+  }
 }

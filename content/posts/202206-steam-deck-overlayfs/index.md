@@ -24,7 +24,7 @@ different partition.
 
 Apple also applies a similar technique with APFS Snapshots in macOS:
 
-![]
+{{< image src="macos-utility-disk.webp" caption="macOS utility showing update snapshot mounted as read only on root">}}
 
 # I use OverlayFS on my Raspberry Pi
 In the past I have struggled a lot on upgrades that forced me to re-install
@@ -32,8 +32,7 @@ a brand new version of GNU/Linux on my device. Even if I can't fully solve it
 with OverlayFS, it helps by allowing me to test some upgrades before actually
 ruining my setup. A simple reboot will revert all the changes.
 
-
-
+![](off-and-on.webp)
 
 The way OverlayFS helps by doing something simple: don't write the changes to
 disk, write them into another device, in my case write them to memory.

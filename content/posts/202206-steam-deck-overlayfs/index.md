@@ -11,9 +11,19 @@ tags:
   - ansible
   - immutable infrastructure
 ---
+A few months ago I have received my Steam Deck, the first iteration of a
+super powerful portable Linux gaming console capable of running any Windows
+gaming. Taken by my unresistable desire to tinker with it, I noticed that
+it uses a read-only root and overlay fs to guarantee the best experience to
+all the users. This is smart! So I have decided to do something similar on my
+Raspbery Pi running my NAS to test upgrades before actually upgrading.
 
 <!--more-->
+
+{{< image src="feature.webp" class="square">}}
+
 # The benefits of Immutalbe Infrastructure without VMs
+
 
 # Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in

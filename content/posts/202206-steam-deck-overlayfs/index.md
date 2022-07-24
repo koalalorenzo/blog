@@ -3,11 +3,13 @@ title: "Steam Deck and Overlay FS"
 date: 2022-06-21T18:05:41+01:00
 tags:
   - videogames
-  - nintendo
-  - switch
   - steam deck
   - steam
   - linux
+  - overlayfs
+  - raspberrypi
+  - ansible
+  - immutable infrastructure
 ---
 
 <!--more-->

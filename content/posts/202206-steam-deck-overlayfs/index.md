@@ -23,7 +23,17 @@ Raspbery Pi running my NAS to test upgrades before actually upgrading.
 {{< image src="feature.webp" class="square">}}
 
 # The benefits of Immutalbe Infrastructure without VMs
+After downloading a lot of games, I ventured on exploring Desktop Mode:
+my Steam Deck transforemd from a Gaming Console into a powerful KDE Desktop
+Machine. The OS is based on Manjaro (A fork of Arch Linux) but when I tried to
+run `pacman -Syu` from the terminal to install upgrades, I ran into issues:
 
+I already [wrote about Immutable Infrastructure]({{< ref "202003-immutable-infrastructure-vault" >}})
+in the past. Valve's approach is similar and provides the same benefits:
+being able to revert to a stable version of the OS after a faulty upgrade.
+
+I could not run the upgrades manually, I can't change things, but that is fine
+as the persistency is somewhere else, and the main OS is immutable.
 
 # Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in
@@ -103,7 +113,7 @@ preventing all the other filesystem under `/` to be mounted with the same
 option recursively. This is necessary for me as my persistent data is stored
 in my OpenZFS setup under `/data`.
 
-# How the Steam Deck does it?
+# You can still install apps
 Using a read only root is a good decision for a product like the Steam Deck.
 Tinkering with the Operative System and then running an upgrade will probably
 cause bigger issues and ruining the user experience, as well as increase
@@ -119,9 +129,11 @@ Firefox is there, Bitwarden is there and even Emulators are there!
 
 Using this technique, I would say that Valve applied some principles of
 immutable infrastructure on bare metal OS (without VMs) and gaining all the
-benefits. 👏 Good job Valve! 👏
+benefits.
 
-# Go buy a Steam Deck now!
+👏 Good job Valve! 👏
+
+# Go buy a Steam Deck... NOW!
 Since I got my Steam Deck I never picked up my Nintendo Switch, and most
 _mouse and keyboard only_ games are super playable: Plug your mouse, keyboard
 and screen (with a usb-c dongle) and you are good to go!

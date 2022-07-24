@@ -13,16 +13,17 @@ tags:
 ---
 
 <!--more-->
+# The benefits of Immutalbe Infrastructure without VMs
 
-# Immutable part
+# Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in
 [this article](https://www.svenknebel.de/posts/2022/5/2/), the root filesystem
 is mounted as read only, while other directories are mounted as OverlayFS, and
 the home directory is `read/write` allowing some persistency.
 
-I have seen this design in the past in ChromeOS: the root directory (`/`) is
-mounted as read only and user's configurations, apps and files are stored in a
-different partition.
+I have seen this design in Embedded Linux and in ChromeOS: the root directory
+(`/`) is mounted as read only and user's configurations, apps and files are
+stored in a different partition.
 
 Apple also applies a similar technique with APFS Snapshots in macOS:
 
@@ -91,7 +92,32 @@ option recursively. This is necessary for me as my persistent data is stored
 in my OpenZFS setup under `/data`.
 
 # How the Steam Deck does it?
-The decision of using read only root is a good decision for a product like the
-Steam Deck. Tinkering with the OS and then running an upgrade would probably
-cause bigger issues and ruining the experience as well as increase drastically
-the amount of support cases.
+Using a read only root is a good decision for a product like the Steam Deck.
+Tinkering with the Operative System and then running an upgrade will probably
+cause bigger issues and ruining the user experience, as well as increase
+the amount of support cases where it was just the user fault.
+
+What I love of the Steam Deck though, is that you still can tinker with it
+if you want! It is your own machine and you can still change everything about
+it.
+
+I decided to keep the settings as it is as I am highily satisfied with using
+Flatpack apps and keeping my custom scripts only in the home directory.
+Firefox is there, Bitwarden is there and even Emulators are there!
+
+Using this technique, I would say that Valve applied some principles of
+immutable infrastructure on bare metal OS (without VMs) and gaining all the
+benefits. 👏 Good job Valve! 👏
+
+# Go buy a Steam Deck now!
+Since I got my Steam Deck I never picked up my Nintendo Switch, and most
+_mouse and keyboard only_ games are super playable: Plug your mouse, keyboard
+and screen (with a usb-c dongle) and you are good to go!
+
+I am super happy with it: I never had a single issue with it that was not
+fixed with a reboot. I am shocked how Wine and Proton have pushed gaming on
+Linux this far. 10 years ago this would have been a dream.
+
+I unsubscribed from Google Stadia (even though I love Google way to do Cloud
+Gaming) in favor of plugging my Steam Deck to my TV. If you are undecided
+[go ahead and buy one](https://steamdeck.com/)!

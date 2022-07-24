@@ -27,7 +27,7 @@ stored in a different partition.
 
 Apple also applies a similar technique with APFS Snapshots in macOS:
 
-{{< image src="macos-utility-disk.webp" caption="macOS utility showing update snapshot mounted as read only on root">}}
+{{< image src="macos-utility-disk.webp" class="big" caption="macOS Disk Utility showing update snapshot mounted as read only on root">}}
 
 # OverlayFS on Raspberry Pi
 In the past I have struggled a lot on upgrades that forced me to re-install
@@ -40,10 +40,12 @@ ruining my setup. A simple reboot will revert all the changes.
 OverlayFS in my case does something simple: don't write the changes to
 disk, write them into another device, in my case write them to memory.
 
-To enable OverlayFS I initially followed [this guide], but since Ubuntu has
-an easy to use package to enable and disable OverlayFS, I went that direction.
-I wrote a simple [ansible playbook](https://gitlab.com/koalalorenzo/playbooks),
-allowing me to turn it on and off on demand with a single command:
+To enable OverlayFS I initially followed
+[this page](https://raspberrypi.stackexchange.com/questions/124628/raspbian-enable-disable-overlayfs-from-terminal),
+but since Ubuntu has an easy to use package to enable and disable OverlayFS,
+I went that direction. I wrote a simple
+[ansible playbook](https://gitlab.com/koalalorenzo/playbooks), allowing me to
+turn it on and off on demand with a single command:
 
 ```yaml
 ---

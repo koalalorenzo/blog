@@ -24,10 +24,13 @@ upgrading.
 {{< image src="feature.webp" class="square">}}
 
 # The benefits of Immutable Infrastructure without VMs
-After downloading a lot of games, I ventured on exploring Desktop Mode:
-my Steam Deck transformed from a Gaming Console into a powerful KDE Desktop
-Machine. The OS is based on Manjaro (A fork of Arch Linux) but when I tried to
-run `pacman -Syu` from the terminal to install upgrades, I ran into issues:
+After downloading a lot of games, I ventured on exploring Desktop Mode: my Steam
+Deck transformed from a Gaming Console into a powerful KDE Desktop Machine.
+Under Steam Deck OS, there is a fork of Arch Linux, but when I tried to run
+`pacman` from the terminal to install upgrades, I ran into issues:
+
+{{< image src="pacman.webp" class="square">}}
+
 
 I already [wrote about Immutable Infrastructure]({{< ref "202003-immutable-infrastructure-vault" >}})
 in the past. Valve's approach is similar and provides the same benefits:

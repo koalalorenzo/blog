@@ -113,14 +113,14 @@ This playbook installs the `overlayroot` package and adds a line in
 overlayroot="tmpfs:swap=1,recurse=0"
 ```
 
-What does it do? Simple: Write the root changes on memory (`tmpfs`), enable
+_What does it do?_ Simple: Write the root changes on memory (`tmpfs`), enable
 swap, and prevent all the other filesystems from being mounted as OverlayFS.
 The recursive mount is disabled as I need persistency in my OpenZFS setup
 mounted under a different path.
 
 I could have used [btrfs](https://en.wikipedia.org/wiki/Btrfs), but I did not
-want to complicate too much handling snapshots. I wanted just to unplug the
-power and plug it back again in case of any disaster. Maybe another post?
+want to complicate too much handling snapshots. I just wanted to unplug the
+power and plug it back again in case of disaster. Maybe another post?
 
 # You can still install apps
 Using a read-only root is a good decision for a product like the Steam Deck.
@@ -128,8 +128,8 @@ Tinkering with the Operative System and then running an upgrade will probably
 cause bigger issues, ruin the user experience, and increase the number of
 support cases where it was just the user's fault.
 
-What I love about the Steam Deck is that you can still tinker with it if you
-want! It is your machine, and you can still change everything about it.
+I love the Steam Deck because you can still tinker with it if you want!
+It is your machine, and you can still change everything about it.
 
 I decided to keep the settings as I am delighted with using Flatpack apps and
 keeping my custom scripts only in the home directory. Firefox is there,

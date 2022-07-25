@@ -118,9 +118,10 @@ swap, and prevent all the other filesystems from being mounted as OverlayFS.
 The recursive mount is disabled as I need persistency in my OpenZFS setup
 mounted under a different path.
 
-I could have used [btrfs](https://en.wikipedia.org/wiki/Btrfs), but I did not
-want to complicate too much handling snapshots. I just wanted to unplug the
-power and plug it back again in case of disaster. Maybe another post?
+I could have used [btrfs](https://en.wikipedia.org/wiki/Btrfs) or
+[OSTree](https://ostreedev.github.io/ostree/), but I did not want to complicate
+too much handling snapshots. I just wanted to unplug the power and plug it back
+again in case of disaster. _Maybe another post?_ 😏
 
 # You can still install apps
 Using a read-only root is a good decision for a product like the Steam Deck.

@@ -13,7 +13,7 @@ tags:
 A few months ago, I received my Steam Deck, the super powerful portable Linux
 gaming device made by Valve, the company behind Steam, and capable of playing
 Windows games without Windows. Taken by my irresistible desire to tinker with
-it, I noticed that it uses a read-only root and overlay fs to guarantee the best
+it, I noticed that it uses a read-only root and OverlayFS to guarantee the best
 experience for all the users. This is so Smart! So I have decided to do
 something similar on my Raspberry Pi running my NAS to test upgrades before
 actually upgrading.
@@ -22,7 +22,7 @@ actually upgrading.
 
 {{< image src="feature.webp" class="square">}}
 
-# The benefits of Immutable Infrastructure without VMs
+## The benefits of Immutable Infrastructure without VMs
 After downloading a lot of games, I ventured on exploring Desktop Mode: my Steam
 Deck transformed from a Gaming Console into a powerful KDE Desktop Machine.
 Under Steam Deck OS, there is a fork of Arch Linux, but when I tried to run
@@ -44,7 +44,7 @@ changes are applied to a different partition/snapshot and then the system
 reboots into that new one. If the boot fails, it will revert to the old
 partition instead.
 
-# Not the first player
+## Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in
 [this article](https://www.svenknebel.de/posts/2022/5/2/), the root filesystem
 (`/`) is mounted as read-only with BTRFS, while other directories are mounted
@@ -58,7 +58,7 @@ Apple also applies a similar technique with APFS Snapshots in macOS:
 
 {{< image src="macos-utility-disk.webp" class="big" caption="macOS Disk Utility showing update snapshot mounted as read-only on the root path">}}
 
-# OverlayFS on Raspberry Pi
+## OverlayFS on Raspberry Pi
 In the past, I have struggled a lot with upgrades that forced me to format and
 reinstall everything from scratch. Even if I can't fully solve the issue,
 OverlayFS helps by allowing me to test some upgrades before ruining my
@@ -127,7 +127,7 @@ I could have used [btrfs](https://en.wikipedia.org/wiki/Btrfs) or
 too much handling snapshots. I just wanted to unplug the power and plug it back
 again in case of disaster. _Maybe another post?_ 😏
 
-# You can still install apps
+## You can still install apps
 Using a read-only root is a good decision for a product like the Steam Deck.
 Tinkering with the Operative System and then running an upgrade will probably
 cause bigger issues, ruin the user experience, and increase the number of
@@ -146,7 +146,7 @@ benefits.
 
 👏 Good job, Valve! 👏
 
-# Go buy a Steam Deck... NOW!
+## Go buy a Steam Deck... NOW!
 Since I got my Steam Deck, I never picked up my Nintendo Switch, and most
 _mouse and keyboard-only_ games are super playable: Plug your mouse, keyboard
 and screen (with a USB-c dongle) and you are good to go!

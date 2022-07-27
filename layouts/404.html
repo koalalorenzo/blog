@@ -2,9 +2,10 @@
 <main id="main">
   <div>
     <h1 id="title">Ooops! Error 404: Page not found</h1>
-    <img width="128px" height="128px" src="{{ "/images/gopher_coffee_nofill.webp" | absURL }}#noborder">
+    {{ $gopher := resources.Get "images/gopher_coffee_nofill.webp"  }}
+    <img width="128px" height="128px" src="{{ $gopher.Permalink | absURL }}">
     <p>
-      Apparently this page does not exist. 😅 
+      Apparently this page does not exist. 😅
     </p>
     <p>
       You can try searching in the <a href="{{ "/" | absURL }}" data-instant>home page</a>!

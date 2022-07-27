@@ -5,14 +5,8 @@ aside {
   padding-left: $global-margin/2;
   margin-top: $global-header-top-distance;
 
-  @include mobile-portrait {   
+  @include mobile-portrait {
     display: none;
-  }
-
-  img#about_author_avatar {
-    width: 100%;
-    max-width: 155+$global-margin;
-    margin: 0 auto;
   }
 
   // See Partial: table_of_content
@@ -34,7 +28,7 @@ aside {
       a {
         @include themify() {
           color: themed("color-accent") !important;
-        }  
+        }
       }
     }
   }
@@ -47,8 +41,14 @@ aside {
 
     &.avatar {
       padding-top: $global-margin;
+
+      img {
+        width: 100%;
+        max-width: 155+$global-margin;
+        margin: 0 auto;
+      }
     }
-    
+
     &.link {
       line-height: 1.6rem;
     }

@@ -11,9 +11,9 @@ tags:
   - immutable infrastructure
 ---
 A few months ago, I received my Steam Deck, the super powerful portable Linux
-gaming made by Valve, the company behind Steam, and capable of playing Windows
-games without Windows. Taken by my irresistible desire to tinker with it, I
-noticed that it uses a read-only root and overlay fs to guarantee the best
+gaming device made by Valve, the company behind Steam, and capable of playing
+Windows games without Windows. Taken by my irresistible desire to tinker with
+it, I noticed that it uses a read-only root and overlay fs to guarantee the best
 experience for all the users. This is so Smart! So I have decided to do
 something similar on my Raspberry Pi running my NAS to test upgrades before
 actually upgrading.

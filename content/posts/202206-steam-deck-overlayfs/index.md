@@ -30,7 +30,6 @@ Under Steam Deck OS, there is a fork of Arch Linux, but when I tried to run
 
 {{< image src="pacman.webp" class="square">}}
 
-
 I already [wrote about Immutable Infrastructure]({{< ref "202003-immutable-infrastructure-vault" >}})
 in the past. Valve's approach is similar and provides the same benefits: being
 able to revert to a stable version of the OS after a faulty upgrade.
@@ -39,13 +38,18 @@ I could not run the upgrades manually.
 I can't change things, but that is fine as the persistency is elsewhere, and the
 main OS is immutable.
 
+It is immutable because there are two partions for the root/main OS. One for the
+current booted system and another one for backup. During any upgrades the
+changes are applied to a different partition/snapshot and the system boots into
+that one. If the boot fails, it will revert to the old partition instead.
+
 # Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in
 [this article](https://www.svenknebel.de/posts/2022/5/2/), the root filesystem
 (`/`) is mounted as read-only with BTRFS, while other directories are mounted
 as OverlayFS, and the home directory is read/write, allowing some persistency.
 
-I have seen this design in Embedded Linux and ChromeOS: the user's
+I have seen this design in Embedded Linux, Andoird, and ChromeOS: the user's
 configurations, apps, and files are stored in a different partition,
 while the core OS is read-only.
 

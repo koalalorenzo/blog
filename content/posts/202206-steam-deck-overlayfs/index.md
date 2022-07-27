@@ -1,13 +1,12 @@
 ---
 title: "Steam Deck and Overlay FS"
-date: 2022-06-26T11:08:42+01:00
+date: 2022-06-27T08:46:42+01:00
 tags:
   - videogames
   - steam deck
-  - steam
   - linux
   - overlayfs
-  - Raspberry Pi
+  - raspberry pi
   - ansible
   - immutable infrastructure
 ---
@@ -43,8 +42,8 @@ main OS is immutable.
 # Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in
 [this article](https://www.svenknebel.de/posts/2022/5/2/), the root filesystem
-(`/`) is mounted as read-only, while other directories are mounted as OverlayFS,
-and the home directory is read/write, allowing some persistency.
+(`/`) is mounted as read-only with BTRFS, while other directories are mounted
+as OverlayFS, and the home directory is read/write, allowing some persistency.
 
 I have seen this design in Embedded Linux and ChromeOS: the user's
 configurations, apps, and files are stored in a different partition,
@@ -69,8 +68,8 @@ To enable OverlayFS, I initially followed
 [this page](https://raspberrypi.stackexchange.com/questions/124628/raspbian-enable-disable-overlayfs-from-terminal),
 but since Ubuntu has an easy-to-use package to enable and disable it,
 I went in that direction. I wrote a simple
-[Ansible playbook](https://gitlab.com/koalalorenzo/playbooks), allowing me to
-turn it on and off on demand with a single command:
+[Ansible playbook](https://gitlab.com/koalalorenzo/playbooks/-/blob/0346c468717404d7358522f7bdb839ed1f8e30a4/common/overlay-on.yaml),
+allowing me to turn it on and off on demand:
 
 ```yaml
 ---
@@ -151,6 +150,9 @@ I am shocked how Wine and Proton have pushed gaming on Linux this far. I am
 super happy with it: I never had a single issue that a reboot couldn't fix.
 Ten years ago, this would have been a dream: Portable Windows games without
 Windows, on Linux.
+
+I am able to play games that I have never played because my only Operative
+Systems were macOS and Gnu/Linux
 
 I unsubscribed from Google Stadia (even though I love Google's way of doing
 Cloud Gaming) in favor of plugging my Steam Deck into my TV. If you are

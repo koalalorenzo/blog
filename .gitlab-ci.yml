@@ -1,24 +1,25 @@
-image: registry.gitlab.com/qm64/packer/toolchain:latest
-
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
-test:
-  script:
-  - make clean build -e HUGO_ARGS="--buildFuture --buildDrafts"
-  except:
-  - main
-  artifacts:
-    expose_as: 'Preview'
-    paths:
-      - public
-      - public/index.html
-    expire_in: 1 day
-pages:
-  script:
-  - make clean build
-  artifacts:
-    paths:
-    - public
-  only:
-  - main
+# Disabled as we are using Cloudflare Pages
+# image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+#
+# variables:
+#   GIT_SUBMODULE_STRATEGY: recursive
+#
+# test:
+#   script:
+#   - make clean build -e HUGO_ARGS="--buildFuture --buildDrafts"
+#   except:
+#   - main
+#   artifacts:
+#     expose_as: 'Preview'
+#     paths:
+#       - public
+#       - public/index.html
+#     expire_in: 1 day
+# pages:
+#   script:
+#   - make clean build
+#   artifacts:
+#     paths:
+#     - public
+#   only:
+#   - main

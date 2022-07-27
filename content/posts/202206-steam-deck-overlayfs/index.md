@@ -38,10 +38,11 @@ I could not run the upgrades manually.
 I can't change things, but that is fine as the persistency is elsewhere, and the
 main OS is immutable.
 
-It is immutable because there are two partions for the root/main OS. One for the
-current booted system and another one for backup. During any upgrades the
-changes are applied to a different partition/snapshot and the system boots into
-that one. If the boot fails, it will revert to the old partition instead.
+It is immutable because there are two partitions for the root/main OS. One for
+the currently booted system and another one for backup. During any upgrades, the
+changes are applied to a different partition/snapshot and then the system
+reboots into that new one. If the boot fails, it will revert to the old
+partition instead.
 
 # Not the first player
 The Steam Deck uses an immutable filesystem: as deeply described in

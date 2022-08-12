@@ -14,6 +14,7 @@ tags:
   - SRE
   - pipeline
   - ipfs
+  - makefile
 ---
 
 I have the feeling that a blog post about distributing packages is needed. 😮
@@ -21,7 +22,7 @@ In a word filled with Containers, PaaS, and SaaS, it seems weird to talk
 about how we can automate the creation of Debian packages and APT repositories.
 Nonetheless, even if this appears to be a forgotten step for operations, some
 projects are not distributed over Debian packages, 👷‍♂️ and I need them for my
-Raspberry Pi! 😜 
+Raspberry Pi! 😜
 <!--more-->
 
 
@@ -172,19 +173,19 @@ a tedious process from my daily chores 😉. Most of the PaaS and SaaS solutions
 that we use to build and distribute software are moving me away from the "Ops"
 part of DevOps. With the promise of simplifying, I _buy_ black boxes made by
 other companies that will take care of "that" for me 😍. The whole cloud computing
-is based on this compromise. I love it, but I miss some of the manual control 
+is based on this compromise. I love it, but I miss some of the manual control
 sometimes. This project made me feel better a little more in control of my OS.
 
 That said there are cases where even a "black box" where we need to manage Debian
 Repositories. Distributing packages is one of those things that I still have to
 take care of even if I am using Immutable Infrastructure or if I am using Docker
-Containers based on Debian/Ubuntu. The world evolved but we still need some 
+Containers based on Debian/Ubuntu. The world evolved but we still need some
 components there!
 
 **Note** that there is something that I have ignored on purpose: *PGP/GPG Signatures*!
-Digital signatures are present because HTTPs is not the default transport 
-protocol used. Instead, PGP/GPG increases the security for HTTP, FTP, and other 
+Digital signatures are present because HTTPs is not the default transport
+protocol used. Instead, PGP/GPG increases the security for HTTP, FTP, and other
 methods to distribute files! 😎 (Does anybody remember when repositories were on
 CD/DVDs?). But don't panic! This process can be automated too, just remember
-to use something like [Hashicorp Vault](https://blog.setale.me/2020/03/21/Exploring-Immutable-Infrastructure-with-Vault/) 
+to use something like [Hashicorp Vault](https://blog.setale.me/2020/03/21/Exploring-Immutable-Infrastructure-with-Vault/)
 to store the secret PGP Key!

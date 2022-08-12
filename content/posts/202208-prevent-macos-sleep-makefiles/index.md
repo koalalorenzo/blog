@@ -9,10 +9,10 @@ tags:
 ---
 Often I find myself using third-party software like Caffeine or Amphetamine to
 keep my Mac awake while running some specific commands. Sometimes it is because
-I am running backups, sometimes it is because I am compiling something.
+I am running backups. Sometimes it is because I am compiling something.
 I found out that macOS comes pre-installed with `caffeinete` command... this
-post is about how to integrate it in your Makefile so that when you are running
-any command there, it will prevent your Mac from sleeping!
+post is about how to integrate it in your Makefile so that running any command
+there will prevent your Mac from sleeping!
 
 <!--more-->
 
@@ -24,12 +24,12 @@ going to use it:
 ```bash
 caffeinate -i ${COMMAND}
 ```
-This will prevent the system from sleeping while the `${COMMAND}` is running.
+This will prevent the system from sleeping while the `${COMMAND}` runs.
 
+I prefer to allow the display to sleep so that I can save some energy.
 I am using the `-i` flag to prevent the system from idle sleeping, while I could
 also use `-d` to prevent the display from sleeping. You can get more options
-from a quick check in the manual (`man caffeinate`). I prefer to allow the
-display to _sleep_, so that I can save some energy.
+from a quick check in the manual (`man caffeinate`).
 
 {{< image src="man-caffeinate.feature.webp" class="big">}}
 
@@ -68,7 +68,7 @@ SHELL := caffeinate -i bash
 
 Sadly, this Makefile will not be portable, as caffeinate is available on macOS
 but not necessarily everywhere. So here is a simple condition to check if the
-binary is available, and then overwrite the default shell used by Make:
+binary is available and then overwrite the default shell used by Make:
 
 ```makefile
 # Prevent the system from idle sleeping, only on macOS
@@ -81,7 +81,7 @@ endif
 	other-command $*
 ```
 
-There is a catch though: `caffeinate` on macOS works differently than the
+There is a catch, though: `caffeinate` on macOS works differently than the
 [package available here](https://manpages.ubuntu.com/manpages/jammy/man1/caffeinate.1.html),
 and that might cause issues as the flags are different. 🤔
 Therefore, instead of checking if `caffeinate` command is available like this:
@@ -90,12 +90,12 @@ Therefore, instead of checking if `caffeinate` command is available like this:
 ifneq (,$(shell which caffeinate))
 ```
 
-I have decided to check if the kernel/OS running is macOS/Darwin. There is space
-for improvements here!
+I have decided to check if the kernel/OS is Darwin/macOS. There is space
+for improvements here to support different GNU/Linux distros.
 
 I have implemented this in my
 [Ansible Playbooks](https://gitlab.com/koalalorenzo/playbooks), as I was always
 finding myself struggling with having to restart commands just because I forgot
 to prevent my Mac from sleeping.
-Now I got it fixed with just 3 lines of code! 🥰
+Now I got it fixed with just three lines of code! 🥰
 

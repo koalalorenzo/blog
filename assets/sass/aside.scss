@@ -40,11 +40,9 @@ aside {
     }
 
     &.avatar {
-      padding-top: $global-margin;
-
       img {
         width: 100%;
-        max-width: 155+$global-margin;
+        max-width: $max_aside_width;
         margin: 0 auto;
       }
     }

@@ -52,12 +52,7 @@ aside {
     }
   }
 
-  :first-child {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
   div {
-    padding-top: $global-h1-margin;
+    padding-bottom: $global-h1-margin;
   }
 }

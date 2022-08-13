@@ -3,14 +3,14 @@
     {{ partial "head" . }}
     <body>
       {{ partial "header" . }}
-      <aside {{ if not .IsPage }}class="sticky"{{ end }}>
-        {{ partialCached "avatar.html" . }}
-        {{ partial "author_links.html" . }}
-      </aside>
       <div class="main">
       {{ block "main" . }}
       {{ end }}
       </div>
+      <aside {{ if not .IsPage }}class="sticky"{{ end }}>
+        {{ partialCached "avatar.html" . }}
+        {{ partial "author_links.html" . }}
+      </aside>
       {{ if .IsPage }}
       <aside class="sticky">
         {{ partial "table_of_content.html" . }}

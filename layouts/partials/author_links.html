@@ -1,9 +1,12 @@
-<div class="author link">
-  <a href="https://setale.me/contact.html" data-instant>✉️ Contact</a><br/>
-  <a href="https://setale.me/" data-instant>👨‍💻 About me</a><br/>
-  <a href="https://twitter.com/koalalorenzo">🐦 Twitter</a><br/>
-  <a href="https://github.com/koalalorenzo">🐙 GitHub</a><br/>
-  <a href="https://gitlab.com/koalalorenzo">🦊 GitLab</a><br/>
-  <a href="https://twitch.tv/koalalorenzo">🎮 Twitch</a><br/>
-</div>
+<navbar class="author link">
+  <a class="button{{ if .IsHome }} selected{{ end }}" href="{{ "/" | absURL }}" data-instant>📓 My Blog</a>
+  <a class="button" href="https://setale.me/" data-instant>👨‍💻 About me</a><br/>
+  <a class="button" href="https://setale.me/contact.html" data-instant>✉️ Contact</a><br/>
+  {{ if .IsHome }}
+  <a class="button" href="https://twitter.com/koalalorenzo">🐦 Twitter</a><br/>
+  <a class="button" href="https://github.com/koalalorenzo">🐙 GitHub</a><br/>
+  <a class="button" href="https://gitlab.com/koalalorenzo">🦊 GitLab</a><br/>
+  <a class="button" href="https://twitch.tv/koalalorenzo">🎮 Twitch</a><br/>
+  {{ end }}
+</navbar>
 <div class="clearfix"></div>

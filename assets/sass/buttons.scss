@@ -9,7 +9,7 @@
 
   text-decoration: none;
   background: transparent;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 
   width: 100%;
   max-width: ($max_aside_width - $global-border-radius)-($global-border-radius/2);
@@ -18,7 +18,7 @@
   text-align: left;
 
 
-  &:hover, .selected {
+  &:hover, &.selected {
     @include themify() {
       background: themed("color-accent") !important;
       border-color: themed("color-accent") !important;

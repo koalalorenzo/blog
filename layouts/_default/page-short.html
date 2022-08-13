@@ -11,7 +11,7 @@
   <div>
     {{- $images := $.Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
-    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}    
+    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
     {{- with $featured -}}
     <a href="{{ $.Permalink | relURL }}" data-instant>
       {{ with $i := .Fill "450x300 Center webp q75" }}
@@ -25,6 +25,6 @@
       </p>
     </div>
   </div>
-  <a class="continue-reading" href="{{ .Permalink | relURL }}" data-instant>Continue reading...</a>
+  <a class="button slim always" href="{{ .Permalink | relURL }}" data-instant>Continue reading...</a>
 </article>
 <hr />

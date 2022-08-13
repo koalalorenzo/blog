@@ -9,7 +9,7 @@
       </div>
       <aside {{ if not .IsPage }}class="sticky"{{ end }}>
         {{ partialCached "avatar.html" . }}
-        {{ partialCached "author_links.html" . }}
+        {{ partial "author_links.html" . }}
       </aside>
       {{ if .IsPage }}
       <aside class="sticky">

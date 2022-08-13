@@ -3,6 +3,11 @@ header {
     color: themed("text-color");
   }
 
+  display: none;
+  @include mobile-portrait(){
+    display: inline;
+  }
+
   // position: fixed;
   width: 100%;
   min-height: 2rem;
@@ -17,7 +22,7 @@ header {
       text-decoration: none;
       @include themify(){
         color: themed("text-color");
-      }    
+      }
     }
   }
 

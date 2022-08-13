@@ -1,6 +1,18 @@
+{{ $avatar_animated_small := resources.Get "images/avatar.animated.256x256.webp"  }}
+{{ $avatar_animated_smallmed := resources.Get "images/avatar.animated.320x320.webp"  }}
+{{ $avatar_animated_medium := resources.Get "images/avatar.animated.512x512.webp"  }}
 <div class="author avatar">
   <a href="https://setale.me/" data-instant>
-    <img width="128px" height="128px" alt="Lorenzo's photo" id="about_author_avatar" src='{{ "/images/avatar.256x256.webp" | absURL }}' srcset='{{ "/images/avatar.1024x1024.webp" | absURL }} 1024w, {{ "/images/avatar.512x512.webp" | absURL }} 512w, {{ "/images/avatar.256x256.webp" | absURL }} 256w'>
+    <img
+      id="about_author_avatar"
+      width="256px"
+      height="256px"
+      srcset="
+      {{- with $avatar_animated_small.RelPermalink -}}{{.}} 256w{{- end -}}
+      {{- with $avatar_animated_smallmed.RelPermalink -}}{{.}} 320w{{- end -}}
+      {{- with $avatar_animated_medium.RelPermalink -}}{{.}} 512{{- end -}}
+      "
+      src="{{ $avatar_animated_medium.RelPermalink }}">
   </a>
   <h2>Lorenzo Setale</h2>
 </div>

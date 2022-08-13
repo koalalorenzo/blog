@@ -61,6 +61,8 @@ $global-border-radius: 25px;
 $global-margin: $global-border-radius;
 $global-body-width: 900px;
 $global-content-width: $global-body-width - $global-margin;
+// Calculate the maximus size of the elements in the bar
+$max_aside_width: 256-$global-margin;
 // import custom stuff;
 $screen-break-small: 600px;
 
@@ -73,3 +75,4 @@ $screen-break-small: 600px;
 @import "assets/sass/sections.scss";
 @import "assets/sass/articles.scss";
 @import "assets/sass/articles_shorts.scss";
+@import "assets/sass/buttons.scss";

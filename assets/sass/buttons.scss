@@ -11,7 +11,7 @@
   background: transparent;
   transition: all 0.25s ease-in-out;
 
-  width: none;
+  width: 100%;
   max-width: ($max_aside_width - $global-border-radius)-($global-border-radius/2);
   margin-bottom: $global-h1-margin/4;
   border-radius: $global-border-radius;

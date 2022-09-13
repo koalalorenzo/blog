@@ -6,7 +6,11 @@ html {
 body {
   @include themify() {
     background: themed("background");
+    background: linear-gradient(315deg, themed("background") 20%, themed("background-accent") 100%);
+    background: -moz-linear-gradient(315deg, themed("background") 20%, themed("background-accent") 100%);
+    background: -webkit-linear-gradient(315deg, themed("background") 20%, themed("background-accent") 100%);
     color: themed("text-color");
+    background-attachment: fixed;
   }
 
   font-family: $font-family;

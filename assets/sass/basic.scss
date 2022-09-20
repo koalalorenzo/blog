@@ -29,6 +29,16 @@ body {
   @include for-mobile-portrait-down {
     padding: 0 $global-margin/3;
   }
+
+  // Fix background with devices with notches (only on portrait)
+  @include for-mobile-portrait-down {
+    @include themify() {
+      @supports(padding:max(0px)) {
+        background: themed("background");
+      }
+    }
+  }
+  // End fix background Notches
 }
 
 * {

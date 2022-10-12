@@ -30,11 +30,11 @@ scenes that we don't want in our final cut. Hell yeah, we do even some CGI if we
 like it better than what the lenses captured!
 
 But that is precisely the issue: Time flows fast, and I noticed how my brain can
-re-arrange it to make me feel better about anything even if that is not the
+re-arrange it to make me feel better about anything, even if that is not the
 reality. To me, writing down my life events and memories helps to keep the story
 coherent.
 
-If some editing happens, that is ok. More or less I will be aware of both the
+If some editing happens, that is ok. More or less, I will be aware of both the
 stories: the one that I lived on the same day I wrote on the journal, and the
 one that I want to remember.
 
@@ -80,16 +80,16 @@ a decent journaling software that has superb features like tags, geolocation and
 a nice text editor.
 
 I tried to move to other solutions unsuccessfully. It works perfectly with my
-iPhone, iPad, and Mac and it has features that helps me go back in time and
+iPhone, iPad, and Mac, and it has features that help me go back in time and
 reflect. I can see what I wrote today, but during the years and review a
 specific scene of the movie.
 
 At the beginning, I was writing it every day or even more. It used to be my
-companion before going to bed, but now it I can't find the time and I write only
+companion before going to bed, but now I can't find the time and I write only
 when I feel like. In the last 3/4 years, after burning out at work, I
 found myself writing once or twice a week. Being honest, I feel guilty of not
 writing every day anymore. I am scared of forgetting things, missing memories
-and not calming my mind down, but that is a pressure I don't want to have.
+and not calming my mind down, but that is a pressure I would rather not feel.
 
 ## This show has everything
 

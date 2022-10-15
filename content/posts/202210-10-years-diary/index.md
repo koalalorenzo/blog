@@ -131,7 +131,13 @@ sure Trixie and Katya would say that [this](https://youtu.be/6nvDC9YSMvQ?t=1310)
 [everything](https://youtu.be/jKMGFaF1YbE?t=1034): drama, love,
 suspense, sex, blood, and laughs... and Toto would love it too!
 
-Seriously speaking, **I do suggest writing a journal**. It helped me so much
-in the past 10 years: I would be an entirely different person without it. If
-you are in doubt, I hope that this convinced you: now it is your turn:
-_what did you do today?_ and will you remember this day in 10 years? 😉
+Seriously speaking, what I want to say is that writing down things helps me
+remember important events of my life, more than a bullet point list of episodes.
+I think the people in these episodes were living their own film, and there might
+be other diaries with a different plot. No single diary is better than another.
+Life is a rollercoaster of events for everyone.
+
+**I do suggest writing a journal**. It helped me so much in the past 10 years:
+I would be an entirely different person without it. If you are in doubt,
+I hope that this convinced you: now it is your turn: _what did you do today?_
+and will you remember this day in 10 years? 😉

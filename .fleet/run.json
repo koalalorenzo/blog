@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "make run",
+            "program": "make",
+            "args": ["clean", "run"],
+        },
+        {
+            "type": "command",
+            "name": "make build",
+            "program": "make",
+            "args": ["clean", "build"],
+        }
+    ]
+}

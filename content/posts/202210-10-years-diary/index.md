@@ -14,20 +14,24 @@ observation.
 
 <!-- more -->
 
-The main reason why I started writing a diary is that I wanted to avoid that
-cognitive bias. I also wanted to learn more from myself and discover how I
-process emotions and time. When I was 16 I noticed how easy it was for some
-people to forget some bad experiences with other people.Sure, people can
-change... but I want to say how it is important to remember and evaluate a
-bigger picture.
+{{< image src="locations.feature.webp">}}
+
+The main reason why I started writing a diary is that I wanted to **avoid that
+cognitive bias** and try to have a more objective memory for my future self.
+I also wanted to learn more from myself and discover how I process emotions and
+time. Before starting writing the diary I noticed that a single bad experience
+can change our prospective over 100 different positive experiences. Out of 100
+packages being delivered perfectly, that single package that is broken will make
+us complain to the post office! The same is valid for people, and time has an
+effect to it.
 
 I always thought that time is like one of these old movies on highly flammable
 tape. One of those like in [Cinema Paradiso](https://en.wikipedia.org/wiki/Cinema_Paradiso),
-and we are the little Toto super curious to see how the story goes.
+and we are the young Totó (Salvatore) super curious to see how the story goes.
 
-We can always cut the tape and re-arrange it, give some editing. We delete
-scenes that we don't want in our final cut. Hell yeah, we do even some CGI if we
-like it better than what the lenses captured!
+Because it is our own film, we can always cut the tape and re-arrange it, give
+some editing. We delete scenes that we don't want in our final cut. Hell yeah,
+we do even some CGI if we like it better than what the lenses captured!
 
 But that is precisely the issue: Time flows fast, and I noticed how my brain can
 re-arrange it to make me feel better about anything, even if that is not the
@@ -114,6 +118,5 @@ sure Trixie and Katya would say that [this](https://youtu.be/6nvDC9YSMvQ?t=1310)
 [everything](https://youtu.be/jKMGFaF1YbE?t=1034): drama, love,
 suspense, sex, blood, and laughs... and Toto would love it too!
 
-Seriously speaking, I do suggest writing a journal! Be aware: It is a habit that
-takes time, as going to the gym or learning a new language. It takes time and I
-found it helped me to achieve other goals.
+Seriously speaking, **I do suggest writing a journal**. It helped me so much
+in the past 10 years: I would be a totally different person without it.

@@ -1,6 +1,6 @@
 ---
 title: "I have been writing on my diary for 10 years"
-date: 2022-10-03T08:10:48+02:00
+date: 2022-10-16T12:10:48+02:00
 tags:
   - thoughts
   - suggestions
@@ -16,57 +16,55 @@ observation.
 
 {{< image src="locations.feature.webp">}}
 
-The main reason why I started writing a diary is that I wanted to **avoid that
+The main reason why I started writing a diary is that I wanted to **avoid
 cognitive bias** and try to have a more objective memory for my future self.
 I also wanted to learn more from myself and discover how I process emotions and
-time. Before starting writing the diary I noticed that a single bad experience
-can change our prospective over 100 different positive experiences. Out of 100
+time. Before starting writing the diary I noticed that **a single bad experience
+can change our prospective over 100 different positive experiences**. Out of 100
 packages being delivered perfectly, that single package that is broken will make
 us complain to the post office! The same is valid for people, and time has an
 effect to it.
 
 I always thought that time is like one of these old movies on highly flammable
-tape. One of those like in [Cinema Paradiso](https://en.wikipedia.org/wiki/Cinema_Paradiso),
+tape. 📽 One of those like in [Cinema Paradiso](https://en.wikipedia.org/wiki/Cinema_Paradiso),
 and we are the young Totó (Salvatore) super curious to see how the story goes.
 
 Because it is our own film, we can always cut the tape and re-arrange it, give
-some editing. We delete scenes that we don't want in our final cut. Hell yeah,
-we do even some CGI if we like it better than what the lenses captured!
+some editing. We delete scenes that we don't want in our final cut. _Hell yeah_,
+we do even some CGI if we like it better than what the cameras captured!
 
-But that is precisely the issue: Time flows fast, and I noticed how my brain can
-re-arrange it to make me feel better about anything, even if that is not the
+But that is precisely the issue: Time flows... fast! I noticed how my brain can
+re-arrange events to make me feel better about anything, even if that is not the
 reality. To me, writing down my life events and memories helps to keep the story
-coherent.
+coherent, especially in the future when I will forget most of the details.
 
 If some editing happens, that is ok. More or less, I will be aware of both the
-stories: the one that I lived on the same day I wrote on the journal, and the
-one that I want to remember.
+stories: the one that I chose to remember and what I wrote on the journal. Our
+brain does not have infinite space and we use a very lossy compression
+algorithm! 🤣
 
 I met so many people who gave me such big joy in my life. For one reason or
-another, they are no longer characters in my film. Some are no longer with us,
-some others argued with me, and others moved on to the next chapter of
-their movie. In any case, I still remember both the happiness and the sadness
-that they caused me in different moments, without holding any specific feelings.
-
-Those were different part of my movie, those were different chapters of the
-story and different people.
+another, they are no longer characters in my film. Some are no longer with us
+💀 some others argued with me 💔, and others moved on to the next chapter of
+their movie ✈️. Thanks to my diary, **I still remember both the happiness and the
+sadness** that they caused me in different moments, without holding any specific
+feelings as the only way to remember them.
 
 ## I write to improve myself
 
-I learned a lot more in the last 5 years thanks to the diary about compassion,
-towards other people and towards myself. For example, one thing that I have
-noticed during the last 10 years by reading is how easy it is to go back and
-say: _Oh! That was stupid of me!_  
+Thanks to the diary, I learned about compassion towards other people and towards
+myself. For example, one thing that I have noticed during the last 10 years by
+reading is how easy it is to go back and say: _Oh! That was stupid of me!_  
 
-It is super easy to have regrets or feel ashamed of something that happened.
+It is super easy to have **regrets or feel ashamed of something that happened**.
 My diary gives me the instrument to reflect on my reflection when I look back:
 I assume that it is normal to want to do better, even if the things that we want
-to do better are in the past. That is a valid point to improve ourselves.
+to improve are in the past. I am not an expert but I believe that regrets and
+shame are powerful mechanisms for self improvement.
 
 The important thing about regrets is to know that I am learning. I am improving
 myself so that if something similar happens in the future, I will know what
-to do. We are more than allowed to be ashamed of it, too. It is in a past and
-old part of the tape of our movie.
+to do.
 
 ## Being present and living the moment
 

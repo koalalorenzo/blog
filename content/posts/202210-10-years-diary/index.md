@@ -68,46 +68,59 @@ to do.
 
 ## Being present and living the moment
 
-I have to be personal here. I noticed how writing a diary and forcing myself to
-describe as much as possible the details helped me to be present. I still
-struggle a lot with it, and sometimes time flows too quickly. Writing
-down what I saw, the emotions, the sensations, or small details of my experience
-does not only enrich the story, but it allows me to teleport mentally when I am
-reading back again the page.
+Another thing that I noticed is that writing a diary and forcing myself to
+describe as much as possible the details, helped me to be present and live
+the moment.
+
+I still struggle a lot with it, and sometimes time flows too quickly.
+Writing down what I saw, the emotions, the sensations, or small details of my
+experience does not only enrich the story, but it allows me to teleport mentally
+when I am reading back again the page. I am forcing myself to look around more,
+to capture feelings  and sensation in my everyday life, so that I will be forced
+to write it down  later.
+
+The opposite scares me a lot: not being able to enjoy the important moments of
+my life and reaching an old age where I didn't pay attention to things that
+matter. I am scared of having past my whole life in front a screen rather than
+looking at the colors of the leaves or the smile on people's face.
 
 ## What do I use and how often?
 
 I have been using [Day One](https://dayoneapp.com) for the last 10 years. It is
 a decent journaling software that has superb features like tags, geolocation and
-a nice text editor.
+a nice text editor. It helps me by adding more information/metadata than the
+analog counterpart: pen and paper!
 
 I tried to move to other solutions unsuccessfully. It works perfectly with my
 iPhone, iPad, and Mac, and it has features that help me go back in time and
-reflect. I can see what I wrote today, but during the years and review a
-specific scene of the movie.
+reflect: I can see what I wrote on the same day a few years back. It is like
+selecting a chapter on our movie.
 
-At the beginning, I was writing it every day or even more. It used to be my
+At the beginning, **I was writing it every day or even more**. It used to be my
 companion before going to bed, but now I can't find the time and I write only
 when I feel like. In the last 3/4 years, after burning out at work, I
 found myself writing once or twice a week. Being honest, I feel guilty of not
 writing every day anymore. I am scared of forgetting things, missing memories
 and not calming my mind down, but that is a pressure I would rather not feel.
+That is why I write when I feel like writing: it should not be a cause of
+stress.
 
 ## This show has everything
 
-I wrote almost the entirety of my 20s. Toto from Cinema Paradiso might say
-that this tape is a perfect pilot for a TV show instead of a single movie! Why
-limiting to a long feature film when you can have:
+I wrote almost the entirety of my 20s. From September 2012 up until now. I will
+continue writing. Toto from Cinema Paradiso might say that this tape is a
+perfect pilot for a TV show instead of a single movie! Why limiting to a long
+feature film when you can have:
 
 * a spy episode about me trying to organize a surprise birthday party
 * a thriller, the one when I drank far too much with the wrong people
-* an adventure one, about dates and hookups on Grindr and trips around the world
-* an adult-themed one about exploring sexuality and experimenting
+* an adventure one, about dates and hookups on Grindr in Japan
 * a comedy episode about that time I had a seizure in the cinema
-* a sci-fi one where I talk about work and projects that I never finished
-* a LGBTQ+ horror one about that time I got hurt by a homophobic guy
+* an adult-themed one about exploring sexuality and experimenting new things
+* a sci-fi one about work and projects that I never finished 🤣
+* a LGBTQ+ horror one about that time I woke up filled with bruises in somebody's flat
 * a dramatic episode when you feel alone because you live abroad
-* a love story filled with plot twists about finding friends and the right man
+* a romantic epsiode filled with plot twists about finding friends and the right man
 
 Even if the story will be inconsistent and too few recurring characters, I am
 sure Trixie and Katya would say that [this](https://youtu.be/6nvDC9YSMvQ?t=1310)
@@ -117,4 +130,6 @@ sure Trixie and Katya would say that [this](https://youtu.be/6nvDC9YSMvQ?t=1310)
 suspense, sex, blood, and laughs... and Toto would love it too!
 
 Seriously speaking, **I do suggest writing a journal**. It helped me so much
-in the past 10 years: I would be a totally different person without it.
+in the past 10 years: I would be a totally different person without it. If
+you are in doubt, I hope that this conviced you: now it is your turn:
+_what did you do today?_ and will you remember this day in 10 years?

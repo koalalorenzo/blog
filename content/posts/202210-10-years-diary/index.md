@@ -1,5 +1,5 @@
 ---
-title: "I have been writing on my diary for 10 years"
+title: "For the past 10 years, I have been keeping a diary"
 date: 2022-10-16T12:10:48+02:00
 tags:
   - thoughts

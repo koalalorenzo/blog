@@ -8,8 +8,8 @@ tags:
 ---
 I have been writing down events of my life for the last 10 years. I want to
 celebrate this achievement. 🎉☺️ This diary helped me a lot in the past, and I
-want to convince anyone who is on the fence about starting one to go for it.
-Those are my personal observation of things that I noticed.
+wish to convince anyone who is on the fence about starting one to go for it.
+Those are my personal observation.
 
 <!-- more -->
 
@@ -43,7 +43,7 @@ stories: the one that I chose to remember and what I wrote on the journal. Our
 brain does not have infinite space, and we use a very [lossy compression
 algorithm](https://en.wikipedia.org/wiki/Lossy_compression)! 🤣
 
-I met a lot of people who gave me joy in the past 10 years. For one reason or
+I met many people who gave me joy in the past 10 years. For one reason or
 another, they are no longer characters in my film. Some are no longer with us
 💀 some others argued with me 💔, and others moved on to the next chapter of
 their movie ✈️. Thanks to my diary, **I still remember both the happiness and the

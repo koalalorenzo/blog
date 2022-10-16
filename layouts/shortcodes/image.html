@@ -4,6 +4,7 @@
 
 {{ $tiny := "" }}
 {{ $small := "" }}
+{{ $smalljpeg := "" }}
 {{ $medium := "" }}
 {{ $large := "" }}
 
@@ -14,6 +15,7 @@
 
   {{ if gt .Width 512 }}
   {{ $small = (.Resize "512x webp q75") }}
+  {{ $smalljpeg = (.Resize "512x jpeg q75") }}
   {{ end }}
 
   {{ if gt .Width 1024 }}
@@ -35,6 +37,7 @@
 
         {{ if gt .Width 512 }}
         {{- with $small.RelPermalink -}}, {{.}} 512w{{- end -}}
+        {{- with $smalljpeg.RelPermalink -}}, {{.}} 512w{{- end -}}
         {{- end -}}
 
         {{ if gt .Width 1024 }}
@@ -45,6 +48,12 @@
         {{- with $large.RelPermalink -}}, {{.}} 2048w{{- end -}}
         {{ end }}
       "
+      sizes="
+        (max-width: 2048px) 2048px,
+        (max-width: 1024px) 1024px,
+        (max-width: 768px) 768px,
+        (max-width: 500px) 500px"
+
       {{ if gt .Width 1024 }}
       src="{{ $medium.RelPermalink }}"
       {{ else }}

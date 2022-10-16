@@ -4,7 +4,6 @@
 
 {{ $tiny := "" }}
 {{ $small := "" }}
-{{ $smalljpeg := "" }}
 {{ $medium := "" }}
 {{ $large := "" }}
 
@@ -15,15 +14,14 @@
 
   {{ if gt .Width 512 }}
   {{ $small = (.Resize "512x webp q75") }}
-  {{ $smalljpeg = (.Resize "512x jpeg q75") }}
   {{ end }}
 
   {{ if gt .Width 1024 }}
   {{ $medium = (.Resize "1024x webp q75") }}
   {{ end }}
 
-  {{ if gt .Width 2048 }}
-  {{ $large = (.Resize "2048x webp q75") }}
+  {{ if gt .Width 1920 }}
+  {{ $large = (.Resize "1920x webp q75") }}
   {{ end }}
 <a href="{{ .RelPermalink }}" target="_blank">
   <figure {{ if $class }}class="{{ $class }}"{{ end }}>
@@ -37,19 +35,18 @@
 
         {{ if gt .Width 512 }}
         {{- with $small.RelPermalink -}}, {{.}} 512w{{- end -}}
-        {{- with $smalljpeg.RelPermalink -}}, {{.}} 512w{{- end -}}
         {{- end -}}
 
         {{ if gt .Width 1024 }}
         {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
         {{- end -}}
 
-        {{ if gt .Width 2048 }}
-        {{- with $large.RelPermalink -}}, {{.}} 2048w{{- end -}}
+        {{ if gt .Width 1920 }}
+        {{- with $large.RelPermalink -}}, {{.}} 1920w{{- end -}}
         {{ end }}
       "
       sizes="
-        (max-width: 2048px) 2048px,
+        (max-width: 1920px) 1920px,
         (max-width: 1024px) 1024px,
         (max-width: 768px) 768px,
         (max-width: 500px) 500px"

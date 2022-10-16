@@ -6,11 +6,10 @@ tags:
   - suggestions
   - goals
 ---
-I have been writing a journal for the last 10 years. This diary helped me a lot
-and I want to write down a few things that I discovered to celebrate this
-achievement that I thought it was impossible. At the same time, I wish to help
-who is not sure if starting one to do so, or not. Those are my personal
-observation.
+I have been writing down events of my life for the last 10 years. I want to
+celebrate this achievement. 🎉☺️ This diary helped me a lot in the past, and I
+want to convince anyone who is on the fence about starting one to go for it.
+Those are my personal observation of things that I noticed.
 
 <!-- more -->
 
@@ -19,10 +18,10 @@ observation.
 I started writing a diary because I wanted to **avoid cognitive biases** and
 have a more objective memory for my future self. I also wanted to learn more
 from myself and discover how I process emotions and time. Before starting
-writing the diary, I noticed that **a single bad experience can change our
+writing the diary, I noticed that often **a single bad experience can change our
 prospective to over 100 different positive experiences**.
 
-Out of 100 packages being delivered perfectly, that single package that is
+Out of 100 packages being delivered perfectly, that single package that arrives
 broken will make us complain to the post office! The same is valid for people,
 and time has an effect on it.
 

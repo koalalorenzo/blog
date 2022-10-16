@@ -112,25 +112,14 @@ stress.
 
 I wrote almost the entirety of my 20s. From September 2012 until now. I will
 continue writing. Toto from Cinema Paradiso might say that this tape is a
-perfect pilot for a TV show instead of a single movie! Why limiting to a long
-feature film when you can have:
-
-* a spy episode about me trying to organize a surprise birthday party
-* a thriller, the one when I drank far too much with the wrong people
-* an adventure one, about dates and hookups on Grindr in Japan
-* a comedy episode about that time I had a seizure in the cinema
-* an adult-themed one about exploring sexuality and experimenting new things
-* a sci-fi one about work and projects that I never finished 🤣
-* a LGBTQ+ horror one about that time I woke up filled with bruises in somebody's flat
-* a dramatic episode when you feel alone because you live abroad
-* a romantic episode filled with plot twists about finding friends and the right man
+perfect pilot for a TV show instead of a single movie!
 
 Even if the story will be inconsistent and too few recurring characters, I am
 sure Trixie and Katya would say that [this](https://youtu.be/6nvDC9YSMvQ?t=1310)
 [show](https://youtu.be/8jqs2XKe3Xg?t=1206)
 [has](https://youtu.be/Wmw9WcFe9Mo?t=1142)
 [everything](https://youtu.be/jKMGFaF1YbE?t=1034): drama, love,
-suspense, sex, blood, and laughs... and Toto would love it too!
+suspense, depression, sex, blood, and laughs... and Toto would love it too!
 
 Seriously speaking, what I want to say is that writing down things helps me
 remember important events of my life, more than a bullet point list of episodes.

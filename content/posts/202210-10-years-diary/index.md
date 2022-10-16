@@ -98,6 +98,8 @@ iPhone, iPad, and Mac, and it has features that help me go back in time and
 reflect: I can see what I wrote on the same day a few years back. It is like
 selecting a chapter on our movie.
 
+{{< image src="dayone-map.webp" class="square" caption="Day One has a built-in Map and geolocation">}}
+
 At the beginning, **I was writing it every day or even more**. It used to be my
 companion before going to bed, but now I can't find the time and I write only
 when I feel like. In the last 3/4 years, after burning out at work, I

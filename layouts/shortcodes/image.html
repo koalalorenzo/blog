@@ -20,8 +20,8 @@
   {{ $medium = (.Resize "1024x webp q75") }}
   {{ end }}
 
-  {{ if gt .Width 2048 }}
-  {{ $large = (.Resize "2048x webp q75") }}
+  {{ if gt .Width 1920 }}
+  {{ $large = (.Resize "1920x webp q75") }}
   {{ end }}
 <a href="{{ .RelPermalink }}" target="_blank">
   <figure {{ if $class }}class="{{ $class }}"{{ end }}>
@@ -41,10 +41,16 @@
         {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
         {{- end -}}
 
-        {{ if gt .Width 2048 }}
-        {{- with $large.RelPermalink -}}, {{.}} 2048w{{- end -}}
+        {{ if gt .Width 1920 }}
+        {{- with $large.RelPermalink -}}, {{.}} 1920w{{- end -}}
         {{ end }}
       "
+      sizes="
+        (max-width: 1920px) 1920px,
+        (max-width: 1024px) 1024px,
+        (max-width: 768px) 768px,
+        (max-width: 500px) 500px"
+
       {{ if gt .Width 1024 }}
       src="{{ $medium.RelPermalink }}"
       {{ else }}

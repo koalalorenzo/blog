@@ -9,8 +9,9 @@
         On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time>
         {{ if .Lastmod }}
         <meta itemprop="dateModified" content="{{ .Lastmod }}" />
-        {{ end }}
-        - Reading Time: {{ math.Round (div (countwords .Content) 230.0) }} Minutes
+        {{ end }} -
+        Reading Time: <a href="javascript:(function(){sq=window.sq=window.sq||{};if(sq.script){sq.again();}else{sq.bookmarkletVersion='0.3.0';sq.iframeQueryParams={host:'//squirt.io',userId:'7ba878ae-944b-4cbb-8255-87de76b6c69b',};sq.script=document.createElement('script');sq.script.src=sq.iframeQueryParams.host+'/bookmarklet/frame.outer.js';document.body.appendChild(sq.script);}})();">
+        {{ math.Round (div (countwords .Content) 300.0) }} Minutes</a>,
       </p>
   </div>
   <div itemprop="articleBody">{{ .Content }}</div>

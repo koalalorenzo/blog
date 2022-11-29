@@ -14,9 +14,9 @@ many things I have to do in case of leaks. I was looking for a solution that
 would work and be good enough for my simple Ansible Playbooks, and I stumbled
 upon the Mozilla SOPS.
 
-<!-- more -->
+<!--more-->
 
-## What I have tried in the past and did not work this time 
+## What I have tried in the past and didn't work this time 
 
 Things might get out of control when it comes to managing secrets in code on
 Git. Nobody wants to store secrets in plain text, so there are different tools 
@@ -78,7 +78,9 @@ When it comes to integrating it with GitHub or GitLab, it can be glued together
 with HashiCorp Vault or any Cloud KMS solution (there are plenty of docs)
 
 ## Mozilla SOPS and Ansible
-Mozilla SOPS and Ansible
+I use Ansible with countless variables to configure and populate files and 
+settings. Ansible can load these variables from an encrypted SOPS file.
+
 On macOS, installing it is easier than expected and setting it up is also super 
 straightforward:
 
@@ -86,3 +88,51 @@ straightforward:
 brew install sops
 ```
 
+There are plenty of ways to install it on Linux too in the 
+[official docs](https://github.com/mozilla/sops#download). You can then add 
+your GPG/PGP Keys to the `.sops.yaml` file in the root of your repository like 
+this:
+
+```yaml
+creation_rules:
+  - pgp: "73880ECAF69EC2ED44CE5889502BFB12D0B5295F"
+````
+
+where `73880ECAF69EC2ED44CE5889502BFB12D0B5295F` is the PGP Key Fingerprint that
+will be used to encrypt. You can also add other keys 
+[from different solutions](https://github.com/mozilla/sops#using-sops-yaml-conf-to-select-kms-pgp-for-new-files),
+including a transit key from Hashicorp Vault, AWS KMS, or GCP KMS. :flex:
+
+Then you can create a new YAML file containing the variables that we can use in 
+our playbooks with this command:
+
+```bash
+sops filename.sops.yaml
+```
+
+It will open an editor where you can set your key: value that will be loaded as 
+variables. You can use this command also to edit in the future as long as you
+have access to a way to decrypt the file.
+
+{{< image src="mozilla-sops.feature.webp" class="big">}}
+
+After that in the playbook you can load the SOPS file and use it like this:
+
+```yaml
+tasks:
+  - name: Load encrypted credentials
+    community.sops.load_vars:
+      file: filename.sops.yaml
+  - name: Print the secret value
+    ansible.builtin.debug:
+      msg: "Secret value is {{ lumpy_space_password }}"
+```
+
+When your playbook will run, Ansible will try to decrypt based on the available 
+methods. In my case, it will prompt my PIN code for my YubiKey to decrypt the 
+secrets using GPG.
+
+I strongly suggest to read the 
+[README file](https://github.com/mozilla/sops#readme) 
+for more information on how to use it, even with binary files and integrating 
+it with different software. :wink:

@@ -134,5 +134,6 @@ secrets using GPG.
 
 I strongly suggest to read the 
 [README file](https://github.com/mozilla/sops#readme) 
-for more information on how to use it, even with binary files and integrating 
-it with different software. :wink:
+for more information on how to use it with binary files, how to rotate keys 
+and integrating it with different software. :wink: I really believe that this
+little software written in Go makes managing secrets less complicated

@@ -1,6 +1,6 @@
 ---
 title: "Handling secrets when working alone"
-date: 2022-10-28T9:40:48+02:00
+date: 2022-11-30T09:22:48+02:00
 tags:
   - secrets
   - devops

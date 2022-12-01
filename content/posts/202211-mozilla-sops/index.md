@@ -1,18 +1,20 @@
 ---
-title: "Handling secrets when working alone"
+title: "Handling Secrets should not be complicated: Mozilla SOPS"
 date: 2022-11-30T09:22:48+02:00
 tags:
   - secrets
   - devops
   - sre
   - security
-  - Today I Leanred
+  - Today I Learned
+mermaid: true
 ---
 Managing secrets in Git repositories has been one of the biggest issues when
 I write code. I have used multiple solutions based on the complexity and how 
 many things I have to do in case of leaks. I was looking for a solution that 
 would work and be good enough for my simple Ansible Playbooks, and I stumbled
-upon the Mozilla SOPS.
+upon the Mozilla SOPS: something that makes handling secrets not complicated
+when working alone on simple projects.
 
 <!--more-->
 
@@ -28,10 +30,11 @@ secrets.
 ### For serious projects: HashiCorp Vault
 
 My favorite way of dealing with secrets is generating them every time they are 
-needed. HashiCorp Vault is a perfect cloud-agnostic tool for that! It ensures 
-TTL, Authorization and Authentication even when Cloud Providers or tools can't 
-provide it (ex: Databases, Service Account tokens) and has a nice way to deal 
-with authentication and authorization.
+needed. [HashiCorp Vault]({{< ref "202003-immutable-infrastructure-vault" >}}) 
+is a perfect cloud-agnostic tool for that! It ensures  TTL, Authorization and 
+Authentication even when Cloud Providers or tools can't provide it (ex: 
+Databases, Service Account tokens) and has a nice way to deal with 
+authentication and authorization.
 
 Vault is simple enough, but an overkill for projects like mine. In my case, I 
 am using some basic  Ansible Playbooks, and have a Vault instance available at 
@@ -49,18 +52,35 @@ commits.
 
 With git crypt, could argue that the files are encrypted and safe in the 
 history, but if the encryption keys are compromised, any effort to keep 
-everything safe is valiant. 
+everything safe is valiant.
 
-One of this limit is that it works only with a static encryption key or GPG 
+{{< mermaid >}}
+graph TD
+    C[Clear File]
+    GPG1[GPG Key 1]
+    GPG2[GPG Key 2]
+    EK[static encription key]
+    E[Encrypted File]
+
+    C ---> git-crypt
+    git-crypt --> E
+
+    GPG1 --Decrypts--> EK
+    GPG2 --Decrypts--> EK
+    EK --Used to encrypt--> git-crypt
+{{< /mermaid >}}
+
+One of the limits is that it works only with a static encryption key or GPG 
 Keys. All of those are not good when it comes to automation, as they require 
-tools to have static and long-living keys lying around: For example, using it in
+tools to have static and long-living keys lying around. For example, using it in
 GitHub Action might require you to create a static GPG Key dedicated for the 
-workflow and that is a pain to deal with… In that case, we need something more 
+workflow and that is a pain to deal with! In that case we need something more 
 complex, like HashiCorp Vault… or other cloud solutions.
 
 ### Best of all: Mozilla SOPS
-You might be saying: Hey, there is an infinite loop in your blog post! This is 
-the paragraph where we break that loop and share something that sits in the 
+You might be saying: _Hey, there is an infinite loop in your blog post: don't use
+Vault, use git-crypt; don't use git-crypt use vault!_ :laughing:
+This is the paragraph where we break that loop and share something that sits in the 
 middle between git-crypt and HashiCorp Vault.
 
 Mozilla SOPS sits in the middle. The way it works is similar to git-crypt, but 
@@ -101,7 +121,23 @@ creation_rules:
 where `73880ECAF69EC2ED44CE5889502BFB12D0B5295F` is the PGP Key Fingerprint that
 will be used to encrypt. You can also add other keys 
 [from different solutions](https://github.com/mozilla/sops#using-sops-yaml-conf-to-select-kms-pgp-for-new-files),
-including a transit key from Hashicorp Vault, AWS KMS, or GCP KMS. :flex:
+including a transit key from Hashicorp Vault, AWS KMS, or GCP KMS. :muscle:
+
+{{< mermaid >}}
+graph TD
+    C[Clear File]
+    GPG[GPG Key]
+    SOPS
+    KMS
+    V[Hashicorp Vault]
+    E[Encrypted File]
+
+    C ---> SOPS 
+    SOPS --> E
+    GPG --> SOPS
+    KMS --> SOPS
+    V --> SOPS
+{{< /mermaid >}}
 
 Then you can create a new YAML file containing the variables that we can use in 
 our playbooks with this command:

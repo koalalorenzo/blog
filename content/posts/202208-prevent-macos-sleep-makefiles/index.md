@@ -6,6 +6,7 @@ tags:
   - how to
   - makefile
   - software development
+  - Today I Learned
 ---
 Often I find myself using third-party software like Caffeine or Amphetamine to
 keep my Mac awake while running some specific commands. Sometimes it is because

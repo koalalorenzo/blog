@@ -44,15 +44,16 @@ that can be simplified. When working alone, HashiCorp  Vault can be over
 engineering and I would prefer to use something simpler like git-crypt.
 
 ### For local only: git crypt
-A way that I have explored in the past was with git-crypt. It is a smart way to
-encrypt and decrypt a file: It uses GPG/PGP keys and git filters to 
-transparently manage secrets. Once initialize, it feels like if it is not 
-there: files are stored locally in plain text, and encrypted right before 
-commits.
+A way that I have explored in the past was with 
+[git-crypt](https://github.com/AGWA/git-crypt).  It is a smart way to encrypt 
+and decrypt a file: It uses GPG/PGP keys and git filters to transparently 
+manage secrets. Once initialize, it feels like if it is not there: files are 
+stored locally in plain text, and encrypted right before commits.
 
-With git crypt, could argue that the files are encrypted and safe in the 
+With git-crypt, could argue that the files are encrypted and safe in the 
 history, but if the encryption keys are compromised, any effort to keep 
-everything safe is valiant.
+everything safe is valiant. The reason is that git-crypt uses GPG keys to
+share a common encription key used to encrypt everything it tracks:
 
 {{< mermaid >}}
 graph TD
@@ -122,6 +123,8 @@ where `73880ECAF69EC2ED44CE5889502BFB12D0B5295F` is the PGP Key Fingerprint that
 will be used to encrypt. You can also add other keys 
 [from different solutions](https://github.com/mozilla/sops#using-sops-yaml-conf-to-select-kms-pgp-for-new-files),
 including a transit key from Hashicorp Vault, AWS KMS, or GCP KMS. :muscle:
+The file (or the YAML values) are encrypted multiple times with each key/tool 
+provided:
 
 {{< mermaid >}}
 graph TD

@@ -99,8 +99,9 @@ When it comes to integrating it with GitHub or GitLab, it can be glued together
 with HashiCorp Vault or any Cloud KMS solution (there are plenty of docs)
 
 ## Mozilla SOPS and Ansible
-I use Ansible with countless variables to configure and populate files and 
-settings. Ansible can load these variables from an encrypted SOPS file.
+I use [Ansible](https://www.ansible.com) with countless variables to configure 
+and populate files and settings. Ansible can load these variables from an 
+encrypted SOPS file.
 
 On macOS, installing it is easier than expected and setting it up is also super 
 straightforward:
@@ -155,7 +156,10 @@ have access to a way to decrypt the file.
 
 {{< image src="mozilla-sops.feature.webp" class="big">}}
 
-After that in the playbook you can load the SOPS file and use it like this:
+After that, You can load the SOPS file and use the values as
+variables with 
+[community.sops.load_vars](https://docs.ansible.com/ansible/latest/collections/community/sops/load_vars_module.html)
+and use them in the Ansible playbook like this:
 
 ```yaml
 tasks:

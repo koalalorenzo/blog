@@ -11,6 +11,7 @@ tags:
   - software development
   - how to
   - makefile
+  - Today I Learned
 ---
 This blog post is about what I have changed in my blog and website to make it
 faster. Recently, I have traveled with a bad airplane company that delayed my

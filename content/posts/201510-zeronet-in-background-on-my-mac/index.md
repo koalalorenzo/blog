@@ -21,6 +21,7 @@ tags:
 - zeronet
 - bittorrent
 - tor
+- Today I Learned
 ---
 
 Since when I was little, I always loved peer-to-peer technologies... I even tried to create a GNU/Linux distribution based on that. .. but recently I have discovered a brilliant project that is combining the power of **asynchronous cryptography**, using **Bitcoin** private and public keys, with **BitTorrent technology.** This project is called [ZeroNet](http://zeronet.io) and it is a new and interesting way to provide websites and real-time services in a p2p network. <!--more-->

@@ -14,6 +14,8 @@ the adjustments I made to make Helix a better fit for my daily work.
 
 <!--more-->
 
+{{< image src="logo-feature.webp" link="https://helix-editor.com/">}}
+
 ## My reasons to switch from Microsoft Visual Studio Code
 One of the main reasons I switched to Helix was because I was looking for a more
 lightweight and efficient text editor. While VS Code is a powerful and

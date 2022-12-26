@@ -45,7 +45,7 @@ format, and then I would use the `|` command to run `fmt -w 80` on the selected
 lines.  The output would then replace the selected lines, effectively formatting
 the text to fit within the 80th column.
 
-{{< figure src="pipe.webp" class="big noborder" >}}
+{{< figure src="pipe.webp" class="big noborder" link="pipe.webp" >}}
 
 Overall, the piping feature in Helix is a great way to automate common tasks and
 save time when working with large files or performing repetitive tasks sorting

@@ -173,9 +173,23 @@ hx --tutor
 The tutorial is a great way to learn the basic features and functions of Helix,
 and it is a great resource for those who are new to modal editors or want to get
 up to speed quickly. I used Vim before, and there are some small things that I
-had to get used to.
+had to get used to, and there is [a guide for that too](https://github.com/helix-editor/helix/wiki/Migrating-from-Vim)
 
 It is worth mentioning that [the Helix community on Matrix](https://matrix.to/#/#helix-community:matrix.org) 
 is very helpful and welcoming, and is a great resource for getting support 
 and learning more about the editor. I had a small question about using multiple
 cursors and within seconds somebody helped and gave me super useful tips!
+
+## Final Thoughts 
+In conclusion, **switching to Helix as my primary text editor has been a great
+decision for me**. Its modal interface, lightweight design, and efficient
+features have made it a great fit for my daily work, and the various
+customization and customization options have allowed me to tailor it to my
+specific needs and preferences. The use of custom scripts and language servers
+has also improved my workflow and helped me to write better code faster.
+:rocket: Overall, I have been very happy with Helix and do not plan on returning
+to Visual Studio Code. I would highly recommend Helix to anyone who is looking
+for a fast and efficient text editor that is customizable and powerful.
+
+Go on [helix-editor.com](https://helix-editor.com) and get started! You will
+not regret it :wink:

@@ -1,16 +1,19 @@
 ---
 title: "Switching to Helix: My Experience and Tips"
-date: 2022-12-28T10:42:25+01:00
+date: 2022-12-27T10:42:25+01:00
 tags:
   - editor
-  - 
+  - vscode
+  - helix
+  - tools
+  - software development
 ---
 I recently switched from Visual Studio Code (VS Code) to Helix as my primary
-text editor. One of the main reasons for the switch was that I wanted a more
-efficient and powerful modal editor for working with Go, Terraform, YAML, and
-other languages and tools. I also appreciated the lightweight and efficient
-design of Helix. In this post, I will discuss my experience with the switch and
-the adjustments I made to make Helix a better fit for my daily work.
+text editor. I wanted a more efficient and powerful modal editor for working
+with Go, Terraform, YAML, and other languages and tools. I also appreciated the
+lightweight and efficient design of Helix. In this post, I will discuss my
+experience with the switch and the adjustments I made to make Helix a better fit
+for my daily work.
 
 <!--more-->
 
@@ -162,7 +165,7 @@ hxs() {
                know the original author please let me know and I will mention 
                it! :sweat_smile:
 
-## Getting started
+## It's easy to get started
 One of the things I really appreciated about Helix is the easy tutorial that is
 available to help you get started quickly and learn how to use the various
 keyboard combinations. To access the tutorial, simply use the command: 
@@ -175,7 +178,7 @@ hx --tutor
 The tutorial is a great way to learn the basic features and functions of Helix,
 and it is a great resource for those who are new to modal editors or want to get
 up to speed quickly. I used Vim before, and there are some small things that I
-had to get used to, and there is [a guide for that too](https://github.com/helix-editor/helix/wiki/Migrating-from-Vim)
+had to get used to, and there is [a guide for that too](https://github.com/helix-editor/helix/wiki/Migrating-from-Vim).
 
 It is worth mentioning that [the Helix community on Matrix](https://matrix.to/#/#helix-community:matrix.org) 
 is very helpful and welcoming, and is a great resource for getting support 

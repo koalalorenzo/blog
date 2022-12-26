@@ -1,18 +1,19 @@
 {{ define "main" }}
 <article class="full" itemscope itemtype="https://schema.org/Article">
   <div class="header">
-      <h1 class="title" itemprop="headline">
-          {{ .Title }}
-      </h1>
-      {{ partial "agecheck.html" . }}
-      <p>
-        On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time>
-        {{ if .Lastmod }}
-        <meta itemprop="dateModified" content="{{ .Lastmod }}" />
-        {{ end }} -
-        Reading Time: <a href="javascript:(function(){sq=window.sq=window.sq||{};if(sq.script){sq.again();}else{sq.bookmarkletVersion='0.3.0';sq.iframeQueryParams={host:'//squirt.io',userId:'7ba878ae-944b-4cbb-8255-87de76b6c69b',};sq.script=document.createElement('script');sq.script.src=sq.iframeQueryParams.host+'/bookmarklet/frame.outer.js';document.body.appendChild(sq.script);}})();">
+    <h1 class="title" itemprop="headline">
+      {{ .Title }}
+    </h1>
+    {{ partial "agecheck.html" . }}
+    <p>
+      On <time itemprop="datePublished" datetime="{{ .Date }}">{{ .Date.Format "2006-01-02"}}</time>
+      {{ if .Lastmod }}
+      <meta itemprop="dateModified" content="{{ .Lastmod }}" />
+      {{ end }}&nbsp;-
+      Reading Time: <a
+        href="javascript:(function(){sq=window.sq=window.sq||{};if(sq.script){sq.again();}else{sq.bookmarkletVersion='0.3.0';sq.iframeQueryParams={host:'//squirt.io',userId:'7ba878ae-944b-4cbb-8255-87de76b6c69b',};sq.script=document.createElement('script');sq.script.src=sq.iframeQueryParams.host+'/bookmarklet/frame.outer.js';document.body.appendChild(sq.script);}})();">
         {{ math.Round (div (countwords .Content) 300.0) }} Minutes</a>,
-      </p>
+    </p>
   </div>
   <div itemprop="articleBody">{{ .Content }}</div>
 </article>
@@ -20,20 +21,11 @@
 {{ if ($.Param "comments") }}
 <div id="comments">
   <h2>Comments</h2>
-  <script src="https://giscus.app/client.js"
-    data-repo="koalalorenzo/blog"
-    data-repo-id="MDEwOlJlcG9zaXRvcnkzNTIxMjk4MzM="
-    data-category="Blog Comments"
-    data-category-id="DIC_kwDOFP0TKc4CBJDA"
-    data-mapping="pathname"
-    data-reactions-enabled="1"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-  </script>
+  <script src="https://giscus.app/client.js" data-repo="koalalorenzo/blog"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkzNTIxMjk4MzM=" data-category="Blog Comments"
+    data-category-id="DIC_kwDOFP0TKc4CBJDA" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="1"
+    data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async>
+    </script>
   {{ partial "agecheck.html" . }}
 </div>
 {{ end }}
@@ -43,7 +35,7 @@
   {{ if .PrevPage }}
   <a class="link-reverse" href="{{ .PrevPage.Permalink }}">« Previous Post</a>
   {{ end }}
-  {{ if and .PrevPage .NextPage  }}
+  {{ if and .PrevPage .NextPage }}
   -~-
   {{ end }}
   {{ if .NextPage }}

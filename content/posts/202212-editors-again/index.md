@@ -1,5 +1,5 @@
 ---
-title: "I said goodbye to vscode and switched to Helix"
+title: "Switching to Helix: My Experience and Tips"
 date: 2022-12-28T10:42:25+01:00
 tags:
   - editor
@@ -14,7 +14,7 @@ the adjustments I made to make Helix a better fit for my daily work.
 
 <!--more-->
 
-## My reasons to switch
+## My reasons to switch from Microsoft Visual Studio Code
 One of the main reasons I switched to Helix was because I was looking for a more
 lightweight and efficient text editor. While VS Code is a powerful and
 feature-rich editor, it can be resource-intensive, especially when editing large
@@ -159,3 +159,23 @@ hxs() {
 [^copy-pasta]: I don't remember where I found it, but I had to modify it. If you
                know the original author please let me know and I will mention 
                it! :sweat_smile:
+
+## Getting started
+One of the things I really appreciated about Helix is the easy tutorial that is
+available to help you get started quickly and learn how to use the various
+keyboard combinations. To access the tutorial, simply use the command: 
+
+
+```bash
+hx --tutor
+```
+
+The tutorial is a great way to learn the basic features and functions of Helix,
+and it is a great resource for those who are new to modal editors or want to get
+up to speed quickly. I used Vim before, and there are some small things that I
+had to get used to.
+
+It is worth mentioning that [the Helix community on Matrix](https://matrix.to/#/#helix-community:matrix.org) 
+is very helpful and welcoming, and is a great resource for getting support 
+and learning more about the editor. I had a small question about using multiple
+cursors and within seconds somebody helped and gave me super useful tips!

@@ -32,18 +32,18 @@ lightweight and performant editor that has not caused any significant
 performance issues for me. It offers a good balance of power and efficiency, and
 I have been happy with the switch.
 
-## All you need is pipe!
+## All you need is a pipe!
 To me, one of the standout features of Helix is its ability to pipe selected
 lines and pass them as input to any command, and then replace the selected lines
 with the output of the command. This is a powerful and efficient way to perform
 common tasks, such as formatting text or running code snippets.
 
 For example, let's say I have a file with some unformatted text that I want to
-wrap to fit within the 80th column.  I can use the fmt command to do this
-automatically. First, I would select the lines of text that I intend to format,
-and then I would use the `|` command to run `fmt -w 80` on the selected lines.
-The output would then replace the selected lines, effectively formatting the
-text to fit within the 80th column.:q
+wrap to fit within the 80th column.  I can use the `fmt` command to do this
+_automagically_. First, I would select the lines of text that I intend to
+format, and then I would use the `|` command to run `fmt -w 80` on the selected
+lines.  The output would then replace the selected lines, effectively formatting
+the text to fit within the 80th column.
 
 {{< figure src="pipe.webp" class="big noborder" >}}
 
@@ -52,7 +52,7 @@ save time when working with large files or performing repetitive tasks sorting
 with `sort`, filtering with `grep` or finding unique lines with `uniq`. :smirk:
 
 _Really_... You can use **any command** that follows the 
-[unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)! isn't that 
+[unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)! Isn't that 
 great already?
 
 ## Customizing Helix for a Better Workflow
@@ -97,14 +97,14 @@ workflow.
 If you need some inspiration, you can check
 [my configuration here](https://gitlab.com/-/snippets/2476731).
 
-## Auto complete, linting, formatting and more
+## Auto-complete, linting, formatting and more
 One of the things that has really improved my workflow in Helix is the use of
 language servers. These servers provide a range of features, such as formatting,
-linting, auto complete, and references that can help to write code as a full 
+linting, auto-complete, and references that can help to write code as a full 
 IDE.
 
-To install some of the language servers that I use every day for Helix, on macOS
-you can use the following command:
+To install some language servers that I use every day for Helix, on macOS you
+can use the following command:
 
 ```bash
 # For Terraform (HCL), Bash, Generic YAML, 
@@ -120,7 +120,7 @@ npm i -g vscode-langservers-extracted typescript typescript-language-server
 go install golang.org/x/tools/gopls@latest
 ```
 
-You can check [more language servers here](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers)
+You can check [more language servers here](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers),
 and it is possible to check how the various languages are supported by running:
 
 ```bash
@@ -131,8 +131,8 @@ hx --health
 The default file browser in Helix (`helix .`) is missing the ability to filter
 files by their content, rather than just their names. While the default file
 browser does use fuzzy search, it only searches for matches in the file names,
-which can be limiting if you are looking for a specific piece of text within a
-large number of files.
+which can be limiting if you are looking for a specific piece of text within 
+many files.
 
 To address this issue, I modified a bash function[^copy-pasta] that uses
 [fzf](https://github.com/junegunn/fzf) and 
@@ -162,7 +162,7 @@ hxs() {
 ```
 
 [^copy-pasta]: I don't remember where I found it, but I had to modify it. If you
-               know the original author please let me know and I will mention 
+               know the original author, please let me know, and I will mention 
                it! :sweat_smile:
 
 ## It's easy to get started
@@ -182,8 +182,9 @@ had to get used to, and there is [a guide for that too](https://github.com/helix
 
 It is worth mentioning that [the Helix community on Matrix](https://matrix.to/#/#helix-community:matrix.org) 
 is very helpful and welcoming, and is a great resource for getting support 
-and learning more about the editor. I had a small question about using multiple
-cursors and within seconds somebody helped and gave me super useful tips!
+and learning more about the editor. :pray: I had a small question about using 
+multiple cursors and within seconds somebody helped and gave me super useful 
+tips!
 
 ## Final Thoughts 
 In conclusion, **switching to Helix as my primary text editor has been a great
@@ -192,9 +193,9 @@ features have made it a great fit for my daily work, and the various
 customization and customization options have allowed me to tailor it to my
 specific needs and preferences. The use of custom scripts and language servers
 has also improved my workflow and helped me to write better code faster.
-:rocket: Overall, I have been very happy with Helix and do not plan on returning
-to Visual Studio Code. I would highly recommend Helix to anyone who is looking
-for a fast and efficient text editor that is customizable and powerful.
+:rocket: Overall, I have been **happy with Helix** and do not plan on returning
+to Visual Studio Code. I highly recommend Helix to anyone who is looking for a
+fast and efficient text editor that is customizable and powerful.
 
-Go on [helix-editor.com](https://helix-editor.com) and get started! You will
+Go to [helix-editor.com](https://helix-editor.com) and get started! You will
 not regret it :wink:

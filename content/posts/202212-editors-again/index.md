@@ -28,10 +28,22 @@ performance issues for me. It offers a good balance of power and efficiency, and
 I have been happy with the switch.
 
 ## All you need is pipe!
-To me, one of the standout features of Helix is its ability to pipe selected lines and pass them as input to any command, and then replace the selected lines with the output of the command. This is a powerful and efficient way to perform common tasks, such as formatting text or running code snippets.
+To me, one of the standout features of Helix is its ability to pipe selected
+lines and pass them as input to any command, and then replace the selected lines
+with the output of the command. This is a powerful and efficient way to perform
+common tasks, such as formatting text or running code snippets.
 
-For example, let's say I have a file with some unformatted text that I want to wrap to fit within the 80th column. 
-I can use the fmt command to do this automatically. First, I would select the lines of text that I intend to format, and then I would use the `|` command to run `fmt -w 80` on the selected lines. The output would then replace the selected lines, effectively formatting the text to fit within the 80th column.
+For example, let's say I have a file with some unformatted text that I want to
+wrap to fit within the 80th column.  I can use the fmt command to do this
+automatically. First, I would select the lines of text that I intend to format,
+and then I would use the `|` command to run `fmt -w 80` on the selected lines.
+The output would then replace the selected lines, effectively formatting the
+text to fit within the 80th column.
 
-Overall, the piping feature in Helix is a great way to automate common tasks and save time when working with large files or performing repetitive tasks sorting with sort or filtering with grep.
+{{< image src="pipe.webp" >}}
+
+Overall, the piping feature in Helix is a great way to automate common tasks and
+save time when working with large files or performing repetitive tasks sorting
+with `sort` or filtering with `grep`.
+
 

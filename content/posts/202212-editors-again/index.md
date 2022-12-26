@@ -20,7 +20,7 @@ lightweight and efficient text editor. While VS Code is a powerful and
 feature-rich editor, it can be resource-intensive, especially when editing large
 files or working on a system with limited resources. This is probably due to
 Electron, lots of JavaScript, and the fact that I had many plugins installed
-that I didn't use regularly. 
+that I didn't use regularly.
 
 In contrast, [Helix](http://helix-editor.com/) is written in Rust, and it is a
 lightweight and performant editor that has not caused any significant

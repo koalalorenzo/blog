@@ -38,6 +38,7 @@ body {
       }
     }
   }
+
   // End fix background Notches
 }
 
@@ -65,13 +66,14 @@ a {
     }
   }
 
-  figure, figcaption {
-    @include themify(){
+  figure,
+  figcaption {
+    @include themify() {
       color: themed("text-color");
     }
 
-    &:hover{
-      @include themify(){
+    &:hover {
+      @include themify() {
         color: themed("text-color");
       }
     }
@@ -105,6 +107,18 @@ pre {
 
   code {
     font-family: monospace !important;
+  }
+}
+
+p {
+  code {
+    font-family: monospace;
+    padding: 0.30em 0.40em;
+
+    @include themify() {
+      background-color: themed("background-accent");
+      color: themed("color");
+    }
   }
 }
 

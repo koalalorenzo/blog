@@ -24,7 +24,7 @@
 {{ if gt .Width 1920 }}
 {{ $large = (.Resize "1920x webp q75") }}
 {{ end }}
-<a href="{{ if $link }}{{ $ link }}{{ else }}{{ .RelPermalink }}{{ endif}}" target="_blank">
+<a href="{{ if $link }}{{ $link }}{{ else }}{{ .RelPermalink }}{{ end }}" target="_blank">
   <figure {{ if $class }}class="{{ $class }}" {{ end }}>
     <img width="450px" height="{{ div (mul .Height 450) .Width }}px" srcset="
         {{ if gt .Width 256 }}

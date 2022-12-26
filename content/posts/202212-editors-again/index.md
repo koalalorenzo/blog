@@ -92,7 +92,7 @@ workflow.
 If you need some inspiration, you can check
 [my configuration here](https://gitlab.com/-/snippets/2476731).
 
-# Auto complete, linting, formatting and more
+## Auto complete, linting, formatting and more
 One of the things that has really improved my workflow in Helix is the use of
 language servers. These servers provide a range of features, such as formatting,
 linting, auto complete, and references that can help to write code as a full 
@@ -122,3 +122,40 @@ and it is possible to check how the various languages are supported by running:
 hx --health
 ```
 
+## Finding my way to files (fzf + ripgrep)
+The default file browser in Helix (`helix .`) is missing the ability to filter
+files by their content, rather than just their names. While the default file
+browser does use fuzzy search, it only searches for matches in the file names,
+which can be limiting if you are looking for a specific piece of text within a
+large number of files.
+
+To address this issue, I modified a bash function[^copy-pasta] that uses
+[fzf](https://github.com/junegunn/fzf) and 
+[ripgrep](https://github.com/BurntSushi/ripgrep) to filter files by their
+content. This has been a game-changer for me, as it has made it much easier to
+find specific pieces of text within many files. In addition, I modified the
+script to support _opening multiple files at once_ (with `vsplit`), which has
+saved me a lot of time when working with related files.
+
+This is the code that I have added to my `~/.bash_profile` or equivalent:
+
+```bash
+# Helix Search
+hxs() {
+	RG_PREFIX="rg -i --files-with-matches"
+	local files
+	files="$(
+		FZF_DEFAULT_COMMAND_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --multi 3 --print0 --sort --preview="[[ ! -z {} ]] && rg --pretty --context 5 {q} {}" \
+				--phony -i -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap" \
+				--bind 'ctrl-a:select-all'
+	)"
+	[[ "$files" ]] && hx --vsplit $(echo $files | tr \\0 " ")
+}
+```
+
+[^copy-pasta]: I don't remember where I found it, but I had to modify it. If you
+               know the original author please let me know and I will mention 
+               it! :sweat_smile:

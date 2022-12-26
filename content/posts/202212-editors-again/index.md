@@ -92,3 +92,33 @@ workflow.
 If you need some inspiration, you can check
 [my configuration here](https://gitlab.com/-/snippets/2476731).
 
+# Auto complete, linting, formatting and more
+One of the things that has really improved my workflow in Helix is the use of
+language servers. These servers provide a range of features, such as formatting,
+linting, auto complete, and references that can help to write code as a full 
+IDE.
+
+To install some of the language servers that I use every day for Helix, on macOS
+you can use the following command:
+
+```bash
+# For Terraform (HCL), Bash, Generic YAML, 
+# Docker, Docker compose and Ansible
+brew install terraform-ls bash-language-server \
+             yaml-language-server docker-ls \
+             ansible-language-server
+
+# For HTML, json, css, javascript and typescript
+npm i -g vscode-langservers-extracted typescript typescript-language-server
+
+# Go official language server
+go install golang.org/x/tools/gopls@latest
+```
+
+You can check [more language servers here](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers)
+and it is possible to check how the various languages are supported by running:
+
+```bash
+hx --health
+```
+

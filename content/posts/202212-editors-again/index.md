@@ -38,12 +38,57 @@ wrap to fit within the 80th column.  I can use the fmt command to do this
 automatically. First, I would select the lines of text that I intend to format,
 and then I would use the `|` command to run `fmt -w 80` on the selected lines.
 The output would then replace the selected lines, effectively formatting the
-text to fit within the 80th column.
+text to fit within the 80th column.:q
 
-{{< image src="pipe.webp" >}}
+{{< figure src="pipe.webp" class="big noborder" >}}
 
 Overall, the piping feature in Helix is a great way to automate common tasks and
 save time when working with large files or performing repetitive tasks sorting
-with `sort` or filtering with `grep`.
+with `sort`, filtering with `grep` or finding unique lines with `uniq`. :smirk:
 
+_Really_... You can use **any command** that follows the 
+[unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)! isn't that 
+great already?
+
+## Customizing Helix for a Better Workflow
+At first, I wasn't sure if I needed to customize Helix, as it seemed to work
+well out of the box. However, after spending some time with the editor and
+exploring the various customization options, I realized that making a few small
+adjustments could make a big difference in my workflow.
+
+For example, selecting 
+[a color scheme](https://github.com/helix-editor/helix/wiki/Themes) that works
+well for me has made it easier to read and work with code, and adding vertical
+rules at the 80th column has helped me to keep my code and documentation aligned
+and easy to read.
+
+```toml
+theme = "monokai_pro_spectrum"
+[editor]
+rulers = [80, 120]
+mouse = true
+```
+
+These small changes may seem insignificant, but they have made a noticeable
+difference in my productivity and overall enjoyment of the editor.
+
+Something more useful was changing the behavior of the clipboard to work
+seamlessly when using copy-paste. This saved me a lot of time when working with
+large blocks of text from a command line.
+
+```toml
+[keys.normal]
+# Use system clipboard
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_before"
+```
+
+Overall, I have found that customizing Helix to suit my specific needs and
+preferences has helped me to work more efficiently and effectively. While it may
+not be necessary for everyone, I would highly recommend taking some time to
+explore the customization options and see if they can help you to improve your
+workflow.
+
+If you need some inspiration, you can check
+[my configuration here](https://gitlab.com/-/snippets/2476731).
 

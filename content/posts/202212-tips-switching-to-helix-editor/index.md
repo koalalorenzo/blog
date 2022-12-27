@@ -1,6 +1,6 @@
 ---
 title: "Switching to Helix: My Experience and Tips"
-date: 2022-12-27T10:42:25+01:00
+date: 2022-12-27T09:39:25+01:00
 tags:
   - editor
   - vscode

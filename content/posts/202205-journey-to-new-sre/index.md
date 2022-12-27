@@ -56,7 +56,7 @@ random thoughts. Being nice is not the same as being kind to yourself and your
 colleagues. Even if it is not the dictionary definitions of those words, I like
 this distinction.
 
-{{< tweet user="jordonaut" id="1352363164629831681" >}}
+{{< image src="tweet.webp" link="https://nitter.net/jordonaut/status/1352363164629831681" >}}
 
 The DevOps team was kind for sure, but not to themselfs. We were useful
 mostly for others. The engineers on-call would always answer questions,

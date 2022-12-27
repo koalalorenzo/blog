@@ -38,6 +38,7 @@ body {
       }
     }
   }
+
   // End fix background Notches
 }
 
@@ -65,13 +66,14 @@ a {
     }
   }
 
-  figure, figcaption {
-    @include themify(){
+  figure,
+  figcaption {
+    @include themify() {
       color: themed("text-color");
     }
 
-    &:hover{
-      @include themify(){
+    &:hover {
+      @include themify() {
         color: themed("text-color");
       }
     }
@@ -108,6 +110,18 @@ pre {
   }
 }
 
+p {
+  code {
+    font-family: monospace;
+    padding: 0.30em 0.40em;
+
+    @include themify() {
+      background-color: themed("background-accent");
+      color: themed("color");
+    }
+  }
+}
+
 hr {
   margin: $global-margin 0 $global-margin*2;
   clear: both;
@@ -119,7 +133,10 @@ blockquote {
     color: themed("color")
   }
 
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia,
+  "Times New Roman",
+  Times,
+  serif;
   font-style: italic;
   padding: $global-margin/2 $global-margin;
 

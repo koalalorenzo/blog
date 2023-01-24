@@ -1,29 +1,32 @@
 ---
-title: "Subscriptions that I am grateful for"
+title: "Happy to give back, happy to pay"
 date: 2023-01-15T23:13:27+01:00
 tags:
-  - update
   - life
+  - services
+  - subscriptions
+  - apps
 ---
 I miss the days when I bought software on my Mac instead of using a
 subscription. More and more software and services are moving to
 subscription-based models. In this blog post, I want to share my thoughts on
 subscriptions, including those that I am grateful for paying for and those that
-I have stopped paying for. By working with open-source software I learned how
-important it is to give back and support the developers (and companies) that are
-providing services that we like, or not paying them if we don't! 
+I have stopped paying for. By working with open-source software **I learned how
+important it is to give back and support the developers** (and companies) that
+are providing services that we like, or not paying them if we don't!
+
 <!--more-->
 
 ## Subscriptions and services that I am happy to pay for
 There are a few services and subscriptions that make my daily life easier and
 more enjoyable. I am happy to pay for them because those make me happier, or
-they provide me things that I find essential.  For example, I use 
-[Apple One](https://www.apple.com/apple-one/) which includes Apple Music, 
-Apple TV and iCloud services. 
+they provide me things that I find essential.  For example, I use 
+[Apple One](https://www.apple.com/apple-one/) which includes Apple Music, 
+Apple TV and iCloud services. 
 
 I really like [Mythic Quest](https://tv.apple.com/us/show/mythic-quest/umc.cmc.1nfdfd5zlk05fo1bwwetzldy3), 
 See, [Severance](https://tv.apple.com/dk/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx), 
-and [Foundation](https://tv.apple.com/dk/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3) 
+and [Foundation](https://tv.apple.com/dk/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3) 
 tv shows, but it is also about iCloud security and the software development that
 keeps improving. I want to **avoid hosting my email server** or pay with my
 privacy or with ads. That is why I decided to pay for it, but it can be applied
@@ -82,55 +85,62 @@ be self-hosted. :sweat_smile: _though I prefer to pay rather to
 run an email server!_ 
 
 
-# Services I am not paying anymore I have stopped paying for several
-subscriptions that I found were not worth the cost or no longer met my needs.
-One of those is Netflix. I used to enjoy the wide range of content that it
-offered, but over time, the content that I cared about was removed, and the new
-things are not interesting to me. I would rather not subscribe just for one
-single TV show. So, the trick "that show that keep you subscribed" does not work
-to me
+# Services I am not paying anymore
 
-There is a service that I have been paying for more than 6 years now, and
-recently, I realized it was not worth it: ProtonMail, from being an end-to-end
-email provider, it became just a glorified encryption at rest with PGP that
-can’t keep up with features that others can. I used to appreciate the level of
-security that ProtonMail provided, but as time went on, I found that it was
-lacking in certain features that other email providers offered. Their support
-for open-source software was good, as well as their way of being transparent.
-Sadly, the dream of having end-to-end encrypted email turned out unrealistic
+I have stopped paying for several subscriptions that I found were not worth the
+cost or no longer met my needs.  One of those is **Netflix**. I used to enjoy
+the wide range of content that it offered, but over time, the **movies and
+series that I cared about was removed**, and the new things are not interesting
+to me. I would rather not subscribe just for one single TV show. :rage: So, the
+trick they use "_that show that keep you subscribed_" does not work to me
+
+There is a service that I have been paying for **more than 6 years**, and now I
+realized it was not worth it: **ProtonMail**, from being an end-to-end email
+provider, it became just a glorified encryption at rest with PGP that can’t keep
+up with features that others can. I used to appreciate the level of security
+that ProtonMail provided, but as time went on, I found that it was lacking in
+certain features that other email providers offered. Their support for
+open-source software was good, as well as their way of being transparent.
+Sadly, the dream of having **end-to-end encrypted email turned out unrealistic**
 unless everybody uses ProtonMail or PGP/GPG encryption in their client. This
 meant that my PGP key is only used at rest and to encrypt a limited number of
-emails from Facebook (really, that is the only service that allows to receive
-PGP emails).
+emails **from Facebook** :open_mouth: _Really!_ That is the only service that
+can send OpenPGP encrypted emails: [Set it yourself
+here](https://www.facebook.com/settings?tab=security).
 
-One that got in disuse is the Nintendo Switch Online: I rarely use my Switch
-since I got my Steam Deck at the beginning of this year. I found that the Steam
-Deck offered a wider range of games and better graphics, and it was more
-convenient for me to play on my computer rather than on my Switch. I also found
-that the subscription cost for Nintendo Switch Online was not really useful, and
-the included emulators are fun, but I never used them. So, I have decided not to
-pay anymore.
+One that I stopped using is the **Nintendo Switch Online**: I rarely use my
+Switch since I got my **Steam Deck** at the beginning of this year. I found that
+the Steam Deck offered a wider range of games and better graphics, and it was
+more convenient for me to play on my Mac and Deck rather than on my Switch. I
+also found that the subscription cost for Nintendo Switch Online was not really
+useful: the included emulators are fun, but I never used them. So, I have
+decided not to pay anymore.
 
-The Danish postal system automatically notifies me and tracks on the official
-App when a new parcel is coming to my address or has my email/phone number. I
-found that the official postal service app was more convenient and more reliable
-than the Parcel App, that I was paying for. It supports Amazon and a lot of
-tracking services, so if you are not in Denmark, I strongly suggest it!
+The Danish Postal service (Post Nord) automatically notifies me and tracks
+packages on the official App when a new parcel is coming to my address or has my
+email/phone number. I found that more convenient and more reliable than the
+**Parcel App**, that I was paying for. I had to mention it because Parcel
+supports Amazon and a lot of tracking services, so if you are not in Denmark, I
+strongly suggest it! :thumbsup:
 
-Should we talk about dating apps? I have been paying for years for Grindr
-Xtra...  it has never been worth it, and NextDNS blocks Ads perfectly. I found
-out that the services offered were not that good and the app kept crashing and
-having issues. When I lost all my chats (yeah it is not a myth) I lost it and
-decided not to pay for the app.
+Should we talk about dating apps? I have been paying for years for **Grindr
+Xtra**...  it has never been worth it, and ads blockers are making the user
+experience better for non-paying users. I found out that the services offered
+were not that good, since privacy does not exists on that app anyway. The app
+kept crashing and had plenty of bugs and issues that were never fixed in the
+serveral years I paid for... :rage: When I lost all my chats (_yeah! it is not a
+myth_) I was super annoyed and decided not to pay for the app.
 
-1Password is the worst one so far. Since they switched from an ultra-fast and
-stable native app to an Electron-based app, I uninstalled it and unsubscribed.
-It is clear that they are now focusing more on enterprise and business, but I am
-still annoyed about how they went for the money rather than for the UX and
-customer fidelity. I found that the new electron-based client was slow and
-bloated, and I didn’t like the direction the company was going in. After more
+**1Password** is the worst one so far. Since they switched and abbandoned the
+development of the ultra-fast and stable native app, in favor of an
+**Electron-based/JavaScript app**, I uninstalled it and unsubscribed.  It is
+clear that they are now focusing more on enterprise and business, but I am still
+annoyed about how they went for the money rather than for the UX and customer
+fidelity. I found that the new electron-based client was slow and bloated, and
+**I didn’t like the direction the company was going in anymore**. After more
 than 10 years of using it and paying, after switching to their subscription
-model, I decided to cancel it. All it took was some messages with the CTO on
-Twitter: I felt not understood nor heard about keeping the native app running. I
-felt that 1Password switched from being customer-first to be money-driven and
-unsecure.
+model, I decided to cancel it. All it took was some [messages with the CTO on
+Twitter](https://nitter.net/koalalorenzo/status/1522978667445501952#m): I felt
+not understood nor heard about keeping the native app running. I felt that
+1Password switched from being customer-first to be money-driven, and unsecure. I
+turned to Bitwarden that at least is open-source and worth paying for.

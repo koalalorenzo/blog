@@ -80,3 +80,57 @@ I also like that it’s been bought by Proton, as it gives me more confidence in
 the security and privacy of my email. SimpleLogin is also open source and can
 be self-hosted. :sweat_smile: _though I prefer to pay rather to
 run an email server!_ 
+
+
+# Services I am not paying anymore I have stopped paying for several
+subscriptions that I found were not worth the cost or no longer met my needs.
+One of those is Netflix. I used to enjoy the wide range of content that it
+offered, but over time, the content that I cared about was removed, and the new
+things are not interesting to me. I would rather not subscribe just for one
+single TV show. So, the trick "that show that keep you subscribed" does not work
+to me
+
+There is a service that I have been paying for more than 6 years now, and
+recently, I realized it was not worth it: ProtonMail, from being an end-to-end
+email provider, it became just a glorified encryption at rest with PGP that
+can’t keep up with features that others can. I used to appreciate the level of
+security that ProtonMail provided, but as time went on, I found that it was
+lacking in certain features that other email providers offered. Their support
+for open-source software was good, as well as their way of being transparent.
+Sadly, the dream of having end-to-end encrypted email turned out unrealistic
+unless everybody uses ProtonMail or PGP/GPG encryption in their client. This
+meant that my PGP key is only used at rest and to encrypt a limited number of
+emails from Facebook (really, that is the only service that allows to receive
+PGP emails).
+
+One that got in disuse is the Nintendo Switch Online: I rarely use my Switch
+since I got my Steam Deck at the beginning of this year. I found that the Steam
+Deck offered a wider range of games and better graphics, and it was more
+convenient for me to play on my computer rather than on my Switch. I also found
+that the subscription cost for Nintendo Switch Online was not really useful, and
+the included emulators are fun, but I never used them. So, I have decided not to
+pay anymore.
+
+The Danish postal system automatically notifies me and tracks on the official
+App when a new parcel is coming to my address or has my email/phone number. I
+found that the official postal service app was more convenient and more reliable
+than the Parcel App, that I was paying for. It supports Amazon and a lot of
+tracking services, so if you are not in Denmark, I strongly suggest it!
+
+Should we talk about dating apps? I have been paying for years for Grindr
+Xtra...  it has never been worth it, and NextDNS blocks Ads perfectly. I found
+out that the services offered were not that good and the app kept crashing and
+having issues. When I lost all my chats (yeah it is not a myth) I lost it and
+decided not to pay for the app.
+
+1Password is the worst one so far. Since they switched from an ultra-fast and
+stable native app to an Electron-based app, I uninstalled it and unsubscribed.
+It is clear that they are now focusing more on enterprise and business, but I am
+still annoyed about how they went for the money rather than for the UX and
+customer fidelity. I found that the new electron-based client was slow and
+bloated, and I didn’t like the direction the company was going in. After more
+than 10 years of using it and paying, after switching to their subscription
+model, I decided to cancel it. All it took was some messages with the CTO on
+Twitter: I felt not understood nor heard about keeping the native app running. I
+felt that 1Password switched from being customer-first to be money-driven and
+unsecure.

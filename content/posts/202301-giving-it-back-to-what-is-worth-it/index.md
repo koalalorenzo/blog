@@ -15,9 +15,9 @@ I have stopped paying for. By working with open-source software **I learned how
 important it is to give back and support the developers** (and companies) that
 are providing services that we like, or not paying them if we don't!
 
-{{< image src="money.feature.webp" caption="Hands paying money for services" >}}
-
 <!--more-->
+
+{{< image src="money.feature.webp" caption="Hands paying money for services" >}}
 
 ## Subscriptions and services that I am happy to pay for
 

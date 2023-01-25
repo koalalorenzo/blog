@@ -15,6 +15,8 @@ I have stopped paying for. By working with open-source software **I learned how
 important it is to give back and support the developers** (and companies) that
 are providing services that we like, or not paying them if we don't!
 
+{{< image src="money.feature.webp" caption="Hands paying money for services" >}}
+
 <!--more-->
 
 ## Subscriptions and services that I am happy to pay for
@@ -96,6 +98,8 @@ way and **I want to see them succeed**.
 
 ## Services I am not paying anymore
 
+{{< image src="angryperson.webp" caption="A person angry in front of a computer" >}}
+
 I have stopped paying for several subscriptions that I found were not worth the
 cost or no longer met my needs.  One of those is **Netflix**. I used to enjoy
 the wide range of content that it offered, but over time, the **movies and
@@ -174,6 +178,7 @@ back to the community and ensure that the software continues to be maintained,
 improved and available for all. That should not apply exclusively to Patreon or
 donating to developers, but also to **companies that are doing the right
 thing**. I don't like to **pay with my own privacy** or data. :rage: I prefer to
-pay with money. :euro: TL;DR: If you liked it: contribute or pay for it!
+pay with money. :euro: 
 
+**TL;DR**: If you liked it: contribute or pay for it! :wink:
 

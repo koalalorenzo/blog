@@ -1,6 +1,6 @@
 ---
 title: "Happy to give back, happy to pay"
-date: 2023-01-15T23:13:27+01:00
+date: 2023-01-25T21:13:27+01:00
 tags:
   - life
   - services
@@ -18,6 +18,7 @@ are providing services that we like, or not paying them if we don't!
 <!--more-->
 
 ## Subscriptions and services that I am happy to pay for
+
 There are a few services and subscriptions that make my daily life easier and
 more enjoyable. I am happy to pay for them because those make me happier, or
 they provide me things that I find essential.  For example, I use 
@@ -84,8 +85,16 @@ the security and privacy of my email. SimpleLogin is also open source and can
 be self-hosted. :sweat_smile: _though I prefer to pay rather to
 run an email server!_ 
 
+About social networks, I am supporting [Mastodon](http://joinmastodon.org/) with
+a small monthly payment on [Patreon](https://joinmastodon.org/sponsors). _Why?_
+I moved out from Twitter and deleted all references from my account. I never
+paid for Twitter. If I did, I would waste my money and give them directly to
+Musk with no benefits. :fu:  Instead, I prefer to **pay for the development** of
+a decentralized and open-source project, that offers multiple instances for free
+for many people. Not everybody can pay, so I am because I like it better this
+way and **I want to see them succeed**.
 
-# Services I am not paying anymore
+## Services I am not paying anymore
 
 I have stopped paying for several subscriptions that I found were not worth the
 cost or no longer met my needs.  One of those is **Netflix**. I used to enjoy
@@ -144,3 +153,27 @@ Twitter](https://nitter.net/koalalorenzo/status/1522978667445501952#m): I felt
 not understood nor heard about keeping the native app running. I felt that
 1Password switched from being customer-first to be money-driven, and unsecure. I
 turned to Bitwarden that at least is open-source and worth paying for.
+
+## Give back to the communities
+Plenty of companies are **firing people** right now. :sob: Inflation and several
+other factors are making things **more difficult than usual**. That is why I
+feel it’s important to support the development of software that we care about,
+especially for open-source projects. Open-source projects rely on contributions
+from the community and companies, both in terms of development and financial
+support. By paying for subscriptions or buying apps from companies that
+contribute to FOSS, we are supporting the development and maintenance of these
+projects.
+
+Without contribution or financial support, many **open-source projects would
+struggle** to continue development and maintenance. We can show our support by
+becoming a sponsor, paying for a subscription, or buying apps from companies
+that contribute to open-source software. In this way, we are not only getting
+access to the software, but we are also contributing to the growth and
+sustainability of the project. Supporting open-source projects is a way to give
+back to the community and ensure that the software continues to be maintained,
+improved and available for all. That should not apply exclusively to Patreon or
+donating to developers, but also to **companies that are doing the right
+thing**. I don't like to **pay with my own privacy** or data. :rage: I prefer to
+pay with money. :euro: TL;DR: If you liked it: contribute or pay for it!
+
+

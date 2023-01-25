@@ -168,7 +168,7 @@ support. By paying for subscriptions or buying apps from companies that
 contribute to FOSS, we are supporting the development and maintenance of these
 projects.
 
-{{< image src="smiles.webp" caption="people smiling because they pay for companies that support to FOSS or provide services">}}
+{{< image src="smiles.webp" caption="They pay to support to FOSS and companies providing good products">}}
 
 Without contribution or financial support, many **open-source projects would
 struggle** to continue development and maintenance. We can show our support by

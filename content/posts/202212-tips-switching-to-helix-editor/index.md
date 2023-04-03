@@ -142,7 +142,8 @@ find specific pieces of text within many files. In addition, I modified the
 script to support _opening multiple files at once_ (with `vsplit`), which has
 saved me a lot of time when working with related files.
 
-This is the code that I have added to my `~/.bash_profile` or equivalent:
+This is the code that I have added to my `~/.bash_profile` or 
+equivalent[^update]:
 
 ```bash
 # Helix Search
@@ -151,7 +152,7 @@ hxs() {
 	local files
 	files="$(
 		FZF_DEFAULT_COMMAND_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --multi 3 --print0 --sort --preview="[[ ! -z {} ]] && rg --pretty --context 5 {q} {}" \
+			fzf --multi 3 --print0 --sort --preview="[[ ! -z {} ]] && rg --pretty --ignore-case --context 5 {q} {}" \
 				--phony -i -q "$1" \
 				--bind "change:reload:$RG_PREFIX {q}" \
 				--preview-window="70%:wrap" \
@@ -199,3 +200,8 @@ fast and efficient text editor that is customizable and powerful.
 
 Go to [helix-editor.com](https://helix-editor.com) and get started! You will
 not regret it :wink:
+
+[^update]: Edit: the code has been updated, thanks to 
+           [@ipochi](https://github.com/ipochi) for the suggestion! Now the 
+           preview window will be case insensitive! :tada:
+

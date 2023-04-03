@@ -151,7 +151,7 @@ hxs() {
 	local files
 	files="$(
 		FZF_DEFAULT_COMMAND_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --multi 3 --print0 --sort --preview="[[ ! -z {} ]] && rg --pretty --context 5 {q} {}" \
+			fzf --multi 3 --print0 --sort --preview="[[ ! -z {} ]] && rg --pretty --ignore-case --context 5 {q} {}" \
 				--phony -i -q "$1" \
 				--bind "change:reload:$RG_PREFIX {q}" \
 				--preview-window="70%:wrap" \

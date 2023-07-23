@@ -1,9 +1,26 @@
 ---
 title: "Apple HomeKit and Linux SystemD"
-date: 2023-07-21T21:13:27+01:00
+date: 2023-07-23T16:13:27+01:00
 tags:
+  - software development
+  - devops
+  - how to
+  - apple
+  - learning
   - go
-  - apps
+  - HomeLab
+keywords:
+  - Apple HomeKit
+  - Linux SystemD
+  - hk-svcs-bridge
+  - Go programming
+  - Home automation
+  - Raspberry Pi
+  - HAP library
+  - HomeKit integration
+  - SystemD services
+  - HomeKit bridge
+  - HomeLab
 ---
 If you've ever dreamt of controlling your Linux applications or running commands
 directly from your iPhone, I've got some exciting news for you. I've been
@@ -18,9 +35,12 @@ Apple HomeKit and SystemD services. Let me introduce you to my latest creation:
 The idea was born out of sheer convenience. Imagine this: you're settling down
 for a movie night. With a simple command to Siri or a press of a button, the
 lights dim, your Apple TV springs to life, and the Jellyfin Docker/Podman
-service starts running in the background. _Sounds like magic, right?_ That's
-precisely what I aimed to achieve: a Linux daemon, crafted in Go, mapping SystemD 
-services and commands to Apple Home (HomeKit) buttons.
+service starts running in the background on my HomeLab Raspberry Pi. _Sounds
+like magic, right?_ That's precisely what I aimed to achieve: a Linux daemon,
+crafted in Go, mapping SystemD services and commands to Apple Home (HomeKit)
+buttons.
+
+{{< image src="feature.webp" >}}
 
 ## Setting Up the hk-svcs-bridge
 
@@ -74,8 +94,16 @@ sudo systemctl restart hk-svcs-bridge
 Once you've successfully set up the hk-svcs-bridge on your Linux system,
 integrating it with your iPhone is a straightforward process. Begin by opening
 the Home app on your iPhone. Tap on the '+' icon located at the top right corner
-and select "Add Accessory." and select the Bridge and use the
-`pairing_code` to add it. 
+and select "Add Accessory.". 
+
+{{< image src="setup.webp" >}}
+
+Since the bridge does not have a code to scan, tap "_More options_" and then 
+select it. In my case it is called "Raspberry Py". Then you must insert the PIN
+code as the value in the config file as `pairing_code` to add it. The rest of 
+the steps is easy to follow. Here is a short video:
+
+{{< youtube VMLYLQUh-rk >}}
 
 After finishing the setup, this configuration will introduce two buttons in
 the Home app: one for _NGINX_ and another for the _Media Server_.

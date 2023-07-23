@@ -25,8 +25,8 @@ keywords:
 If you've ever dreamt of controlling your Linux applications or running commands
 directly from your iPhone, I've got some exciting news for you. I've been
 tinkering around and have come up with a solution that bridges the gap between
-Apple HomeKit and SystemD services. Let me introduce you to my latest creation:
-[hk-svcs-bridge](https://gitlab.com/koalalorenzo/hk-svcs-bridge)...
+Apple HomeKit and SystemD services. Let me introduce you to my latest 
+side-project: [hk-svcs-bridge](https://gitlab.com/koalalorenzo/hk-svcs-bridge)!
 
 <!-- more -->
 
@@ -34,13 +34,13 @@ Apple HomeKit and SystemD services. Let me introduce you to my latest creation:
 
 The idea was born out of sheer convenience. Imagine this: you're settling down
 for a movie night. With a simple command to Siri or a press of a button, the
-lights dim, your Apple TV springs to life, and the Jellyfin Docker/Podman
-service starts running in the background on my HomeLab Raspberry Pi. _Sounds
-like magic, right?_ That's precisely what I aimed to achieve: a Linux daemon,
-crafted in Go, mapping SystemD services and commands to Apple Home (HomeKit)
-buttons.
+lights dim, your Apple TV springs to life, and the
+[Jellyfin](https://jellyfin.org) Docker/Podman service starts running in the
+background on the Home Lab Raspberry Pi.  :sunglasses: _Sounds like magic,
+right?_ That's precisely what I aimed to achieve: a Linux daemon, crafted in Go,
+mapping SystemD services and commands to Apple Home (HomeKit) buttons.
 
-{{< image src="feature.webp" >}}
+{{< image src="feature.webp" caption="The end result is a button on the Home App" >}}
 
 ## Setting Up the hk-svcs-bridge
 
@@ -49,10 +49,8 @@ the `hk-svcs-bridge` is straightforward. You can directly download the
 pre-compiled binaries from the [releases page on
 GitLab](https://gitlab.com/koalalorenzo/hk-svcs-bridge/-/releases).  The project
 supports multiple CPU architectures, ensuring compatibility with a range of
-devices, including the Raspberry Pi!
-
-For Ubuntu/Debian users, especially those using a Raspberry Pi, here's a quick
-way to get started:
+different Home Lab hardware. For Ubuntu/Debian users, especially those using a
+Raspberry Pi, here's a quick way to get started:
 
 ```bash
 # Please check the GitHub Page for newer versions if those are available! 
@@ -96,10 +94,10 @@ integrating it with your iPhone is a straightforward process. Begin by opening
 the Home app on your iPhone. Tap on the '+' icon located at the top right corner
 and select "Add Accessory.". 
 
-{{< image src="setup.webp" >}}
+{{< image src="setup-short.webp" caption="Adding the bridge" >}}
 
 Since the bridge does not have a code to scan, tap "_More options_" and then 
-select it. In my case it is called "Raspberry Py". Then you must insert the PIN
+select it. In my case it is called "Raspberry Py". :face_palm: Then you must insert the PIN
 code as the value in the config file as `pairing_code` to add it. The rest of 
 the steps is easy to follow. Here is a short video:
 

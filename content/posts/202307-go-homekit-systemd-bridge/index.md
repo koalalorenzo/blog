@@ -80,8 +80,12 @@ and select "Add Accessory." and select the Bridge and use the
 After finishing the setup, this configuration will introduce two buttons in
 the Home app: one for _NGINX_ and another for the _Media Server_.
 
-## It was fun
-The journey of creating this bridge was both challenging and rewarding. It's
-always a pleasure to craft solutions that make life a tad bit easier and more
-connected. If you're as excited as I am about this project, feel free to dive
-into the source code and explore its potential.
+## There is a Go package for that!
+Building this bridge was quite the adventure! A big shoutout to
+[Matthias](https://github.com/brutella) the author of the
+[HAP](https://github.com/brutella/hap) library, for making things so much
+smoother. Honestly, without it, I might've been scratching my head a lot more.
+It's pretty cool how in the world of Go, there seems to be a library for just
+about everything. If you're curious about how all this works under the hood, why
+not take a peek at [the source code](https://gitlab.com/koalalorenzo/hk-svcs-bridge)? 
+Dive in and have fun exploring!

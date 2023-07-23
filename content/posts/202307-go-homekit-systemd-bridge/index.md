@@ -40,7 +40,7 @@ background on the Home Lab Raspberry Pi.  :sunglasses: _Sounds like magic,
 right?_ That's precisely what I aimed to achieve: a Linux daemon, crafted in Go,
 mapping SystemD services and commands to Apple Home (HomeKit) buttons.
 
-{{< image src="feature.webp" caption="The end result is a button on the Home App" >}}
+{{< image src="feature.webp" caption="The result is a button on the Home App for my SystemD Service" >}}
 
 ## Setting Up the hk-svcs-bridge
 
@@ -91,7 +91,7 @@ sudo systemctl restart hk-svcs-bridge
 
 Once you've successfully set up the hk-svcs-bridge on your Linux system,
 integrating it with your iPhone is a straightforward process. Begin by opening
-the Home app on your iPhone. Tap on the '+' icon located at the top right corner
+the Home app on your iPhone. Tap on the '+' icon located in the top right corner
 and select "Add Accessory.". 
 
 {{< image src="setup-short.webp" caption="Adding the bridge" >}}
@@ -99,7 +99,7 @@ and select "Add Accessory.".
 Since the bridge does not have a code to scan, tap "_More options_" and then 
 select it. In my case it is called "Raspberry Py". :face_palm: Then you must insert the PIN
 code as the value in the config file as `pairing_code` to add it. The rest of 
-the steps is easy to follow. Here is a short video:
+the steps are easy to follow. Here is a short video:
 
 {{< youtube VMLYLQUh-rk >}}
 
@@ -111,7 +111,7 @@ Building this bridge was quite the adventure! A big shoutout to
 [Matthias](https://github.com/brutella) the author of the
 [HAP](https://github.com/brutella/hap) library, for making things so much
 smoother. Honestly, without it, I might've been scratching my head a lot more.
-It's pretty cool how in the world of Go, there seems to be a library for just
+It's pretty cool how in the world of Go, there appears to be a library for just
 about everything. If you're curious about how all this works under the hood, why
 not take a peek at [the source code](https://gitlab.com/koalalorenzo/hk-svcs-bridge)? 
 Dive in and have fun exploring!

@@ -28,6 +28,18 @@ permalinks:
 disablePathToLower: true
 
 sitemap:
-  changefreq: 'weekly'
-  filename: 'sitemap.xml'
+  changefreq: "weekly"
+  filename: "sitemap.xml"
   priority: 0.5
+
+related:
+  includeNewer: true
+  indices:
+    - name: tags
+      weight: 80
+    - applyFilter: false
+      name: fragmentrefs
+      type: fragments
+      weight: 50
+    - name: date
+      weight: 80

@@ -22,7 +22,7 @@ clean: clean_public clean_tmp clean_resources
 .PHONY: clean
 
 run: clean_public
-	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts ${HUGO_ARGS}
+	hugo server --bind 0.0.0.0 --buildFuture --buildDrafts --disableFastRender ${HUGO_ARGS}
 .PHONY: run
 
 build: clean_public

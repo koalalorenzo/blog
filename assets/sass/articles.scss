@@ -108,4 +108,20 @@ article {
 
 div#comments {
   margin-top: 3.5rem;
+
+}
+
+div#related {
+  margin-top: 3.5rem;
+
+  h2 {
+    margin-left: -($global-h1-margin);
+    padding-bottom: $global-h1-margin;
+  }
+
+  h3 {
+    margin-left: -($global-h1-margin/2);
+    padding-bottom: $global-h1-margin;
+  }
+
 }

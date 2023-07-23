@@ -93,6 +93,7 @@ article {
       margin-left: 2.5rem;
     }
   }
+
 }
 
 .pagination {
@@ -122,6 +123,14 @@ div#related {
   h3 {
     margin-left: -($global-h1-margin/2);
     padding-bottom: $global-h1-margin;
+  }
+
+  @media screen and (max-width: $screen-break-small) {
+
+    h2,
+    h3 {
+      margin-left: 0rem;
+    }
   }
 
 }

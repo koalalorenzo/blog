@@ -33,7 +33,7 @@
 <div id="related">
   {{ $related := .Site.RegularPages.Related . | first 5 }}
   {{ with $related }}
-  <h2>Related blog post</h2>
+  <h2>Related blog posts</h2>
   <ul>
     {{ range . }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

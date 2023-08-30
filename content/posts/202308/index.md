@@ -28,6 +28,51 @@ some ground rules:
 * Grafana Cloud would be used so that I don't have to host Prometheus, Loki
 * Everything is following a 3-2-1 backup rules using Restic and ZFS
 
-At the beginning I though that Kubernetes (K3S) would have been a good solution
-but Nomad seems to be a better solution.
+At the beginning I though that Kubernetes would have been a good solution
+but the more I write YAML for the ansible playbooks to automate the process, the 
+more I realised how unnecessarely overcomplicated K8S is.
+
+## Nomad comes to rescue
+
+I've opted for Hashicorp's Nomad over the Kubernetes for its simplicity,
+versatility, and lower cognitive overhead. Nomad's single-binary nature makes it
+incredibly easy to manage and integrate, unlike the complex architecture of
+Kubernetes.
+
+At the beginning I thought that Nomad would work perfectly by itself. After 
+all [Hashicorp announced that Consul is no longer necessary] 
+for service discovery. But I had issues with consistency in the cluster as well
+as leader elections, so I had to introduce Consul.
+
+With Consul I was able to:
+
+* Increase stability in the Nomad configuration
+* Enable proper service discovery
+* Allows Traefik to self-configure to do proper reverse proxy
+
+Nomad allows me to do a
+
+## The hardware architecture
+
+This is how the architecture looks like from a Storage Prospective:
+
+{{< mermaid >}}
+flowchart TB
+  C0[Compute Node 0]
+  C1[Compute Node 1]
+
+  C0 <-- NFS --> S0
+  C1 <-- NFS --> S0
+
+  subgraph S0[Storage Node]
+    direction TB
+    ZFS[ZFS with raidz2-0] <--> Restic[Restic Backups]
+  end
+{{< /mermaid >}}
+
+The Compute nodes are running any workload (mostly HTTP services) and are 
+mounting disks using NFS. To acheive this I am very happy that Nomad is 
+compatible with CSI, and there is a CSI plugin that works perfectly with NFS
+and Nomad for my own use-case. Kudos to RocketDuck for making [this plugin
+on GitLab](https://gitlab.com/rocketduck/csi-plugin-nfs).
 

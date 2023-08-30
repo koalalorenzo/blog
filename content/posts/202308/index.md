@@ -1,7 +1,7 @@
 ---
 title: "Refactoring my Homelab: from SystemD to Nomad"
 date: 2023-08-30T18:07:27+02:00
-draft: true
+mermaid: true
 tags:
   - update
 ---
@@ -12,7 +12,7 @@ journey from a single node cluster managed by SystemD services to a flexible
 something stronger, this story has it all: servers, code, and a good deal of
 tinkering!
 
-# The Setup and goals
+## The Setup and goals
 
 Originally I started from a QNAP machine with 4 disks, and then I moved to
 a set up with ZFS on one Raspberry Pi 4 Zero with 4GB of RAM. That was 

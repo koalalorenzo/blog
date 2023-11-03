@@ -6,27 +6,30 @@ tags:
   - update
 ---
 Ah, the Home Lab—a geek's sanctuary and the best DIY project since the invention
-of the potato-powered clock. Well, for me, this project has been a riveting
-journey from a single node cluster managed by SystemD services to a flexible
-3-node setup with Hashicorp Nomad running on Raspberry Pis. Grab a coffee or
-something stronger, this story has it all: servers, code, and a good deal of
-tinkering!
+of the potato-powered clock. This blog post is about my Home Lab, and how I
+transformed it from a single node cluster managed by SystemD services to a 
+flexible 3-node setup with Hashicorp Nomad running on Raspberry Pis.  
+<!-- more -->
 
-## The Setup and goals
+Originally I started from a QNAP machine with 4 disks. There was nothing wrong 
+with that setup except that QNAP was riveting with bugs and broken security
+promises... and it was too easy: pre built software is nice but boring! 
 
-Originally I started from a QNAP machine with 4 disks, and then I moved to
-a set up with ZFS on one Raspberry Pi 4 Zero with 4GB of RAM. That was 
-not enough for the workloads!
+So I moved to a set up with ZFS on one Raspberry Pi 4, 4 HDD and a lot of 
+patience. That was right enough for ZFS, but not enough for the workload 
+that I had in mind. I wanted to run, experiment and play with new _toys_ all the
+time! These 4 GB of RAM barely managed to manage ZFS and NFS.
 
-This time I decided to work with more hardware so that I can apply some solid 
-principles. I want to:
+## The new Setup comes with principless
+
+For the next setup I decided to work with more hardware and stick to RPis so 
+that I can apply some solid principles. I want to:
 
 * Run the workload in 3 Raspberry Pis for reliablity
 * ZFS would still be used as filesystem for the disks
-* NFS would be used so that the workload can access the disks no matter where 
-  it runs.
+* NFS would be used so that the containers can access volumes on demand.
 * All the machines and services would be accessible via Tailscale
-* Grafana Cloud would be used so that I don't have to host Prometheus, Loki
+* Grafana Cloud would be used so that I don't have to host Prometheus, Loki, etc
 * Everything is following a 3-2-1 backup rules using Restic and ZFS
 
 At the beginning I though that Kubernetes would have been a good solution
@@ -93,5 +96,118 @@ The Compute nodes are running any workload (mostly HTTP services) and are
 mounting disks using NFS. To acheive this I am very happy that Nomad is 
 compatible with CSI, and there is a CSI plugin that works perfectly with NFS
 and Nomad for my own use-case. Kudos to RocketDuck for making [this plugin
-on GitLab](https://gitlab.com/rocketduck/csi-plugin-nfs).
+on GitLab](https://gitlab.com/rocketduck/csi-plugin-nfs), but sooner I found 
+the official k8s NSF CSI plugin to work out of the box and to be a little more
+versatile.
 
+## Ansible and Nomad, two different worlds
+
+I have always been using Ansible for my HomeLab, but this time I had to divide
+what Ansible was buildng and what Nomad would manage. Originally Ansible would
+set up and deploy services/containers using podman and SystemD. With Nomad I
+could still trigger Ansible to deploy the jobs/containers, but instead 
+decoupling the OS from the contaienrs gives me the power of implementing 
+some immutable infrastructure practices at home.
+
+In this way if I have some issue with one node (_and trust me, it happened_),
+or simply to run some upgrades I can just move temporarely the workload 
+to another node, re build the underlying OS image, without worring about 
+SystemD and various configurations.
+
+For example, I wrote this Ansible playbook that allows me to reboot machines
+on demand without causing downtime. It basically runs this comad to migrate 
+the workload somewhere else:
+
+```bash
+  nomad node drain -enable -self -deadline 1m
+```
+
+It will wait for the jobs runnign in that node to move somewhere else and then
+marks the node as not available for scheduling. Then It would reboot the machine
+and mark itself as available once everything is ready, by running again:
+
+```bash
+  nomad node eligibility -enable -self
+```
+
+This is something basic in the cloud operations, but I find it very exciting 
+that I can finally do it on my Raspberry Pis.
+
+## New capabilities = New challenges
+Building the cluster and setting it up with Nomad and even Consul is very easy. 
+Managing it seems to be also very easy, but I have been doing it for fun and 
+only for barely less than a year. I am impressed by the stability but I am more
+impressed by how a single binary carries features without overcomplicating the 
+setup.
+
+Some of these features, that are not part of the standard k8s experience, are 
+out of the box. Besides being much ligher it offers different `drivers`
+to run the workloads / jobs. I am referring mostly about the `exec` and 
+`raw_exec` drivers that allow me to run any binary and workload, without 
+the need of a container.
+
+This comes with a price that many procedures needs to be rethought, but for 
+example it fits perfectly my need of "_just run `restic backup` 
+command on that cronjob_"
+
+Rewriting most of docker compose examples to nomad jobs in HCL was both a 
+challenge that made me cry of joy. Moving away from YAML to HCL it's pure 
+happiness. The syntaxt feels more clear and manipulating it makes more sense:
+Those are not just manifests, but piece of code that can be adjusted on the fly,
+like using the templating system to automatically restart 
+a workload when some other workload changes configuration.
+
+For example my Blocky (DNS ad-blocker) setup, uses this template:
+
+```yaml
+{{ range service "redis" }}
+redis:
+  required: false
+  address: {{ .Address }}:{{ .Port }}
+{{ end }}
+```
+
+Nomad would then change the config file and resetart Blocky whenever the 
+Redis service changes. If there is no Redis available, it would simple omit
+those lines. The challenge here is just understanding the difference with 
+k8s services, and how much complexity is removed from sepcifying an address
+and a port. There are also other way to address this to be honest, but for my
+use case this works the best.
+
+## Scheduler settings
+To make sure that all the nodes were in use, I had to change some of the 
+settings of the scheduler. Bin packing works fine, but in my case I can't scale
+horizontally (_I could, but it requires me buying a new raspberry pi 4... if I 
+could find any!_). So instead I changed the code to balance the way jobs are 
+scheduled:
+
+```hcl
+server {
+  default_scheduler_config {
+    scheduler_algorithm = "spread"
+  }
+}
+```
+
+At the same time I wanted to reduce as much as possible the workload running on
+`storage0` (so that it focuses mostly on backups, volumes and ZFS shennanigaz).
+I applied this line of code to define a `node_class`:
+
+```hcl
+client {
+  node_class = "<storage or compute>"
+}
+```
+
+Then inside my Nomad Job, I can set the affinity, so that the scheduler can
+prefer the `compute` nodes:
+
+```hcl
+job "something" {
+  affinity {
+    attribute = node.class
+    value     = "compute"
+    weight    = 90
+  }
+}
+```

@@ -8,17 +8,20 @@ tags:
 Ah, the Home Lab—a geek's sanctuary and the best DIY project since the invention
 of the potato-powered clock. This blog post is about my Home Lab, and how I
 transformed it from a single node cluster managed by SystemD services to a 
-flexible 3-node setup with Hashicorp Nomad running on Raspberry Pis.  
+flexible 3-node setup with Hashicorp Nomad running on Raspberry Pis. These are 
+some notes from this experience.
 <!-- more -->
 
 Originally I started from a QNAP machine with 4 disks. There was nothing wrong 
-with that setup except that QNAP was riveting with bugs and broken security
-promises... and it was too easy: pre built software is nice but boring! 
+with that setup except that QNAP was [riveting with bugs and broken security
+issues](https://arstechnica.com/information-technology/2023/02/thousands-of-qnap-devices-remain-unpatched-against-9-8-severity-vulnerability/)
+... and it was too easy: pre built software is nice but boring! 
 
 So I moved to a set up with ZFS on one Raspberry Pi 4, 4 HDD and a lot of 
-patience. That was right enough for ZFS, but not enough for the workload 
-that I had in mind. I wanted to run, experiment and play with new _toys_ all the
-time! These 4 GB of RAM barely managed to manage ZFS and NFS.
+patience. I even made a [HomeKit bridge for SystemD ](https://blog.setale.me/2023/07/23/Apple-HomeKit-and-Linux-SystemD/).
+That was right enough for ZFS, but not enough for the workload that I had in 
+mind. I wanted to run, experiment and play with new _toys_ all the
+time and these 4 GB of RAM barely managed ZFS and NFS.
 
 ## The new Setup comes with principless
 
@@ -174,7 +177,7 @@ k8s services, and how much complexity is removed from sepcifying an address
 and a port. There are also other way to address this to be honest, but for my
 use case this works the best.
 
-## Scheduler settings
+## Some scheduler and client settings
 To make sure that all the nodes were in use, I had to change some of the 
 settings of the scheduler. Bin packing works fine, but in my case I can't scale
 horizontally (_I could, but it requires me buying a new raspberry pi 4... if I 
@@ -186,6 +189,7 @@ server {
   default_scheduler_config {
     scheduler_algorithm = "spread"
   }
+  [...]
 }
 ```
 
@@ -196,6 +200,7 @@ I applied this line of code to define a `node_class`:
 ```hcl
 client {
   node_class = "<storage or compute>"
+  [...]
 }
 ```
 
@@ -209,5 +214,7 @@ job "something" {
     value     = "compute"
     weight    = 90
   }
+  [...]
 }
 ```
+

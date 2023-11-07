@@ -14,16 +14,18 @@ some notes from this experience.
 
 Originally I started from a QNAP machine with 4 disks. There was nothing wrong 
 with that setup except that QNAP was [riveting with bugs and broken security
-issues](https://arstechnica.com/information-technology/2023/02/thousands-of-qnap-devices-remain-unpatched-against-9-8-severity-vulnerability/)
-... and it was too easy: pre built software is nice but boring! 
+issues][1]... and it was too easy: pre built software is nice but boring! 
 
-So I moved to a set up with ZFS on one Raspberry Pi 4, 4 HDD and a lot of 
-patience. I even made a [HomeKit bridge for SystemD ](https://blog.setale.me/2023/07/23/Apple-HomeKit-and-Linux-SystemD/).
-That was right enough for ZFS, but not enough for the workload that I had in 
-mind. I wanted to run, experiment and play with new _toys_ all the
-time and these 4 GB of RAM barely managed ZFS and NFS.
+So I moved to a set up with ZFS on one Raspberry Pi 4, 4 HDD and a lot of
+patience. I even made a [HomeKit bridge for SystemD][2] That was right enough
+for ZFS, but not enough for the workload that I had in mind. I wanted to run,
+experiment and play with new _toys_ all the time and these 4 GB of RAM barely
+managed ZFS and NFS.
 
-## The new Setup comes with principless
+[1]: https://arstechnica.com/information-technology/2023/02/thousands-of-qnap-devices-remain-unpatched-against-9-8-severity-vulnerability/
+[2]: https://blog.setale.me/2023/07/23/Apple-HomeKit-and-Linux-SystemD/
+
+## Some principles
 
 For the next setup I decided to work with more hardware and stick to RPis so 
 that I can apply some solid principles. I want to:
@@ -36,18 +38,18 @@ that I can apply some solid principles. I want to:
 * Everything is following a 3-2-1 backup rules using Restic and ZFS
 
 At the beginning I though that Kubernetes would have been a good solution
-but the more I write YAML for the ansible playbooks to automate the process, the 
-more I realised how unnecessarely overcomplicated K8S is.
+but the more I write YAML for the ansible playbooks to automate the process,
+the more I realised how unnecessarely overcomplicated K8S is.
 
 ## Nomad comes to rescue
 
-I've opted for [Hashicorp's Nomad](https://www.nomadproject.io) over the 
+I've opted for [Hashicorp's Nomad][3] over the 
 Kubernetes for its simplicity, versatility, and lower cognitive overhead.
 Nomad's single-binary nature makes it incredibly easy to manage and integrate,
 unlike the complex architecture of Kubernetes.
 
 At the beginning I thought that Nomad would work perfectly by itself. After 
-all [Hashicorp announced that Consul is no longer necessary](https://www.hashicorp.com/blog/nomad-service-discovery) 
+all [Hashicorp announced that Consul is no longer necessary][4] 
 for service discovery. But I had issues with consistency in the cluster as well
 as leader elections, so I had to introduce Consul.
 
@@ -66,13 +68,17 @@ much of the complexity baked in K8S are not needed. I just needed a solution
 that is more advanced that manually setting SystemD services. That said, if 
 there are features that Nomad is lacking, they are replaced by other solutions.
 
-In general Nomad feels more [KISS](https://en.wikipedia.org/wiki/KISS_principle) 
+In general Nomad feels more [KISS][5] 
 than Kubernetes, and does one job, and it does it well. Replacing YAML with HCL
 is easing a lot of steps. If you are considering Nomad, the following links
 helped me setting it up:
 
 * [A Kubernetes User's Guide to HashiCorp Nomad](https://www.hashicorp.com/blog/a-kubernetes-user-s-guide-to-hashicorp-nomad)
 * [Nomad tips and tricks](https://danielabaron.me/blog/nomad-tips-and-tricks/)
+
+[3]: https://www.nomadproject.io
+[4]: https://www.hashicorp.com/blog/nomad-service-discovery
+[5]: https://en.wikipedia.org/wiki/KISS_principle
 
 ## The hardware architecture
 
@@ -95,15 +101,21 @@ allows me to download and run the right binary based on which machine is running
 the job. This means that I don't care if it is an ARM, Intel, Linux or macOS,
 as long as the Nomad Job supports it properly.
 
-The Compute nodes are running any workload (mostly HTTP services) and are 
-mounting disks using NFS. To acheive this I am very happy that Nomad is 
+The Compute nodes are running any workload (mostly HTTP services) and are
+mounting disks using NFS. To acheive this I am very happy that Nomad is
 compatible with CSI, and there is a CSI plugin that works perfectly with NFS
 and Nomad for my own use-case. Kudos to RocketDuck for making [this plugin
-on GitLab](https://gitlab.com/rocketduck/csi-plugin-nfs), but sooner I found 
-the official k8s NSF CSI plugin to work out of the box and to be a little more
-versatile.
+on GitLab][6], but sooner I found [the official k8s NSF CSI plugin][7] to
+work out of the box and to be a little more versatile (_Like I can select
+the NFS server for each volume_). You can see my Noamd Job specifications
+[here][9] and [here][10] if you want to copy-paste it.
 
-## Ansible and Nomad, two different worlds
+[6]: https://gitlab.com/rocketduck/csi-plugin-nfs
+[7]: https://github.com/kubernetes-csi/csi-driver-nfs
+[9]: https://gitlab.com/koalalorenzo/homelab/-/blob/63a5db0db39556edf5fecdb465cf2f1e42d42056/system/csi-nfs-controller.job.hcl
+[10]: https://gitlab.com/koalalorenzo/homelab/-/blob/63a5db0db39556edf5fecdb465cf2f1e42d42056/system/csi-nfs-nodes.job.hcl
+
+## Immutable Infrastructure
 
 I have always been using Ansible for my HomeLab, but this time I had to divide
 what Ansible was buildng and what Nomad would manage. Originally Ansible would
@@ -117,7 +129,7 @@ or simply to run some upgrades I can just move temporarely the workload
 to another node, re build the underlying OS image, without worring about 
 SystemD and various configurations.
 
-For example, I wrote this Ansible playbook that allows me to reboot machines
+For example, I wrote [this Ansible playbook][8] that allows me to reboot machines
 on demand without causing downtime. It basically runs this comad to migrate 
 the workload somewhere else:
 
@@ -135,6 +147,8 @@ and mark itself as available once everything is ready, by running again:
 
 This is something basic in the cloud operations, but I find it very exciting 
 that I can finally do it on my Raspberry Pis.
+
+[8]: https://gitlab.com/koalalorenzo/homelab/-/blob/63a5db0db39556edf5fecdb465cf2f1e42d42056/nomad/reboot.yaml
 
 ## New capabilities = New challenges
 Building the cluster and setting it up with Nomad and even Consul is very easy. 
@@ -178,11 +192,11 @@ and a port. There are also other way to address this to be honest, but for my
 use case this works the best.
 
 ## Some scheduler and client settings
-To make sure that all the nodes were in use, I had to change some of the 
-settings of the scheduler. Bin packing works fine, but in my case I can't scale
-horizontally (_I could, but it requires me buying a new raspberry pi 4... if I 
-could find any!_). So instead I changed the code to balance the way jobs are 
-scheduled:
+To make sure that all the resources were in use in a reliable way, (ex: don't
+put all your eggs in one basket) I had to change some of the settings of the
+scheduler. Bin packing works fine, but in my case I can't scale horizontally
+(_I could, but it requires me buying a new raspberry pi 4... if I could find
+any!_). So instead I changed the code to balance the way jobs are scheduled:
 
 ```hcl
 server {

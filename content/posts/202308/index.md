@@ -1,5 +1,5 @@
 ---
-title: "Refactoring my Homelab: from SystemD to Nomad"
+title: "Rebuilding my homelab with Nomad"
 date: 2023-08-30T18:07:27+02:00
 mermaid: true
 tags:

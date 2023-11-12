@@ -232,3 +232,17 @@ job "something" {
 }
 ```
 
+I decided to use the node class instead of other node labels. Conceptually
+this is not differeht thant k8s affinity and anti-affinity rules. A handy
+feature that I started using instantly is [assigning priorities][priority]
+to Nomad Jobs. This tells the scheduler what to run if there is not much
+availability of resources or in case of other situations. For example I want
+almost always to run Traefik nodes to redirect HTTP and HTTPs traffick to
+the right containers, or NSF-CSI containers to avoid issues with Storage.
+
+```hcl
+job "something-important" {
+  priority = 95
+  [...]
+}
+```

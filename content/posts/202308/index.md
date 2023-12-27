@@ -246,3 +246,6 @@ job "something-important" {
   [...]
 }
 ```
+
+## Simplifying networking setup
+Some thoguhts about network setup and port allocation over virtual networks.

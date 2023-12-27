@@ -63,7 +63,7 @@ Though it is not necessary, as Traefik supports Nomad Services too, Consul makes
 more sense to have.
 
 In general I have noticed that Nomad is way quicker and responsive than my past
-experiences with K8S (and k3s specifically). It is designed with semplicity and
+experiences with K8S (and k3s specifically). It is designed with simplicity and
 much of the complexity baked in K8S are not needed. I just needed a solution
 that is more advanced that manually setting SystemD services. That said, if 
 there are features that Nomad is lacking, they are replaced by other solutions.

@@ -65,7 +65,7 @@ more sense to have.
 In general I have noticed that Nomad is way quicker and responsive than my past
 experiences with K8S (and k3s specifically). It is designed with simplicity and
 much of the complexity baked in K8S are not needed. I just needed a solution
-that is more advanced that manually setting SystemD services. That said, if 
+that is more advanced then manually setting SystemD services. That said, if 
 there are features that Nomad is lacking, they are replaced by other solutions.
 
 In general Nomad feels more [KISS][5] 
@@ -82,7 +82,7 @@ helped me setting it up:
 
 ## The hardware architecture
 
-The hardware itself is very simple. It consist in these phisical machines:
+The hardware itself is very simple. It consists in these physical machines:
 
 * `storage0`: A Raspberry Pi 4 with 8GB of RAM is tasked with the lofty 
   responsibility of storage, running ZFS like a champ :flex: It's main focus

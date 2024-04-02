@@ -58,6 +58,8 @@ It allows users to automate tasks and integrates with many apps, and OS
 features. My passion for automation made me create a shortcut for this specific
 need. Here is how it works:
 
+{{< video src_mp4="ios-spoon.mp4" src_webm="ios-spoon.webm" >}}
+
 I schedule (_yes, with a deadline_) things that I want to do on the Reminder app.
 This includes stuff like _cleaning my flat_, _groceries_, _sending emails_ or
 even things like _taking a relaxing shower_ sometimes. :sweat_smile: For each
@@ -78,12 +80,13 @@ You can download, inspect and use the shortcut from
 [this link here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 It works on all platform (iOS, macOS and iPadOS).
 
-{{< image src="mac-spoon-shortcut.webp" class="big" >}}
-
 ## Things that made it works
 Here are a few things that I have learned and changes I had to implement in 
 order to make it work for me. At the beginning I got a little frustated, but 
-then these tricks made me get stuff done.
+then these tricks made me get stuff done. I have added comments in the flow
+about those.
+
+{{< image src="mac-spoon-shortcut.webp" class="big" >}}
 
 At the beginning I was listing all the reminders, without any deadline. 
 This made me a lot more anxiety then needed, and the shortcuts was not helping
@@ -108,4 +111,4 @@ a small thing. It does not require a dedicated ToDo list, or to pay for a
 specific app. You can [download the shortcut here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
 If you find this shortcut useful please [let me know on mastodon](https://mastodon.social/@koalalorenzo)! 
-I would appreciate it a lot :heart:
+I would appreciate it a lot :heart: :smile:

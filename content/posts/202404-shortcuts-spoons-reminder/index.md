@@ -24,7 +24,7 @@ and I am sharing it with you! :smile:
 TL;DR: You can [download the shortcut from here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
 ## A little about Spoon Theory
-If you have never heard about [The Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory), 
+If you have never heard about [The Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory),
 it is a metaphor created by Christine Miserandino in 2003, to describe the
 amount of physical or mental energy available during a day to perform tasks.
 
@@ -51,8 +51,8 @@ specific moment. The medication started helping too, but managing the energy
 levels helped the most. :tada:
 
 ## Apple Shortcuts to the rescue
-The [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) app is an 
-obscure, and mostly unknown application, that runs on iOS, iPadOS, and macOS. 
+The [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) app is an
+obscure, and mostly unknown application, that runs on iOS, iPadOS, and macOS.
 It allows users to automate tasks and integrates with many apps, and OS 
 features. My passion for automation made me create a shortcut for this specific
 need. Here is how it works:
@@ -89,16 +89,16 @@ order to make it work for me. I have added comments in the flow about those.
 link="https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a" >}}
 
 At the beginning I was creating reminders without any deadline. This gave
-me a lot more anxiety than needed, and the shortcut was not helping at all. 
+me a lot more anxiety than needed, and the shortcut was not helping at all.
 Seeing and doing all the tasks together did not help. 
-The solution was to **schedule**, and think _about when_ I could do something, 
+The solution was to **schedule**, and think _about when_ I could do something,
 so that I don't get to do too many things in one day and exhaust spoons.
 Taking a break and do a little every day works for me.
 
 Setting the order to **random** instead of **sorting by priority** was
 important. Sometimes I don't feel like acting on things, as the amount of
 spoons that some tasks are required varies from day to day. Having a random
-order allows me to re-run the shortcut so that I might get a different output 
+order allows me to re-run the shortcut so that I might get a different output
 every time. _If I don't feel like doing something, I pick something else!_
 
 Not knowing how many spoons a specific tasks would take (even if I had set
@@ -112,6 +112,6 @@ me. I think this is a small thing. It does not require a dedicated
 ToDo list, or to pay for a specific app. **You don't need an app
 for that**, a shortcut is fine. You can [download my shortcut here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
-If you find this shortcut useful, please [let me know on mastodon](https://mastodon.social/@koalalorenzo)! 
+If you find this shortcut useful, please [let me know on mastodon](https://mastodon.social/@koalalorenzo)!
 :heart: :smile: I would appreciate it a lot knowing that you are using it 
 and even adapting/editing it to your own needs!

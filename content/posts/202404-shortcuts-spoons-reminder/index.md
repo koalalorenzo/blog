@@ -46,12 +46,12 @@ something was extremely demotivating.
 
 I took a break from taking the pills and things did not change much. Things
 got better when I started scheduling my tasks on Reminders and using the
-spoon theory with any handy Apple Shortcuts that would tell me what I can
-do on a specific moment. The medication started helping too, but managing
-the energy levels helped the most. :tada:
+Spoon Theory with my handy Shortcuts that would tell me what I can do on a
+specific moment. The medication started helping too, but managing the energy
+levels helped the most. :tada:
 
 ## Apple Shortcuts to the rescue
-[Apple shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) is an 
+The [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) app is an 
 obscure, and mostly unknown application, that runs on iOS, iPadOS, and macOS. 
 It allows users to automate tasks and integrates with many apps, and OS 
 features. My passion for automation made me create a shortcut for this specific
@@ -62,54 +62,56 @@ need. Here is how it works:
 I schedule (_yes, with a deadline_) things that I want to do on the Reminder
 app.  This includes stuff like _cleaning my flat_, _groceries_, _sending
 emails_ or even things like _taking a relaxing shower_ sometimes. :sweat_smile:
-For each task I add a tag containing the amount of spoons (Ex: `#3-spoons`).
+For each task I add a **tag** containing the amount of spoons (Ex: `#3-spoons`).
 
 {{< image src="reminders.feature.webp" >}}
 
-The shortcuts ask me how many spoons I have today, then fetches from the
-Reminder app a list of upcoming tasks. It randomizes them and extracts how
-many spoons they would take to complete with _regex magic_. Then it tries to
-fit as many tasks as possible based on the amount of spoons I have available,
-and shows it on the screen, as well as spits it out as an output.
+When activated, the shortcut asks me how many spoons I have today, then
+fetches from the Reminder app a list of upcoming tasks. With some _regex magic_
+extracts how many spoons they would take to complete. Then
+it tries to fit as many tasks as possible based on the amount of spoons I have
+available, and shows it on the screen, as well as spits it out as an output.
 
-The reason for doing it as an output, too, is that I am using the same shortcut
-with other shortcuts (ex: The integration with Obsidian for my second brain).
+The reason for doing it as an output too, is that I am using the same shortcut
+with other shortcut (ex: The integration with Obsidian for my second brain).
+This works very much like proper bash scripting, and it allows you to use it
+with other shortcuts (or even scripts if you use it from the CLI).
 
 You can download, inspect and use the shortcut from [this link
 here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 It works on all platforms (iOS, macOS, and iPadOS).
 
-## Things that made it works (for me)
+## Things that made it work (for me)
 Here are a few things that I have learned and changes I had to implement in
-order to make it work for me. At the beginning I got a little frustrated,
-but then these tricks made me get stuff done. I have added comments in the
-flow about those.
+order to make it work for me. I have added comments in the flow about those.
 
 {{< image src="mac-spoon-shortcut.webp" class="big"
 link="https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a" >}}
 
-At the beginning I was listing all the reminders, without any deadline.
-This made me a lot more anxiety than needed, and the shortcuts were not
-helping at all. All the tasks together did not help. The solution was to
-**schedule**, and think _about when_ I could do something, so that I don't
-get to do too many things in one day and exhaust spoons.
+At the beginning I was creating reminders without any deadline. This gave
+me a lot more anxiety than needed, and the shortcut was not helping at all. 
+Seeing and doing all the tasks together did not help. 
+The solution was to **schedule**, and think _about when_ I could do something, 
+so that I don't get to do too many things in one day and exhaust spoons.
+Taking a break and do a little every day works for me.
 
 Setting the order to **random** instead of **sorting by priority** was
-important.  Sometimes I don't feel like acting on things, as the amount of
+important. Sometimes I don't feel like acting on things, as the amount of
 spoons that some tasks are required varies from day to day. Having a random
-order of tasks that I should do, allows me to re-run the shortcut so that
-I might get a different output every time. So if I don't feel like doing
-something, I pick something else!
+order allows me to re-run the shortcut so that I might get a different output 
+every time. _If I don't feel like doing something, I pick something else!_
 
 Not knowing how many spoons a specific tasks would take (even if I had set
-it up) made me not stress about it. Knowing how much energy and spoons they
-will consume, made it harder for me to feel motivated.
+it up myself) made me not stress about it. Knowing how much energy and spoons
+they will consume, made it harder for me to feel motivated. That is why the
+text displayed does not show how many spoons each activity will take.
 
 ## Conclusion
-I hope that this shortcut helps other people the same way it helped me. It is
-a small thing. It does not require a dedicated ToDo list, or to pay for a
-specific app. **You don't need an app for that**, a shortcut is fine. 
-You can [download the shortcut here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
+I hope that this shortcut helps other people the same way it helped
+me. I think this is a small thing. It does not require a dedicated
+ToDo list, or to pay for a specific app. **You don't need an app
+for that**, a shortcut is fine. You can [download my shortcut here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
 If you find this shortcut useful, please [let me know on mastodon](https://mastodon.social/@koalalorenzo)! 
-:heart: :smile: I would appreciate it a lot.
+:heart: :smile: I would appreciate it a lot knowing that you are using it 
+and even adapting/editing it to your own needs!

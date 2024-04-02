@@ -12,7 +12,7 @@ tags:
 - mac
 - hacking
 - tools
-- macOS
+- macos
 - software development
 - devops
 - scale

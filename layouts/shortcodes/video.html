@@ -3,6 +3,7 @@
 {{ $loop := .Get "loop" | default "true" }}
 
 <video
+  {{ if isset .Params "class" }}class="{{ .Get "class" }}"{{ end }}
   {{ if isset .Params "width" }}width="{{ .Get "width" }}"{{ end }}
   {{ if isset .Params "heigth" }}heigth="{{ .Get "heigth" }}"{{ end }}
   {{ if eq $autoplay "true" }}autoplay{{ end }}
@@ -10,8 +11,8 @@
   {{ if eq $loop "true" }}loop{{ end }}
   >
   {{ if isset .Params "src_webm" }}<source src="{{ .Get "src_webm" }}" type="video/webm">{{ end }}
-  <!-- {{ if isset .Params "src_mp4" }}<source src="{{ .Get "src_mp4" }}" type="video/mp4">{{ end }} -->
-  <!-- {{ if isset .Params "src_ogg" }}<source src="{{ .Get "src_ogg" }}" type="video/ogg">{{ end }} -->
+  {{ if isset .Params "src_mp4" }}<source src="{{ .Get "src_mp4" }}" type="video/mp4">{{ end }}
+  {{ if isset .Params "src_ogg" }}<source src="{{ .Get "src_ogg" }}" type="video/ogg">{{ end }}
   Your browser does not support the video tag.
 </video>
 

@@ -11,44 +11,44 @@ tags:
   - ipados
   - automation
 ---
-I have always been a person that organizes his day and tasks, and I have grown
-over the years, a little bit too much obsessed about scheduling and prioritizing
-things to do. Recently I have diagnosed as neurodivergent and I have been 
-introduced to the Spoon Theory, to manage energy level.
+I have always been a person that organizes his day and tasks, and I have
+grown, over the years, a little bit too much obsessed about scheduling and
+prioritizing things to do. Recently I have diagnosed as neurodivergent,
+and I have been introduced to the Spoon Theory, to manage energy level.
 
-I have made an Apple Shortcut that uses Reminders app to get stuff done based on
-how much enenergy (spoons :spoon: ) I feel like I have on the moment and I am sharing it
-with you! :smile:
+I have made an Apple Shortcut that uses the Reminders app to get stuff done
+based on how much energy (spoons :spoon: ) I feel like I have at the moment,
+and I am sharing it with you! :smile:
 
 <!--more-->
 TL;DR: You can [download the shortcut from here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
 ## A little about Spoon Theory
-If you have never heard about [The Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory),
-it is a methaphore created by Christine Miserandino in 2003, to describe the 
+If you have never heard about [The Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory), 
+it is a metaphor created by Christine Miserandino in 2003, to describe the
 amount of physical or mental energy available during a day to perform tasks.
 
 What I have learned is that you might wake up one day and have a lot of energy,
-or another day when you are deplated entirely. As everybody we have things to do
-and those take energy. From cleaning my flat, to sending an email or doing 
-something at work. :spoon: All of that takes energy, or spoons.
+or another day when you are depleted entirely. Like everybody, we have things
+to do and those take energy. From cleaning my flat, to sending an email or
+doing something at work. :spoon: All of that takes energy, or spoons.
 
-I have recently started taking medications, and I have found myself in a pit of
-despare, laying in bed and not feeling motivated to do anything. I started my day
-with one or negative amount of spoons. This might have been caused by the 
-medication but a big chunk was due to the fact that I never knew how to manage
-my daily amount of spoons.
+I have recently started taking medications, and I have found myself in a
+pit of despair, laying in bed and not feeling motivated to do anything. I
+started my day with one or negative amount of spoons. This might have been
+caused by the medication, but a big chunk was due to the fact that I never
+knew how to manage my daily amount of spoons.
 
-Most of my spoons where taken away by social media, pressure from other people
-or just having a never ending list of things to do. :frowning: This made me feel drained 
-even more. I reached a point where just thinking about doing something was 
-extremely demotivating.
+Most of my spoons were taken away by social media, pressure from other people
+or just having a never ending list of things to do. :frowning: This made me
+feel drained even more. I reached a point where just thinking about doing
+something was extremely demotivating.
 
-I took a break from taking the pills and things did not change much. Things got
-better when I started scheduling my tasks on Reminders and using the spoon 
-theory with an handy Apple Shortcuts that would tell me what I can do on a 
-specific moment. The medication started helping too, but managing the energy
-levels helped the most. :tada:
+I took a break from taking the pills and things did not change much. Things
+got better when I started scheduling my tasks on Reminders and using the
+spoon theory with any handy Apple Shortcuts that would tell me what I can
+do on a specific moment. The medication started helping too, but managing
+the energy levels helped the most. :tada:
 
 ## Apple Shortcuts to the rescue
 [Apple shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) is an 

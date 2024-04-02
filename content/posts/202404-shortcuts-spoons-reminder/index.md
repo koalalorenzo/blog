@@ -13,27 +13,27 @@ tags:
 ---
 I have always been a person that organizes his day and tasks, and I have
 grown, over the years, a little bit too much obsessed about scheduling and
-prioritizing things to do. Recently I have diagnosed as neurodivergent,
+prioritizing things to do. Recently I was diagnosed as neurodivergent,
 and I have been introduced to the Spoon Theory, to manage energy level.
 
-I have made an Apple Shortcut that uses the Reminders app to get stuff done
-based on how much energy (spoons :spoon: ) I feel like I have at the moment,
+I have made a shortcut for iPhone/Mac/iPad that uses the Reminders app to get
+stuff done based on how much energy (spoons :spoon: ) I have at the moment,
 and I am sharing it with you! :smile:
 
 <!--more-->
 TL;DR: You can [download the shortcut from here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
 ## A little about Spoon Theory
-If you have never heard about [The Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory),
+If you havenever heard about [The Spoon Theory](https://en.wikipedia.org/wiki/Spoon_theory),
 it is a metaphor created by Christine Miserandino in 2003, to describe the
 amount of physical or mental energy available during a day to perform tasks.
 
-What I have learned is that you might wake up one day and have a lot of energy,
+What I learned is that you might wake up one day and have a lot of energy,
 or another day when you are depleted entirely. Like everybody, we have things
 to do and those take energy. From cleaning my flat, to sending an email or
 doing something at work. :spoon: All of that takes energy, or spoons.
 
-I have recently started taking medications, and I have found myself in a
+I recently started taking medications, and I found myself in a
 pit of despair, laying in bed and not feeling motivated to do anything. I
 started my day with one or negative amount of spoons. This might have been
 caused by the medication, but a big chunk was due to the fact that I never
@@ -73,9 +73,9 @@ it tries to fit as many tasks as possible based on the amount of spoons I have
 available, and shows it on the screen, as well as spits it out as an output.
 
 The reason for doing it as an output too, is that I am using the same shortcut
-with other shortcut (ex: The integration with Obsidian for my second brain).
-This works very much like proper bash scripting, and it allows you to use it
-with other shortcuts (or even scripts if you use it from the CLI).
+with other shortcuts (ex: The integration with Obsidian for my second brain).
+This works very much like proper shell scripting, and it allows you to combine
+it and reuse it in more complex workflows.
 
 You can download, inspect and use the shortcut from [this link
 here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).

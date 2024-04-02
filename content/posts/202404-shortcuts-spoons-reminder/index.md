@@ -1,7 +1,6 @@
 ---
 title: "How I get stuff done with Spoon Theory and Shortcuts"
 date: 2024-04-02T12:20:57+02:00
-draft: true
 tags:
   - apple
   - adhd

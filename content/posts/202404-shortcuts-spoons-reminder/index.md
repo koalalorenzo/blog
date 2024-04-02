@@ -58,7 +58,7 @@ It allows users to automate tasks and integrates with many apps, and OS
 features. My passion for automation made me create a shortcut for this specific
 need. Here is how it works:
 
-{{< video src_mp4="ios-spoon.mp4" src_webm="ios-spoon.webm" class="medium" >}}
+{{< video src_mp4="ios-spoon.mp4" src_webm="ios-spoon.webm" class="medium" muted="true" >}}
 
 I schedule (_yes, with a deadline_) things that I want to do on the Reminder app.
 This includes stuff like _cleaning my flat_, _groceries_, _sending emails_ or

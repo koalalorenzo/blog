@@ -1,5 +1,6 @@
 {{ $autoplay := .Get "autoplay" | default "true" }}
 {{ $controls := .Get "controls" | default "true" }}
+{{ $muted := .Get "muted" | default "false" }}
 {{ $loop := .Get "loop" | default "true" }}
 
 <video
@@ -8,6 +9,7 @@
   {{ if isset .Params "heigth" }}heigth="{{ .Get "heigth" }}"{{ end }}
   {{ if eq $autoplay "true" }}autoplay{{ end }}
   {{ if eq $controls "true" }}controls{{ end }}
+  {{ if eq $muted "true" }}muted{{ end }}
   {{ if eq $loop "true" }}loop{{ end }}
   >
   {{ if isset .Params "src_webm" }}<source src="{{ .Get "src_webm" }}" type="video/webm">{{ end }}

@@ -85,7 +85,7 @@ order to make it work for me. At the beginning I got a little frustated, but
 then these tricks made me get stuff done. I have added comments in the flow
 about those.
 
-{{< image src="mac-spoon-shortcut.webp" class="big" >}}
+{{< image src="mac-spoon-shortcut.webp" class="big" link="https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a" >}}
 
 At the beginning I was listing all the reminders, without any deadline. 
 This made me a lot more anxiety then needed, and the shortcuts was not helping

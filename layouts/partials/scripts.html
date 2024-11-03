@@ -1,16 +1,17 @@
 {{ $instjs := resources.Get "js/instantpage.js" }}
 {{ $tocbot := resources.Get "js/tocbot.js" }}
-{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.tm.js" | js.Build (dict "minify" true "sourcemap" "external") | fingerprint}}
+{{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.tm.js" | js.Build (dict "minify" true "sourcemap"
+"external") | fingerprint}}
 
 <script src="{{ $js.RelPermalink | absURL }}"></script>
 
 {{ if (.IsPage) }}
 <script type="text/javascript" defer>
   tocbot.init({
-      tocSelector: '#TableOfContents',
-      contentSelector: 'article.full',
-      headingSelector: 'h2, h3',
-      orderedList: false,
+    tocSelector: '#TableOfContents',
+    contentSelector: 'article.full',
+    headingSelector: 'h2, h3',
+    orderedList: false,
   });
 </script>
 {{ end }}
@@ -24,5 +25,8 @@
 {{ end }}
 
 <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+  data-cf-beacon='{"token": "ff0fefbb0f5146fd8e2576bf281447b7"}'></script>
 <!-- End Cloudflare Web Analytics -->
+
+<script defer src="https://umami.elates.it/check.js" data-website-id="2beed590-956a-4aab-8797-9ec1430f9d14"></script>

@@ -14,39 +14,41 @@ $font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus 
 $base-font-size: 16px;
 $base-line-height: 1.25em;
 
-// https://colorhunt.co/palette/d8e3e751c4d3126e82132c33
 $themes: (
-  light: (
-    background: #D8E3E7,
+  light: (background: #D8E3E7,
     background-accent: #51C4D3,
     text-color: #132C33,
     color-primary: #126E82,
     color-secondary: rgba(#126E82, .80),
-    color-accent: #51C4D3,
+    color-accent: #2997A5,
   ),
-  dark: (
-    background: #132C33,
+  dark: (background: #132C33,
     background-accent: #126E82,
     text-color: #D8E3E7,
     color-primary: #51C4D3,
     color-secondary: rgba(#51C4D3, .80),
-    color-accent: #126E82,
+    color-accent: #1998B5,
   ),
 );
 
 $theme-map: null;
+
 @mixin themify() {
   @each $theme, $map in $themes {
     @media (prefers-color-scheme: #{$theme}) {
-      $theme-map: () !global;
+      $theme-map: (
+        ) !global;
+
       @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
-        $theme-map: map-merge($theme-map, ($key: $value)) !global;
-      }
-      @content;
-      $theme-map: null !global;
+        $value: map-get(map-get($themes, $theme), '#{$key}'
+        );
+      $theme-map: map-merge($theme-map, ($key: $value)) !global;
     }
+
+    @content;
+    $theme-map: null !global;
   }
+}
 }
 
 @function themed($key) {

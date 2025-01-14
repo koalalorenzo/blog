@@ -1,10 +1,9 @@
 name = "blog"
 pages_build_output_dir = "public"
 
-[vars]
+[env.preview.vars]
 HUGO_ARGS = "--buildFuture --minify --gc"
 HUGO_VERSION = "0.140.2"
 
 [env.production.vars]
-HUGO_VERSION = "0.120.3"
-NODE_VERSION = "v18.17.0"
+HUGO_VERSION = "0.140.2"

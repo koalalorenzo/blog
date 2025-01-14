@@ -44,14 +44,14 @@
 
 <div class="pagination">
   <hr />
-  {{ if .PrevPage }}
-  <a class="link-reverse" href="{{ .PrevPage.Permalink }}">« Previous Post</a>
+  {{ if .Prev }}
+  <a class="link-reverse" href="{{ .Prev.Permalink }}">« Previous Post</a>
   {{ end }}
-  {{ if and .PrevPage .NextPage }}
+  {{ if and .Prev .Next }}
   -~-
   {{ end }}
-  {{ if .NextPage }}
-  <a class="link-reverse" href="{{ .NextPage.Permalink }}">Next Post »</a>
+  {{ if .Next }}
+  <a class="link-reverse" href="{{ .Next.Permalink }}">Next Post »</a>
   {{ end }}
 </div>
 

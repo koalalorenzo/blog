@@ -19,6 +19,7 @@
           gnupg
           nodePackages.sass
           hugo
+          wrangler
         ];
       };
     }

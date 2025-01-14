@@ -25,8 +25,7 @@ keywords:
 If you've ever dreamt of controlling your Linux applications or running commands
 directly from your iPhone, I've got some exciting news for you. I've been
 tinkering around and have come up with a solution that bridges the gap between
-Apple HomeKit and SystemD services. Let me introduce you to my latest 
-side-project: [hk-svcs-bridge](https://gitlab.com/koalalorenzo/hk-svcs-bridge)!
+Apple HomeKit and SystemD services. Let me introduce you to my latest side-project!
 
 <!--more-->
 

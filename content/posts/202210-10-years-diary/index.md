@@ -11,7 +11,7 @@ celebrate this achievement. 🎉☺️ This diary helped me a lot in the past, a
 wish to convince anyone who is on the fence about starting one to go for it.
 Those are my personal observation.
 
-<!-- more -->
+<!--more-->
 
 {{< image src="locations.feature.webp">}}
 

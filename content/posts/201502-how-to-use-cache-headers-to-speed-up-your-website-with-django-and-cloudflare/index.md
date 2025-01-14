@@ -20,8 +20,14 @@ tags:
 - Today I Learned
 ---
 
-Since I started working at bigger startups, like [MinbilDinbil](http://minbildinbil.dk/), I had to face the problem of providing pages to a larger amount of users every day. For this reason, it is really important to use a CDN service like **CloudFlare**, in order to provide a good user experience on our website: we don't want our clients wait too much to load the homepage! How do we do that? <!-- more --> The author of GNU grep [once said](http://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html):
+Since I started working at bigger startups, like [MinbilDinbil](http://minbildinbil.dk/), 
+I had to face the problem of providing pages to a larger amount of users
+every day. For this reason, it is really important to use a CDN service like
+**CloudFlare**, in order to provide a good user experience on our website: we
+don't want our clients wait too much to load the homepage! How do we do that?
+<!--more-->
 
+The author of GNU grep [once said](http://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html):
 > The key to making programs fast is to make them
 > do practically nothing
 _Mike Haertel, Sat Aug 21 2010.[^source]

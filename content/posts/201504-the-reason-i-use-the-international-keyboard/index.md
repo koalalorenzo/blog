@@ -17,7 +17,12 @@ tags:
 - hacking
 ---
 
-If you think that a keyboard layout can **boost** your **productivity**, you should consider the **time** you will spend to **learn** a new one, the hassle and the **frustration** when typing something wrong... but if you love **programming**, you may consider to **buy/switch** to the **international** keyboard.
+If you think that a keyboard layout can **boost** your **productivity**,
+you should consider the **time** you will spend to **learn** a new one, the
+hassle and the **frustration** when typing something wrong... but if you love
+**programming**, you may consider to **buy/switch** to the **international**
+keyboard.
+<!--more-->
 
 {{< image src="cover_keyboard.webp" >}}
 

@@ -17,8 +17,13 @@ tags:
 - money
 ---
 
-I am in the world of bitcoin since 2012 when I opened my first bitcoin wallet on [blockchain.info](https://blockchain.info/it/wallet/)... and a lot of things **changed** since that moment: new **services**, growing **communities**, new alternative crypto currencies, **ATMs**, Credit-Debit cards, and a larger diffusion of people accepting bitcoin in their shops. <!-- more -->
+I am in the world of bitcoin since 2012 when I opened my first bitcoin wallet
+on [blockchain.info](https://blockchain.info/it/wallet/)... and a lot of things
+**changed** since that moment: new **services**, growing **communities**,
+new alternative crypto currencies, **ATMs**, Credit-Debit cards, and a larger
+diffusion of people accepting bitcoin in their shops.
 
+<!--more-->
 {{< image src="cover_bitcoin.webp" >}}
 
 After those two years I can see a better view of what Bitcoin means to me and the innovation behind that technology, including [Xapo](http://xapo.com/r/AT5712D) debit card... and some of my friends are tired of me talking about bitcoins :)

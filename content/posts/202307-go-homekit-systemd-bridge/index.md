@@ -28,7 +28,7 @@ tinkering around and have come up with a solution that bridges the gap between
 Apple HomeKit and SystemD services. Let me introduce you to my latest 
 side-project: [hk-svcs-bridge](https://gitlab.com/koalalorenzo/hk-svcs-bridge)!
 
-<!-- more -->
+<!--more-->
 
 ## The Inspiration Behind the Project
 

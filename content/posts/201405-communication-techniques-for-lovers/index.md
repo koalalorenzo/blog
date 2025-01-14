@@ -17,7 +17,7 @@ tags:
 
 During the last months, I fell in love with different people. My real problem was that my mind was "acting like a child", dividing work from loving affairs as two magnets with the same poles attract themselves (hint: they don't). That's good, but what happens if you bring "_communication techniques_" into love affairs? So I realized that, when I am in love, I was not that good in communicating as I am doing while working every day... then I decided to write down some suggestion about the "_communication techniques for lovers_".
 
-<!-- more -->
+<!--more-->
 
 {{< image src="cover.webp" caption="Communication for lovers (Photo by MartinodF)" >}}
 

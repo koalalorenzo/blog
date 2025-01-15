@@ -1,63 +1,68 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="revisit-after" content="3 days" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ if eq .Title "" }}Lorenzo's Blog{{ else }}{{ .Title }} - Lorenzo's Blog{{ end }}</title>
+  <meta charset="UTF-8">
+  <meta name="revisit-after" content="3 days" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if eq .Title "" }}Lorenzo's Blog{{ else }}{{ .Title }} - Lorenzo's Blog{{ end }}</title>
 
-    {{ $description := "" }}
-    {{ if ne $.Site.Params.description  "" }}
-    {{ .Scratch.Set "description" $.Site.Params.description }}
-    {{ end }}
-    {{ if ne .Summary "" }}
-    {{ .Scratch.Set "description" .Summary }}
-    {{ end }}
-    {{ if ne .Description "" }}
-    {{ .Scratch.Set "description" .Description }}
-    {{ end }}
-    <meta name="description" content='{{ .Scratch.Get "description" | truncate 160 }}'>
+  {{ $description := "" }}
+  {{ if ne $.Site.Params.description "" }}
+  {{ .Scratch.Set "description" $.Site.Params.description }}
+  {{ end }}
+  {{ if ne .Summary "" }}
+  {{ .Scratch.Set "description" .Summary }}
+  {{ end }}
+  {{ if ne .Description "" }}
+  {{ .Scratch.Set "description" .Description }}
+  {{ end }}
+  <meta name="description" content='{{ .Scratch.Get "description" | truncate 160 }}'>
 
-    {{ $taxonomy := "tags" }}{{ with .Param $taxonomy }}
-    <meta name="keywords" content='{{ delimit . ", " }}' />
-    {{ end }}
+  {{ $taxonomy := "tags" }}{{ with .Param $taxonomy }}
+  <meta name="keywords" content='{{ delimit . ", " }}' />
+  {{ end }}
 
-    <link rel="canonical" href="{{ $.Page.Permalink | absURL }}"/>
-    <link rel="shortlink" href="{{ $.Page.Permalink | absURL }}"/>
+  <link rel="canonical" href="{{ $.Page.Permalink | absURL }}" />
+  <link rel="shortlink" href="{{ $.Page.Permalink | absURL }}" />
 
-    <!-- RSS -->
-    <link  rel="alternate" type="application/rss+xml" title="Lorenzo's Blog Posts Feed" href="/index.xml">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Lorenzo's Blog Posts Feed" href="/index.xml">
 
-    <!-- CSS -->
-    {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | absURL }}">
+  <!-- CSS -->
+  {{ $style := resources.Get "style.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | absURL }}">
 
-    <!-- Preloads -->
-    {{ $instjs := resources.Get "js/instantpage.js" }}
-    {{ $tocbot := resources.Get "js/tocbot.js" }}
-    {{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.tm.js" | js.Build (dict "minify" true "sourcemap" "external") | fingerprint}}
-    <link rel="preload" as="script" href="{{ $js.RelPermalink | absURL }}" />
+  <!-- Preloads -->
+  {{ $instjs := resources.Get "js/instantpage.js" }}
+  {{ $tocbot := resources.Get "js/tocbot.js" }}
+  {{ $js := slice $instjs $tocbot | resources.Concat "js/bundle.tm.js" | js.Build (dict "minify" true "sourcemap"
+  "external") | fingerprint}}
+  <link rel="preload" as="script" href="{{ $js.RelPermalink | absURL }}" />
 
-    {{ if .Params.mermaid }}
-    {{ $mermaidjs := resources.Get "js/mermaid.min.js" | fingerprint }}
-    <link rel="preload" as="script" src="{{ $mermaidjs.RelPermalink | absURL }}"></script>
-    {{ end }}
-    
-    {{ if and (.IsPage) ($.Param "comments")}}
-    <link rel="preload" as="script" href="https://giscus.app/client.js" />
-    {{ end }}
-    <!-- OpenGraph -->
-    {{ template "_internal/opengraph.html" . }}
+  {{ if .Params.mermaid }}
+  {{ $mermaidjs := resources.Get "js/mermaid.min.js" | fingerprint }}
+  <link rel="preload" as="script" src="{{ $mermaidjs.RelPermalink | absURL }}">
+  </script>
+  {{ end }}
 
-    <!-- Twitter Cards -->
-    {{ template "_internal/twitter_cards.html" . }}
+  {{ if and (.IsPage) ($.Param "comments")}}
+  <link rel="preload" as="script" href="https://giscus.app/client.js" />
+  {{ end }}
+  <!-- OpenGraph -->
+  {{ template "_internal/opengraph.html" . }}
 
-    <!-- Misc -->
-    <meta name="microtip" content="bc1q975caqkxx8augcg5v3luadkdfwfw49j606lkyk" data-currency="btc">
-    <link rel='me' href='https://mastodon.social/@koalalorenzo' />
-    <link rel="icon" href="data:,">
+  <!-- Twitter Cards -->
+  {{ template "_internal/twitter_cards.html" . }}
 
-    <!-- Prefetching -->
-    <link rel="dns-prefetch" href="https://setale.me/">
-    <link rel="prefetch" href="https://setale.me/contact">
-    <link rel="prefetch" href="https://setale.me/">
+  <!-- Misc -->
+  <meta name="microtip" content="bc1qzmhffgvcwn6w7ku02j24f5qphf92cptqn0ukw9" data-currency="btc">
+  <meta name="microtip" content="0xEe5fD999CA8AF856608b2c2f075C37C178d4263E" data-currency="eth">
+  <meta name="microtip" content="DFdLkRschNrfMA9fiRF2knvR4kUbfJUUT9" data-currency="doge">
+  <meta name="fediverse:creator" content="@koalalorenzo@mastodon.social">
+  <link rel='me' href='https://mastodon.social/@koalalorenzo' />
+  <link rel="icon" href="data:,">
+
+  <!-- Prefetching -->
+  <link rel="dns-prefetch" href="https://setale.me/">
+  <link rel="prefetch" href="https://setale.me/contact">
+  <link rel="prefetch" href="https://setale.me/">
 </head>

@@ -24,7 +24,7 @@ During the last year my interests verted to **security** and **privacy**. I had 
 
 I believe that there is **a limit to security and privacy** because in specific situations we may want others to know what happened. Emotions, like bad and good stories, usually are temporary, and the **things** that I **care** the most will **vary** in different **moments of my life**. So are the things that I want to keep safe and encrypted...
 
-After encrypting all my important documents I have realized that there is a limit. I need the right level of encryption, not much or less. Enough security and enough privacy for the future. 
+After encrypting all my important documents I have realized that there is a limit. I need the right level of encryption, not much or less. Enough security and enough privacy for the future.
 
 What if something bad is happening to me to the point that I will not be able to access some important files, and the only help would come from these documents? What if somebody will hurt me and the only truth is encrypted and nobody will ever access these files?
 

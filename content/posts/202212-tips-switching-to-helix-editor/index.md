@@ -51,8 +51,8 @@ Overall, the piping feature in Helix is a great way to automate common tasks and
 save time when working with large files or performing repetitive tasks sorting
 with `sort`, filtering with `grep` or finding unique lines with `uniq`. :smirk:
 
-_Really_... You can use **any command** that follows the 
-[unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)! Isn't that 
+_Really_... You can use **any command** that follows the
+[unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)! Isn't that
 great already?
 
 ## Customizing Helix for a Better Workflow
@@ -61,7 +61,7 @@ well out of the box. However, after spending some time with the editor and
 exploring the various customization options, I realized that making a few small
 adjustments could make a big difference in my workflow.
 
-For example, selecting 
+For example, selecting
 [a color scheme](https://github.com/helix-editor/helix/wiki/Themes) that works
 well for me has made it easier to read and work with code, and adding vertical
 rules at the 80th column has helped me to keep my code and documentation aligned
@@ -100,14 +100,14 @@ If you need some inspiration, you can check
 ## Auto-complete, linting, formatting and more
 One of the things that has really improved my workflow in Helix is the use of
 language servers. These servers provide a range of features, such as formatting,
-linting, auto-complete, and references that can help to write code as a full 
+linting, auto-complete, and references that can help to write code as a full
 IDE.
 
 To install some language servers that I use every day for Helix, on macOS you
 can use the following command:
 
 ```bash
-# For Terraform (HCL), Bash, Generic YAML, 
+# For Terraform (HCL), Bash, Generic YAML,
 # Docker, Docker compose and Ansible
 brew install terraform-ls bash-language-server \
              yaml-language-server docker-ls \
@@ -131,18 +131,18 @@ hx --health
 The default file browser in Helix (`helix .`) is missing the ability to filter
 files by their content, rather than just their names. While the default file
 browser does use fuzzy search, it only searches for matches in the file names,
-which can be limiting if you are looking for a specific piece of text within 
+which can be limiting if you are looking for a specific piece of text within
 many files.
 
 To address this issue, I modified a bash function[^copy-pasta] that uses
-[fzf](https://github.com/junegunn/fzf) and 
+[fzf](https://github.com/junegunn/fzf) and
 [ripgrep](https://github.com/BurntSushi/ripgrep) to filter files by their
 content. This has been a game-changer for me, as it has made it much easier to
 find specific pieces of text within many files. In addition, I modified the
 script to support _opening multiple files at once_ (with `vsplit`), which has
 saved me a lot of time when working with related files.
 
-This is the code that I have added to my `~/.bash_profile` or 
+This is the code that I have added to my `~/.bash_profile` or
 equivalent[^update]:
 
 ```bash
@@ -163,13 +163,13 @@ hxs() {
 ```
 
 [^copy-pasta]: I don't remember where I found it, but I had to modify it. If you
-               know the original author, please let me know, and I will mention 
+               know the original author, please let me know, and I will mention
                it! :sweat_smile:
 
 ## It's easy to get started
 One of the things I really appreciated about Helix is the easy tutorial that is
 available to help you get started quickly and learn how to use the various
-keyboard combinations. To access the tutorial, simply use the command: 
+keyboard combinations. To access the tutorial, simply use the command:
 
 
 ```bash
@@ -181,13 +181,13 @@ and it is a great resource for those who are new to modal editors or want to get
 up to speed quickly. I used Vim before, and there are some small things that I
 had to get used to, and there is [a guide for that too](https://github.com/helix-editor/helix/wiki/Migrating-from-Vim).
 
-It is worth mentioning that [the Helix community on Matrix](https://matrix.to/#/#helix-community:matrix.org) 
-is very helpful and welcoming, and is a great resource for getting support 
-and learning more about the editor. :pray: I had a small question about using 
-multiple cursors and within seconds somebody helped and gave me super useful 
+It is worth mentioning that [the Helix community on Matrix](https://matrix.to/#/#helix-community:matrix.org)
+is very helpful and welcoming, and is a great resource for getting support
+and learning more about the editor. :pray: I had a small question about using
+multiple cursors and within seconds somebody helped and gave me super useful
 tips!
 
-## Final Thoughts 
+## Final Thoughts
 In conclusion, **switching to Helix as my primary text editor has been a great
 decision for me**. Its modal interface, lightweight design, and efficient
 features have made it a great fit for my daily work, and the various
@@ -201,7 +201,7 @@ fast and efficient text editor that is customizable and powerful.
 Go to [helix-editor.com](https://helix-editor.com) and get started! You will
 not regret it :wink:
 
-[^update]: Edit: the code has been updated, thanks to 
-           [@ipochi](https://github.com/ipochi) for the suggestion! Now the 
+[^update]: Edit: the code has been updated, thanks to
+           [@ipochi](https://github.com/ipochi) for the suggestion! Now the
            preview window will be case insensitive! :tada:
 

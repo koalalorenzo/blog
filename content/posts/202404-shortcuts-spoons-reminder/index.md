@@ -53,7 +53,7 @@ levels helped the most. :tada:
 ## Apple Shortcuts to the rescue
 The [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) app is an
 obscure, and mostly unknown application, that runs on iOS, iPadOS, and macOS.
-It allows users to automate tasks and integrates with many apps, and OS 
+It allows users to automate tasks and integrates with many apps, and OS
 features. My passion for automation made me create a shortcut for this specific
 need. Here is how it works:
 
@@ -90,7 +90,7 @@ link="https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a" >}}
 
 At the beginning I was creating reminders without any deadline. This gave
 me a lot more anxiety than needed, and the shortcut was not helping at all.
-Seeing and doing all the tasks together did not help. 
+Seeing and doing all the tasks together did not help.
 The solution was to **schedule**, and think _about when_ I could do something,
 so that I don't get to do too many things in one day and exhaust spoons.
 Taking a break and do a little every day works for me.
@@ -113,5 +113,5 @@ ToDo list, or to pay for a specific app. **You don't need an app
 for that**, a shortcut is fine. You can [download my shortcut here](https://www.icloud.com/shortcuts/dca360da797e4c28b1221c5b97c83b6a).
 
 If you find this shortcut useful, please [let me know on mastodon](https://mastodon.social/@koalalorenzo)!
-:heart: :smile: I would appreciate it a lot knowing that you are using it 
+:heart: :smile: I would appreciate it a lot knowing that you are using it
 and even adapting/editing it to your own needs!

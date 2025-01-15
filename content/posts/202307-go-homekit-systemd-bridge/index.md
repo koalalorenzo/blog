@@ -52,7 +52,7 @@ different Home Lab hardware. For Ubuntu/Debian users, especially those using a
 Raspberry Pi, here's a quick way to get started:
 
 ```bash
-# Please check the GitHub Page for newer versions if those are available! 
+# Please check the GitHub Page for newer versions if those are available!
 wget https://gitlab.com/koalalorenzo/hk-svcs-bridge/-/jobs/4061805600/artifacts/file/build/hk-svcs-bridge_0.1.4-beta-0_armhf.deb
 sudo apt install ./hk-svcs-bridge_0.1.4-beta-0_armhf.deb ````
 ```
@@ -72,7 +72,7 @@ pairing_code: "42042042"
 
 services:
 - name: nginx
-- name: "Media Server" 
+- name: "Media Server"
   on_cmd: "docker start jellyfin"
   off_cmd: "docker stop jellyfin"
   check_cmd: "docker inspect --format='{{.State.Running}}' jellyfin"
@@ -82,22 +82,22 @@ Save this configuration to `/etc/hk-svcs-bridge.yaml`. After saving the
 configuration, you'll need to restart the systemd service for the changes to
 take effect:
 
-```bash 
-sudo systemctl daemon-reload 
-sudo systemctl enable hk-svcs-bridge 
-sudo systemctl restart hk-svcs-bridge 
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable hk-svcs-bridge
+sudo systemctl restart hk-svcs-bridge
 ```
 
 Once you've successfully set up the hk-svcs-bridge on your Linux system,
 integrating it with your iPhone is a straightforward process. Begin by opening
 the Home app on your iPhone. Tap on the '+' icon located in the top right corner
-and select "Add Accessory.". 
+and select "Add Accessory.".
 
 {{< image src="setup-short.webp" caption="Adding the bridge" >}}
 
-Since the bridge does not have a code to scan, tap "_More options_" and then 
+Since the bridge does not have a code to scan, tap "_More options_" and then
 select it. In my case it is called "Raspberry Py". :face_palm: Then you must insert the PIN
-code as the value in the config file as `pairing_code` to add it. The rest of 
+code as the value in the config file as `pairing_code` to add it. The rest of
 the steps are easy to follow. Here is a short video:
 
 {{< youtube VMLYLQUh-rk >}}
@@ -112,5 +112,5 @@ Building this bridge was quite the adventure! A big shoutout to
 smoother. Honestly, without it, I might've been scratching my head a lot more.
 It's pretty cool how in the world of Go, there appears to be a library for just
 about everything. If you're curious about how all this works under the hood, why
-not take a peek at [the source code](https://gitlab.com/koalalorenzo/hk-svcs-bridge)? 
+not take a peek at [the source code](https://gitlab.com/koalalorenzo/hk-svcs-bridge)?
 Dive in and have fun exploring!

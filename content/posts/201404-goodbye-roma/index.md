@@ -23,7 +23,7 @@ I know you are not missing me and I am not missing you. You may wonder why I mad
 
 {{< image src="cover_13357268864_6760a1c19e_o.webp" >}}
 
-[We are on a time bomb](http://tmb.setale.me/post/68204905930/iperattivi-pro-attivi-e-stronzi), Rome. You are not what I need now. You are the perfect city for people that are not willing to grow up. Your citizen has big dreams, but maybe someone has cursed you. So they easily get **distractions** when they are almost to achieve goals. You are my **eternal city** because it was not easy to get things done for me. I had this feeling. 
+[We are on a time bomb](http://tmb.setale.me/post/68204905930/iperattivi-pro-attivi-e-stronzi), Rome. You are not what I need now. You are the perfect city for people that are not willing to grow up. Your citizen has big dreams, but maybe someone has cursed you. So they easily get **distractions** when they are almost to achieve goals. You are my **eternal city** because it was not easy to get things done for me. I had this feeling.
 
 When I was **not thinking** about collecting money, because I get used to that, and when I forgot that I planned to move abroad, because I was feeling so good with my friends and my clients, something more concrete and real bring me back to the reality. During my 21th birthday party **I got my opportunity** and a new mood. I got an **unexpected** opportunity to move to **Copenhagen**. I took that and I decided to escape and get away from you. Is the very first time in my life I feel really happy and "accomplished". I achieved my goal: I found a great job in a cool startup with great people and great co-working space. I am really lucky.
 

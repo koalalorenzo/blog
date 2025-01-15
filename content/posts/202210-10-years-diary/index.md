@@ -54,7 +54,7 @@ feelings as the only way to remember them.
 
 Thanks to the diary, I learned about compassion towards other people and towards
 myself. For example, one thing that I have noticed during the last 10 years by
-reading is how easy it is to go back and say: _Oh! That was stupid of me!_  
+reading is how easy it is to go back and say: _Oh! That was stupid of me!_
 
 It is super easy to have **regrets or feel ashamed of something that happened**.
 My diary gives me the instrument to reflect on my reflection when I look back:

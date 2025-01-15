@@ -22,7 +22,7 @@ Sadly, somebody had the bad idea to start an [attack against some Bitcoin Classi
 
 {{< image src="cover_screen-shot-2016-02-28-at-12-42-42.webp" caption="My miners went down several times as I was attacked." class="center">}}
 
-**I don’t care who did it**. I care more why they did it: **What is the point** of blocking me and making a DoS attack to me and my Classic Node? 
+**I don’t care who did it**. I care more why they did it: **What is the point** of blocking me and making a DoS attack to me and my Classic Node?
 
 Bitcoin Classic is a _modified_ version fo the Bitcoin Core client, that wants to **increase the block limit to 2MB**: this will speed up the transactions verification, allowing more people to use the technology and reducing waiting time and fees. This update will be **applied if the 75%** of the 1000 last blocks, will be **mined using Bitcoin Classic**. Then the nodes have 28 days of _grace period_ to update to Bitcoin Classic and accept 2MB blocks.
 

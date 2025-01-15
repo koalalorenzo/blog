@@ -23,13 +23,13 @@ are providing services that we like, or not paying them if we don't!
 
 There are a few services and subscriptions that make my daily life easier and
 more enjoyable. I am happy to pay for them because those make me happier, or
-they provide me things that I find essential.  For example, I use 
-[Apple One](https://www.apple.com/apple-one/) which includes Apple Music, 
-Apple TV and iCloud services. 
+they provide me things that I find essential.  For example, I use
+[Apple One](https://www.apple.com/apple-one/) which includes Apple Music,
+Apple TV and iCloud services.
 
-I really like [Mythic Quest](https://tv.apple.com/us/show/mythic-quest/umc.cmc.1nfdfd5zlk05fo1bwwetzldy3), 
-See, [Severance](https://tv.apple.com/dk/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx), 
-and [Foundation](https://tv.apple.com/dk/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3) 
+I really like [Mythic Quest](https://tv.apple.com/us/show/mythic-quest/umc.cmc.1nfdfd5zlk05fo1bwwetzldy3),
+See, [Severance](https://tv.apple.com/dk/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx),
+and [Foundation](https://tv.apple.com/dk/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3)
 tv shows, but it is also about iCloud security and the software development that
 keeps improving. I want to **avoid hosting my email server** or pay with my
 privacy or with ads. That is why I decided to pay for it, but it can be applied
@@ -43,49 +43,49 @@ about their development progress and challanges in the blog. I like that! For
 what I use it for, I don't have to pay for the services, but I am happy to
 support the developers behind it.
 
-Another subscription I am grateful for is [YouTube Premium Lite](https://www.youtube.com/premiumlite), 
+Another subscription I am grateful for is [YouTube Premium Lite](https://www.youtube.com/premiumlite),
 it’s great to be able to watch videos without having to deal with ads. As
 someone who spends a lot of time on YouTube, this subscription has made a huge
 difference in my viewing experience. I no longer have to sit through ads that I
 don’t care about, and I can just focus on the content that I want to watch.
 
 Talking about advertisement, [NextDNS](https://nextdns.io) is another service
-that I pay for. I used to have [PiHole](https://pi-hole.net), then switched to 
+that I pay for. I used to have [PiHole](https://pi-hole.net), then switched to
 [AdGuard](https://github.com/AdguardTeam/AdGuardHome), but since Raspberry Pis
-are hard to buy today, I prefer to **pay this service rather than maintain it** 
+are hard to buy today, I prefer to **pay this service rather than maintain it**
 at home. I can now enjoy my online experience without being constantly bombarded
 by ads, and I think it’s worth the cost, considering that is way more stable
 than a RPi. Not only that, but I would switch to AdGuard, but I _avoid running
 any Russian developed software_ until the end of the war.
 
-[LanguageTool](http://languagetool.org/) is a European-funded, multi-language 
-tool that I discovered after using Grammarly for a long time, it has full API 
-access and integration with 
-[Slack, Mail, and more native macOS apps](https://languagetool.org/mac-desktop). 
+[LanguageTool](http://languagetool.org/) is a European-funded, multi-language
+tool that I discovered after using Grammarly for a long time, it has full API
+access and integration with
+[Slack, Mail, and more native macOS apps](https://languagetool.org/mac-desktop).
 This tool has been a great help for me, as I use it for both my personal and
-professional writing. _Heck!_ I am using it right now to write this post! :wink: 
+professional writing. _Heck!_ I am using it right now to write this post! :wink:
 It’s great that it supports **multiple languages**, and the fact that it has full
-API access and integration with other apps is a massive plus 
+API access and integration with other apps is a massive plus
 ([Obsidian](https://languagetool.org/insights/post/product-obsidian/) and
 LibreOffice plugins are available).
 
 [Bitwarden](https://bitwarden.com) is an open-source and (optionally)
 self-hosted alternative to the now bloated 1Password. Even if it is written in
-C#, there is a 
-[slimmer version of the backend re-written in Rust](https://github.com/dani-garcia/vaultwarden) 
+C#, there is a
+[slimmer version of the backend re-written in Rust](https://github.com/dani-garcia/vaultwarden)
 that can run on a raspberry pi without many issues. I pay for the service mostly
 to keep the security and keep developing it. It might not have the best UI, or
-slick design, but it at least they did not disappointed me :cry: 
+slick design, but it at least they did not disappointed me :cry:
 _More on that later!_
 
-Email privacy is something that I value. [SimpleLogin](http://simplelogin.io/) 
+Email privacy is something that I value. [SimpleLogin](http://simplelogin.io/)
 is a valuable service that even though it has been bought by Proton, it offers
 more than Apple/iCloud Hide My mail because **I can own my email domain**. I
-have more control over my emails and, which is great in case of leaks or spam. 
+have more control over my emails and, which is great in case of leaks or spam.
 I also like that it’s been bought by Proton, as it gives me more confidence in
 the security and privacy of my email. SimpleLogin is also open source and can
 be self-hosted. :sweat_smile: _though I prefer to pay rather to
-run an email server!_ 
+run an email server!_
 
 About social networks, I am supporting [Mastodon](http://joinmastodon.org/) with
 a small monthly payment on [Patreon](https://joinmastodon.org/sponsors). _Why?_
@@ -180,7 +180,7 @@ back to the community and ensure that the software continues to be maintained,
 improved and available for all. That should not apply exclusively to Patreon or
 donating to developers, but also to **companies that are doing the right
 thing**. I don't like to **pay with my own privacy** or data. :rage: I prefer to
-pay with money. :euro: 
+pay with money. :euro:
 
 **TL;DR**: If you liked it: contribute or pay for it! :wink:
 

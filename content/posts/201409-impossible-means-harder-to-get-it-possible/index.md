@@ -20,7 +20,7 @@ Several times, I have heard my grandparents saying "that is impossible" when the
 
 {{< youtube vI_7_qTKA3c >}}
 
-Today I saw on [this video](https://www.youtube.com/watch?v=vI_7_qTKA3c), comparing the _new_ generation of MacBook Pro with [Macintosh Portable](http://en.wikipedia.org/wiki/Macintosh_Portable), and we can see clearly the difference between those two models, but the main difference is the release date. You have all the rights to say me that I am talking about a trivial thing, but it's really good to introduce the thought I have in my mind. 
+Today I saw on [this video](https://www.youtube.com/watch?v=vI_7_qTKA3c), comparing the _new_ generation of MacBook Pro with [Macintosh Portable](http://en.wikipedia.org/wiki/Macintosh_Portable), and we can see clearly the difference between those two models, but the main difference is the release date. You have all the rights to say me that I am talking about a trivial thing, but it's really good to introduce the thought I have in my mind.
 
 The Macintosh Portable, yes that _big-plastic-"90's gray"-heavy thing_, was released on the **September 20th 1989**. At that time the technologies were totally different than today, and now we can almost say "obsolete". Nevertheless, that piece of cold engineering became really obsolete few years later. On the February 11th of the amazing **1991**, that heavy guy started being "_a piece of history_".
 

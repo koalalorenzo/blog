@@ -12,9 +12,13 @@ tags:
 In the past few months, I started thinking about how I use social networks
 and the impact they have on my life. Today, I took a strong decision: it's
 time to move on from Instagram, a platform that is clearly no longer a social
-network based on my expectations.
+network based on my expectations. But where to? I need to dig deeper into my
+past personal experience with the social network to really understand why I am
+going to use Mastodon and Pixelfed.
 
 <!--more-->
+
+## My Instagram experience
 
 I have been on the Instagram since 2011, way before even Facebook acquired
 it, way before Facebook was called Meta. It might not be news to you, but
@@ -33,6 +37,8 @@ people. Receiving a like was so satisfying that it made me super engaged
 with the platform. I started following people that I barely knew to feel
 inspired by their progress and their hard work.
 
+## Meme-a-la-carte
+
 In the last few years, things started slowly changing. With the TikTok mania,
 Instagram and Facebook became sources of a never-ending scroll of content
 that was no longer from my friends. They have even removed the friends from
@@ -45,6 +51,8 @@ is no longer about checking what they are up to and talking about it. It is
 about sending messages with memes and stupid videos. Some people consider
 that being close, and I fell into that trap.
 
+## Loosing touch with friends
+
 Right now, if I scroll on my "For You" timeline, I can't see a single post
 from my social circle: none of these people are my friends. If there is a
 post of somebody I follow, it's somebody that I never met, or I met once.
@@ -54,30 +62,34 @@ clearly try to polarize me with political or very opinionated things that just
 disturb me. They cause emotions that would keep me engaged, in a bad way. With
 the latest changes from Meta, Facebook, and Twitter with the American Nazi
 shenanigans, I had enough. Now it has been made official by Facebook/Meta,
-but I feel it was brewed slowly. In the past year, I noticed how 2 of my
-friends started sending me memes of things that are disturbing. Topics like
+but I feel it was brewed slowly. In the past year, I noticed how 2 people
+started sending me memes of things that are disturbing. Topics like
 pronouns, gender equality, abortion, transphobia, racism and homophobia
 are clearly memes and jokes, changing something that is important to my
-community into something that I am forced to laugh about. If it is on the
+community into something that I am pushed to laugh about. If it is on the
 platform and people are just laughing about it, it must be acceptable to
-ridicule marginalized people.
+ridicule marginalized people... right?
 
 Today it is my birthday, and clearly a very few friends remembered. Those that
 I shared memes with did not wish me a happy birthday, while in the past that
 would have been very common. The Social part of Instagram is clearly gone,
 and it is time to move on.
 
+## When I stopped using Facebook and Twitter
+
 A few years ago, I stopped using Facebook for very similar reasons. The
 price I paid back then was loneliness: I was no longer invited to events,
 and rarely I was reading messages. I was forced back on Facebook just to
 handle the volunteering at my LGBTQ+ Volleyball club. When I started using
 it again, the feeling did not change: the content on the platform is even
-worse than when I left, and it offers the same issue as Instagram.
+worse than when I left, and it shares the same issue as Instagram.
 
 I also stopped using Twitter for the same reason. Leaving was easy. I have
 been using RSS feeds from blogs and news websites for a long time. On top
 of that, Mastodon provided me with a better experience than Twitter, and I
 am still using it today.
+
+## What is next?
 
 I have looked for years into a few alternatives. The problem with that is
 all of them require people to move to those platforms. 

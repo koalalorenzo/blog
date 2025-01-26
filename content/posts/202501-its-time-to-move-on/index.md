@@ -53,9 +53,9 @@ about sending messages with memes and stupid videos. Some people consider
 that being close, and I fell into that trap.
 
 How long does it take for you to see a post from somebody close to you in the
-time line? How many posts do you need to scroll?
+timeline? How many posts do you need to scroll?
 
-## Loosing touch with friends
+## Losing touch with friends
 
 Right now, if I scroll on my _For You_ timeline, I can’t see a single post
 from my social circle: none of these people are my friends. :cry: If there is
@@ -69,17 +69,17 @@ the American Nazi shenanigans, I had enough. :cry:
 
 I feel it was _slowly cooked_. In the past year, I noticed how 2 people
 started sending me more and more memes of things that are disturbing.
-Topics like pronouns, gender equality, abortion, transphobia, violence, racism
+Topics like pronouns, gender equality, abortion, transphobia, violence, racism,
 and homophobia are now clearly memes and jokes. What once was important things
 to fight for to them and to my community, slowly became something to laugh about
-the more it was **pushed by the algorithm**. :rage: Is it realy tailored?
+the more it was **pushed by the algorithm**. :rage: Is it really tailored?
 
 _If it is on the platform and people are just laughing about it, it must be
-acceptable to ridicule marginalized people, right?_ except that hurts people.
+acceptable to ridicule marginalized people, right?_ Except, that hurts people.
 
 Today it is my birthday, and clearly a very few friends remembered. Those that
 I shared memes with did not wish me a happy birthday, while in the past that
-would have been very common. :worried: The Social part of Instagram is clearly
+would have been very common. :worried: The social part of Instagram is clearly
 gone, and it is time to move on.
 
 ## I have been here before
@@ -91,7 +91,7 @@ and rarely read messages to not get sucked into Facebook again.
 I was forced back on Facebook just to handle the volunteering at my LGBTQ+
 Volleyball club. :tired_face: When I log in on it again, the feeling is the
 same: the content on the platform is even worse than when I left, and it
-shares the same issue as Instagram. Thankfuly I don't feel addicted to Facebook
+shares the same issue as Instagram. Thankfully, I don't feel addicted to Facebook
 anymore and I can clearly close the app and move on.
 
 I also **stopped using Twitter** for the similar reasons. Leaving was easy this
@@ -117,8 +117,8 @@ The ones that I will use are **Pixelfed and Mastodon**. These are
 more robust platforms that can interconnect and talk to each other even. It is
 mind-blowing that I can see Pixelfed posts on a Mastodon app. It could be
 a nice idea to use it independently on the instance where all my friends are.
-I can self-host my profile/instance instead of relying on one overflown by
-advertisement and Nazi propaganda. I will probably move my photos from
+I can self-host my profile/instance instead of relying on one overflowing with
+advertisement and nazi propaganda. I will probably move my photos from
 Instagram to a Pixelfed instance. There are guides and tools to automate the
 process after exporting the data from Meta.
 

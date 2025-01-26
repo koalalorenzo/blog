@@ -12,11 +12,13 @@ tags:
 In the past few months, I started thinking about how I use social networks
 and the impact they have on my life. Today, I took a strong decision: it’s
 time to move on from Instagram, a platform that is clearly **no longer a social
-network**. But where to? I need to dig deeper into my past personal experience
-with the social network to really understand why I am going to use Mastodon
-and Pixelfed.
+network**. _How did we get here? Where are we going?_
+I need to dig deeper into my past personal experience with the social network
+to really understand why I am going to use Mastodon and Pixelfed.
 
 <!--more-->
+
+{{< image src="cover.webp" class="square" >}}
 
 ## My Instagram experience
 
@@ -43,9 +45,11 @@ inspired by their progress and their hard work. It was useful and rewarding.
 In the last few years, things started slowly changing. With the **TikTok
 mania**, Instagram and Facebook copied that idea, and both became sources of a
 **never-ending scroll** of content that was no longer from my friends. :fearful:
-The developers have even removed the friends from my main timeline and added the _Following_
-and _Favorites_ tabs, where _For you_ would be the default timeline
+The developers have even removed the friends from my main timeline and added the
+_Following_ and _Favorites_ tabs, where _For you_ would be the default timeline
 tailored to keep me glued on content that I barely was interested in.
+
+{{< image src="timelines.webp" >}}
 
 This also changed a lot in the way I interacted with my friends: Instagram
 is no longer about checking what they are up to and talking about it. It is
@@ -89,10 +93,10 @@ price I paid back then was **loneliness**: I was no longer invited to events,
 and rarely read messages to not get sucked into Facebook again.
 
 I was forced back on Facebook just to handle the volunteering at my LGBTQ+
-Volleyball club. :tired_face: When I log in on it again, the feeling is the
+Volleyball club. :tired_face: When I log in on it, the feeling is the
 same: the content on the platform is even worse than when I left, and it
-shares the same issue as Instagram. Thankfully, I don't feel addicted to Facebook
-anymore and I can clearly close the app and move on.
+shares the same issue as Instagram. Thankfully, I don't feel addicted to
+Facebook anymore and I can clearly close the app and move on with my day.
 
 I also **stopped using Twitter** for the similar reasons. Leaving was easy this
 time. I have been using RSS feeds from blogs and news websites for a long time.
@@ -122,6 +126,8 @@ advertisement and nazi propaganda. I will probably move my photos from
 Instagram to a Pixelfed instance. There are guides and tools to automate the
 process after exporting the data from Meta.
 
+{{< image src="limit.webp" >}}
+
 Today **I have deleted all my posts from Instagram**, except my very first post:
 a photo of my mom’s Pizza di Scarola back from 2011. I hope people will
 remember those days, and that social networks will not make me feel lonely again.
@@ -129,4 +135,6 @@ I don't want an algorithm that makes me enraged just to squize money and time.
 It will be difficult since **it will take time for my peers to change platform**,
 and it will take time to rebuild the social network. I'll go first, as it's
 time for me to move on!
+
+You can follow me on :elephant: Mastodon here: [@koalalorenzo@mastodon.social](https://mastodon.social/@koalalorenzo)
 

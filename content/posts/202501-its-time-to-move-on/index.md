@@ -117,14 +117,14 @@ the project financially with donations, but nowadays, the app development
 seems stagnant. There are still too many technicalities to overcome before
 making it a full product usable by my friends and my mother. :sweat_smile:
 
-The ones that I will use are **Pixelfed and Mastodon**. These are
-more robust platforms that can interconnect and talk to each other even. It is
-mind-blowing that I can see Pixelfed posts on a Mastodon app. It could be
-a nice idea to use it independently on the instance where all my friends are.
-I can self-host my profile/instance instead of relying on one overflowing with
-advertisement and nazi propaganda. I will probably move my photos from
-Instagram to a Pixelfed instance. There are guides and tools to automate the
-process after exporting the data from Meta.
+The ones that I will use are [Pixelfed](http://pixelfed.org/) and [Mastodon](https://joinmastodon.org).
+These are more robust platforms that can interconnect and talk to each other
+even. It is mind-blowing that I can see Pixelfed posts on a Mastodon app. It
+could be a nice idea to use it independently on the instance where all my
+friends are.  I can self-host my profile/instance instead of relying on one
+overflowing with advertisement and nazi propaganda. I will probably move my
+photos from Instagram to a Pixelfed instance. There are guides and tools to
+automate the process after exporting the data from Meta.
 
 {{< image src="limit.webp" >}}
 

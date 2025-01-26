@@ -93,7 +93,13 @@ The ones that I can easily settle for are Pixelfed and Mastodon. These are
 more robust platforms that can interconnect and talk to each other. It is
 mind-blowing that I can see Pixelfed posts on a Mastodon app. It could be
 a nice idea to use an instance where all my friends are, instead of relying
-on one overflown by advertisement and Nazi propaganda.
+on one overflown by advertisement and Nazi propaganda. I will probably move
+content to a Pixelfed instance, there are guides and tools to automate the 
+process after exporting the data from Instagram.
 
 Today I have deleted all my posts from Instagram, except my very first post: a
-photo of my mom's Pizza di Scarola back from 2011.
+photo of my mom's Pizza di Scarola back from 2011. I hope people will remember
+those days. I just hope that the next social networks will not make me feel
+lonely and enraged by their content. I hope they will help me connect with my
+friends instead!
+

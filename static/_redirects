@@ -1,1 +1,5 @@
 /feed.xml /index.xml 301
+/gpgkey.asc https://setale.me/.well-known/openpgpkey 301
+/gpg https://setale.me/.well-known/openpgpkey 301
+/pgp https://setale.me/.well-known/openpgpkey 301
+/.well-known/security.txt https://setale.me/.well-known/security.txt 301

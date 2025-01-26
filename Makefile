@@ -50,3 +50,8 @@ endif
 new_post:
 	-hugo new posts/${DATE}/index.md
 .PHONY: new_post
+
+
+upload: build
+	wrangler pages deploy public --project-name blog
+.PHONY: upload

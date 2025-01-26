@@ -20,6 +20,7 @@
           nodePackages.sass
           hugo
           wrangler
+          libwebp
         ];
       };
     }

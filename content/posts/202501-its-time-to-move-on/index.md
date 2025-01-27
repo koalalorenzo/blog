@@ -18,7 +18,7 @@ to really understand why I am going to use Mastodon and Pixelfed.
 
 <!--more-->
 
-{{< image src="cover.webp" class="square" >}}
+{{< image src="cover.webp" class="square" caption="Do you remember this logo?" >}}
 
 ## My Instagram experience
 

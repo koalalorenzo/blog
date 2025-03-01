@@ -1,8 +1,9 @@
 .agecheck {
-  @include themify(){
+  @include themify() {
     background: themed("background-accent");
     color: themed("text-color");
   }
+
   margin: $global-margin 0 !important;
   padding: $global-h1-margin;
 
@@ -17,7 +18,7 @@
     padding: 0;
   }
 
-  @include mobile-portrait {   
+  @include mobile-portrait {
     position: inherit !important;
   }
 }

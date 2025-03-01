@@ -3,7 +3,7 @@
   float: right; //opposite of aside
   margin-top: $global-header-top-distance;
 
-  @include mobile-portrait {   
+  @include mobile-portrait {
     float: none;
     display: inline-block;
 
@@ -26,6 +26,7 @@
 
   // Fixes numbers and bullet points not being readable on small screens
   @media screen and (max-width: $screen-break-small) {
+
     // Code highlight and markup
     & {
       width: 95%;
@@ -40,13 +41,13 @@
 }
 
 .hide-portrait {
-  @include mobile-portrait {   
+  @include mobile-portrait {
     display: none;
   }
 }
 
 .hide-small-screen {
-  @include for-mobile-portrait-down {   
+  @include for-mobile-portrait-down {
     display: none;
   }
 }

@@ -5,15 +5,16 @@ article.short {
   border-radius: $global-border-radius;
   text-align: left;
   // min-height: $global-home-thumbnail-height + ($global-margin*3);
+  perspective: 100px;
 
   h2 {
     margin-top: 0px;
     margin-left: 0px;
 
     a {
-      @include themify(){
+      @include themify() {
         color: themed("text-color");
-      }    
+      }
     }
   }
 
@@ -32,7 +33,10 @@ article.short {
     float: left;
     margin: $global-margin/3 $global-margin/2 $global-margin/3 0;
 
-    @include themify(){
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform: scale(1);
+
+    @include themify() {
       background-color: themed("background-accent");
     }
 
@@ -45,6 +49,10 @@ article.short {
       height: 200px;
     }
 
+    &:hover {
+      transform: scale(1.025) rotateX(0.5deg);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
   }
 
   .summary {

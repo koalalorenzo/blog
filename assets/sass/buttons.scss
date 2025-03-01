@@ -17,12 +17,14 @@
   background: transparent;
   transition: all 0.25s ease-in-out;
 
-  &:hover, &.selected {
+  &:hover,
+  &.selected {
     @include themify() {
       background: themed("color-accent") !important;
       border-color: themed("color-accent") !important;
       color: themed("background") !important;
     }
+
     text-decoration: none;
   }
 
@@ -33,10 +35,12 @@
   &.slim {
     max-width: none;
     width: auto;
+
     @include mobile-portrait {
       width: 100%;
       max-width: $max_aside_width;
     }
+
     padding: $global-margin/2 $global-margin;
 
     &.always {

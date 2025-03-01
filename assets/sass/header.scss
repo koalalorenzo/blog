@@ -1,10 +1,11 @@
 header {
-  @include themify(){
+  @include themify() {
     color: themed("text-color");
   }
 
   display: none;
-  @include mobile-portrait(){
+
+  @include mobile-portrait() {
     display: inline;
   }
 
@@ -20,7 +21,8 @@ header {
 
     a {
       text-decoration: none;
-      @include themify(){
+
+      @include themify() {
         color: themed("text-color");
       }
     }

@@ -2,6 +2,7 @@
 {{ $controls := .Get "controls" | default "true" }}
 {{ $muted := .Get "muted" | default "false" }}
 {{ $loop := .Get "loop" | default "true" }}
+{{ $volume := .Get "volume" | default "1" }}
 
 <video
   {{ if isset .Params "class" }}class="{{ .Get "class" }}"{{ end }}
@@ -11,6 +12,7 @@
   {{ if eq $controls "true" }}controls{{ end }}
   {{ if eq $muted "true" }}muted{{ end }}
   {{ if eq $loop "true" }}loop{{ end }}
+  {{ if isset .Params "volume" }}onloadstart="this.volume={{ .Get "volume"}}"{{ end }}
   >
   {{ if isset .Params "src_webm" }}<source src="{{ .Get "src_webm" }}" type="video/webm">{{ end }}
   {{ if isset .Params "src_mp4" }}<source src="{{ .Get "src_mp4" }}" type="video/mp4">{{ end }}

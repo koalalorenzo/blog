@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := clean
 
 DATE ?= $(shell date +"%Y%m")
-HUGO_ARGS ?= --minify --gc
+HUGO_ARGS ?= --minify --gc --buildFuture
 CF_PAGES_BRANCH ?= $(shell git branch --show-current)
 
 # Fixes CF_PAGES_URL to be blog.setale.me when deploying in master

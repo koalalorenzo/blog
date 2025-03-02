@@ -29,15 +29,16 @@ playing a game you made together! Being able to export the game to different
 platforms was key for this to happen.
 
 My love for free and open source software pushed me to use [Godot](https://godotengine.org) as a
-game engine. Even if I worked for Unity and I admire the work of my former
+game engine. Even if I worked for **Unity** and I admire the work of my former
 colleagues, I still went with FOSS as I wanted to rely on something more
 stable. I don't want to learn C# nor wait long time to install petabyte of
 things that I don't need on my Mac. Godot is the right thing to do for me.
-As I usually do for FOSS projects, I decided to _give back_ and
-[donate 5 euros a month to support the project](https://blog.setale.me/2023/01/25/Happy-to-give-back-happy-to-pay/).
 
-{{< image src="donations.webp" link="https://fund.godotengine.org/" >}}
-
+Since this project is not backed by a company charging for services, I encourage
+you to consider donating to the [Godot Fund](https://fund.godotengine.org). As
+usual, I am [happy to give back](https://blog.setale.me/2023/01/25/Happy-to-give-back-happy-to-pay/):
+I can't contribute to the project with code, so instead I am donating and paying
+every month.
 
 ## My first Game Jam
 Since I started using Godot, I have made small games that I have never

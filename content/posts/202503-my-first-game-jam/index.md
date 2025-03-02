@@ -106,8 +106,6 @@ more tasks.
 At least, that is the basic idea. Give it a spin and play the game
 [here](http://koalalorenzo.itch.io/yak-shaving-brackeys-13)!
 
-{{< video src_mp4="editor-incenerator.mp4" src_webm="editor-incenerator.webm" loop="true" class="big" muted="true" >}}
-
 ## Making the game
 In my line of work, I have always focused on avoiding repeating code, and
 reusing things, so I prepared a basic Godot 4 add-on that I reuse to do UI
@@ -119,8 +117,8 @@ main reason is that I did not need most of the things I prepared. The theme
 and time made me focus on a limited amount of mechanics. Though, bootstrapping
 a basic testable version of the game was easier with my add-on/library.
 
-I enjoyed a lot following some of the Godot principles, one of which is to make
-_everything a Node_, with custom Resources too. The code was much cleaner, and I
+I enjoyed a lot following some of the **Godot principles**, one of which is to make
+_everything a Node_, with custom `Resources` too. The code was much cleaner, and I
 could easily implement different tasks for the player by just customizing a few
 variables in an instance of my custom `Task` node.
 
@@ -142,7 +140,7 @@ I gifted myself for Winter Solstice (_Christmas_) a tool to make quick 3D models
 that I could export. I would love to learn Blender at some point. I bought the
 Astronaut and Yak models (Credits in the game page on itch.io).
 
-{{< image src="asset-forge.webp" class="big" >}}
+{{< video src_mp4="editor-incenerator.mp4" src_webm="editor-incenerator.webm" loop="true" class="big" muted="true" >}}
 
 ## Learnings so far
 After submitting the game to the Game Jam, I started receiving some feedback.

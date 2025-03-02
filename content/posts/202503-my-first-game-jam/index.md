@@ -197,3 +197,8 @@ You can play Yak Shaving Space Delivery in the browser [on itch.io here](http://
 or download it for Windows, macOS, or Linux... and if you are in the competition,
 please consider reviewing my game and leaving some feedback :heart:
 
+Before submitting I ran the game and delivered 6 yaks in around `636.798747...` seconds,
+can you do better than me? :stuck_out_tongue_winking_eye:
+
+{{< image src="screenshot.webp" class="big" link="https://koalalorenzo.itch.io/yak-shaving-brackeys-13" >}}
+

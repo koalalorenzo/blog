@@ -6,7 +6,7 @@
   </h2>
   <div class="details">
     On: {{ .Date.Format "2006-01-02"}} -
-    Reading Time: {{ math.Round (div (countwords .Content) 300.0) }} Minutes
+    Reading Time: {{ math.Round (div (countwords .Content) 315.0) }} Minutes
   </div>
   <div>
     {{- $images := $.Resources.ByType "image" -}}

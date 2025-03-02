@@ -157,6 +157,7 @@ made some basic mistakes. Here is some learning so far:
 - The orthogonal camera was a risky bet: not everybody liked it.
 - The game is slow, and it might take 15 minutes to complete it.
 - I made a bunch of typos and grammar mistakes.
+- Working in a team or with somebody would have helped a lot.
 
 The first playtests were done by my friends, and they were honest, but most of
 the time **I could not sit behind them and observe** the behavior. I only did 1

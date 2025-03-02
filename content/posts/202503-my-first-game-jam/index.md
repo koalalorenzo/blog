@@ -1,6 +1,6 @@
 ---
 title: "My first Game Jam"
-date: 2025-03-02T14:40:01+01:00
+date: 2025-03-02T12:10:05+01:00
 tags:
   - gamedev
   - gamejam
@@ -11,7 +11,8 @@ tags:
 In January 2024 I started making small video games for pure fun. After some
 practice, playtesting with friends and new languages, I decided to test my
 skills and publish something. So I joined my first Game Jam and submitted
-my first game: Yak Shaving Space Delivery. Here are my thoughts about it.
+my first game: **Yak Shaving Space Delivery**. Here are my thoughts and
+learnings about how it went so far! (Yes you can play the game too) :stuck_out_tongue_closed_eyes:
 
 <!--more-->
 
@@ -30,8 +31,11 @@ platforms was key for this to happen.
 My love for free and open source software pushed me to use Godot as a
 game engine. Even if I worked for Unity and I admire the work of my former
 colleagues, I still went with FOSS as I wanted to rely on something more
-stable and reliable. I even decided to
+stable and different. As I usually do for FOSS projects, I even decided to
 [donate 5 euros a month to support the project](https://blog.setale.me/2023/01/25/Happy-to-give-back-happy-to-pay/).
+
+{{< image src="donations.webp" link="https://fund.godotengine.org/" >}}
+
 
 ## My first Game Jam
 Since I started using Godot, I have made small games that I have never

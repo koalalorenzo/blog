@@ -59,7 +59,7 @@ whole time, with some breaks. :smile: During the breaks I played online games wi
 the gang at [PAN Idraet Gaming](https://panidraet.dk/en/idraetsgrene/andre-aktiviteter/gaming/)
 and got even some playtests from some of the members of the club!
 
-## About the game 
+## About the game
 For a whole week, I worked very hard on making a game. I started thinking
 about what I can relate to when things go wrong, or not, and when brainstorming
 about decision trees and tasks, priority 2 things came into my mind:

@@ -53,26 +53,28 @@ My goal for this Jam is to learn and gather feedback to improve my craft.
 
 {{< image src="brackeys-gj-logo.webp" link="https://itch.io/jam/brackeys-13" >}}
 
-I messed up the dates and reserved the wrong week, but nothing went wrong IRL:
-I ordered a lot of food on Wolt, drank a lot of coffee, and stayed home the
-whole time, with some breaks. :smile: During the breaks I played online games with
-the gang at [PAN Idraet Gaming](https://panidraet.dk/en/idraetsgrene/andre-aktiviteter/gaming/)
+I messed up the dates and reserved the wrong week in the calendar, but
+nothing went wrong IRL: I ordered a lot of food on Wolt, drank a lot of
+coffee, and stayed home the whole time, with some breaks. :smile: During
+the breaks I played online games with the gang at
+[PAN Idraet Gaming](https://panidraet.dk/en/idraetsgrene/andre-aktiviteter/gaming/)
 and got even some playtests from some of the members of the club!
 
-## About the game
+## About the game.
 For a whole week, I worked very hard on making a game. I started thinking
 about what I can relate to when things go wrong, or not, and when brainstorming
-about decision trees and tasks, priority 2 things came into my mind:
+about [decision trees](tree.webp) and tasks, priority 2 things came into my mind:
 
 1. [Toil](https://sre.google/sre-book/eliminating-toil/)
 2. [Yak Shaving](https://en.wiktionary.org/wiki/yak_shaving)
 
 I decided to work on these two concepts and make a game where somebody would
-start from a single goal, but gradually things go wrong, and the player has
-to perform tasks that seem unrelated to the main goal. _Yak Shaving_. Though,
-_how can I make something tedious actually fun_? :smirk:
+start from a single objective, but gradually things go wrong, and the player has
+to perform tasks that seem unrelated to the main one. Like
+[Hal, trying to replace a light bulb in Malcom in the Middle](https://www.youtube.com/watch?v=8fnfeuoh4s8),
+also known as _Yak Shaving_. Though, _how can I make something tedious actually fun_? :smirk:
 
-{{< image src="tree.webp" class="big" >}}
+{{< video src_mp4="replacing-light-bulb.mp4" src_webm="replacing-light-bulb.webm" class="big" volume="0.1" >}}
 
 So I started working on it: In the game, you are an astronaut on a spaceship
 picking up cargo from a planet and delivering it to another planet. Something
@@ -93,7 +95,7 @@ pick an object and drop it somewhere.
 
 To make things fun, I decided to rely on **silly physics and engaging with
 dialogues** from the ship. The spaceship itself guides the player. Their name?
-_Procrastinato 9000_ , of course! They are sassy, annoyed by biological life
+_Procrastinator_ _9000_, of course! They are sassy, annoyed by biological life
 form, and would prefer doing nothing rather than performing the tasks.
 
 As _Nothing can go wrong_, the player never dies, though something _goes wrong_,
@@ -129,7 +131,7 @@ that turned out to be super useful. ..._and yes, people noticed that_ :laughing:
 My partner also gifted to me an asset pack from Humble Bundle and I hoarded a
 bunch of assets, including some of the background sounds.
 
-On the last day, I had some big issues with Dialogic, that caused me some
+On the last day (_ofc_), I had some big issues with Dialogic, that caused me some
 actual _Yak shaving_. :facepalm: Investigating an issue with instances not being
 freed correctly, causing memory leaks. It was hard, and I ended up switching
 to [Dialogue Manager](https://dialogue.nathanhoad.net), which was much simpler,
@@ -152,10 +154,10 @@ game crashing due to objects being freed.
 I remember watching videos and videos to prepare, but I realised too late that I
 made some basic mistakes. Here is some learning so far:
 
-- I should have done more playtests or gathered more information
-- The orthogonal camera was a risky bet: not everybody liked it
-- The game is slow, and it might take 15 minutes to complete it
-- I made a bunch of typos and grammar mistakes
+- I should have done more playtests or gathered more information.
+- The orthogonal camera was a risky bet: not everybody liked it.
+- The game is slow, and it might take 15 minutes to complete it.
+- I made a bunch of typos and grammar mistakes.
 
 The first playtests were done by my friends, and they were honest, but most of
 the time **I could not sit behind them and observe** the behavior. I only did 1

@@ -138,7 +138,7 @@ looked actively maintained, and was easier to use/implement.
 I made most of the 3D Assets using [Kenny's Forge Deluxe](https://www.kenney.nl/tools/asset-forge).
 I gifted myself for Winter Solstice (_Christmas_) a tool to make quick 3D models
 that I could export. I would love to learn Blender at some point. I bought the
-Astronaut and got the animal from itch.io (Credits in the game page on itch.io).
+Astronaut and Yak models (Credits in the game page on itch.io).
 
 {{< image src="asset-forge.webp" class="big" >}}
 

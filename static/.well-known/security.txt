@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56b5f045c7aed316cecb4f25e0103d99eb4c2eb37fcc3273a1ecbe2669213f56
-size 1231
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@setale.me
+Expires: 2030-01-25T23:59:00.000Z
+Encryption: https://setale.me/.well-known/openpgpkey
+Encryption: https://github.com/koalalorenzo.gpg
+Encryption: https://gitlab.com/koalalorenzo.gpg
+Encryption: https://pgp.mit.edu/pks/lookup?op=get&search=0x73880ecaf69ec2ed44ce5889502bfb12d0b5295f
+Preferred-Languages: en, it
+Canonical: https://setale.me/.well-known/security.txt
+Canonical: https://who.is.lorenzo.setale.me/.well-known/security.txt
+Canonical: https://blog.setale.me/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE2NXAL6qdn0ZrUi5tIrh6YYfiAJYFAmhtiYUACgkQIrh6YYfi
+AJbeUxAAgC1McoP6NB8xSlJvsNWnFtfyaITZDds4haC8XLNT9AFndEsxVrBRyaKl
+gPG1T3yvAfUWQiYt02zcd5TPTiTCgpSWF2a/+NYQMntm0YADbAvxTcdrc/7Cpw/s
+wx80ZMegcXL30BNSzZ4VtXRoZWpB8JrxvCMiwo0So3Od1+QQqPQis5poRhEDIULo
+8jeIqZgX3hPZ8FK9tcCkb9NwOAq9xNZqg8VArHw2yUKy4zqzUsuq3ePHOOXwAWQw
+duint22Ue6kd1qyjdgtjREos7hh4at52vg57HzfvLqj/Qo4bbdW62zgyzVjHwpNU
+qg1Oyh4QYR72myrFwgiHqFpVOl7nYJTCLUlX0u4Y1oeOrjTlAx9uH8lsyq9uyO7C
+nX7aADDTs1BE5RMuoNiDiFKZPysoXgMaFWOHDo2vnhI1osrM6xWfWUKh7hX3MJEZ
+3FD6LosTpCyFJGn6MF2JJ78+t3tP+SIVs2hk9OskwzgNWMq23HihcQZqeM++Xu+w
+wU+JfIieguHrUqSd7Yh5AklguKunDJX+W+/WChr18dYV3wDNBSwxErScAJxXaabQ
+sHM3CGIyQz+U8pXzSpr6SG2IpoBEf+EjwiLSo4Ur1omqMVSmoHci5ZRAM4elO/d7
+6Lg2yZO97byPW3VDKl3Is5TMZjJcNuY5hWQZ4Isay0Kdr9X6eP4=
+=3eOh
+-----END PGP SIGNATURE-----

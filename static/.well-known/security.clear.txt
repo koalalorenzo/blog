@@ -1,0 +1,10 @@
+Contact: mailto:security@setale.me
+Expires: 2030-01-25T23:59:00.000Z
+Encryption: https://setale.me/.well-known/openpgpkey
+Encryption: https://github.com/koalalorenzo.gpg
+Encryption: https://gitlab.com/koalalorenzo.gpg
+Encryption: https://pgp.mit.edu/pks/lookup?op=get&search=0x73880ecaf69ec2ed44ce5889502bfb12d0b5295f
+Preferred-Languages: en, it
+Canonical: https://setale.me/.well-known/security.txt
+Canonical: https://who.is.lorenzo.setale.me/.well-known/security.txt
+Canonical: https://blog.setale.me/.well-known/security.txt

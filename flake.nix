@@ -2,7 +2,7 @@
   description = "Lorenzo's Blog";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
     utils.url = "github:numtide/flake-utils";
   };
 
@@ -17,10 +17,11 @@
           git
           gnumake
           gnupg
-          nodePackages.sass
           hugo
-          wrangler
           libwebp
+          nodePackages.sass
+          nodejs_24
+          wrangler
         ];
       };
     }
